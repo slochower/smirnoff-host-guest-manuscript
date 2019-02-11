@@ -18,9 +18,9 @@ title: 'Manubot Rootstock: Manuscript Title'
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/f988430b058791beed47b6d567c57c135ab6627f/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/435a9597a59e87a5c6722d2bded2a2cf1cb3adb3/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@f988430](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/f988430b058791beed47b6d567c57c135ab6627f)
+from [slochower/smirnoff-host-guest-manuscript@435a959](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/435a9597a59e87a5c6722d2bded2a2cf1cb3adb3)
 on February 11, 2019.
 </em></small>
 
@@ -61,6 +61,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum mattis
 Proin lobortis imperdiet vestibulum. Integer semper varius tortor eget finibus. Mauris accumsan nisi eu posuere bibendum. Nam eget nisi hendrerit nisi convallis aliquet id in risus. Sed non tincidunt quam. Duis sem enim, dictum vitae consectetur semper, tincidunt at libero. Sed finibus in ligula non sagittis. Vestibulum et ligula ipsum.  
 
 ![A](https://rawcdn.githack.com/slochower/smirnoff-host-guest-simulations/9c0b93d8c00685398ae953b33779661d15798e6e/figures/SMIRNOFF99Frosst-vs-GAFF-v1.7-TdS.pdf){#fig:workflow width=3.5in}
+![B](https://rawcdn.githack.com/slochower/smirnoff-host-guest-simulations/9c0b93d8c00685398ae953b33779661d15798e6e/figures/SMIRNOFF99Frosst-vs-GAFF-v2.1-TdS.pdf){#fig:workflow width=3.5in}
 
 Vestibulum vulputate felis sed dui vestibulum tempor. Donec sed sem porttitor, varius sem consectetur, lacinia tellus. Aliquam quis felis vulputate, congue turpis non, efficitur ligula. Cras eu arcu odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere orci quis justo dignissim sodales. Nullam sed finibus nulla. Ut leo arcu, lacinia a libero sit amet, finibus facilisis tortor. Phasellus elementum lacinia purus consequat vestibulum. Cras a justo laoreet, rhoncus diam at, rutrum lacus. Fusce vulputate eu augue vel porta. Quisque id nunc eu dolor accumsan semper at non sem. Vestibulum at nunc et dui molestie efficitur. Aliquam luctus pellentesque nunc, id lobortis velit 
 
