@@ -24,7 +24,7 @@ mkdir -p output
 # Create HTML output
 # http://pandoc.org/MANUAL.html
 echo "Exporting HTML manuscript"
-/usr/local/bin/pandoc --verbose \
+pandoc --verbose \
   --from=markdown \
   --to=html5 \
   --filter=pandoc-eqnos \
@@ -34,11 +34,20 @@ echo "Exporting HTML manuscript"
   --bibliography=$BIBLIOGRAPHY_PATH \
   --csl=$CSL_PATH \
   --metadata link-citations=true \
-  --mathjax \
   --include-after-body=build/themes/default.html \
-  --include-after-body=build/plugins/analytics.html \
+  --include-after-body=build/plugins/table-scroll.html \
   --include-after-body=build/plugins/anchors.html \
+  --include-after-body=build/plugins/accordion.html \
+  --include-after-body=build/plugins/tooltips.html \
+  --include-after-body=build/plugins/jump-to-first.html \
+  --include-after-body=build/plugins/link-highlight.html \
+  --include-after-body=build/plugins/table-of-contents.html \
+  --include-after-body=build/plugins/lightbox.html \
+  --mathjax \
+  --variable math="" \
+  --include-after-body=build/plugins/math.html \
   --include-after-body=build/plugins/hypothesis.html \
+  --include-after-body=build/plugins/analytics.html \
   --output=output/manuscript.html \
   $INPUT_PATH
 
