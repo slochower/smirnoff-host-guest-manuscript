@@ -24,12 +24,13 @@ mkdir -p output
 # Create HTML output
 # http://pandoc.org/MANUAL.html
 echo "Exporting HTML manuscript"
-pandoc --verbose \
+/usr/local/bin/pandoc --verbose \
   --from=markdown \
   --to=html5 \
-  --filter=pandoc-fignos \
   --filter=pandoc-eqnos \
   --filter=pandoc-tablenos \
+  --filter=pandoc-crossref \
+  --metadata-file=build/assets/pandoc-crossref.yaml \
   --bibliography=$BIBLIOGRAPHY_PATH \
   --csl=$CSL_PATH \
   --metadata link-citations=true \
