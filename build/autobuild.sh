@@ -2,5 +2,5 @@
 # Depends on watchdog https://github.com/gorakhargosh/watchdog
 watchmedo shell-command \
   --wait \
-  --command='sh build/build.sh && python build/webpage.py' \
+  --command='BUILD_PDF=false sh build/build.sh && python build/webpage.py' \
   content
