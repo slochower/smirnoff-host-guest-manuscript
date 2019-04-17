@@ -1,10 +1,15 @@
 <!-- math plugin configuration -->
 
 <script type="text/x-mathjax-config">
+    MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
     MathJax.Hub.Config({
         "CommonHTML": { linebreaks: { automatic: true } },
         "HTML-CSS": { linebreaks: { automatic: true } },
-        "SVG": { linebreaks: { automatic: true } }
+        "SVG": { linebreaks: { automatic: true } },
+        TeX: {
+            extensions: ["[mhchem]/mhchem.js"]
+          }        
     });
 </script>
 
