@@ -21,9 +21,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/c151049a312bb8c37fdce7773221c2bd29ca9686/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/d526bd7d068f090889a51130d0773198ba9b8ac0/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@c151049](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/c151049a312bb8c37fdce7773221c2bd29ca9686)
+from [slochower/smirnoff-host-guest-manuscript@d526bd7](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/d526bd7d068f090889a51130d0773198ba9b8ac0)
 on April 17, 2019.
 </em></small>
 
@@ -222,8 +222,8 @@ There are two orientations for binding: one where the primary functional group i
 The experimental data is a Boltzmann weighted ensemble of these two orientations.
 
 <div id="fig:by-orientation-comparison">
-![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-by-orientation.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-color-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-color-by-orientation.png){width=3.5in}
 
 Binding free energies (ΔG) with the primary orientation results colored in blue and secondary orientation results colored in green.
 </div>
@@ -354,6 +354,31 @@ In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 an
 Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.
 </div>
 
+<div id="fig:dG-by-orientation">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-by-orientation.png){width=3.5in}
+![](images/GAFF-v2.1-vs-GAFF-v1.7-dG-by-orientation.png){width=3.5in}
+
+Comparison of calculated absolute binding free energies (ΔG) between force field combinations. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.
+</div>
+
+<div id="fig:dH-by-orientation">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dH-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dH-by-orientation.png){width=3.5in}
+![](images/GAFF-v2.1-vs-GAFF-v1.7-dH-by-orientation.png){width=3.5in}
+
+Comparison of calculated absolute binding free enthalpies (ΔH) between force field combinations. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.
+</div>
+
+<div id="fig:TdS-by-orientation">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-TdS-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-TdS-by-orientation.png){width=3.5in}
+![](images/GAFF-v2.1-vs-GAFF-v1.7-TdS-by-orientation.png){width=3.5in}
+
+Comparison of calculated absolute binding free entropies (-TΔS) between force field combinations. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.
+</div>
+
+
 <div id="fig:dG-dH-by-cyclodextrin">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-alpha.svg){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-beta.svg){width=3.5in}
@@ -369,8 +394,6 @@ Binding free energies (ΔG) replotted from [@fig:dG-dH], with αCD points colore
 
 ![A minimized structure of αCD in the SMIRNOFF99Frosst force field.](images/cyclodextrin-snapshot.png){#fig:cyclodextrin-snapshot width=3.5in}
 
-[Add highlights by orientation]{.banner .lightgrey}
-
 <div id="fig:bond-req">
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-bond-req.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-bond-req.png){width=3.5in}
@@ -378,6 +401,35 @@ Binding free energies (ΔG) replotted from [@fig:dG-dH], with αCD points colore
 A comparison of bond equilibrium lengths for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Atom names refer to [@fig:atom-names]. 
 </div>
 
+<div id="fig:additional-highlights-alcohols">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-alcohols-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-alcohols-by-orientation.png){width=3.5in}
+
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-alcohols-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-alcohols-by-orientation.png){width=3.5in}
+
+Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted.
+</div>
+
+<div id="fig:additional-highlights-ammonium">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-ammonium-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-ammonium-by-orientation.png){width=3.5in}
+
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-ammonium-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-ammonium-by-orientation.png){width=3.5in}
+
+Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted.
+</div>
+
+<div id="fig:additional-highlights-carboxylates">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-carboxylates-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-carboxylates-by-orientation.png){width=3.5in}
+
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-carboxylates-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-carboxylates-by-orientation.png){width=3.5in}
+
+Binding free energy (ΔG) comparisons showing carboxylates guests in color and highlighted.
+</div>
 
 ## References {.page_break_before}
 
