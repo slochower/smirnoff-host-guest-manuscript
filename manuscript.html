@@ -25,7 +25,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the Open Force Field Group</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/464c3dbb03c77eb3fa7a087b740150a276e6afe3/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/464c3dbb03c77eb3fa7a087b740150a276e6afe3">slochower/smirnoff-host-guest-manuscript@464c3db</a> on April 17, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/288cb2b96300c94b985cf90b66bae718a54b255d/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/288cb2b96300c94b985cf90b66bae718a54b255d">slochower/smirnoff-host-guest-manuscript@288cb2b</a> on April 17, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -39,12 +39,12 @@
 <h2 id="introduction">Introduction</h2>
 <h2 id="methods">Methods</h2>
 <h3 id="chose-of-host-guest-system">Chose of host-guest system</h3>
-<p>In this study, we report the binding thermodynamics of 43 host-guest complexes (Figure <a href="#fig:host-guest-pairs">1</a>) computed using three different force fields. The complexes consist of either α- or β-cyclodextrin as host molecule and a series of ammonium, carboxylate, or cyclic alcohol small molecule guests. Cyclodextrins are cyclic polymers consisting of six (αCD) or seven (βCD) glucose monomers in the shape of a truncated cone. The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry <span class="citation" data-cites="1236RpaUv">[<a href="#ref-1236RpaUv" role="doc-biblioref">1</a>]</span> and computationally in <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">2</a>]</span>. As in <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">2</a>]</span>, only a single structural isomer was considered for the 1-methylammonium guests.</p>
+<p>In this study, we report the binding thermodynamics of 43 host-guest complexes (Figure <a href="#fig:host-guest-pairs">1</a>) computed using three different force fields. The complexes consist of either α- or β-cyclodextrin as host molecule and a series of ammonium, carboxylate, or cyclic alcohol small molecule guests. Cyclodextrins are cyclic polymers consisting of six (αCD) or seven (βCD) glucose monomers in the shape of a truncated cone. The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry <span class="citation" data-cites="1236RpaUv">[<a href="#ref-1236RpaUv" role="doc-biblioref">1</a>]</span> and computationally in <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">2</a>]</span>. As in Henriksen, et al. <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">2</a>]</span>, only a single structural isomer was considered for the 1-methylammonium guests.</p>
 <figure>
 <img src="images/host-guest-pairs.png" alt="Figure 1: Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs." id="fig:host-guest-pairs" /><figcaption>Figure 1: Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs.</figcaption>
 </figure>
 <h3 id="application-of-force-field-parameters">Application of force field parameters</h3>
-<p>We sought to compare force fields directly, and as such, attempted to minimize additional differences between the simulation sets. In all simulations, we applied AM1-BCC <span class="citation" data-cites="LxrgIkt0 BkLoOd0N">[<a href="#ref-LxrgIkt0" role="doc-biblioref">3</a>,<a href="#ref-BkLoOd0N" role="doc-biblioref">4</a>]</span> partial atomic charges to both the host and guest molecules using the <code>antechamber</code>program. The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure <a href="#fig:atom-names">2</a>); each glucose monomer in the cyclodextrin polymer has identical charges. We used TIP3P water <span class="citation" data-cites="chrX4HGh">[<a href="#ref-chrX4HGh" role="doc-biblioref">5</a>]</span> and Joung-Cheatham monovalent ion parameters for <span class="math inline">\(\ce{Na+}\)</span> and <span class="math inline">\(\ce{Cl-}\)</span> <span class="citation" data-cites="uZnQBwCt">[<a href="#ref-uZnQBwCt" role="doc-biblioref">6</a>]</span> in each simulation set.</p>
+<p>We sought to compare force fields directly, and as such, attempted to minimize additional differences between the simulations with each force field. In all simulations, we applied AM1-BCC <span class="citation" data-cites="LxrgIkt0 BkLoOd0N">[<a href="#ref-LxrgIkt0" role="doc-biblioref">3</a>,<a href="#ref-BkLoOd0N" role="doc-biblioref">4</a>]</span> partial atomic charges to both the host and guest molecules using the <code>antechamber</code> program. The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure <a href="#fig:atom-names">2</a>); each glucose monomer in the cyclodextrin polymer has identical charges. We used TIP3P water <span class="citation" data-cites="chrX4HGh">[<a href="#ref-chrX4HGh" role="doc-biblioref">5</a>]</span> and Joung-Cheatham monovalent ion parameters for <span class="math inline">\(\ce{Na+}\)</span> and <span class="math inline">\(\ce{Cl-}\)</span> <span class="citation" data-cites="uZnQBwCt">[<a href="#ref-uZnQBwCt" role="doc-biblioref">6</a>]</span> in each simulation set.</p>
 <div id="fig:atom-names" class="subfigures">
 <p><img src="images/atom-names-trimer.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/gaff-atom-types.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p>Figure 2: Atom names (left) and GAFF atom types (right) for a glucose monomer in αCD shown with two flanking monomers. The remaining three glucose monomers are hidden for clarity. </p>
@@ -54,13 +54,11 @@
 <p>To apply SMIRNOFF99Frosst parameters, we followed a <a href="https://github.com/slochower/smirnoff-host-guest/blob/master/02-convert-APR-files.ipynb">multistep process</a>, beginning with the prepared GAFF v1.7 files. The host and guest molecules were parameterized with the Open Force Field Toolkit version 0.0.3, SMIRNOFF version 1.0, and SMIRNOFF99Frosst version 1.0.5. Once parameterized with SMIRNOFF99Frosst, ParmEd <span class="citation" data-cites="T7iFp9ei">[<a href="#ref-T7iFp9ei" role="doc-biblioref">7</a>]</span> was used to combine the host and guest with the solvent and ions, which retained their parameters as TIP3P water and Joung-Cheatham ion parameters, respectively.</p>
 <p><span class="banner lightgrey">I decided to skip a detailed listing of what I did, and instead link to the Jupyter notebook I used, because these instructions may change with future toolkit versions, and in fact, it is already out of date in some ways. If this is a good way to cite this, I can upload that GitHub repository to Zenodo, get a DOI, and cite the DOI. It may also be feasible to include this as SI, but that can get messy for anything other than trivial code listings.</span></p>
 <h3 id="thermodynamic-calculation">Thermodynamic calculation</h3>
-<p>We used the attach-pull-release (APR) method as implemented in the open source package pAPRika version 0.0.3, to calculate absolute binding free energies. A complete description of the APR method has been characterized in the literature <span class="citation" data-cites="1935a9V0d W9FLyOZr GA1AFcUw 1HWPx2yMR">[<a href="#ref-GA1AFcUw" role="doc-biblioref">10</a>,<a href="#ref-1HWPx2yMR" role="doc-biblioref">11</a>,<a href="#ref-1935a9V0d" role="doc-biblioref">8</a>,<a href="#ref-W9FLyOZr" role="doc-biblioref">9</a>]</span>. The attachment and release phases consisted of 15 independent windows; the pulling phase consisted of 45 independent windows. During the attachment phase, the force constants on the host and guest are scaled by a <span class="math inline">\(\lambda\)</span> parameter that goes from <span class="math inline">\(\lambda = 0\)</span>, when all restraints are turned off, to <span class="math inline">\(\lambda = 1\)</span>, when all restraints reach their maximum force constant. The <span class="math inline">\(\lambda\)</span> windows are more densely spaced where the force constant is smaller to improve sampling along highly curved regions of the potential of mean force. Conformational restraints were applied between neighboring glucose units of the cyclodextrin to limit the incursion of monomers into the host cavity. These restraints were applied along the pseudodihedrals <span class="math inline">\(\ce{{O5}_n-{C1}_n-{O1}_n-{C4}_{n+1}}\)</span> and <span class="math inline">\(\ce{{C1}_n-{O1}_n-{C4}_{n+1}-{C5}_{n+1}}\)</span> to improve convergence and sampling of the bound state (see Figure <a href="#fig:atom-names">2</a>for atom naming conventions). To further improve convergence of the bound state, we applied a hard wall restraint that confined the guest molecule to within a sphere of 12.3 and 13.5 Å of αCD and βCD, respectively.</p>
+<p>We used the attach-pull-release (APR) method as implemented in the open source package pAPRika version 0.0.3, to calculate absolute binding free energies. A complete description of the APR method has been characterized in the literature <span class="citation" data-cites="1935a9V0d W9FLyOZr GA1AFcUw 1HWPx2yMR">[<a href="#ref-GA1AFcUw" role="doc-biblioref">10</a>,<a href="#ref-1HWPx2yMR" role="doc-biblioref">11</a>,<a href="#ref-1935a9V0d" role="doc-biblioref">8</a>,<a href="#ref-W9FLyOZr" role="doc-biblioref">9</a>]</span>. The attachment and release phases consisted of 15 independent windows; the pulling phase consisted of 45 independent windows. During the attachment phase, the force constants on the host and guest are scaled by a <span class="math inline">\(\lambda\)</span> parameter that goes from <span class="math inline">\(\lambda = 0\)</span>, when all restraints are turned off, to <span class="math inline">\(\lambda = 1\)</span>, when all restraints reach their maximum force constant. The <span class="math inline">\(\lambda\)</span> windows are more densely spaced where the force constant is smaller to improve sampling along highly curved regions of the potential of mean force. Conformational restraints were applied between neighboring glucose units of the cyclodextrin to limit the incursion of monomers into the host cavity. These restraints were applied along the pseudodihedrals <span class="math inline">\(\ce{{O5}_n-{C1}_n-{O1}_n-{C4}_{n+1}}\)</span> and <span class="math inline">\(\ce{{C1}_n-{O1}_n-{C4}_{n+1}-{C5}_{n+1}}\)</span> to improve convergence and sampling of the bound state (Figure <a href="#fig:atom-names">2</a> for atom names). To further improve convergence of the bound state, we applied a hard wall restraint that confined the guest molecule to within a sphere of 12.3 and 13.5 Å of αCD and βCD, respectively.</p>
 <p>During the pulling phase, the <span class="math inline">\(\lambda\)</span> parameter represented a distance restraint and is increased uniformly in 45 increments of 0.4 Å, yielding windows that separate the host and guest by 18 Å. An explicit release calculation is performed to turn off the conformational restraints on the host in the absence of guest molecules. This is performed once for each cyclodextrin. An analytic release calculation is performed to compute the work of moving the guest from the restricted volume enforced by the APR restraints to standard state at 1 M concentration.</p>
 <p><span class="banner lightgrey">Needs editing</span></p>
 <p>Due to the lack of symmetry of cyclodextrin and the small molecule guests, there are generally two distinct binding poses. We separately compute the binding free energy and enthalpy for each orientation <span class="citation" data-cites="1935a9V0d">[<a href="#ref-1935a9V0d" role="doc-biblioref">8</a>]</span> and combine the results to produce a single value for each host-guest combination.</p>
-<p>% For simple guest molecules, with one polar functional group, there are generally two possible binding modes in the CD cavity: one with the polar group oriented out of the CD opening with primary alcohols, and one with the polar group oriented out of the wider opening with secondary alcohols (Figure 2). However, experimental data report binding free energy and enthalpy values based on a Boltzmann-weighted ensemble of these two orientations. In order to compare with experiment, we separately compute and appropriately combine the binding free energy and enthalpy for each orientation, as previously described.40</p>
 <p>Thermodynamic integration was used to compute the binding free energy. The binding enthalpy was computed as the difference in mean potential energy of the bound state (in the absence of any restraints) and the unbound state (where the guest is held far away from the host, but the conformational restraints on the host are disabled).</p>
-<p>% The binding enthalpy was computed by subtracting the average potential energy of the last window of the release phase, in which the guest has been pulled far away from the host, from the mean energy of the first window of the attachment phase, in which restraint force constants are off. The uncertainties for average properties calculated in each window (e.g., restraint coordinate values and potential energies) were estimated with the blocking method42 and propagated into the final reported values using bootstrapping for the thermodynamic integration calculations, or addition in quadrature for the binding enthalpy calculations.</p>
 <p>Uncertainties were computed using blocking analysis <span class="citation" data-cites="htck51Lp">[<a href="#ref-htck51Lp" role="doc-biblioref">12</a>]</span>.</p>
 <h3 id="simulations">Simulations</h3>
 <p>Simulations were performed with the <code>pmemd.cuda</code> module of AMBER 16 (calculations of the GAFF v1.7 force field) and AMBER 18 (calculations of the GAFF v2.1 and SMIRNOFF99Frosst force fields) molecular dynamics software <span class="citation" data-cites="197xzzCJg">[<a href="#ref-197xzzCJg" role="doc-biblioref">13</a>]</span>. Each window for each system was independently solvated and simulated.</p>
@@ -149,11 +147,986 @@
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-ang-theta.png" title="fig:" alt="c" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-ang-theta.png" title="fig:" alt="d" style="width:3.5in" /></p>
 <p>Figure 13: A comparison of angle parameters for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Precise atom names have been omitted to compress multiple angles with the same parameter values into a single label. </p>
 </div>
+<h4 id="dihedrals">Dihedrals</h4>
 <p><span class="banner lightgrey">Include the table of dihedral differences here.</span></p>
-<p>The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF99Frosst.</p>
+<p>The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are very similar, with hte expceiton of… (Table <a href="#tbl:S99-vs-GAFF-v1.7">1</a>).</p>
+<a name="tbl:S99-vs-GAFF-v1.7"></a>
+<table>
+<caption><span>Table 1:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. </caption>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th>GAFF v1.7</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Atom 1</td>
+<td>Atom 2</td>
+<td>Atom 3</td>
+<td>Atom 4</td>
+<td>Per</td>
+<td>Phase</td>
+<td>Height (kcal/mol)</td>
+<td>Height (kcal/mol)</td>
+</tr>
+<tr class="even">
+<td>H1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td>H1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>3</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.16</td>
+</tr>
+</tbody>
+</table>
 <figure>
 <img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-H1-C2-C2-O2.png" alt="Figure 14: The dihedral energy term applied to H1-C1-C2-O2 in SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to Figure 2." id="fig:dihedral" style="width:3.5in" /><figcaption>Figure 14: The dihedral energy term applied to H1-C1-C2-O2 in SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to Figure <a href="#fig:atom-names">2</a>.</figcaption>
 </figure>
+<p>The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF99Frosst.</p>
+<a name="tbl:S99-vs-GAFF-v2.1-missing"></a>
+<table>
+<caption><span>Table 2:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the correspeonding term in the other force field. </caption>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th>GAFF v2.1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Atom 1</td>
+<td>Atom 2</td>
+<td>Atom 3</td>
+<td>Atom 4</td>
+<td>Per</td>
+<td>Phase</td>
+<td>Height (kcal/mol)</td>
+<td>Height (kcal/mol)</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>HO2</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>HO2</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>C4</td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>C4</td>
+<td>2</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>C4</td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.24</td>
+</tr>
+<tr class="odd">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>C6</td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>C6</td>
+<td>2</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.16</td>
+</tr>
+<tr class="odd">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>C6</td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.24</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>C2</td>
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>2</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.24</td>
+</tr>
+<tr class="odd">
+<td>C2</td>
+<td>C3</td>
+<td>O3</td>
+<td>HO3</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td>C3</td>
+<td>O3</td>
+<td>HO3</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>C5</td>
+<td>C6</td>
+<td>O6</td>
+<td>HO6</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>C5</td>
+<td>C6</td>
+<td>O6</td>
+<td>HO6</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>H1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td>H1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>3</td>
+<td>0</td>
+<td>0.00</td>
+<td>0.16</td>
+</tr>
+<tr class="odd">
+<td>O1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.02</td>
+</tr>
+<tr class="even">
+<td>O1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>2</td>
+<td>0</td>
+<td>1.18</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>O1</td>
+<td>C1</td>
+<td>C2</td>
+<td>O2</td>
+<td>3</td>
+<td>0</td>
+<td>0.14</td>
+<td>1.01</td>
+</tr>
+<tr class="even">
+<td>O2</td>
+<td>C2</td>
+<td>C1</td>
+<td>O5</td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.02</td>
+</tr>
+<tr class="odd">
+<td>O2</td>
+<td>C2</td>
+<td>C1</td>
+<td>O5</td>
+<td>2</td>
+<td>0</td>
+<td>1.18</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>O2</td>
+<td>C2</td>
+<td>C1</td>
+<td>O5</td>
+<td>3</td>
+<td>0</td>
+<td>0.14</td>
+<td>1.01</td>
+</tr>
+<tr class="odd">
+<td>O5</td>
+<td>C5</td>
+<td>C6</td>
+<td>O6</td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.02</td>
+</tr>
+<tr class="even">
+<td>O5</td>
+<td>C5</td>
+<td>C6</td>
+<td>O6</td>
+<td>2</td>
+<td>0</td>
+<td>1.18</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>O5</td>
+<td>C5</td>
+<td>C6</td>
+<td>O6</td>
+<td>3</td>
+<td>0</td>
+<td>0.14</td>
+<td>1.01</td>
+</tr>
+<tr class="even">
+<td>HO2</td>
+<td>O2</td>
+<td>C2</td>
+<td>C3</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td>HO2</td>
+<td>O2</td>
+<td>C2</td>
+<td>C3</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td>HO3</td>
+<td>O3</td>
+<td>C3</td>
+<td>C4</td>
+<td>1</td>
+<td>0</td>
+<td>0.25</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td>HO3</td>
+<td>O3</td>
+<td>C3</td>
+<td>C4</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
+<a name="tbl:S99-vs-GAFF-v2.1"></a>
+<table>
+<caption><span>Table 3:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, only height differences. </caption>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th>GAFF v2.1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Atom 1</td>
+<td>Atom 2</td>
+<td>Atom 3</td>
+<td>Atom 4</td>
+<td>Per</td>
+<td>Phase</td>
+<td>Height (kcal/mol)</td>
+<td>Height (kcal/mol)</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>1</td>
+<td>0</td>
+<td>0.20</td>
+<td>0.11</td>
+</tr>
+<tr class="odd">
+<td>C1</td>
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>2</td>
+<td>0</td>
+<td>0.25</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>3</td>
+<td>0</td>
+<td>0.18</td>
+<td>0.13</td>
+</tr>
+<tr class="odd">
+<td>C1</td>
+<td>C2</td>
+<td>C3</td>
+<td>O3</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>H5</td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>1</td>
+<td>0</td>
+<td>0.20</td>
+<td>0.11</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>2</td>
+<td>0</td>
+<td>0.25</td>
+<td>0.29</td>
+</tr>
+<tr class="odd">
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>3</td>
+<td>0</td>
+<td>0.18</td>
+<td>0.13</td>
+</tr>
+<tr class="even">
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>C6</td>
+<td>1</td>
+<td>0</td>
+<td>0.20</td>
+<td>0.11</td>
+</tr>
+<tr class="odd">
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>C6</td>
+<td>2</td>
+<td>0</td>
+<td>0.25</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>C6</td>
+<td>3</td>
+<td>0</td>
+<td>0.18</td>
+<td>0.13</td>
+</tr>
+<tr class="odd">
+<td>C4</td>
+<td>C5</td>
+<td>C6</td>
+<td>O6</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>H1</td>
+<td>C1</td>
+<td>C2</td>
+<td>H2</td>
+<td>3</td>
+<td>0</td>
+<td>0.15</td>
+<td>0.16</td>
+</tr>
+<tr class="odd">
+<td>H2</td>
+<td>C2</td>
+<td>C3</td>
+<td>H3</td>
+<td>3</td>
+<td>0</td>
+<td>0.15</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td>H2</td>
+<td>C2</td>
+<td>O2</td>
+<td>HO2</td>
+<td>3</td>
+<td>0</td>
+<td>0.17</td>
+<td>0.11</td>
+</tr>
+<tr class="odd">
+<td>H3</td>
+<td>C3</td>
+<td>C4</td>
+<td>H4</td>
+<td>3</td>
+<td>0</td>
+<td>0.15</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td>H3</td>
+<td>C3</td>
+<td>O3</td>
+<td>HO3</td>
+<td>3</td>
+<td>0</td>
+<td>0.17</td>
+<td>0.11</td>
+</tr>
+<tr class="odd">
+<td>H4</td>
+<td>C4</td>
+<td>C5</td>
+<td>H5</td>
+<td>3</td>
+<td>0</td>
+<td>0.15</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td>H5</td>
+<td>C5</td>
+<td>C6</td>
+<td>H61</td>
+<td>3</td>
+<td>0</td>
+<td>0.15</td>
+<td>0.16</td>
+</tr>
+<tr class="odd">
+<td>H5</td>
+<td>C5</td>
+<td>C6</td>
+<td>H62</td>
+<td>3</td>
+<td>0</td>
+<td>0.15</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td>O1</td>
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>1</td>
+<td>0</td>
+<td>1.35</td>
+<td>0.97</td>
+</tr>
+<tr class="odd">
+<td>O1</td>
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>2</td>
+<td>0</td>
+<td>0.85</td>
+<td>1.24</td>
+</tr>
+<tr class="even">
+<td>O1</td>
+<td>C1</td>
+<td>O5</td>
+<td>C5</td>
+<td>3</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td>O2</td>
+<td>C2</td>
+<td>C3</td>
+<td>C4</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>O2</td>
+<td>C2</td>
+<td>C3</td>
+<td>O3</td>
+<td>2</td>
+<td>0</td>
+<td>1.18</td>
+<td>1.13</td>
+</tr>
+<tr class="odd">
+<td>O2</td>
+<td>C2</td>
+<td>C3</td>
+<td>O3</td>
+<td>3</td>
+<td>0</td>
+<td>0.14</td>
+<td>0.90</td>
+</tr>
+<tr class="even">
+<td>O3</td>
+<td>C3</td>
+<td>C4</td>
+<td>C5</td>
+<td>3</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td>H61</td>
+<td>C6</td>
+<td>O6</td>
+<td>HO6</td>
+<td>3</td>
+<td>0</td>
+<td>0.17</td>
+<td>0.11</td>
+</tr>
+<tr class="even">
+<td>H62</td>
+<td>C6</td>
+<td>O6</td>
+<td>HO6</td>
+<td>3</td>
+<td>0</td>
+<td>0.17</td>
+<td>0.11</td>
+</tr>
+</tbody>
+</table>
+<p>…Inter-residue dihedrals…</p>
+<a name="tbl:S99-vs-GAFF-v2.1-inter"></a>
+<table style="width:100%;">
+<caption><span>Table 4:</span> Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. </caption>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th>GAFF v2.1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ID</td>
+<td>Atom 1</td>
+<td>Res 1</td>
+<td>Atom 2</td>
+<td>Res 2</td>
+<td>Atom 3</td>
+<td>Res 3</td>
+<td>Atom 4</td>
+<td>Res 4</td>
+<td>Per</td>
+<td>Phase</td>
+<td>Height (kcal/mol)</td>
+<td>Height (kcal/mol)</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>C1</td>
+<td><em>n</em></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C3</td>
+<td><em>n+1</em></td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>C1</td>
+<td><em>n</em></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C3</td>
+<td><em>n+1</em></td>
+<td>2</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>C1</td>
+<td><em>n</em></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C3</td>
+<td><em>n+1</em></td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.24</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>C1</td>
+<td><em>n</em></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C5</td>
+<td><em>n+1</em></td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>C1</td>
+<td><em>n</em></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C5</td>
+<td><em>n+1</em></td>
+<td>2</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.16</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>C1</td>
+<td><em>n</em></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C5</td>
+<td><em>n+1</em></td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.24</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>C2</td>
+<td><em>n</em></td>
+<td>C1</td>
+<td><em>n+1</em></td>
+<td>O1</td>
+<td><em>n+1</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>C2</td>
+<td><em>n</em></td>
+<td>C1</td>
+<td><em>n+1</em></td>
+<td>O1</td>
+<td><em>n+1</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>2</td>
+<td>0</td>
+<td>0.10</td>
+<td>0.16</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>C2</td>
+<td><em>n</em></td>
+<td>C1</td>
+<td><em>n+1</em></td>
+<td>O1</td>
+<td><em>n+1</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>3</td>
+<td>0</td>
+<td>0.38</td>
+<td>0.24</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C3</td>
+<td><em>n+1</em></td>
+<td>O3</td>
+<td><em>n+1</em></td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.02</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C3</td>
+<td><em>n+1</em></td>
+<td>O3</td>
+<td><em>n+1</em></td>
+<td>2</td>
+<td>0</td>
+<td>1.18</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C3</td>
+<td><em>n+1</em></td>
+<td>O3</td>
+<td><em>n+1</em></td>
+<td>3</td>
+<td>0</td>
+<td>0.14</td>
+<td>1.01</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C5</td>
+<td><em>n+1</em></td>
+<td>O5</td>
+<td><em>n+1</em></td>
+<td>1</td>
+<td>0</td>
+<td>–</td>
+<td>0.17</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C5</td>
+<td><em>n+1</em></td>
+<td>O5</td>
+<td><em>n+1</em></td>
+<td>2</td>
+<td>0</td>
+<td>1.18</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>O1</td>
+<td><em>n</em></td>
+<td>C4</td>
+<td><em>n+1</em></td>
+<td>C5</td>
+<td><em>n+1</em></td>
+<td>O5</td>
+<td><em>n+1</em></td>
+<td>3</td>
+<td>0</td>
+<td>0.14</td>
+<td>0.00</td>
+</tr>
+</tbody>
+</table>
 <div id="fig:interdihedrals" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-O1-C4-C3-O3.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-O1-C4-C5-O5.png" title="fig:" alt="b" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-C1-O1-C4-C3.png" title="fig:" alt="c" style="width:3.5in" /></p>
 <p>Figure 15: The dihedral energy term applied to three inter-residue dihedrals in SMIRNOFF99Frosst and GAFF v2.1. The third dihedral, affecting atoms O1<sub>n</sub>–C4<sub>n+1</sub>–C5<sub>n+1</sub>–O5<sub>n+1</sub> is quite significantly different, with multiple minima and and barrier heights. This dihedral partially controls the rotation of glucose monomers towards or away from the interior of the cyclodextrin cavity. Surprisingly, glucose monomers in GAFF v2.1 penetrate the open cavity much less frequently than in SMIRNOFF99Frosst, despite the lower and broader dihedral energy in GAFF v2.1. Atom names refer to Figure <a href="#fig:atom-names">2</a>. </p>
@@ -164,7 +1137,7 @@
 <img src="images/cyclodextrin-flexibility.png" alt="Figure 16: Top: Root mean square deviation (RMSD) of free βCD in the three force fields, all relative to the same initial structure. A 1000 frame moving average is plotted in red. Middle: to-view of the open cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the open cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity." id="fig:flexibility" style="width:100.0%" /><figcaption>Figure 16: Top: Root mean square deviation (RMSD) of free βCD in the three force fields, all relative to the same initial structure. A 1000 frame moving average is plotted in red. Middle: to-view of the open cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the open cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity.</figcaption>
 </figure>
 <p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> <span class="banner lightgrey"><i class="fas fa-star"></i> Update font size in RMSD plots.</span></p>
-<h2 id="supporting-information" class="page_break_before">Supporting Information</h2>
+<h2 id="SI" class="page_break_before">Supporting Information</h2>
 <div id="fig:TdS" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-Experiment-TdS.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/GAFF-v1.7-vs-Experiment-TdS.png" title="fig:" alt="b" style="width:3.5in" /> <img src="images/GAFF-v2.1-vs-Experiment-TdS.png" title="fig:" alt="c" style="width:3.5in" /></p>
 <p>Figure 17: Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively. </p>
@@ -519,6 +1492,8 @@ DOI: <a href="https://doi.org/10.1002/jcc.20035">10.1002/jcc.20035</a> · PMID: 
         /* squash table if too wide for page by forcing line breaks */
         word-break: break-all;
         word-break: break-word;
+        /* decrease font size */
+        font-size: 0.85em;
     }
 
     /* header row and even rows */

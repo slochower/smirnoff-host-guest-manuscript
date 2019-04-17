@@ -21,9 +21,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/464c3dbb03c77eb3fa7a087b740150a276e6afe3/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/288cb2b96300c94b985cf90b66bae718a54b255d/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@464c3db](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/464c3dbb03c77eb3fa7a087b740150a276e6afe3)
+from [slochower/smirnoff-host-guest-manuscript@288cb2b](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/288cb2b96300c94b985cf90b66bae718a54b255d)
 on April 17, 2019.
 </em></small>
 
@@ -89,14 +89,14 @@ In this study, we report the binding thermodynamics of 43 host-guest complexes (
 The complexes consist of either α- or β-cyclodextrin as host molecule and a series of ammonium, carboxylate, or cyclic alcohol small molecule guests.
 Cyclodextrins are cyclic polymers consisting of six (αCD) or seven (βCD) glucose monomers in the shape of a truncated cone.
 The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry [@1236RpaUv] and computationally in [@HVgz5rZq].
-As in [@HVgz5rZq], only a single structural isomer was considered for the 1-methylammonium guests.
+As in Henriksen, et al. [@HVgz5rZq], only a single structural isomer was considered for the 1-methylammonium guests.
 
 ![Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs.](images/host-guest-pairs.png){#fig:host-guest-pairs}
 
 ### Application of force field parameters
 
-We sought to compare force fields directly, and as such, attempted to minimize additional differences between the simulation sets.
-In all simulations, we applied AM1-BCC [@LxrgIkt0; @BkLoOd0N] partial atomic charges to both the host and guest molecules using the `antechamber`program.
+We sought to compare force fields directly, and as such, attempted to minimize additional differences between the simulations with each force field.
+In all simulations, we applied AM1-BCC [@LxrgIkt0; @BkLoOd0N] partial atomic charges to both the host and guest molecules using the `antechamber` program.
 The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols ([ @fig:atom-names]); each glucose monomer in the cyclodextrin polymer has identical charges.
 We used TIP3P water [@chrX4HGh] and Joung-Cheatham monovalent ion parameters for $\ce{Na+}$ and $\ce{Cl-}$ [@uZnQBwCt] in each simulation set.
 
@@ -127,7 +127,7 @@ We used the attach-pull-release (APR) method as implemented in the open source p
 A complete description of the APR method has been characterized in the literature [@1935a9V0d; @W9FLyOZr; @GA1AFcUw; @1HWPx2yMR].
 The attachment and release phases consisted of 15 independent windows; the pulling phase consisted of 45 independent windows.
 During the attachment phase, the force constants on the host and guest are scaled by a $\lambda$ parameter that goes from $\lambda = 0$, when all restraints are turned off, to $\lambda = 1$, when all restraints reach their maximum force constant. The $\lambda$ windows are more densely spaced where the force constant is smaller to improve sampling along highly curved regions of the potential of mean force.
-Conformational restraints were applied between neighboring glucose units of the cyclodextrin to limit the incursion of monomers into the host cavity. These restraints were applied along the pseudodihedrals $\ce{{O5}_n-{C1}_n-{O1}_n-{C4}_{n+1}}$ and $\ce{{C1}_n-{O1}_n-{C4}_{n+1}-{C5}_{n+1}}$ to improve convergence and sampling of the bound state (see [@fig:atom-names]for atom naming conventions). To further improve convergence of the bound state, we applied a hard wall restraint that confined the guest molecule to within a sphere of 12.3 and 13.5 Å of αCD and βCD, respectively. 
+Conformational restraints were applied between neighboring glucose units of the cyclodextrin to limit the incursion of monomers into the host cavity. These restraints were applied along the pseudodihedrals $\ce{{O5}_n-{C1}_n-{O1}_n-{C4}_{n+1}}$ and $\ce{{C1}_n-{O1}_n-{C4}_{n+1}-{C5}_{n+1}}$ to improve convergence and sampling of the bound state ([@fig:atom-names] for atom names). To further improve convergence of the bound state, we applied a hard wall restraint that confined the guest molecule to within a sphere of 12.3 and 13.5 Å of αCD and βCD, respectively. 
 
 During the pulling phase, the $\lambda$ parameter represented a distance restraint and is increased uniformly in 45 increments of 0.4 Å, yielding windows that separate the host and guest by 18 Å. An explicit release calculation is performed to turn off the conformational restraints on the host in the absence of guest molecules. This is performed once for each cyclodextrin. An analytic release calculation is performed to compute the work of moving the guest from the restricted volume enforced by the APR restraints to standard state at 1 M concentration. 
 
@@ -135,11 +135,7 @@ During the pulling phase, the $\lambda$ parameter represented a distance restrai
 
 Due to the lack of symmetry of cyclodextrin and the small molecule guests, there are generally two distinct binding poses. We separately compute the binding free energy and enthalpy for each orientation [@1935a9V0d] and combine the results to produce a single value for each host-guest combination.
 
-% For simple guest molecules, with one polar functional group, there are generally two possible binding modes in the CD cavity: one with the polar group oriented out of the CD opening with primary alcohols, and one with the polar group oriented out of the wider opening with secondary alcohols (Figure 2). However, experimental data report binding free energy and enthalpy values based on a Boltzmann-weighted ensemble of these two orientations. In order to compare with experiment, we separately compute and appropriately combine the binding free energy and enthalpy for each orientation, as previously described.40 
-
 Thermodynamic integration was used to compute the binding free energy. The binding enthalpy was computed as the difference in mean potential energy of the bound state (in the absence of any restraints) and the unbound state (where the guest is held far away from the host, but the conformational restraints on the host are disabled).
-
-% The binding enthalpy was computed by subtracting the average potential energy of the last window of the release phase, in which the guest has been pulled far away from the host, from the mean energy of the first window of the attachment phase, in which restraint force constants are off. The uncertainties for average properties calculated in each window (e.g., restraint coordinate values and potential energies) were estimated with the blocking method42 and propagated into the final reported values using bootstrapping for the thermodynamic integration calculations, or addition in quadrature for the binding enthalpy calculations.
 
 Uncertainties were computed using blocking analysis [@htck51Lp].
 
@@ -319,12 +315,119 @@ Weaker force constants for these parameters may  lead to increased flexibility.
 A comparison of angle parameters for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Precise atom names have been omitted to compress multiple angles with the same parameter values into a single label.
 </div>
 
+#### Dihedrals
+
 [Include the table of dihedral differences here.]{.banner .lightgrey}
 
-The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF99Frosst.
+The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are very similar, with hte expceiton of... (Table @tbl:S99-vs-GAFF-v1.7).
+
+|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v1.7 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
+|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
+|  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
+
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. {#tbl:S99-vs-GAFF-v1.7}
 
 ![The dihedral energy term applied to H1-C1-C2-O2 in SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to [@fig:atom-names].](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-H1-C2-C2-O2.png){#fig:dihedral width=3.5in}
 
+
+The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF99Frosst.
+
+|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
+|  C1 | C2 | O2 | HO2 | 1 | 0 | 0.25 | -- |
+|  C1 | C2 | O2 | HO2 | 3 | 0 | 0.16 | 0.00 |
+|  C1 | O5 | C5 | C4 | 1 | 0 | -- | 0.00 |
+|  C1 | O5 | C5 | C4 | 2 | 0 | 0.10 | 0.16 |
+|  C1 | O5 | C5 | C4 | 3 | 0 | 0.38 | 0.24 |
+|  C1 | O5 | C5 | C6 | 1 | 0 | -- | 0.00 |
+|  C1 | O5 | C5 | C6 | 2 | 0 | 0.10 | 0.16 |
+|  C1 | O5 | C5 | C6 | 3 | 0 | 0.38 | 0.24 |
+|  C2 | C1 | O5 | C5 | 1 | 0 | -- | 0.00 |
+|  C2 | C1 | O5 | C5 | 2 | 0 | 0.10 | 0.16 |
+|  C2 | C1 | O5 | C5 | 3 | 0 | 0.38 | 0.24 |
+|  C2 | C3 | O3 | HO3 | 1 | 0 | 0.25 | -- |
+|  C2 | C3 | O3 | HO3 | 3 | 0 | 0.16 | 0.00 |
+|  C5 | C6 | O6 | HO6 | 1 | 0 | 0.25 | -- |
+|  C5 | C6 | O6 | HO6 | 3 | 0 | 0.16 | 0.00 |
+|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
+|  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
+|  O1 | C1 | C2 | O2 | 1 | 0 | -- | 0.02 |
+|  O1 | C1 | C2 | O2 | 2 | 0 | 1.18 | 0.00 |
+|  O1 | C1 | C2 | O2 | 3 | 0 | 0.14 | 1.01 |
+|  O2 | C2 | C1 | O5 | 1 | 0 | -- | 0.02 |
+|  O2 | C2 | C1 | O5 | 2 | 0 | 1.18 | 0.00 |
+|  O2 | C2 | C1 | O5 | 3 | 0 | 0.14 | 1.01 |
+|  O5 | C5 | C6 | O6 | 1 | 0 | -- | 0.02 |
+|  O5 | C5 | C6 | O6 | 2 | 0 | 1.18 | 0.00 |
+|  O5 | C5 | C6 | O6 | 3 | 0 | 0.14 | 1.01 |
+|  HO2 | O2 | C2 | C3 | 1 | 0 | 0.25 | -- |
+|  HO2 | O2 | C2 | C3 | 3 | 0 | 0.16 | 0.00 |
+|  HO3 | O3 | C3 | C4 | 1 | 0 | 0.25 | -- |
+|  HO3 | O3 | C3 | C4 | 3 | 0 | 0.16 | 0.00 |
+
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the correspeonding term in the other force field. {#tbl:S99-vs-GAFF-v2.1-missing}
+
+|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
+|  C1 | C2 | C3 | C4 | 1 | 0 | 0.20 | 0.11 |
+|  C1 | C2 | C3 | C4 | 2 | 0 | 0.25 | 0.29 |
+|  C1 | C2 | C3 | C4 | 3 | 0 | 0.18 | 0.13 |
+|  C1 | C2 | C3 | O3 | 3 | 0 | 0.16 | 0.21 |
+|  C1 | O5 | C5 | H5 | 3 | 0 | 0.38 | 0.34 |
+|  C2 | C3 | C4 | C5 | 1 | 0 | 0.20 | 0.11 |
+|  C2 | C3 | C4 | C5 | 2 | 0 | 0.25 | 0.29 |
+|  C2 | C3 | C4 | C5 | 3 | 0 | 0.18 | 0.13 |
+|  C3 | C4 | C5 | C6 | 1 | 0 | 0.20 | 0.11 |
+|  C3 | C4 | C5 | C6 | 2 | 0 | 0.25 | 0.29 |
+|  C3 | C4 | C5 | C6 | 3 | 0 | 0.18 | 0.13 |
+|  C4 | C5 | C6 | O6 | 3 | 0 | 0.16 | 0.21 |
+|  H1 | C1 | C2 | H2 | 3 | 0 | 0.15 | 0.16 |
+|  H2 | C2 | C3 | H3 | 3 | 0 | 0.15 | 0.16 |
+|  H2 | C2 | O2 | HO2 | 3 | 0 | 0.17 | 0.11 |
+|  H3 | C3 | C4 | H4 | 3 | 0 | 0.15 | 0.16 |
+|  H3 | C3 | O3 | HO3 | 3 | 0 | 0.17 | 0.11 |
+|  H4 | C4 | C5 | H5 | 3 | 0 | 0.15 | 0.16 |
+|  H5 | C5 | C6 | H61 | 3 | 0 | 0.15 | 0.16 |
+|  H5 | C5 | C6 | H62 | 3 | 0 | 0.15 | 0.16 |
+|  O1 | C1 | O5 | C5 | 1 | 0 | 1.35 | 0.97 |
+|  O1 | C1 | O5 | C5 | 2 | 0 | 0.85 | 1.24 |
+|  O1 | C1 | O5 | C5 | 3 | 0 | 0.10 | 0.00 |
+|  O2 | C2 | C3 | C4 | 3 | 0 | 0.16 | 0.21 |
+|  O2 | C2 | C3 | O3 | 2 | 0 | 1.18 | 1.13 |
+|  O2 | C2 | C3 | O3 | 3 | 0 | 0.14 | 0.90 |
+|  O3 | C3 | C4 | C5 | 3 | 0 | 0.16 | 0.21 |
+|  H61 | C6 | O6 | HO6 | 3 | 0 | 0.17 | 0.11 |
+|  H62 | C6 | O6 | HO6 | 3 | 0 | 0.17 | 0.11 |
+
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, only height differences. {#tbl:S99-vs-GAFF-v2.1}
+
+
+...Inter-residue dihedrals...
+
+|   |  |  |  |  |  |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  ID | Atom 1 | Res 1 | Atom 2 | Res 2 | Atom 3 | Res 3 | Atom 4 | Res 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
+|  1 | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 1 | 0 | -- | 0.00 |
+|   | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 2 | 0 | 0.10 | 0.16 |
+|   | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 3 | 0 | 0.38 | 0.24 |
+|  2 | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 1 | 0 | -- | 0.00 |
+|   | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 2 | 0 | 0.10 | 0.16 |
+|   | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 3 | 0 | 0.38 | 0.24 |
+|  3 | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 1 | 0 | -- | 0.00 |
+|   | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 2 | 0 | 0.10 | 0.16 |
+|   | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 3 | 0 | 0.38 | 0.24 |
+|  4 | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 1 | 0 | -- | 0.02 |
+|   | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 2 | 0 | 1.18 | 0.00 |
+|   | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 3 | 0 | 0.14 | 1.01 |
+|  5 | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 1 | 0 | -- | 0.17 |
+|   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 2 | 0 | 1.18 | 0.00 |
+|   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 3 | 0 | 0.14 | 0.00 |
+
+Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. {#tbl:S99-vs-GAFF-v2.1-inter}
 
 <div id="fig:interdihedrals">
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-O1-C4-C3-O3.png){width=3.5in}
@@ -344,7 +447,7 @@ In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 an
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
  [<i class="fas fa-star"></i> Update font size in RMSD plots.]{.banner .lightgrey}
 
-## Supporting Information {.page_break_before}
+## Supporting Information {.page_break_before #SI}
 
 <div id="fig:TdS">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-TdS.png){width=3.5in}
