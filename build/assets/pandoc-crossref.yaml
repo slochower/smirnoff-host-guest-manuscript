@@ -5,4 +5,5 @@ figPrefix:
 
 ccsLabelSep: ":&nbsp;"
 linkReferences: true
+subfigureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$ $$ccs$$
 ---
