@@ -2,57 +2,85 @@
   "date": "April 17, 2019",
   "authors": [
     {
-      "github": "johndoe",
-      "name": "John Doe",
-      "initials": "JD",
-      "orcid": "XXXX-XXXX-XXXX-XXXX",
-      "twitter": "johndoe",
-      "email": "john.doe@something.com",
+      "github": "slochower",
+      "name": "David R. Slochower",
+      "initials": "DRS",
+      "orcid": "0000-0003-3928-5050",
+      "twitter": "drslochower",
+      "email": "slochower@gmail.com",
       "affiliations": [
-        "Department of Something, University of Whatever"
+        "Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA"
       ],
-      "funders": "Grant XXXXXXXX",
       "affiliation_numbers": [
         1
       ]
     },
     {
-      "github": "janeroe",
-      "name": "Jane Roe",
-      "initials": "JR",
-      "orcid": "XXXX-XXXX-XXXX-XXXX",
-      "email": "jane.roe@whatever.edu",
+      "github": "nhenriksen",
+      "orcid": "0000-0002-7916-0757",
+      "name": "Niel M. Henriksen",
+      "initials": "NMH",
+      "email": "shireham@gmail.com",
       "affiliations": [
-        "Department of Something, University of Whatever",
-        "Department of Whatever, University of Something"
+        "Atomwise, Inc., San Francisco, CA 94105, USA"
       ],
       "affiliation_numbers": [
-        1,
         2
+      ]
+    },
+    {
+      "github": "jchodera",
+      "orcid": "0000-0003-0542-119X",
+      "twitter": "jchodera",
+      "name": "John D. Chodera",
+      "initials": "JDC",
+      "email": "john.chodera@choderalab.org",
+      "affiliations": [
+        "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065"
+      ],
+      "affiliation_numbers": [
+        3
+      ]
+    },
+    {
+      "twitter": "michaelkgilson",
+      "name": "Michael K. Gilson",
+      "orcid": "0000-0002-3375-1738",
+      "initials": "MKG",
+      "email": "mgilson@ucsd.edu",
+      "affiliations": [
+        "Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA"
+      ],
+      "affiliation_numbers": [
+        1
       ]
     }
   ],
   "affiliations": [
     {
-      "affiliation": "Department of Something, University of Whatever",
+      "affiliation": "Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA",
       "affiliation_number": 1
     },
     {
-      "affiliation": "Department of Whatever, University of Something",
+      "affiliation": "Atomwise, Inc., San Francisco, CA 94105, USA",
       "affiliation_number": 2
+    },
+    {
+      "affiliation": "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065",
+      "affiliation_number": 3
     }
   ],
   "ci_source": {
     "repo_slug": "slochower/smirnoff-host-guest-manuscript",
     "repo_owner": "slochower",
     "repo_name": "smirnoff-host-guest-manuscript",
-    "commit": "a2fec1ee6bf387a1e664186f8ddd2c15facadcf7"
+    "commit": "7f3a72b0251b48cac1cc21761df718f820e0ace9"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 13,
       "total": 13
     },
-    "word_count": 2933
+    "word_count": 3604
   }
 }
