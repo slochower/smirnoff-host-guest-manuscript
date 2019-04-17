@@ -21,9 +21,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/7f3a72b0251b48cac1cc21761df718f820e0ace9/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/c151049a312bb8c37fdce7773221c2bd29ca9686/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@7f3a72b](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/7f3a72b0251b48cac1cc21761df718f820e0ace9)
+from [slochower/smirnoff-host-guest-manuscript@c151049](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/c151049a312bb8c37fdce7773221c2bd29ca9686)
 on April 17, 2019.
 </em></small>
 
@@ -144,7 +144,7 @@ Thermodynamic integration was used to compute the binding free energy. The bindi
 Uncertainties were computed using blocking analysis [@htck51Lp].
 
 ### Simulations
-Simulations were performed with the `pmemd.cuda` module of AMBER 16 (calculations of the GAFF v1.7 force field) and AMBER 18 (calculations of the GAFF v2.1 and SMIRNOFF99Frosst force fields) molecular dynamics software. Each window for each system was independently solvated and simulated.
+Simulations were performed with the `pmemd.cuda` module of AMBER 16 (calculations of the GAFF v1.7 force field) and AMBER 18 (calculations of the GAFF v2.1 and SMIRNOFF99Frosst force fields) molecular dynamics software [@197xzzCJg]. Each window for each system was independently solvated and simulated.
 
 Solvation consisted of 2000 TIP3P waters for the αCD systems and 2210 waters for the βCD systems in an orthorhombic box. Each simulation contained enough $\ce{Na+}$ or $\ce{Cl-}$ ions to neutralize the host-guest complex  and an additional 50 mM $\ce{NaCl}$ to match the experimental conditions in [@1236RpaUv]. The host and guest were oriented via non-interacting dummy atoms along the simulation box $z$ axis to minimize the amount of solvent required. Hydrogen mass repartitioning was used to adjust the mass of hydrogen atoms to 3.024 Da by transferring mass from bonded heavy atoms, enabling a simulation timestep of 4 fs. Equilibration consisted of 50,000 steps of energy minimization, 100 ps of heating from 0 to 300 K, followed by 2000 ps of additional NPT simulations. A Langevin thermostat, the Monte Carlo barostat, a nonbonded cutoff of 9 Å and default PME parameters, were used for the NPT simulations.
 

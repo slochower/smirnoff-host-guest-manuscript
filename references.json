@@ -544,5 +544,21 @@
     "URL": "https://doi.org/bjpm5j",
     "container-title-short": "The Journal of Chemical Physics",
     "id": "htck51Lp"
+  },
+  {
+    "type": "webpage",
+    "title": "The Amber Molecular Dynamics Package",
+    "abstract": "Amber is a package of programs for\n   molecular dynamics simulations of proteins and nucleic acids",
+    "URL": "http://ambermd.org/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          4,
+          17
+        ]
+      ]
+    },
+    "id": "197xzzCJg"
   }
 ]
