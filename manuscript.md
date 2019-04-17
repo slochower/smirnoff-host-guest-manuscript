@@ -18,9 +18,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/c34530460f3c4a2794a0dce10e3cc8519078f9c3/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/a2fec1ee6bf387a1e664186f8ddd2c15facadcf7/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@c345304](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/c34530460f3c4a2794a0dce10e3cc8519078f9c3)
+from [slochower/smirnoff-host-guest-manuscript@a2fec1e](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/a2fec1ee6bf387a1e664186f8ddd2c15facadcf7)
 on April 17, 2019.
 </em></small>
 
