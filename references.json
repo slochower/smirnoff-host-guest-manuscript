@@ -1,1 +1,548 @@
-[]
+[
+  {
+    "publisher": "Wiley",
+    "issue": "2",
+    "DOI": "10.1002/(sici)1096-987x(20000130)21:2<132::aid-jcc5>3.0.co;2-p",
+    "type": "article-journal",
+    "page": "132-146",
+    "source": "Crossref",
+    "title": "Fast, efficient generation of high-quality atomic charges. AM1-BCC model: I. Method",
+    "volume": "21",
+    "author": [
+      {
+        "given": "Araz",
+        "family": "Jakalian"
+      },
+      {
+        "given": "Bruce L.",
+        "family": "Bush"
+      },
+      {
+        "given": "David B.",
+        "family": "Jack"
+      },
+      {
+        "given": "Christopher I.",
+        "family": "Bayly"
+      }
+    ],
+    "container-title": "Journal of Computational Chemistry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2000,
+          1,
+          30
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cvvpkv",
+    "container-title-short": "J. Comput. Chem.",
+    "id": "BkLoOd0N"
+  },
+  {
+    "publisher": "Wiley",
+    "issue": "16",
+    "DOI": "10.1002/jcc.10128",
+    "type": "article-journal",
+    "page": "1623-1641",
+    "source": "Crossref",
+    "title": "Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation",
+    "volume": "23",
+    "author": [
+      {
+        "given": "Araz",
+        "family": "Jakalian"
+      },
+      {
+        "given": "David B.",
+        "family": "Jack"
+      },
+      {
+        "given": "Christopher I.",
+        "family": "Bayly"
+      }
+    ],
+    "container-title": "Journal of Computational Chemistry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2002,
+          10,
+          18
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cktk6g",
+    "container-title-short": "J. Comput. Chem.",
+    "PMID": "12395429",
+    "id": "LxrgIkt0"
+  },
+  {
+    "publisher": "Wiley",
+    "issue": "9",
+    "DOI": "10.1002/jcc.20035",
+    "type": "article-journal",
+    "page": "1157-1174",
+    "source": "Crossref",
+    "title": "Development and testing of a general amber force field",
+    "volume": "25",
+    "author": [
+      {
+        "given": "Junmei",
+        "family": "Wang"
+      },
+      {
+        "given": "Romain M.",
+        "family": "Wolf"
+      },
+      {
+        "given": "James W.",
+        "family": "Caldwell"
+      },
+      {
+        "given": "Peter A.",
+        "family": "Kollman"
+      },
+      {
+        "given": "David A.",
+        "family": "Case"
+      }
+    ],
+    "container-title": "Journal of Computational Chemistry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2004
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cdmcnb",
+    "container-title-short": "J. Comput. Chem.",
+    "PMID": "15116359",
+    "id": "YmRgHfeU"
+  },
+  {
+    "publisher": "Wiley",
+    "DOI": "10.1002/jcc.23398",
+    "type": "article-journal",
+    "page": "n/a-n/a",
+    "source": "Crossref",
+    "title": "Overcoming dissipation in the calculation of standard binding free energies by ligand extraction",
+    "author": [
+      {
+        "given": "Camilo",
+        "family": "Velez-Vega"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Computational Chemistry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gbdv9w",
+    "container-title-short": "J. Comput. Chem.",
+    "PMCID": "PMC3932244",
+    "PMID": "24038118",
+    "id": "W9FLyOZr"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "4",
+    "DOI": "10.1007/s10822-014-9735-1",
+    "type": "article-journal",
+    "page": "305-317",
+    "source": "Crossref",
+    "title": "The SAMPL4 host–guest blind prediction challenge: an overview",
+    "volume": "28",
+    "author": [
+      {
+        "given": "Hari S.",
+        "family": "Muddana"
+      },
+      {
+        "given": "Andrew T.",
+        "family": "Fenley"
+      },
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          3,
+          6
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f5585s",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC4053502",
+    "PMID": "24599514",
+    "id": "GA1AFcUw"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1007/s10822-016-9977-1",
+    "type": "article-journal",
+    "page": "147-161",
+    "source": "Crossref",
+    "title": "Lessons learned from comparing molecular dynamics engines on the SAMPL5 dataset",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Michael R.",
+        "family": "Shirts"
+      },
+      {
+        "given": "Christoph",
+        "family": "Klein"
+      },
+      {
+        "given": "Jason M.",
+        "family": "Swails"
+      },
+      {
+        "given": "Jian",
+        "family": "Yin"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      },
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "David A.",
+        "family": "Case"
+      },
+      {
+        "given": "Ellen D.",
+        "family": "Zhong"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          10,
+          27
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9m3wn",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC5581938",
+    "PMID": "27787702",
+    "id": "T7iFp9ei"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "9",
+    "DOI": "10.1021/acs.jctc.5b00405",
+    "type": "article-journal",
+    "page": "4377-4394",
+    "source": "Crossref",
+    "title": "Computational Calorimetry: High-Precision Calculation of Host–Guest Binding Thermodynamics",
+    "volume": "11",
+    "author": [
+      {
+        "given": "Niel M.",
+        "family": "Henriksen"
+      },
+      {
+        "given": "Andrew T.",
+        "family": "Fenley"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          8,
+          26
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f7q3mj",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMCID": "PMC4614838",
+    "PMID": "26523125",
+    "id": "1935a9V0d"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "9",
+    "DOI": "10.1021/acs.jctc.7b00359",
+    "type": "article-journal",
+    "page": "4253-4269",
+    "source": "Crossref",
+    "title": "Evaluating Force Field Performance in Thermodynamic Calculations of Cyclodextrin Host–Guest Binding: Water Models, Partial Charges, and Host Force Field Parameters",
+    "volume": "13",
+    "author": [
+      {
+        "given": "Niel M.",
+        "family": "Henriksen"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          7,
+          11
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gd2z2t",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMCID": "PMC5606194",
+    "PMID": "28696692",
+    "id": "HVgz5rZq"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "9",
+    "DOI": "10.1021/ct5004109",
+    "type": "article-journal",
+    "page": "4069-4078",
+    "source": "Crossref",
+    "title": "Bridging Calorimetry and Simulation through Precise Calculations of Cucurbituril–Guest Binding Enthalpies",
+    "volume": "10",
+    "author": [
+      {
+        "given": "Andrew T.",
+        "family": "Fenley"
+      },
+      {
+        "given": "Niel M.",
+        "family": "Henriksen"
+      },
+      {
+        "given": "Hari S.",
+        "family": "Muddana"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f6hv4x",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMCID": "PMC4159218",
+    "PMID": "25221445",
+    "id": "1HWPx2yMR"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "30",
+    "DOI": "10.1021/jp8001614",
+    "type": "article-journal",
+    "page": "9020-9041",
+    "source": "Crossref",
+    "title": "Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations",
+    "volume": "112",
+    "author": [
+      {
+        "given": "In Suk",
+        "family": "Joung"
+      },
+      {
+        "suffix": "III",
+        "given": "Thomas E.",
+        "family": "Cheatham"
+      }
+    ],
+    "container-title": "The Journal of Physical Chemistry B",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2008,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cgwnj7",
+    "container-title-short": "J. Phys. Chem. B",
+    "PMCID": "PMC2652252",
+    "PMID": "18593145",
+    "id": "uZnQBwCt"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "1",
+    "DOI": "10.1021/jp962715n",
+    "type": "article-journal",
+    "page": "87-100",
+    "source": "Crossref",
+    "title": "Thermodynamic and Nuclear Magnetic Resonance Study of the Reactions of α- and β-Cyclodextrin with Acids, Aliphatic Amines, and Cyclic Alcohols",
+    "volume": "101",
+    "author": [
+      {
+        "given": "Mikhail V.",
+        "family": "Rekharsky"
+      },
+      {
+        "given": "Martin P.",
+        "family": "Mayhew"
+      },
+      {
+        "given": "Robert N.",
+        "family": "Goldberg"
+      },
+      {
+        "given": "Philip D.",
+        "family": "Ross"
+      },
+      {
+        "given": "Yuko",
+        "family": "Yamashoji"
+      },
+      {
+        "given": "Yoshihisa",
+        "family": "Inoue"
+      }
+    ],
+    "container-title": "The Journal of Physical Chemistry B",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1997,
+          1
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cmwfwn",
+    "container-title-short": "J. Phys. Chem. B",
+    "id": "1236RpaUv"
+  },
+  {
+    "publisher": "AIP Publishing",
+    "issue": "2",
+    "DOI": "10.1063/1.445869",
+    "type": "article-journal",
+    "page": "926-935",
+    "source": "Crossref",
+    "title": "Comparison of simple potential functions for simulating liquid water",
+    "volume": "79",
+    "author": [
+      {
+        "given": "William L.",
+        "family": "Jorgensen"
+      },
+      {
+        "given": "Jayaraman",
+        "family": "Chandrasekhar"
+      },
+      {
+        "given": "Jeffry D.",
+        "family": "Madura"
+      },
+      {
+        "given": "Roger W.",
+        "family": "Impey"
+      },
+      {
+        "given": "Michael L.",
+        "family": "Klein"
+      }
+    ],
+    "container-title": "The Journal of Chemical Physics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1983,
+          7,
+          15
+        ]
+      ]
+    },
+    "URL": "https://doi.org/dg9sq8",
+    "container-title-short": "The Journal of Chemical Physics",
+    "id": "chrX4HGh"
+  },
+  {
+    "publisher": "AIP Publishing",
+    "issue": "1",
+    "DOI": "10.1063/1.457480",
+    "type": "article-journal",
+    "page": "461-466",
+    "source": "Crossref",
+    "title": "Error estimates on averages of correlated data",
+    "volume": "91",
+    "author": [
+      {
+        "given": "H.",
+        "family": "Flyvbjerg"
+      },
+      {
+        "given": "H. G.",
+        "family": "Petersen"
+      }
+    ],
+    "container-title": "The Journal of Chemical Physics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1989,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bjpm5j",
+    "container-title-short": "The Journal of Chemical Physics",
+    "id": "htck51Lp"
+  }
+]
