@@ -1,4 +1,4 @@
-# Automated scholarly manuscripts on GitHub
+# Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the Open Force Field Group
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
@@ -10,94 +10,16 @@
 
 <!-- usage note: edit this section. -->
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+This repository describes setting up and running host-guest binding free energy calculations on cyclodextrins using the SMIRNOFF99Frosst force field.
 
-## Manubot
+## Code and data availability
 
-<!-- usage note: do not edit this section -->
+For information related to the setup and analysis of the calculations, please see:
 
-Manubot is a system for writing scholarly manuscripts via GitHub.
-Manubot automates citations and references, versions manuscripts using git, and enables collaborative writing via GitHub.
-The [rootstock repository](https://git.io/fhQH1) is a general purpose template for creating new Manubot instances, as detailed in [`SETUP.md`](SETUP.md).
-See [`USAGE.md`](USAGE.md) for documentation how to write a manuscript.
-
-<<<<<<< HEAD
-Please open [an issue](https://github.com/slochower/smirnoff-host-guest-manuscript/issues) for questions related to Manubot usage, bug reports, or general inquiries.
-=======
-Please open [an issue](https://git.io/fhQHM) for questions related to Manubot usage, bug reports, or general inquiries.
->>>>>>> 091ca8d85c8ef2d7af16fcc8d2ed3ebcbc187f13
-
-### Repository directories & files
-
-The directories are as follows:
-
-+ [`content`](content) contains the manuscript source, which includes markdown files as well as inputs for citations and references.
-  See [`USAGE.md`](USAGE.md) for more information.
-+ [`output`](output) contains the outputs (generated files) from the manubot including the resulting manuscripts.
-  You should not edit these files manually, because they will get overwritten.
-+ [`webpage`](webpage) is a directory meant to be rendered as a static webpage for viewing the HTML manuscript.
-+ [`build`](build) contains commands and tools for building the manuscript.
-+ [`ci`](ci) contains files necessary for deployment via continuous integration.
-  For the CI configuration, see [`.travis.yml`](.travis.yml).
-
-### Local execution
-
-To run the Manubot locally, install the [conda](https://conda.io) environment as described in [`build`](build).
-Then, you can build the manuscript on POSIX systems by running the following commands.
-
-```sh
-# Activate the manubot conda environment (assumes conda version >= 4.4)
-conda activate manubot
-
-# Build the manuscript, saving outputs to the output directory
-sh build/build.sh
-
-# At this point, the HTML & PDF outputs will have been created. The remaining
-# commands are for serving the webpage to view the HTML manuscript locally.
-
-# Configure the webpage directory
-python build/webpage.py
-
-# View the manuscript locally at http://localhost:8000/
-cd webpage
-python -m http.server
-```
-
-Sometimes it's helpful to monitor the content directory and automatically rebuild the manuscript when a change is detected.
-The following command, while running, will trigger both the `build.sh` and `webpage.py` scripts upon content changes:
-
-```sh
-sh build/autobuild.sh
-```
-
-### Continuous Integration
-
-<<<<<<< HEAD
-[![Build Status](https://travis-ci.org/slochower/smirnoff-host-guest-manuscript.svg?branch=master)](https://travis-ci.org/slochower/smirnoff-host-guest-manuscript)
-=======
-[![Build Status](https://travis-ci.com/manubot/rootstock.svg?branch=master)](https://travis-ci.com/manubot/rootstock)
->>>>>>> 091ca8d85c8ef2d7af16fcc8d2ed3ebcbc187f13
-
-Whenever a pull request is opened, Travis CI will test whether the changes break the build process to generate a formatted manuscript.
-The build process aims to detect common errors, such as invalid citations.
-If your pull request build fails, see the Travis CI logs for the cause of failure and revise your pull request accordingly.
-
-<<<<<<< HEAD
-When a commit to the `master` branch occurs (for example, when a pull request is merged), Travis CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/gh-pages) and [`output`](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/output) branches.
-The `gh-pages` branch uses [GitHub Pages](https://pages.github.com/) to host the following URLs:
-
-+ **HTML manuscript** at https://slochower.github.io/smirnoff-host-guest-manuscript/
-+ **PDF manuscript** at https://slochower.github.io/smirnoff-host-guest-manuscript/manuscript.pdf
-=======
-When a commit to the `master` branch occurs (for example, when a pull request is merged), Travis CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/manubot/rootstock/tree/gh-pages) and [`output`](https://github.com/manubot/rootstock/tree/output) branches.
-The `gh-pages` branch uses [GitHub Pages](https://pages.github.com/) to host the following URLs:
-
-+ **HTML manuscript** at https://manubot.github.io/rootstock/
-+ **PDF manuscript** at https://manubot.github.io/rootstock/manuscript.pdf
->>>>>>> 091ca8d85c8ef2d7af16fcc8d2ed3ebcbc187f13
-
-For continuous integration configuration details, see [`.travis.yml`](.travis.yml).
+- [GitHub repository](https://github.com/slochower/smirnoff-host-guest) used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.
+- [GitHub repository](https://github.com/slochower/smirnoff-host-guest-simulations-data) for setting up the attach-pull-release calculations using `paprika` version 0.0.3.
+- [GitHub repository](https://github.com/slochower/smirnoff-host-guest-simulations) for analyzing the simulations and generating the plots in this manuscript.
+- [GitHub repository](https://github.com/openforcefield/openforcefield) for the Open Force Field group containing the toolkit and force field XML file.
 
 ## License
 
@@ -110,11 +32,7 @@ We encourage users to openly license their manuscripts, which is the default as 
 [![License: CC0 1.0](https://img.shields.io/badge/License%20Parts-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 Except when noted otherwise, the entirety of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
-<<<<<<< HEAD
 Please attribute by linking to https://github.com/slochower/smirnoff-host-guest-manuscript.
-=======
-Please attribute by linking to https://github.com/manubot/rootstock.
->>>>>>> 091ca8d85c8ef2d7af16fcc8d2ed3ebcbc187f13
 
 Since CC BY is not ideal for code and data, certain repository components are also released under the CC0 1.0 public domain dedication ([`LICENSE-CC0.md`](LICENSE-CC0.md)).
 All files matched by the following glob patterns are dual licensed under CC BY 4.0 and CC0 1.0:
@@ -134,12 +52,8 @@ All other files are only available under CC BY 4.0, including:
 + `*.pdf`
 + `*.docx`
 
-<<<<<<< HEAD
 Except for the following files with different licenses:
 
 + `build/assets/anchors.js` which is [released](https://www.bryanbraun.com/anchorjs/) under an [MIT License](https://opensource.org/licenses/MIT)
 
 Please open [an issue](https://github.com/slochower/smirnoff-host-guest-manuscript/issues) for any question related to licensing.
-=======
-Please open [an issue](https://github.com/manubot/rootstock/issues) for any question related to licensing.
->>>>>>> 091ca8d85c8ef2d7af16fcc8d2ed3ebcbc187f13
