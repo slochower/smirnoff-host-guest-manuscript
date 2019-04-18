@@ -383,6 +383,49 @@
   },
   {
     "publisher": "American Chemical Society (ACS)",
+    "issue": "4",
+    "DOI": "10.1021/ct5010406",
+    "type": "article-journal",
+    "page": "1864-1874",
+    "source": "Crossref",
+    "title": "Long-Time-Step Molecular Dynamics through Hydrogen Mass Repartitioning",
+    "volume": "11",
+    "author": [
+      {
+        "given": "Chad W.",
+        "family": "Hopkins"
+      },
+      {
+        "given": "Scott",
+        "family": "Le Grand"
+      },
+      {
+        "given": "Ross C.",
+        "family": "Walker"
+      },
+      {
+        "given": "Adrian E.",
+        "family": "Roitberg"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          3,
+          30
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f697mk",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMID": "26574392",
+    "id": "IGZ99oJ8"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
     "issue": "30",
     "DOI": "10.1021/jp8001614",
     "type": "article-journal",
@@ -555,7 +598,7 @@
         [
           "2019",
           4,
-          17
+          18
         ]
       ]
     },
