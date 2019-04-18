@@ -25,7 +25,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the Open Force Field Group</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/81da787f585ba6e056236b020606ab5f4844fd45/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/81da787f585ba6e056236b020606ab5f4844fd45">slochower/smirnoff-host-guest-manuscript@81da787</a> on April 18, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/413f132c74cc628e0f535c1d822d66a783a69ffa/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/413f132c74cc628e0f535c1d822d66a783a69ffa">slochower/smirnoff-host-guest-manuscript@413f132</a> on April 18, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -33,6 +33,7 @@
 <li><p><strong>John D. Chodera</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-0542-119X">0000-0003-0542-119X</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/jchodera">jchodera</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/jchodera">jchodera</a><br> <small> Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065 </small></p></li>
 <li><p><strong>Michael K. Gilson</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-3375-1738">0000-0002-3375-1738</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/michaelkgilson">michaelkgilson</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
 </ul>
+<p><span class="banner lightgrey">Note, I only added authors who reviewed the outline on Google Docs. We can revisit this.</span></p>
 <h2 id="abstract" class="page_break_before">Abstract</h2>
 <p>Designing ligands that bind their target with high affinity and specificity is a key step in small-molecule drug discovery. Yet accurate predictions of protein-ligand binding free energies are difficult and errors in the calculations can be traced to challenges adequately sampling conformational space, ambiguous protonation states, and other causes. Noncovalent complexes between a cavity-containing host molecule and drug-like guest molecules have emerged as powerful tools for modeling protein-ligand binding. Due to their small size and extensive experimental characterization, calculations of host-guest binding free energies, enthalpies, and entropies offer an opportunity to directly probe, and ultimately optimize, force fields.</p>
 <p>The Open Force Field Initiative aims to create a modern, open software infrastructure for automatically generating and validating force fields using high-quality data sets. The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters of a typical general small molecule force field, such as GAFF, yet predicts binding thermodynamics that are on average, at least as accurate. Here, we report the results of free energy calculations on 43 <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>-cyclodextrin host-guest pairs for which experimental data are available. Our calculations were performed using the attach-pull-release method as implemented in the open source package, <code>pAPRika</code>. On binding free energies, the root mean square error of the predictions relative to experiment is 0.82 kcal/mol for SMIRNOFF99Frosst and 1.58 kcal/mol for GAFF version 2.1. These results suggest significant room for improvement in force fields, and will help create a transparent and robust method of evaluating future candidate parameter sets from the Open Force Field Group. Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates.</p>
@@ -307,11 +308,201 @@
 <p>SMIRNOFF99Frosst does about as well as, or even better than GAFF v1.7, depsite have far fewer numerical parameters on predicted ΔG and ΔH compared to the values measured with isothermal titration calorimetry. SMIRNOFF99Frosst has an overall agreement of under 1 kcal/mol on binding free energies and under 2 kcal/mol on binding enthalpies across the 43 host-guest systems (Figure <a href="#fig:dG-dH">3</a>). Overall, the correlation between SMIRNOFF99Frosst and experiment is mediocre, ranging from an R<span class="math inline">\(^2\)</span> value of 0.34 to 0.54 for ΔG. The results are more varied for ΔH with R<span class="math inline">\(^2\)</span> ranging from 0.09 to 0.54. In particular, SMIRNOFF99Frosst underestimates the binding free energy and binding enthalpy of cyclic alcohols and mostly underestimates the binding entropy (Figure <a href="#fig:TdS">18</a>). Guests containing ammonium or carboxylate functional groups appear to be equally over- and under-estimated for binding free energy.</p>
 <p>Notably, SMIRNOFF99Frosst does better on αCD than βCD (Figure <a href="#fig:dG-dH-by-cyclodextrin">22</a>).</p>
 <div id="fig:dG-dH" class="subfigures">
-<p><img src="images/SMIRNOFF99Frosst-vs-Experiment-dG.png" title="fig:" alt="a" id="fig:somethingA" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-Experiment-dH.png" title="fig:" alt="b" id="fig:somethingB" style="width:3.5in" /></p>
+<p><img src="images/SMIRNOFF99Frosst-vs-Experiment-dG.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-Experiment-dH.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p><img src="images/GAFF-v1.7-vs-Experiment-dG.png" title="fig:" alt="c" style="width:3.5in" /> <img src="images/GAFF-v1.7-vs-Experiment-dH.png" title="fig:" alt="d" style="width:3.5in" /></p>
 <p><img src="images/GAFF-v2.1-vs-Experiment-dG.png" title="fig:" alt="e" style="width:3.5in" /> <img src="images/GAFF-v2.1-vs-Experiment-dH.png" title="fig:" alt="f" style="width:3.5in" /></p>
 <p>Figure 3: Comparison of calculated absolute binding free energies (ΔG) and binding enthalpies (ΔH) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively. </p>
 </div>
+<a name="tbl:statistics"></a>
+<table>
+<caption><span>Table 2:</span> Predicted thermodynamic properties for each force field relative to experiment. </caption>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>RMSE (kcal/mol)</th>
+<th></th>
+<th>MSE (kcal/mol)</th>
+<th></th>
+<th>R²</th>
+<th></th>
+<th>Slope</th>
+<th></th>
+<th>Intercept (kcal/mol)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+</tr>
+<tr class="even">
+<td>ΔG</td>
+<td>SMIRNOFF99Frosst</td>
+<td>0.91</td>
+<td>0.11</td>
+<td><strong>-0.01</strong></td>
+<td><strong>0.14</strong></td>
+<td>0.34</td>
+<td>0.11</td>
+<td>0.49</td>
+<td>0.12</td>
+<td>-1.55</td>
+<td>0.38</td>
+</tr>
+<tr class="odd">
+<td>ΔG</td>
+<td>GAFF v1.7</td>
+<td><strong>0.88</strong></td>
+<td><strong>0.09</strong></td>
+<td>0.46</td>
+<td>0.12</td>
+<td>0.54</td>
+<td>0.10</td>
+<td>0.69</td>
+<td>0.11</td>
+<td><strong>-0.48</strong></td>
+<td><strong>0.35</strong></td>
+</tr>
+<tr class="even">
+<td>ΔG</td>
+<td>GAFF v2.1</td>
+<td>1.68</td>
+<td>0.09</td>
+<td>-1.56</td>
+<td>0.10</td>
+<td><strong>0.82</strong></td>
+<td><strong>0.08</strong></td>
+<td><strong>1.19</strong></td>
+<td><strong>0.09</strong></td>
+<td>-1.00</td>
+<td>0.28</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>SMIRNOFF99Frosst</td>
+<td><strong>1.85</strong></td>
+<td><strong>0.23</strong></td>
+<td><strong>0.77</strong></td>
+<td><strong>0.26</strong></td>
+<td>0.44</td>
+<td>0.12</td>
+<td><strong>0.85</strong></td>
+<td><strong>0.17</strong></td>
+<td><strong>0.41</strong></td>
+<td><strong>0.52</strong></td>
+</tr>
+<tr class="odd">
+<td>ΔH</td>
+<td>GAFF v1.7</td>
+<td>2.54</td>
+<td>0.24</td>
+<td>1.84</td>
+<td>0.27</td>
+<td>0.39</td>
+<td>0.12</td>
+<td>0.80</td>
+<td>0.18</td>
+<td>1.36</td>
+<td>0.60</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>GAFF v2.1</td>
+<td>2.21</td>
+<td>0.23</td>
+<td>-1.64</td>
+<td>0.23</td>
+<td><strong>0.75</strong></td>
+<td><strong>0.08</strong></td>
+<td>1.38</td>
+<td>0.12</td>
+<td>-0.69</td>
+<td>0.40</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>-TΔS</td>
+<td>SMIRNOFF99Frosst</td>
+<td>1.90</td>
+<td>0.21</td>
+<td>-0.78</td>
+<td>0.27</td>
+<td>0.40</td>
+<td>0.13</td>
+<td>0.90</td>
+<td>0.20</td>
+<td>-0.83</td>
+<td>0.25</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>GAFF v1.7</td>
+<td>2.21</td>
+<td>0.24</td>
+<td>-1.38</td>
+<td>0.27</td>
+<td>0.43</td>
+<td>0.13</td>
+<td><strong>0.96</strong></td>
+<td><strong>0.21</strong></td>
+<td>-1.41</td>
+<td>0.24</td>
+</tr>
+<tr class="even">
+<td>-TΔS</td>
+<td>GAFF v2.1</td>
+<td><strong>1.47</strong></td>
+<td><strong>0.24</strong></td>
+<td><strong>0.08</strong></td>
+<td><strong>0.23</strong></td>
+<td><strong>0.60</strong></td>
+<td><strong>0.14</strong></td>
+<td>1.14</td>
+<td>0.18</td>
+<td><strong>0.15</strong></td>
+<td><strong>0.21</strong></td>
+</tr>
+</tbody>
+</table>
 <p>Likewise, GAFF v1.7 has very similar properties with an RMSE for ΔG of 0.88 kcal/mol and RMSE for ΔH of 2.54 kcal/mol. Both SMIRNOFF99Frosst and GAFF v1.7 systematically underestimate the binding free energy for cyclic alcohols except for beta-cyclodextrin with cyclopentanol (b-cpe).</p>
 <p>Overall, GAFF v2.1 has a larger RMSE than either SMIRNOFF99Frosst or GAFF v1.7 on binding free energies, but strikingly strong correlations with the experimental values across all three functional group classes. Compared to SMIRNOFF99Frosst and GAFF v1.7, GAFF v2.1 uniformly overestimates both the binding free energy and binding enthalpy.</p>
 <p>SMIRNOFF99Frosst does a great job predicting the binding free energy of αCD with alcohols, with four of the five points nearly falling on the line of identity.</p>
@@ -359,7 +550,7 @@
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-sigma.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-epsilon.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p>Figure 11: A comparison of Lennard-Jones nonbonded parameters for SMIRNOFF99Frosst and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to Figure <a href="#fig:atom-names">2</a>. </p>
 </div>
-<p>Compared to GAFF v1.7, SMIRNOFF99Frosst tends to have slightly larger bond force constants, except for the <span class="math inline">\(\ce{O-H}\)</span> hydroxyl bond force constant, which is much stronger. In GAFF v2.1, the <span class="math inline">\(\ce{O-H}\)</span> hydroxyl bond force constant is consistent with SMIRNOFF99Frosst, but the carbon-oxygen bond constants are weaker. Equilibrium bond lengths are very similar (Figure <a href="#fig:bond-req">24</a>).</p>
+<p>Compared to GAFF v1.7, SMIRNOFF99Frosst tends to have slightly larger bond force constants, except for the <span class="math inline">\(\ce{O-H}\)</span> hydroxyl bond force constant, which is much stronger. In GAFF v2.1, the <span class="math inline">\(\ce{O-H}\)</span> hydroxyl bond force constant is consistent with SMIRNOFF99Frosst, but the carbon-oxygen bond constants are weaker. Equilibrium bond lengths are very similar (Figure <a href="#fig:bond-req">23</a>).</p>
 <div id="fig:bonds" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-bond-k.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-bond-k.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p>Figure 12: A comparison of bonded parameters for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to Figure <a href="#fig:atom-names">2</a>. </p>
@@ -372,10 +563,10 @@
 </div>
 <h4 id="dihedrals">Dihedrals</h4>
 <p><span class="banner lightgrey">Include the table of dihedral differences here.</span></p>
-<p>The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are very similar, with hte expceiton of… (Table <a href="#tbl:S99-vs-GAFF-v1.7">2</a>).</p>
+<p>The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are very similar, with hte expceiton of… (Table <a href="#tbl:S99-vs-GAFF-v1.7">3</a>).</p>
 <a name="tbl:S99-vs-GAFF-v1.7"></a>
 <table>
-<caption><span>Table 2:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. </caption>
+<caption><span>Table 3:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. </caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -427,7 +618,7 @@
 <p>The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF99Frosst.</p>
 <a name="tbl:S99-vs-GAFF-v2.1-missing"></a>
 <table>
-<caption><span>Table 3:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the correspeonding term in the other force field. </caption>
+<caption><span>Table 4:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the correspeonding term in the other force field. </caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -755,7 +946,7 @@
 </table>
 <a name="tbl:S99-vs-GAFF-v2.1"></a>
 <table>
-<caption><span>Table 4:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, only height differences. </caption>
+<caption><span>Table 5:</span> Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, only height differences. </caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -1074,7 +1265,7 @@
 <p>…Inter-residue dihedrals…</p>
 <a name="tbl:S99-vs-GAFF-v2.1-inter"></a>
 <table style="width:100%;">
-<caption><span>Table 5:</span> Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. </caption>
+<caption><span>Table 6:</span> Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. </caption>
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 7%" />
@@ -1381,33 +1572,1539 @@
 <p>Figure 21: Comparison of calculated absolute binding free entropies (-TΔS) between force field combinations. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively. </p>
 </div>
 <div id="fig:dG-dH-by-cyclodextrin" class="subfigures">
-<p><img src="images/SMIRNOFF99Frosst-vs-Experiment-dG-alpha.svg" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-Experiment-dG-beta.svg" title="fig:" alt="b" style="width:3.5in" /></p>
-<p><img src="images/GAFF-v1.7-vs-Experiment-dG-alpha.svg" title="fig:" alt="c" style="width:3.5in" /> <img src="images/GAFF-v1.7-vs-Experiment-dG-beta.svg" title="fig:" alt="d" style="width:3.5in" /></p>
-<p><img src="images/GAFF-v2.1-vs-Experiment-dG-alpha.svg" title="fig:" alt="e" style="width:3.5in" /> <img src="images/GAFF-v2.1-vs-Experiment-dG-beta.svg" title="fig:" alt="f" style="width:3.5in" /></p>
+<p><img src="images/SMIRNOFF99Frosst-vs-Experiment-dG-alpha.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-Experiment-dG-beta.png" title="fig:" alt="b" style="width:3.5in" /></p>
+<p><img src="images/GAFF-v1.7-vs-Experiment-dG-alpha.png" title="fig:" alt="c" style="width:3.5in" /> <img src="images/GAFF-v1.7-vs-Experiment-dG-beta.png" title="fig:" alt="d" style="width:3.5in" /></p>
+<p><img src="images/GAFF-v2.1-vs-Experiment-dG-alpha.png" title="fig:" alt="e" style="width:3.5in" /> <img src="images/GAFF-v2.1-vs-Experiment-dG-beta.png" title="fig:" alt="f" style="width:3.5in" /></p>
 <p>Figure 22: Binding free energies (ΔG) replotted from Figure <a href="#fig:dG-dH">3</a>, with αCD points colored in blue and βCD points in grey (left) or αCD points in grey with βCD points colored in green (right). </p>
 </div>
-<figure>
-<img src="images/cyclodextrin-snapshot.png" alt="Figure 23: A minimized structure of αCD in the SMIRNOFF99Frosst force field." id="fig:cyclodextrin-snapshot" style="width:3.5in" /><figcaption>Figure 23: A minimized structure of αCD in the SMIRNOFF99Frosst force field.</figcaption>
-</figure>
 <div id="fig:bond-req" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-bond-req.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-bond-req.png" title="fig:" alt="b" style="width:3.5in" /></p>
-<p>Figure 24: A comparison of bond equilibrium lengths for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Atom names refer to Figure <a href="#fig:atom-names">2</a>. </p>
+<p>Figure 23: A comparison of bond equilibrium lengths for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Atom names refer to Figure <a href="#fig:atom-names">2</a>. </p>
 </div>
 <div id="fig:additional-highlights-alcohols" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-alcohols-by-orientation.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-alcohols-by-orientation.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-alcohols-by-orientation.png" title="fig:" alt="c" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-alcohols-by-orientation.png" title="fig:" alt="d" style="width:3.5in" /></p>
-<p>Figure 25: Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. </p>
+<p>Figure 24: Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. </p>
 </div>
 <div id="fig:additional-highlights-ammonium" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-ammonium-by-orientation.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-ammonium-by-orientation.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-ammonium-by-orientation.png" title="fig:" alt="c" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-ammonium-by-orientation.png" title="fig:" alt="d" style="width:3.5in" /></p>
-<p>Figure 26: Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. </p>
+<p>Figure 25: Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. </p>
 </div>
 <div id="fig:additional-highlights-carboxylates" class="subfigures">
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-carboxylates-by-orientation.png" title="fig:" alt="a" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-carboxylates-by-orientation.png" title="fig:" alt="b" style="width:3.5in" /></p>
 <p><img src="images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-carboxylates-by-orientation.png" title="fig:" alt="c" style="width:3.5in" /> <img src="images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-carboxylates-by-orientation.png" title="fig:" alt="d" style="width:3.5in" /></p>
-<p>Figure 27: Binding free energy (ΔG) comparisons showing carboxylates guests in color and highlighted. </p>
+<p>Figure 26: Binding free energy (ΔG) comparisons showing carboxylates guests in color and highlighted. </p>
 </div>
+<a name="tbl:dG-combined"></a>
+<table>
+<caption><span>Table 7:</span> Experimental and predicted binding free energies (ΔG). </caption>
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Experimental</th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th></th>
+<th>GAFF v1.7</th>
+<th></th>
+<th>GAFF v2.1</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+</tr>
+<tr class="even">
+<td>a-bam</td>
+<td>-1.58</td>
+<td>0.02</td>
+<td>-3.25</td>
+<td>0.44</td>
+<td>-0.82</td>
+<td>0.21</td>
+<td>-2.93</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>a-but</td>
+<td>-1.51</td>
+<td>0.04</td>
+<td>-1.49</td>
+<td>0.27</td>
+<td>-1.09</td>
+<td>0.20</td>
+<td>-3.14</td>
+<td>0.22</td>
+</tr>
+<tr class="even">
+<td>a-cbu</td>
+<td>-2.02</td>
+<td>0.02</td>
+<td>-1.33</td>
+<td>0.19</td>
+<td>-0.89</td>
+<td>0.22</td>
+<td>-3.73</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td>a-chp</td>
+<td>-2.51</td>
+<td>0.06</td>
+<td>-2.38</td>
+<td>0.28</td>
+<td>-1.69</td>
+<td>0.24</td>
+<td>-4.11</td>
+<td>0.23</td>
+</tr>
+<tr class="even">
+<td>a-coc</td>
+<td>-3.23</td>
+<td>1.14</td>
+<td>-1.78</td>
+<td>0.29</td>
+<td>-1.86</td>
+<td>0.24</td>
+<td>-3.35</td>
+<td>0.24</td>
+</tr>
+<tr class="odd">
+<td>a-cpe</td>
+<td>-2.13</td>
+<td>0.02</td>
+<td>-1.59</td>
+<td>0.25</td>
+<td>-1.50</td>
+<td>0.29</td>
+<td>-3.79</td>
+<td>0.22</td>
+</tr>
+<tr class="even">
+<td>a-ham</td>
+<td>-3.53</td>
+<td>0.00</td>
+<td>-3.43</td>
+<td>0.30</td>
+<td>-3.02</td>
+<td>0.19</td>
+<td>-5.99</td>
+<td>0.17</td>
+</tr>
+<tr class="odd">
+<td>a-hep</td>
+<td>-3.99</td>
+<td>0.01</td>
+<td>-3.95</td>
+<td>0.21</td>
+<td>-3.93</td>
+<td>0.20</td>
+<td>-6.23</td>
+<td>0.17</td>
+</tr>
+<tr class="even">
+<td>a-hex</td>
+<td>-3.38</td>
+<td>0.01</td>
+<td>-2.70</td>
+<td>0.21</td>
+<td>-2.92</td>
+<td>0.21</td>
+<td>-5.27</td>
+<td>0.20</td>
+</tr>
+<tr class="odd">
+<td>a-hp6</td>
+<td>-3.60</td>
+<td>0.00</td>
+<td>-3.32</td>
+<td>0.23</td>
+<td>-3.37</td>
+<td>0.18</td>
+<td>-5.41</td>
+<td>0.18</td>
+</tr>
+<tr class="even">
+<td>a-hpa</td>
+<td>-4.14</td>
+<td>0.00</td>
+<td>-3.02</td>
+<td>0.32</td>
+<td>-3.16</td>
+<td>0.22</td>
+<td>-6.03</td>
+<td>0.22</td>
+</tr>
+<tr class="odd">
+<td>a-hx2</td>
+<td>-3.34</td>
+<td>0.01</td>
+<td>-2.74</td>
+<td>0.20</td>
+<td>-2.60</td>
+<td>0.19</td>
+<td>-4.79</td>
+<td>0.18</td>
+</tr>
+<tr class="even">
+<td>a-hx3</td>
+<td>-3.01</td>
+<td>0.01</td>
+<td>-2.39</td>
+<td>0.25</td>
+<td>-1.58</td>
+<td>0.23</td>
+<td>-3.94</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>a-mba</td>
+<td>-1.76</td>
+<td>0.02</td>
+<td>-1.22</td>
+<td>0.30</td>
+<td>-0.89</td>
+<td>0.25</td>
+<td>-3.17</td>
+<td>0.23</td>
+</tr>
+<tr class="even">
+<td>a-mha</td>
+<td>-3.60</td>
+<td>0.00</td>
+<td>-3.60</td>
+<td>0.29</td>
+<td>-2.89</td>
+<td>0.17</td>
+<td>-5.55</td>
+<td>0.22</td>
+</tr>
+<tr class="odd">
+<td>a-mhp</td>
+<td>-4.17</td>
+<td>0.00</td>
+<td>-3.98</td>
+<td>0.29</td>
+<td>-3.82</td>
+<td>0.19</td>
+<td>-6.23</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>a-nmb</td>
+<td>-1.69</td>
+<td>0.02</td>
+<td>-1.95</td>
+<td>0.42</td>
+<td>-0.83</td>
+<td>0.18</td>
+<td>-2.74</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td>a-nmh</td>
+<td>-3.52</td>
+<td>0.01</td>
+<td>-4.15</td>
+<td>0.59</td>
+<td>-2.92</td>
+<td>0.18</td>
+<td>-5.56</td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td>a-oam</td>
+<td>-4.61</td>
+<td>0.01</td>
+<td>-4.68</td>
+<td>0.49</td>
+<td>-4.33</td>
+<td>0.17</td>
+<td>-6.99</td>
+<td>0.19</td>
+</tr>
+<tr class="odd">
+<td>a-oct</td>
+<td>-4.62</td>
+<td>0.02</td>
+<td>-4.64</td>
+<td>0.30</td>
+<td>-4.85</td>
+<td>0.24</td>
+<td>-6.81</td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td>a-pam</td>
+<td>-2.72</td>
+<td>0.00</td>
+<td>-2.66</td>
+<td>0.77</td>
+<td>-1.53</td>
+<td>0.18</td>
+<td>-4.00</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>a-pnt</td>
+<td>-2.60</td>
+<td>0.01</td>
+<td>-2.56</td>
+<td>0.23</td>
+<td>-1.74</td>
+<td>0.19</td>
+<td>-4.14</td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td>b-ben</td>
+<td>-1.64</td>
+<td>0.02</td>
+<td>-2.85</td>
+<td>0.62</td>
+<td>-1.83</td>
+<td>0.29</td>
+<td>-2.45</td>
+<td>0.17</td>
+</tr>
+<tr class="odd">
+<td>b-cbu</td>
+<td>-1.55</td>
+<td>0.17</td>
+<td>-1.88</td>
+<td>0.20</td>
+<td>-1.64</td>
+<td>0.36</td>
+<td>-2.77</td>
+<td>0.17</td>
+</tr>
+<tr class="even">
+<td>b-chp</td>
+<td>-4.56</td>
+<td>0.01</td>
+<td>-3.08</td>
+<td>0.25</td>
+<td>-2.79</td>
+<td>0.34</td>
+<td>-6.27</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>b-coc</td>
+<td>-4.97</td>
+<td>0.04</td>
+<td>-3.28</td>
+<td>0.23</td>
+<td>-3.36</td>
+<td>0.26</td>
+<td>-7.13</td>
+<td>0.22</td>
+</tr>
+<tr class="even">
+<td>b-cpe</td>
+<td>-3.05</td>
+<td>0.01</td>
+<td>-3.57</td>
+<td>0.34</td>
+<td>-3.55</td>
+<td>0.31</td>
+<td>-5.93</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>b-ham</td>
+<td>-2.49</td>
+<td>0.08</td>
+<td>-2.52</td>
+<td>0.20</td>
+<td>-2.01</td>
+<td>0.26</td>
+<td>-4.14</td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td>b-hep</td>
+<td>-3.39</td>
+<td>0.18</td>
+<td>-3.41</td>
+<td>0.28</td>
+<td>-3.34</td>
+<td>0.35</td>
+<td>-4.15</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>b-hex</td>
+<td>-2.28</td>
+<td>0.03</td>
+<td>-2.93</td>
+<td>0.25</td>
+<td>-2.47</td>
+<td>0.27</td>
+<td>-3.59</td>
+<td>0.17</td>
+</tr>
+<tr class="even">
+<td>b-m4c</td>
+<td>-4.32</td>
+<td>0.01</td>
+<td>-2.89</td>
+<td>0.24</td>
+<td>-2.68</td>
+<td>0.29</td>
+<td>-5.64</td>
+<td>0.22</td>
+</tr>
+<tr class="odd">
+<td>b-m4t</td>
+<td>-4.54</td>
+<td>0.01</td>
+<td>-3.82</td>
+<td>0.19</td>
+<td>-3.50</td>
+<td>0.26</td>
+<td>-6.33</td>
+<td>0.17</td>
+</tr>
+<tr class="even">
+<td>b-mch</td>
+<td>-4.18</td>
+<td>0.01</td>
+<td>-3.69</td>
+<td>0.22</td>
+<td>-3.31</td>
+<td>0.26</td>
+<td>-6.07</td>
+<td>0.17</td>
+</tr>
+<tr class="odd">
+<td>b-mha</td>
+<td>-2.56</td>
+<td>0.07</td>
+<td>-3.46</td>
+<td>0.24</td>
+<td>-2.14</td>
+<td>0.28</td>
+<td>-4.66</td>
+<td>0.18</td>
+</tr>
+<tr class="even">
+<td>b-mo3</td>
+<td>-2.16</td>
+<td>0.01</td>
+<td>-2.87</td>
+<td>0.38</td>
+<td>-2.73</td>
+<td>0.41</td>
+<td>-2.79</td>
+<td>0.20</td>
+</tr>
+<tr class="odd">
+<td>b-mo4</td>
+<td>-2.51</td>
+<td>0.01</td>
+<td>-4.19</td>
+<td>0.41</td>
+<td>-3.10</td>
+<td>0.31</td>
+<td>-3.49</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>b-mp3</td>
+<td>-1.46</td>
+<td>0.04</td>
+<td>-3.03</td>
+<td>0.27</td>
+<td>-2.48</td>
+<td>0.28</td>
+<td>-3.00</td>
+<td>0.19</td>
+</tr>
+<tr class="odd">
+<td>b-mp4</td>
+<td>-2.19</td>
+<td>0.01</td>
+<td>-3.02</td>
+<td>0.32</td>
+<td>-2.77</td>
+<td>0.34</td>
+<td>-3.06</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td>b-oam</td>
+<td>-3.59</td>
+<td>0.12</td>
+<td>-3.35</td>
+<td>0.28</td>
+<td>-2.60</td>
+<td>0.30</td>
+<td>-5.25</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>b-pb3</td>
+<td>-3.52</td>
+<td>0.01</td>
+<td>-3.49</td>
+<td>0.32</td>
+<td>-2.87</td>
+<td>0.30</td>
+<td>-4.58</td>
+<td>0.17</td>
+</tr>
+<tr class="even">
+<td>b-pb4</td>
+<td>-3.60</td>
+<td>0.02</td>
+<td>-3.62</td>
+<td>0.33</td>
+<td>-3.34</td>
+<td>0.35</td>
+<td>-4.71</td>
+<td>0.23</td>
+</tr>
+<tr class="odd">
+<td>b-pha</td>
+<td>-1.70</td>
+<td>0.05</td>
+<td>-3.24</td>
+<td>0.31</td>
+<td>-2.55</td>
+<td>0.29</td>
+<td>-3.98</td>
+<td>0.19</td>
+</tr>
+<tr class="even">
+<td>b-pnt</td>
+<td>-1.27</td>
+<td>0.32</td>
+<td>-2.22</td>
+<td>0.25</td>
+<td>-1.73</td>
+<td>0.29</td>
+<td>-2.00</td>
+<td>0.16</td>
+</tr>
+</tbody>
+</table>
+<a name="tbl:dH-combined"></a>
+<table>
+<caption><span>Table 8:</span> Experimental and predicted binding enthalpies (ΔH). </caption>
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Experimental</th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th></th>
+<th>GAFF v1.7</th>
+<th></th>
+<th>GAFF v2.1</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+</tr>
+<tr class="even">
+<td>a-bam</td>
+<td>-2.17</td>
+<td>0.05</td>
+<td>-0.43</td>
+<td>0.28</td>
+<td>-0.84</td>
+<td>0.59</td>
+<td>-3.05</td>
+<td>0.38</td>
+</tr>
+<tr class="odd">
+<td>a-but</td>
+<td>-2.53</td>
+<td>0.12</td>
+<td>-0.76</td>
+<td>0.59</td>
+<td>-1.08</td>
+<td>0.37</td>
+<td>-4.91</td>
+<td>0.42</td>
+</tr>
+<tr class="even">
+<td>a-cbu</td>
+<td>-2.75</td>
+<td>0.05</td>
+<td>-2.08</td>
+<td>0.21</td>
+<td>-0.71</td>
+<td>0.49</td>
+<td>-4.94</td>
+<td>0.29</td>
+</tr>
+<tr class="odd">
+<td>a-chp</td>
+<td>-2.99</td>
+<td>0.23</td>
+<td>-3.42</td>
+<td>0.39</td>
+<td>-2.33</td>
+<td>0.28</td>
+<td>-5.27</td>
+<td>0.35</td>
+</tr>
+<tr class="even">
+<td>a-coc</td>
+<td>-0.93</td>
+<td>0.32</td>
+<td>-3.80</td>
+<td>0.45</td>
+<td>-2.93</td>
+<td>0.32</td>
+<td>-6.17</td>
+<td>0.32</td>
+</tr>
+<tr class="odd">
+<td>a-cpe</td>
+<td>-2.74</td>
+<td>0.02</td>
+<td>-1.93</td>
+<td>0.30</td>
+<td>-1.06</td>
+<td>0.42</td>
+<td>-4.86</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>a-ham</td>
+<td>-4.19</td>
+<td>0.02</td>
+<td>-4.02</td>
+<td>0.33</td>
+<td>-2.33</td>
+<td>0.30</td>
+<td>-6.91</td>
+<td>0.29</td>
+</tr>
+<tr class="odd">
+<td>a-hep</td>
+<td>-4.19</td>
+<td>0.09</td>
+<td>-4.72</td>
+<td>0.33</td>
+<td>-4.05</td>
+<td>0.36</td>
+<td>-8.68</td>
+<td>0.24</td>
+</tr>
+<tr class="even">
+<td>a-hex</td>
+<td>-3.40</td>
+<td>0.02</td>
+<td>-4.33</td>
+<td>0.30</td>
+<td>-2.95</td>
+<td>0.30</td>
+<td>-7.43</td>
+<td>0.31</td>
+</tr>
+<tr class="odd">
+<td>a-hp6</td>
+<td>-4.48</td>
+<td>0.02</td>
+<td>-4.86</td>
+<td>0.31</td>
+<td>-3.73</td>
+<td>0.21</td>
+<td>-8.24</td>
+<td>0.31</td>
+</tr>
+<tr class="even">
+<td>a-hpa</td>
+<td>-4.66</td>
+<td>0.02</td>
+<td>-4.47</td>
+<td>0.36</td>
+<td>-2.65</td>
+<td>0.30</td>
+<td>-7.38</td>
+<td>0.26</td>
+</tr>
+<tr class="odd">
+<td>a-hx2</td>
+<td>-4.12</td>
+<td>0.06</td>
+<td>-4.24</td>
+<td>0.31</td>
+<td>-2.35</td>
+<td>0.32</td>
+<td>-6.56</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>a-hx3</td>
+<td>-3.36</td>
+<td>0.05</td>
+<td>-2.25</td>
+<td>0.55</td>
+<td>-2.80</td>
+<td>0.32</td>
+<td>-5.51</td>
+<td>0.28</td>
+</tr>
+<tr class="odd">
+<td>a-mba</td>
+<td>-2.68</td>
+<td>0.07</td>
+<td>-0.95</td>
+<td>0.41</td>
+<td>-0.32</td>
+<td>0.37</td>
+<td>-3.11</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>a-mha</td>
+<td>-4.28</td>
+<td>0.02</td>
+<td>-3.31</td>
+<td>0.50</td>
+<td>-2.16</td>
+<td>0.25</td>
+<td>-6.40</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>a-mhp</td>
+<td>-4.74</td>
+<td>0.02</td>
+<td>-4.89</td>
+<td>0.23</td>
+<td>-3.41</td>
+<td>0.23</td>
+<td>-8.12</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td>a-nmb</td>
+<td>-2.57</td>
+<td>0.06</td>
+<td>-1.10</td>
+<td>0.28</td>
+<td>0.03</td>
+<td>0.23</td>
+<td>-3.34</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>a-nmh</td>
+<td>-4.20</td>
+<td>0.08</td>
+<td>-4.20</td>
+<td>0.48</td>
+<td>-2.54</td>
+<td>0.24</td>
+<td>-6.74</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>a-oam</td>
+<td>-5.46</td>
+<td>0.03</td>
+<td>-4.93</td>
+<td>0.28</td>
+<td>-3.73</td>
+<td>0.33</td>
+<td>-8.02</td>
+<td>0.28</td>
+</tr>
+<tr class="odd">
+<td>a-oct</td>
+<td>-4.89</td>
+<td>0.03</td>
+<td>-6.08</td>
+<td>0.21</td>
+<td>-4.69</td>
+<td>0.29</td>
+<td>-9.53</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>a-pam</td>
+<td>-3.28</td>
+<td>0.02</td>
+<td>-1.72</td>
+<td>0.61</td>
+<td>-0.84</td>
+<td>0.28</td>
+<td>-4.45</td>
+<td>0.33</td>
+</tr>
+<tr class="odd">
+<td>a-pnt</td>
+<td>-2.75</td>
+<td>0.01</td>
+<td>-2.05</td>
+<td>0.37</td>
+<td>-1.62</td>
+<td>0.33</td>
+<td>-5.99</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>b-ben</td>
+<td>-2.51</td>
+<td>0.08</td>
+<td>-0.45</td>
+<td>0.56</td>
+<td>-0.76</td>
+<td>0.82</td>
+<td>-1.30</td>
+<td>0.26</td>
+</tr>
+<tr class="odd">
+<td>b-cbu</td>
+<td>0.88</td>
+<td>0.17</td>
+<td>0.05</td>
+<td>0.83</td>
+<td>-0.19</td>
+<td>0.46</td>
+<td>0.87</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>b-chp</td>
+<td>-2.96</td>
+<td>0.01</td>
+<td>0.88</td>
+<td>0.40</td>
+<td>1.82</td>
+<td>0.61</td>
+<td>-4.39</td>
+<td>0.31</td>
+</tr>
+<tr class="odd">
+<td>b-coc</td>
+<td>-3.92</td>
+<td>0.06</td>
+<td>0.80</td>
+<td>0.47</td>
+<td>0.45</td>
+<td>0.98</td>
+<td>-5.57</td>
+<td>0.44</td>
+</tr>
+<tr class="even">
+<td>b-cpe</td>
+<td>-1.09</td>
+<td>0.01</td>
+<td>1.86</td>
+<td>0.37</td>
+<td>3.62</td>
+<td>0.65</td>
+<td>-1.32</td>
+<td>0.30</td>
+</tr>
+<tr class="odd">
+<td>b-ham</td>
+<td>0.60</td>
+<td>0.05</td>
+<td>1.66</td>
+<td>0.68</td>
+<td>2.29</td>
+<td>0.78</td>
+<td>0.42</td>
+<td>0.33</td>
+</tr>
+<tr class="even">
+<td>b-hep</td>
+<td>0.42</td>
+<td>0.04</td>
+<td>-0.05</td>
+<td>0.38</td>
+<td>1.91</td>
+<td>0.29</td>
+<td>-0.92</td>
+<td>0.27</td>
+</tr>
+<tr class="odd">
+<td>b-hex</td>
+<td>1.31</td>
+<td>0.04</td>
+<td>0.41</td>
+<td>0.65</td>
+<td>1.30</td>
+<td>0.60</td>
+<td>-0.21</td>
+<td>0.27</td>
+</tr>
+<tr class="even">
+<td>b-m4c</td>
+<td>-2.27</td>
+<td>0.01</td>
+<td>2.18</td>
+<td>0.48</td>
+<td>2.62</td>
+<td>0.55</td>
+<td>-3.13</td>
+<td>0.30</td>
+</tr>
+<tr class="odd">
+<td>b-m4t</td>
+<td>-2.17</td>
+<td>0.02</td>
+<td>1.26</td>
+<td>0.45</td>
+<td>2.49</td>
+<td>0.51</td>
+<td>-3.11</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>b-mch</td>
+<td>-2.29</td>
+<td>0.03</td>
+<td>-0.79</td>
+<td>1.08</td>
+<td>2.27</td>
+<td>0.73</td>
+<td>-3.37</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>b-mha</td>
+<td>0.47</td>
+<td>0.03</td>
+<td>0.53</td>
+<td>0.55</td>
+<td>2.48</td>
+<td>0.64</td>
+<td>0.28</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>b-mo3</td>
+<td>-2.93</td>
+<td>0.03</td>
+<td>-2.66</td>
+<td>0.46</td>
+<td>-0.59</td>
+<td>0.45</td>
+<td>-2.50</td>
+<td>0.28</td>
+</tr>
+<tr class="odd">
+<td>b-mo4</td>
+<td>-1.96</td>
+<td>0.01</td>
+<td>-2.69</td>
+<td>0.58</td>
+<td>-0.91</td>
+<td>0.33</td>
+<td>-3.05</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>b-mp3</td>
+<td>-2.75</td>
+<td>0.13</td>
+<td>-1.09</td>
+<td>0.68</td>
+<td>0.68</td>
+<td>0.48</td>
+<td>-2.64</td>
+<td>0.31</td>
+</tr>
+<tr class="odd">
+<td>b-mp4</td>
+<td>-2.89</td>
+<td>0.05</td>
+<td>-2.84</td>
+<td>0.76</td>
+<td>0.78</td>
+<td>0.60</td>
+<td>-2.34</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td>b-oam</td>
+<td>-0.48</td>
+<td>0.03</td>
+<td>0.98</td>
+<td>0.41</td>
+<td>2.66</td>
+<td>0.43</td>
+<td>-0.52</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>b-pb3</td>
+<td>-2.25</td>
+<td>0.01</td>
+<td>-1.59</td>
+<td>0.94</td>
+<td>1.78</td>
+<td>0.36</td>
+<td>-2.24</td>
+<td>0.30</td>
+</tr>
+<tr class="even">
+<td>b-pb4</td>
+<td>-2.82</td>
+<td>0.01</td>
+<td>-0.02</td>
+<td>0.62</td>
+<td>-1.44</td>
+<td>0.78</td>
+<td>-3.70</td>
+<td>0.29</td>
+</tr>
+<tr class="odd">
+<td>b-pha</td>
+<td>-1.79</td>
+<td>0.11</td>
+<td>-1.10</td>
+<td>0.69</td>
+<td>-1.34</td>
+<td>0.97</td>
+<td>-3.45</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>b-pnt</td>
+<td>1.89</td>
+<td>0.53</td>
+<td>-0.79</td>
+<td>1.01</td>
+<td>-0.51</td>
+<td>0.84</td>
+<td>0.40</td>
+<td>0.31</td>
+</tr>
+</tbody>
+</table>
+<a name="tbl:TdS-combined"></a>
+<table>
+<caption><span>Table 9:</span> Experimental and predicted binding entropies (−TΔS). </caption>
+<thead>
+<tr class="header">
+<th>System</th>
+<th>Experimental</th>
+<th></th>
+<th>SMIRNOFF99Frosst</th>
+<th></th>
+<th>GAFF v1.7</th>
+<th></th>
+<th>GAFF v2.1</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+<td>Mean</td>
+<td>SEM</td>
+</tr>
+<tr class="even">
+<td>a-bam</td>
+<td>0.59</td>
+<td>0.05</td>
+<td>-2.82</td>
+<td>0.53</td>
+<td>0.02</td>
+<td>0.63</td>
+<td>0.11</td>
+<td>0.45</td>
+</tr>
+<tr class="odd">
+<td>a-but</td>
+<td>1.02</td>
+<td>0.13</td>
+<td>-0.73</td>
+<td>0.65</td>
+<td>-0.01</td>
+<td>0.42</td>
+<td>1.77</td>
+<td>0.47</td>
+</tr>
+<tr class="even">
+<td>a-cbu</td>
+<td>0.73</td>
+<td>0.05</td>
+<td>0.75</td>
+<td>0.28</td>
+<td>-0.17</td>
+<td>0.54</td>
+<td>1.21</td>
+<td>0.36</td>
+</tr>
+<tr class="odd">
+<td>a-chp</td>
+<td>0.48</td>
+<td>0.24</td>
+<td>1.04</td>
+<td>0.48</td>
+<td>0.63</td>
+<td>0.37</td>
+<td>1.16</td>
+<td>0.41</td>
+</tr>
+<tr class="even">
+<td>a-coc</td>
+<td>-2.30</td>
+<td>1.18</td>
+<td>2.02</td>
+<td>0.53</td>
+<td>1.07</td>
+<td>0.40</td>
+<td>2.82</td>
+<td>0.40</td>
+</tr>
+<tr class="odd">
+<td>a-cpe</td>
+<td>0.61</td>
+<td>0.03</td>
+<td>0.33</td>
+<td>0.39</td>
+<td>-0.44</td>
+<td>0.51</td>
+<td>1.07</td>
+<td>0.37</td>
+</tr>
+<tr class="even">
+<td>a-ham</td>
+<td>0.66</td>
+<td>0.02</td>
+<td>0.59</td>
+<td>0.44</td>
+<td>-0.68</td>
+<td>0.36</td>
+<td>0.92</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>a-hep</td>
+<td>0.20</td>
+<td>0.09</td>
+<td>0.77</td>
+<td>0.39</td>
+<td>0.12</td>
+<td>0.41</td>
+<td>2.45</td>
+<td>0.29</td>
+</tr>
+<tr class="even">
+<td>a-hex</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>1.62</td>
+<td>0.37</td>
+<td>0.03</td>
+<td>0.36</td>
+<td>2.17</td>
+<td>0.37</td>
+</tr>
+<tr class="odd">
+<td>a-hp6</td>
+<td>0.88</td>
+<td>0.02</td>
+<td>1.54</td>
+<td>0.38</td>
+<td>0.37</td>
+<td>0.27</td>
+<td>2.84</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>a-hpa</td>
+<td>0.52</td>
+<td>0.02</td>
+<td>1.45</td>
+<td>0.48</td>
+<td>-0.50</td>
+<td>0.37</td>
+<td>1.35</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>a-hx2</td>
+<td>0.78</td>
+<td>0.06</td>
+<td>1.49</td>
+<td>0.37</td>
+<td>-0.25</td>
+<td>0.37</td>
+<td>1.77</td>
+<td>0.35</td>
+</tr>
+<tr class="even">
+<td>a-hx3</td>
+<td>0.35</td>
+<td>0.05</td>
+<td>-0.13</td>
+<td>0.61</td>
+<td>1.23</td>
+<td>0.40</td>
+<td>1.58</td>
+<td>0.36</td>
+</tr>
+<tr class="odd">
+<td>a-mba</td>
+<td>0.92</td>
+<td>0.07</td>
+<td>-0.27</td>
+<td>0.51</td>
+<td>-0.57</td>
+<td>0.44</td>
+<td>-0.06</td>
+<td>0.43</td>
+</tr>
+<tr class="even">
+<td>a-mha</td>
+<td>0.68</td>
+<td>0.02</td>
+<td>-0.29</td>
+<td>0.58</td>
+<td>-0.73</td>
+<td>0.30</td>
+<td>0.85</td>
+<td>0.40</td>
+</tr>
+<tr class="odd">
+<td>a-mhp</td>
+<td>0.57</td>
+<td>0.02</td>
+<td>0.92</td>
+<td>0.37</td>
+<td>-0.41</td>
+<td>0.30</td>
+<td>1.89</td>
+<td>0.35</td>
+</tr>
+<tr class="even">
+<td>a-nmb</td>
+<td>0.88</td>
+<td>0.06</td>
+<td>-0.85</td>
+<td>0.50</td>
+<td>-0.86</td>
+<td>0.29</td>
+<td>0.61</td>
+<td>0.35</td>
+</tr>
+<tr class="odd">
+<td>a-nmh</td>
+<td>0.68</td>
+<td>0.08</td>
+<td>0.05</td>
+<td>0.76</td>
+<td>-0.38</td>
+<td>0.30</td>
+<td>1.18</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>a-oam</td>
+<td>0.85</td>
+<td>0.03</td>
+<td>0.25</td>
+<td>0.57</td>
+<td>-0.60</td>
+<td>0.37</td>
+<td>1.02</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>a-oct</td>
+<td>0.27</td>
+<td>0.04</td>
+<td>1.44</td>
+<td>0.37</td>
+<td>-0.16</td>
+<td>0.38</td>
+<td>2.72</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>a-pam</td>
+<td>0.56</td>
+<td>0.02</td>
+<td>-0.94</td>
+<td>0.98</td>
+<td>-0.68</td>
+<td>0.34</td>
+<td>0.45</td>
+<td>0.40</td>
+</tr>
+<tr class="odd">
+<td>a-pnt</td>
+<td>0.15</td>
+<td>0.01</td>
+<td>-0.51</td>
+<td>0.43</td>
+<td>-0.12</td>
+<td>0.38</td>
+<td>1.84</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>b-ben</td>
+<td>0.87</td>
+<td>0.08</td>
+<td>-2.40</td>
+<td>0.83</td>
+<td>-1.07</td>
+<td>0.87</td>
+<td>-1.15</td>
+<td>0.31</td>
+</tr>
+<tr class="odd">
+<td>b-cbu</td>
+<td>-2.43</td>
+<td>0.24</td>
+<td>-1.93</td>
+<td>0.85</td>
+<td>-1.45</td>
+<td>0.58</td>
+<td>-3.64</td>
+<td>0.34</td>
+</tr>
+<tr class="even">
+<td>b-chp</td>
+<td>-1.60</td>
+<td>0.01</td>
+<td>-3.96</td>
+<td>0.47</td>
+<td>-4.61</td>
+<td>0.69</td>
+<td>-1.87</td>
+<td>0.39</td>
+</tr>
+<tr class="odd">
+<td>b-coc</td>
+<td>-1.05</td>
+<td>0.07</td>
+<td>-4.08</td>
+<td>0.53</td>
+<td>-3.81</td>
+<td>1.02</td>
+<td>-1.56</td>
+<td>0.49</td>
+</tr>
+<tr class="even">
+<td>b-cpe</td>
+<td>-1.96</td>
+<td>0.01</td>
+<td>-5.43</td>
+<td>0.51</td>
+<td>-7.17</td>
+<td>0.72</td>
+<td>-4.60</td>
+<td>0.40</td>
+</tr>
+<tr class="odd">
+<td>b-ham</td>
+<td>-3.09</td>
+<td>0.09</td>
+<td>-4.19</td>
+<td>0.71</td>
+<td>-4.29</td>
+<td>0.82</td>
+<td>-4.56</td>
+<td>0.38</td>
+</tr>
+<tr class="even">
+<td>b-hep</td>
+<td>-3.81</td>
+<td>0.18</td>
+<td>-3.36</td>
+<td>0.47</td>
+<td>-5.25</td>
+<td>0.45</td>
+<td>-3.23</td>
+<td>0.35</td>
+</tr>
+<tr class="odd">
+<td>b-hex</td>
+<td>-3.59</td>
+<td>0.05</td>
+<td>-3.34</td>
+<td>0.70</td>
+<td>-3.77</td>
+<td>0.66</td>
+<td>-3.38</td>
+<td>0.32</td>
+</tr>
+<tr class="even">
+<td>b-m4c</td>
+<td>-2.05</td>
+<td>0.01</td>
+<td>-5.07</td>
+<td>0.54</td>
+<td>-5.29</td>
+<td>0.62</td>
+<td>-2.51</td>
+<td>0.37</td>
+</tr>
+<tr class="odd">
+<td>b-m4t</td>
+<td>-2.37</td>
+<td>0.02</td>
+<td>-5.08</td>
+<td>0.49</td>
+<td>-5.99</td>
+<td>0.57</td>
+<td>-3.22</td>
+<td>0.33</td>
+</tr>
+<tr class="even">
+<td>b-mch</td>
+<td>-1.89</td>
+<td>0.03</td>
+<td>-2.90</td>
+<td>1.10</td>
+<td>-5.58</td>
+<td>0.78</td>
+<td>-2.70</td>
+<td>0.38</td>
+</tr>
+<tr class="odd">
+<td>b-mha</td>
+<td>-3.03</td>
+<td>0.08</td>
+<td>-4.00</td>
+<td>0.60</td>
+<td>-4.62</td>
+<td>0.69</td>
+<td>-4.94</td>
+<td>0.34</td>
+</tr>
+<tr class="even">
+<td>b-mo3</td>
+<td>0.77</td>
+<td>0.03</td>
+<td>-0.20</td>
+<td>0.60</td>
+<td>-2.14</td>
+<td>0.61</td>
+<td>-0.29</td>
+<td>0.34</td>
+</tr>
+<tr class="odd">
+<td>b-mo4</td>
+<td>-0.55</td>
+<td>0.01</td>
+<td>-1.50</td>
+<td>0.71</td>
+<td>-2.19</td>
+<td>0.46</td>
+<td>-0.45</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td>b-mp3</td>
+<td>1.29</td>
+<td>0.14</td>
+<td>-1.94</td>
+<td>0.74</td>
+<td>-3.16</td>
+<td>0.56</td>
+<td>-0.35</td>
+<td>0.37</td>
+</tr>
+<tr class="odd">
+<td>b-mp4</td>
+<td>0.70</td>
+<td>0.05</td>
+<td>-0.19</td>
+<td>0.83</td>
+<td>-3.55</td>
+<td>0.69</td>
+<td>-0.72</td>
+<td>0.35</td>
+</tr>
+<tr class="even">
+<td>b-oam</td>
+<td>-3.11</td>
+<td>0.12</td>
+<td>-4.33</td>
+<td>0.50</td>
+<td>-5.26</td>
+<td>0.53</td>
+<td>-4.73</td>
+<td>0.41</td>
+</tr>
+<tr class="odd">
+<td>b-pb3</td>
+<td>-1.27</td>
+<td>0.01</td>
+<td>-1.90</td>
+<td>0.99</td>
+<td>-4.64</td>
+<td>0.47</td>
+<td>-2.34</td>
+<td>0.34</td>
+</tr>
+<tr class="even">
+<td>b-pb4</td>
+<td>-0.78</td>
+<td>0.02</td>
+<td>-3.60</td>
+<td>0.71</td>
+<td>-1.90</td>
+<td>0.85</td>
+<td>-1.01</td>
+<td>0.37</td>
+</tr>
+<tr class="odd">
+<td>b-pha</td>
+<td>0.09</td>
+<td>0.12</td>
+<td>-2.14</td>
+<td>0.76</td>
+<td>-1.21</td>
+<td>1.01</td>
+<td>-0.52</td>
+<td>0.41</td>
+</tr>
+<tr class="even">
+<td>b-pnt</td>
+<td>-3.16</td>
+<td>0.62</td>
+<td>-1.43</td>
+<td>1.04</td>
+<td>-1.22</td>
+<td>0.89</td>
+<td>-2.40</td>
+<td>0.35</td>
+</tr>
+</tbody>
+</table>
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" role="doc-bibliography">
