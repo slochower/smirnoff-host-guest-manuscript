@@ -17,6 +17,10 @@ before_install:
     --set changeps1 no
   - wget https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.4.0d/linux-pandoc_2_7.tar.gz --output-document pandoc-crossref.tar.gz
   - tar xvfz pandoc-crossref.tar.gz
+  - mkdir -p ~/.local/bin
+  - export PATH=$HOME/.local/bin:$PATH
+  - travis_retry curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'
+
 install:
   - conda env create --quiet --file build/environment.yml
   - conda list --name manubot
@@ -27,8 +31,7 @@ script:
 cache:
   directories:
     - ci/cache
-    - ~/.cabal
-    - ~/.ghc
+    - $HOME/.stack
 after_success:
   - test $TRAVIS_BRANCH = "master" &&
     test $TRAVIS_EVENT_TYPE = "push" &&
