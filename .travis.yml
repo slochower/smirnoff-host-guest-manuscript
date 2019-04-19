@@ -25,7 +25,6 @@ install:
   - conda env create --quiet --file build/environment.yml
   - conda list --name manubot
   - conda activate manubot
-  - apt-get install ghc cabal-install
 script:
   - sh build/build.sh
 cache:
