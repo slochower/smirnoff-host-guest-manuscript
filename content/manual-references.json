@@ -1,22 +1,36 @@
 [
-{
-  "type": "webpage",
-  "standard_citation": "url:https://github.com/manubot/rootstock",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2019
+  {
+    "type": "webpage",
+    "standard_citation": "url:https://github.com/manubot/rootstock",
+    "URL": "https://github.com/manubot/rootstock",
+    "title": "manubot/rootstock GitHub repository",
+    "container-title": "GitHub",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
       ]
+    },
+    "author": [
+      {
+        "given": "Daniel",
+        "family": "Himmelstein"
+      }
     ]
   },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-}
+  {
+    "type": "webpage",
+    "standard_citation": "url:https://openforcefield.org",
+    "title": "Open Force Field Initiative",
+    "abstract": "An open source, open science, and open data approach to better force fields",
+    "URL": "https://openforcefield.org/",
+    "language": "en-us",
+    "author": [
+      {
+        "family": "The Open Force Field Initiative",
+        "given": ""
+      }
+    ]
+  }
 ]
