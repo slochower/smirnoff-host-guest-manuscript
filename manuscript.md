@@ -4,7 +4,7 @@ author-meta:
 - Niel M. Henriksen
 - John D. Chodera
 - Michael K. Gilson
-date-meta: '2019-04-18'
+date-meta: '2019-04-20'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/413f132c74cc628e0f535c1d822d66a783a69ffa/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/9e7eb83a2840e78662be03f477a5451520d8befd/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@413f132](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/413f132c74cc628e0f535c1d822d66a783a69ffa)
-on April 18, 2019.
+from [slochower/smirnoff-host-guest-manuscript@9e7eb83](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/9e7eb83a2840e78662be03f477a5451520d8befd)
+on April 20, 2019.
 </em></small>
 
 ## Authors
@@ -77,20 +77,38 @@ on April 18, 2019.
 
 ## Abstract {.page_break_before}
 
-
 Designing ligands that bind their target with high affinity and specificity is a key step in small-molecule drug discovery. Yet accurate predictions of protein-ligand binding free energies are difficult and errors in the calculations can be traced to challenges adequately sampling conformational space, ambiguous protonation states, and other causes. Noncovalent complexes between a cavity-containing host molecule and drug-like guest molecules have emerged as powerful tools for modeling protein-ligand binding. Due to their small size and extensive experimental characterization, calculations of host-guest binding free energies, enthalpies, and entropies offer an opportunity to directly probe, and ultimately optimize, force fields.
 
-The Open Force Field Initiative aims to create a modern, open software infrastructure for automatically generating and validating force fields using high-quality data sets. The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters of a typical general small molecule force field, such as GAFF, yet predicts binding thermodynamics that are on average, at least as accurate. Here, we report the results of free energy calculations on 43 $\alpha$ and $\beta$-cyclodextrin host-guest pairs for which experimental data are available. Our calculations were performed using the attach-pull-release method as implemented in the open source package, `pAPRika`. On binding free energies, the root mean square error of the predictions relative to experiment is 0.82 kcal/mol for SMIRNOFF99Frosst and 1.58 kcal/mol for GAFF version 2.1. These results suggest significant room for improvement in force fields, and will help create a transparent and robust method of evaluating future candidate parameter sets from the Open Force Field Group. Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates.
+The Open Force Field Initiative aims to create a modern, open software infrastructure for automatically generating and validating force fields using high-quality data sets. The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters of a typical general small molecule force field, such as GAFF, yet predicts binding thermodynamics that are on average, at least as accurate. Here, we report the results of free energy calculations on 43 α and β-cyclodextrin host-guest pairs for which experimental data are available. Our calculations were performed using the attach-pull-release method as implemented in the open source package, `pAPRika`. On binding free energies, the root mean square error of the predictions relative to experiment is 0.82 kcal/mol for SMIRNOFF99Frosst and 1.58 kcal/mol for GAFF version 2.1. These results suggest significant room for improvement in force fields, and will help create a transparent and robust method of evaluating future candidate parameter sets from the Open Force Field Group. Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates.
 
 ## Introduction
 
+Accurate predictions of protein-ligand binding free energies are a key goal of computational chemistry.
+Despite this, calculations of protein-ligand binding thermodynamics involve a number of challenging choices, including specifying the protonation state of ionizable residues, adding hydrogens or otherwise adjusting the initial protein structure, and placing the ligand in the binding pocket, for which there is no consensus in the computational chemistry community.
+Recently, calculations on the reversible work of ligand binding to bromodomain proteins was completed [@1CuDE1c2r], with deviations from experiment in the 1-2 kcal/mol range and uncertainties on the order of ~0.5 kcal/mol. 
+Here, we report the calculation of binding free energies, enthalpies, and entropies of drug-like guest molecules to α- and β-cyclodextrin host molecules, converged to within ~0.1 kcal/mol, using the attach-pull-release method.
+These calculations, which are easier to sample and have been experimentally characterized using a variety of methods, offer an opportunity to benchmark---and ultimately optimize---new and existing force fields.
+We compare the predictions of three force fields: GAFF v1.7 [@YmRgHfeU], GAFF v2.1, and SMIRNOFF99Frosst [@1HYTTY1PU; @OhpH7vfg].
+
+SMIRNOFF99Frosst, released in late 2018, is the first force field produced by the Open Force Field Initiative.
+SMIRNOFF99Frosst is derived from AMBER parm99 [@13wrQoS3l] and Merck's parm@Frosst [@168lWg0SB].
+Instead of relying on atom types to assign force field parameters to compounds, which is the procedure followed by the `tleap` program that parameterizes molecules in AmberTools, SMIRNOFF99Frosst and the Open Force Field Toolkit use the local chemical environment of each atom to apply force field parameters using SMIRKS strings [@pOsXFMux].
+This process simplifies and effectively uncouples the parameters for each term in the force field.
+That is, the addition of a new Lennard-Jones parameter does not require the addition of new bonded, angle, and dihedral parameters involving the same atom. 
+These factors lead to a much more lean force field specification; there are over 3000 lines of parameters in GAFF v1.7, over 6000 lines of parameters in GAFF v2.1, and just ~300 parameters in SMIRNOFF99Frosst version 1.0.5.
+
+Thus far, SMIRNOFF99Frosst has been tested on hydration free energies of 642 small molecules, and the densities and dielectric constants of 45 pure organic liquids [@1HYTTY1PU].
+Here we benchmark SMIRNOFF99Frosst using noncovalent binding thermodynamics using two flexible host molecules and thirty three guests containing three different functional group moieties.
+We first show that SMIRNOFF99Frosst does about as well as the conventional force fields, GAFF v1.7 and GAFF v2.1, predicting experimental binding free energies, enthalpies, and entropies.
+We then characterize the conformational differences produced by SMIRNOFF99Frosst compared to the other force fields.
+
 ## Methods
 
-### Choice of host-guest system
+### Choice of host-guest systems
 In this study, we report the binding thermodynamics of 43 host-guest complexes (@fig:host-guest-pairs and Table @tbl:host-guests) computed using three different force fields. 
 The complexes consist of either α- or β-cyclodextrin as host molecules and a series of small molecule guests containing ammonium, carboxylate, or cyclic alcohol functional groups.
 Cyclodextrins are cyclic polymers consisting of six (αCD) or seven (βCD) glucose monomers in the shape of a truncated cone.
-The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry [@1236RpaUv] and computationally in [@HVgz5rZq].
+The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry (ITC) and nuclear magnetic resonance spectroscopy (NMR) [@1236RpaUv] and computationally in [@HVgz5rZq].
 As in Henriksen, et al. [@HVgz5rZq], only a single structural isomer was considered for the 1-methylammonium guests.
 
 ![Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs.](images/host-guest-pairs.png){#fig:host-guest-pairs}
@@ -159,7 +177,7 @@ Atom names (left) and GAFF atom types (right) for a glucose monomer in αCD show
 
 GAFF v1.7 bond, angle, torsion, and Lennard-Jones parameters were applied using the `tleap` program distributed with AmberTools16. These simulations were performed as part of Henriksen, et al.  [@HVgz5rZq] and are described in additional detail therein.
 
-GAFF v2.1 parameters were applied in an identical manner to the GAFF v1.7 parameters, using the `tleap` program distributed with AmberTools18 and substituting `leaprc.gaff` for `leaprc.gaff2`in the `tleap` input file.
+GAFF v2.1 parameters were applied in an identical manner to the GAFF v1.7 parameters, using the `tleap` program distributed with AmberTools18 and substituting `leaprc.gaff` for `leaprc.gaff2` in the `tleap` input file.
 In GAFF v2.1, the bond and angle parameters have been updated to reproduce small molecule geometries obtained from high-level quantum mechanical calculations.
 The force constants for the bond and angle parameters were tuned to reproduce the vibrational spectra of over 600 molecules.
 The torsion parameters were optimized to reproduce the rotational potential energy surface of 400 model compounds.
@@ -234,21 +252,27 @@ These values are estimated by using the uncertanties assigned to each data point
 The R^2^ values for each functional group subset is also reported in the bottom right corner in each graph.
 
 
-## Results and discussion
+## Results
 
 This results section is organized as follows. We first present a comparison of SMIRNOFF99Frosst and two iterations of the General AMBER Force Field (GAFF [@YmRgHfeU]) on predicting binding free energies (ΔG) and binding enthalpies (ΔH) of small molecule guests to α-cyclodextrin (αCD) and β-cyclodextrin (βCD). 
-We then detail how the behaviors of guest molecules changes between force fields and finally we summarize the parameter differences between SMIRNOFF99Frosst and GAFF along with the effects of the parameter differences. 
+We then detail how the conformational preferences of guest molecules changes between force fields and finally we summarize the parameter differences between SMIRNOFF99Frosst and GAFF along with the effects of the parameter differences. 
 
-### Binding free energies and enthalpies
+### Comparison with experimental binding free energies, enthalpies, and entropies
 
-SMIRNOFF99Frosst does about as well as, or even better than GAFF v1.7, depsite have far fewer numerical parameters on predicted ΔG and ΔH compared to the values measured with isothermal titration calorimetry. 
-SMIRNOFF99Frosst has an overall agreement of under 1 kcal/mol on binding free energies and under 2 kcal/mol on binding enthalpies across the 43 host-guest systems ([@fig:dG-dH]).
-Overall, the correlation between SMIRNOFF99Frosst and experiment is mediocre, ranging from an R$^2$ value of 0.34 to 0.54 for ΔG.
-The results are more varied for ΔH with R$^2$ ranging from 0.09 to 0.54.
-In particular, SMIRNOFF99Frosst underestimates the binding free energy and binding enthalpy of cyclic alcohols and mostly underestimates the binding entropy ([@fig:TdS]).
-Guests containing ammonium or carboxylate functional groups appear to be equally over- and under-estimated for binding free energy.
+Despite having far fewer numerical parameters, SMIRNOFF99Frosst does about as well as, or even better than, GAFF v1.7 on predicting ΔG and ΔH, compared to experimental values measured using ITC or NMR.
+SMIRNOFF99Frosst has an overall deviation from experiment under 1 kcal/mol on binding free energies and under 2 kcal/mol on binding enthalpies and entropies across the 43 host-guest systems (@fig:dG-dH, @fig:TdS, Table @tbl:statistics, Table @tbl:dG-combined, Table @tbl:dH-combined, and Table @tbl:TdS-combined).
 
-Notably, SMIRNOFF99Frosst does better on αCD than βCD ([@fig:dG-dH-by-cyclodextrin]).
+GAFF v1.7 agrees well with SMIRNOFF99Frosst (@fig:dG-by-orientation); the overall root mean squared error (RMSE) between the methods is 0.88 kcal/mol.
+Compared to experiment, GAFF v1.7 has RMSE values of 0.88 kcal/mol, 2.54 kcal/mol, and 2.21 kcal/mol on ΔG, ΔH, and −TΔS.
+Both SMIRNOFF99Frosst and GAFF v1.7 systematically underestimate the ΔG and ΔH for cyclic alcohols.
+In some cases, GAFF v1.7 underestimates ΔH by over 3 kcal/mol and up to 5 kcal/mol (b-chp).
+
+The predictions made by GAFF v2.1 exhibit significant differences from those of SMIRNOFF99Frosst (RMSE=1.90 kcal/mol @fig:dG-by-orientation) or GAFF v1.7 (RMSE=2.1 kcal/mol, @fig:dG-by-orientation). 
+GAFF v2.1 has a large negative systematic deviation from the experimental values in both ΔG and ΔH, yet strikingly strong correlations with the experimental values across all three functional group classes.
+Furthermore, GAFF v2.1 has the lowest −TΔS RMSE of any force field (@fig:TdS).
+Compared to SMIRNOFF99Frosst and GAFF v1.7, GAFF v2.1 uniformly overestimates both the binding free energy and binding enthalpy, with slopes > 1 in both cases (Table @tbl:statistics).
+
+[I'm thinking it might be cleaner and more palatable to separate the comparisions out by ΔG first, then ΔH, and then −TΔS to break things up a bit. I'm made a mush of the results, trying to touch upon the key differences without covering everything, for example, the second paragraph in this section begins by implicitly using ΔG for "agrees well" but then discusses ΔH in the final sentence.]{.banner .lightgrey} 
 
 <div id="fig:dG-dH">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG.png){ width=3.5in}
@@ -280,92 +304,99 @@ Comparison of calculated absolute binding free energies (ΔG) and binding enthal
 
 Table: Predicted thermodynamic properties for each force field relative to experiment. {#tbl:statistics}
 
-Likewise, GAFF v1.7 has very similar properties with an RMSE for ΔG of 0.88 kcal/mol and RMSE for ΔH of 2.54 kcal/mol.
-Both SMIRNOFF99Frosst and GAFF v1.7 systematically underestimate the binding free energy for cyclic alcohols except for beta-cyclodextrin with cyclopentanol (b-cpe).
 
-Overall, GAFF v2.1 has a larger RMSE than either SMIRNOFF99Frosst or GAFF v1.7 on binding free energies, but strikingly strong correlations with the experimental values across all three functional group classes.
-Compared to SMIRNOFF99Frosst and GAFF v1.7, GAFF v2.1 uniformly overestimates both the binding free energy and binding enthalpy.
+### Guest preferences for binding in the primary or secondary cyclodextrin cavity
 
-SMIRNOFF99Frosst does a great job predicting the binding free energy of αCD with alcohols, with four of the five points nearly falling on the line of identity.
+The asymmetry of the hosts and the guests leads to two distinct bound states for each host-guest pair: one where the primary functional group of the guest interacts with the primary alcohols of the host and a second conformation where the primary functional group of the guest interacts with the secondary alcohols (@fig:cavity).
+In most cases, the guest molecules do not sample both conformations during a typical simulation.
+Therefore, we compute ΔG for each orientation separately (@fig:by-orientation-comparison, @fig:by-orientation-highlight and @fig:dG-by-orientation) and combine the results using the following equation:
 
-[Show highlights here]{.banner .lightgrey}
+\begin{equation}
+\Delta G = -RT \ln(\exp(-\beta \Delta G_\text{primary}) + \exp(-\beta \Delta G_\text{secondary})).
+\end{equation}
 
-Likewise, SMIRNOFF99Frosst does a great job with amines (?) with three of the four points falling nearly on the line of identity.
-
-With βCD, on teh other hand, things are a little different: two of the three carboxylates are overestimated, ammoniums are great, but the alcohols are all over the place (two overestimated, two understimated.)
-
-This difference is likely because... (?) of flexibility? (Is alpha more flexible than beta?)
-
-### Guest preferences for primary and secondary binding
-
-There are two orientations for binding: one where the primary functional group is interacting with the more narrow opening primary alcohols and one with the polar group oriented out of the wider, secondary opening.
-
-The experimental data is a Boltzmann weighted ensemble of these two orientations.
-
-<div id="fig:by-orientation-comparison">
-![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-color-by-orientation.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-color-by-orientation.png){width=3.5in}
-
-Binding free energies (ΔG) with the primary orientation results colored in blue and secondary orientation results colored in green.
-</div>
-
-<div id="fig:by-orientation-highlight">
-![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-by-orientation-highlight.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-by-orientation-highlight.png){width=3.5in}
-
-Binding free energies (ΔG) replotted from [@fig:by-orientation-comparison] with points whose difference in binding free energy along either axis is greater than 2 kcal/mol shown in color. Arrows point from primary to secondary. `This is backwards of the next plot.`
-</div>
+The difference in binding free energy between either orientation (ΔΔG<sub>orientation</sub>) can be large, around ~2 kcal/mol for SMIRNOFF99Frosst and GAFF v1.7 and ~5 kcal/mol for GAFF v2.1.
+SMIRNOFF99Frosst predicts the largest ΔΔG<sub>orientation</sub> for the ammonium-containing butylamine and pentylamine with αCD (@fig:by-orientation), with the primary orientation being more favorable.
+GAFF v1.7 predicts a large ΔΔG<sub>orientation</sub> for the cyclic alcohols cyclooctanol and  cycloheptanol, with the secondary orientation having a more favorable ΔG.
+This effect is even more apparent with GAFF v2.1 where the ΔΔG<sub>orientation</sub> for a-chp and a-coc is greater than 4 kcal/mol.
+This effect is due, in part, to poor sampling during the bound state (@fig:by-orientation, bottom right).
 
 <div id="fig:by-orientation">
 ![](images/SMIRNOFF99Frosst-dG-by-orientation-all.png){width=3.5in}
 ![](images/GAFF-v1.7-dG-by-orientation-all.png){width=3.5in}
 ![](images/GAFF-v2.1-dG-by-orientation-all.png){width=3.5in}
+![](images/a-chp-p-overlay.png){width=3.5in}
 
-
-The differences in binding free energy (ΔG) between guests leaving through either the primary or secondary face of αCD or βCD. Arrows point from the binding affinity for the secondary to the binding affinity for     the primary cavity. The systems with the largest ΔG difference are placed at the top.
+The differences in binding free energy (ΔG) between guests in either the primary or secondary orientation of αCD or βCD. Arrows point from ΔG for the secondary to ΔG for the primary cavity. The systems are arranged in descending order by greatest difference in ΔG between orientations.
+Bottom right: An overlay of cycloheptanol bound state positions (400 snapshots over 1 μs) with αCD. **This is actually the SMIRNOFF99Frosst picture, but I want to make the case for GAFF v2.1, so this needs to be updated.**
 </div>
 
 ### Guest preferences for αCD and βCD
+
+Ten guests in the data set bind both αCD and βCD.
+These ten guests show different patterns of binding between the two host molecules.
+For example, SMIRNOFF99Frosts underestimates the binding free energy of cyclooctanol both orientations by the same amount (@fig:by-cyclodextrin).
+However, despite underestimating the binding free energy of cyclobutanol for αCD by ~0.7 kcal/mol,  the binding affinity prediction for βCD is very slightly overestimated by ~0.3 kcal/mol (Table @tbl:dG-combined).
+Very similar patterns are observed for GAFF v1.7 and both force fields appear to perform better overall on binding affinities to αCD compared to βCD (@fig:dG-dH-by-cyclodextrin).
+
+As is the case with the difference in binding free energy between guest orientations, the difference in binding free energy between host molecules using GAFF v2.1 is large.
+There does not appear to be a clear difference in the accuracy of the predictions for αCD versus βCD (@fig:dG-dH-by-cyclodextrin).
 
 <div id="fig:by-cyclodextrin">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-by-cyclodextrin.png){width=3.5in}
 ![](images/GAFF-v1.7-vs-Experiment-dG-by-cyclodextrin.png){width=3.5in}
 ![](images/GAFF-v2.1-vs-Experiment-dG-by-cyclodextrin.png){width=3.5in}
 
-
-The differences in binding free energy (ΔG) between the same guest binding to either αCD or βCD. The binding affinity for αCD is circled in black.
+The differences in binding free energy between the same guest for either αCD or βCD. The binding affinity for αCD is circled in black. Thin colored lines connect data points for the same guest. Color is used purely to distinguish among the guests.
 </div>
 
-### Functional group interactions
+### Trends by guest functional group
+
+SMIRNOFF99Frosst does a good job (MSE = -0.10 kcal/mol and RMSE = 0.76 kcal/mol) estimating the binding free energy of ammonium-containing guests to both αCD and βCD (@fig:ammonium).
+Shorter chain molecules bind less strongly and the same guest will bind more strongly to αCD than βCD.
+
+[I need to include the functional group tables here. I will put the SMIRNOFF99Frosst vs. Experimental tables here and the others in the SI.]{.banner .lightgrey}
 
 <div id="fig:ammonium">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-highlight-alpha-ammonium.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-highlight-beta-ammonium.png){width=3.5in}
 
-Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. Darker colors indicate... 
+Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. Darker colors indicate shorter chain molecules.
 </div>
+
+[This figure makes it look like SMIRNOFF99Frosst nails the prediction, but it is potentially very misleading because this is not *all* of the ammonium containing guests because not all of them follow the trend of increasing chain length. So, for example, 1-methylheptylamine is missing. This point also applies to the graphs below.]{.banner .lightgrey}
+
+SMIRNOFF99Frosst performs reasonably on cyclic alcohols (MSE = 0.70 kcal/mol and RMSE = 1.07 kcal/mol) (@fig:alcohols).
+The predictions for αCD are uniformly underestimated while those for βCD are equally under- and over-predicted.
+
+[Should say something here about cylooctanol predictions *and* experiment being poor because it does not fit well, especially in αCD]{.banner .lightgrey}
 
 <div id="fig:alcohols">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-highlight-alpha-alcohols.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-highlight-beta-alcohols.png){width=3.5in}
 
-Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate... 
+Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate smaller molecules.
 </div>
+
+The binding affinity of carboxylate guests to both αCD and βCD is well characterized by SMIRNOFF99Frosst (MSE = -0.36 kcal/mol and RMSE = 0.87 kcal/mol) (@fig:carboxylates).
 
 <div id="fig:carboxylates">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-highlight-alpha-carboxylates.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-Experiment-dG-highlight-beta-carboxylates.png){width=3.5in}
 
-Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate... 
+Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicates smaller molecules.
 </div>
+
+In all cases, GAFF v1.7 tends to predict slightly weaker binding than SMIRNOFF99Frosst whereas GAFF v2.1 predicts much stronger binding for these compounds (@fig:additional-highlights-ammonium, @fig:additional-highlights-alcohols, and @fig:additional-highlights-carboxylates).
 
 ### Differences in force field parameters between SMIRNOFF99Frosst and GAFF
 
-Next, we summarize the parameter differences between SMIRNOFF99Frosst, a decendent of parm@Frosst and GAFF v1.7 (released circa March 2015 according to `gaff.dat` distributed with AMBER16) and GAFF v2.1 (under active development).
+Next, we summarize the parameter differences between SMIRNOFF99Frosst, a decendent of parm99 and GAFF v1.7 (released circa March 2015 according to `gaff.dat` distributed with AMBER16) and GAFF v2.1 (which is under active development) on the parameters applied to αCD.
 
-The σ and ε parameters are identical between SMIRNOFF99Frosst and GAFF v1.7
-Compared to GAFF v2.1, SMIRNOFF99Frosst has deeper well depths for oxygens and decreased σ values for the hydroxyl hydrogens.
+The σ and ε parameters are identical between SMIRNOFF99Frosst and GAFF v1.7.
+Compared to GAFF v2.1, SMIRNOFF99Frosst has deeper well depths for oxygens and decreased σ values for the hydroxyl hydrogens (@fig:LJ).
 
+#### Lennard-Jones
 <div id="fig:LJ">
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-sigma.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-epsilon.png){width=3.5in}
@@ -373,8 +404,10 @@ Compared to GAFF v2.1, SMIRNOFF99Frosst has deeper well depths for oxygens and d
 A comparison of Lennard-Jones nonbonded parameters for SMIRNOFF99Frosst and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to [@fig:atom-names]. 
 </div>
 
-Compared to GAFF v1.7, SMIRNOFF99Frosst tends to have slightly larger bond force constants, except for the $\ce{O-H}$ hydroxyl bond force constant, which is much stronger.
-In GAFF v2.1, the $\ce{O-H}$ hydroxyl bond force constant is consistent with SMIRNOFF99Frosst, but the carbon-oxygen bond constants are weaker.
+#### Bonded parameters
+
+Compared to GAFF v1.7, SMIRNOFF99Frosst tends to have slightly larger bond force constants, except for the O--H hydroxyl bond force constant, which is much stronger.
+In GAFF v2.1, the O--H hydroxyl bond force constant is consistent with SMIRNOFF99Frosst, but the carbon-oxygen bond constants are weaker.
 Equilibrium bond lengths are very similar ([@fig:bond-req]).
 
 <div id="fig:bonds">
@@ -384,11 +417,13 @@ Equilibrium bond lengths are very similar ([@fig:bond-req]).
 A comparison of bonded parameters for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to [@fig:atom-names]. 
 </div>
 
-Relative to GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst has fewer unique angle parameters applied to αCD; several distinct parameters appear to be compressed into a single force constant, around 50 kcal/mol/rad^2^.
+#### Angle parameters
+
+Relative to GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst has fewer unique angle parameters applied to αCD; several distinct parameters appear to be compressed into a single force constant, around 50 kcal/mol/rad^2^ (@fig:ang).
 These parameters correspond to $\ce{C-C-C}$, $\ce{C-O-C}$, and $\ce{O-C-O}$ angles.
 The $\ce{C-C-C}$ angles are primarily around the ring of the glucose monomer.
 The $\ce{C-O-C}$ angles are both around the ring and between monomers (e.g., $\ce{C1-O1-C4}$ and $\ce{C1-O5-C5}$).
-Weaker force constants for these parameters may  lead to increased flexibility.
+Weaker force constants for these parameters may lead to increased flexibility.
 
 <div id="fig:ang">
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-ang-k.png){width=3.5in}
@@ -400,11 +435,9 @@ Weaker force constants for these parameters may  lead to increased flexibility.
 A comparison of angle parameters for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Precise atom names have been omitted to compress multiple angles with the same parameter values into a single label.
 </div>
 
-#### Dihedrals
+#### Dihedral parameters
 
-[Include the table of dihedral differences here.]{.banner .lightgrey}
-
-The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are very similar, with hte expceiton of... (Table @tbl:S99-vs-GAFF-v1.7).
+The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are extremely similar (where differences occur, they are in the second or third decimal place), with the exception of the $\ce{H1-C1-C2-O2}$ parameter, for which SMIRNOFF99Frosst applies a dihedral with periodicity = 1 and GAFF v1.7 applies a dihedral with a periodicity of 3 (Table @tbl:S99-vs-GAFF-v1.7 and @fig:dihedral).
 
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v1.7 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -416,8 +449,10 @@ Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. {#
 
 ![The dihedral energy term applied to H1-C1-C2-O2 in SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to [@fig:atom-names].](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-H1-C2-C2-O2.png){#fig:dihedral width=3.5in}
 
+The dihedral parameters in GAFF v2.1 differ from those in SMIRNOFF99Frosst, in a number of ways.
+There are several dihedrals that have a different number of terms in either force field (Table @tbl:S99-vs-GAFF-v2.1-missing).
 
-The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF99Frosst.
+[While this table is accurate, it might not be the best representation because some missing terms happen to correspond to a 0.00 kcal/mol force constant in GAFF v2.1. It might be more useful to exclude those.]{.banner .lightgrey}
 
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -453,7 +488,11 @@ The dihedral parameters in GAFF v2.1 differ significantly from those in SMIRNOFF
 |  HO3 | O3 | C3 | C4 | 1 | 0 | 0.25 | -- |
 |  HO3 | O3 | C3 | C4 | 3 | 0 | 0.16 | 0.00 |
 
-Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the correspeonding term in the other force field. {#tbl:S99-vs-GAFF-v2.1-missing}
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the corresponding term in the other force field. {#tbl:S99-vs-GAFF-v2.1-missing}
+
+In other cases, SMIRNOFF99Frosst and GAFF v2.1 have disagreements on the barrier height after matching the periodicity and phase for a given dihedrals.
+It is notable that GAFF v2.1 does not have drastically higher force constants for any of the dihedrals, yet GAFF v2.1 produces much more rigid structures (Table @tbl:S99-vs-GAFF-v2.1).
+The dihedral differences between neighboring glucose monomers demonstrate that SMIRNOFF99Frosst, not GAFF v2.1 has higher force constants (Table @tbl:S99-vs-GAFF-v2.1-inter).
 
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -491,8 +530,6 @@ Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, wh
 Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, only height differences. {#tbl:S99-vs-GAFF-v2.1}
 
 
-...Inter-residue dihedrals...
-
 |   |  |  |  |  |  |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  ID | Atom 1 | Res 1 | Atom 2 | Res 2 | Atom 3 | Res 3 | Atom 4 | Res 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
@@ -515,13 +552,13 @@ Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, on
 Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. {#tbl:S99-vs-GAFF-v2.1-inter}
 
 <div id="fig:interdihedrals">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-C1-O1-C4-C3.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-O1-C4-C3-O3.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-O1-C4-C5-O5.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-C1-O1-C4-C3.png){width=3.5in}
 
-The dihedral energy term applied to three inter-residue dihedrals in SMIRNOFF99Frosst and GAFF v2.1. The third dihedral, affecting atoms O1<sub>n</sub>--C4<sub>n+1</sub>--C5<sub>n+1</sub>--O5<sub>n+1</sub> is quite significantly different, with multiple minima and and barrier heights. This dihedral partially controls the rotation of glucose monomers towards or away from the interior of the cyclodextrin cavity. Surprisingly, glucose monomers in GAFF v2.1 penetrate the open cavity much less frequently than in SMIRNOFF99Frosst, despite the lower and broader dihedral energy in GAFF v2.1. Atom names refer to [@fig:atom-names]. 
+
+The dihedral energy term applied to three inter-residue dihedrals in SMIRNOFF99Frosst and GAFF v2.1. The dihedral acting on atoms O1<sub>n</sub>--C4<sub>n+1</sub>--C5<sub>n+1</sub>--O5<sub>n+1</sub> is quite significantly different, with multiple minima and and barrier heights. This dihedral partially controls the rotation of glucose monomers towards or away from the interior of the cyclodextrin cavity. Surprisingly, glucose monomers in GAFF v2.1 penetrate the open cavity much less frequently than in SMIRNOFF99Frosst, despite the lower and broader dihedral energy in GAFF v2.1. Atom names refer to [@fig:atom-names]. 
 </div>
-
 
 ### Structural consequences of the force field parameter differences
 
@@ -529,12 +566,16 @@ In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 an
 
 ![Top: Root mean square deviation (RMSD) of free βCD in the three force fields, all relative to the same initial structure. A 1000 frame moving average is plotted in red. Middle: to-view of the open cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the open cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity.](images/cyclodextrin-flexibility.png){#fig:flexibility width=100%}
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
- [<i class="fas fa-star"></i> Update font size in RMSD plots.]{.banner .lightgrey}
+## Discussion
+
+[TBD]{.banner .lightgrey}
+
+- Include brief discussion of SMIRNOFF99Frosst developement.
+- It is not surprising that it behaves like GAFF v1.7.
+
+- How are we going to take this work forward?
 
 ## Supporting Information {.page_break_before #SI}
-
-![The primary (left) and secondary (right) cavity of αCD.](images/alphaCD-structure.png){#fig:cavity width=3.5in}
 
 <div id="fig:TdS">
 ![](images/SMIRNOFF99Frosst-vs-Experiment-TdS.png){width=3.5in}
@@ -542,6 +583,23 @@ In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 an
 ![](images/GAFF-v2.1-vs-Experiment-TdS.png){width=3.5in}
 
 Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.
+</div>
+
+![The primary (left) and secondary (right) cavity of αCD.](images/alphaCD-structure.png){#fig:cavity width=3.5in}
+
+
+<div id="fig:by-orientation-comparison">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-color-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-color-by-orientation.png){width=3.5in}
+
+Binding free energies (ΔG) with the primary orientation results colored in blue and secondary orientation results colored in green.
+</div>
+
+<div id="fig:by-orientation-highlight">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-by-orientation-highlight.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-by-orientation-highlight.png){width=3.5in}
+
+Binding free energies (ΔG) replotted from [@fig:by-orientation-comparison] with points whose difference in binding free energy along either axis is greater than 2 kcal/mol shown in color. Arrows point from primary to secondary. **The arrow direction should match @fig:by-orientation, but it doesn't.**
 </div>
 
 <div id="fig:dG-by-orientation">
@@ -582,11 +640,14 @@ Comparison of calculated absolute binding free entropies (-TΔS) between force f
 Binding free energies (ΔG) replotted from [@fig:dG-dH], with αCD points colored in blue and βCD points in grey (left) or αCD points in grey with βCD points colored in green (right).
 </div>
 
-<div id="fig:bond-req">
-![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-bond-req.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-bond-req.png){width=3.5in}
+<div id="fig:additional-highlights-ammonium">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-ammonium-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-ammonium-by-orientation.png){width=3.5in}
 
-A comparison of bond equilibrium lengths for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Atom names refer to [@fig:atom-names]. 
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-ammonium-by-orientation.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-ammonium-by-orientation.png){width=3.5in}
+
+Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted.
 </div>
 
 <div id="fig:additional-highlights-alcohols">
@@ -599,16 +660,6 @@ A comparison of bond equilibrium lengths for SMIRNOFF99Frosst, GAFF v1.7, and GA
 Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted.
 </div>
 
-<div id="fig:additional-highlights-ammonium">
-![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-ammonium-by-orientation.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-ammonium-by-orientation.png){width=3.5in}
-
-![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-beta-ammonium-by-orientation.png){width=3.5in}
-![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-ammonium-by-orientation.png){width=3.5in}
-
-Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted.
-</div>
-
 <div id="fig:additional-highlights-carboxylates">
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-dG-highlight-alpha-carboxylates-by-orientation.png){width=3.5in}
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-alpha-carboxylates-by-orientation.png){width=3.5in}
@@ -617,6 +668,13 @@ Binding free energy (ΔG) comparisons showing ammonium guests in color and highl
 ![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-dG-highlight-beta-carboxylates-by-orientation.png){width=3.5in}
 
 Binding free energy (ΔG) comparisons showing carboxylates guests in color and highlighted.
+</div>
+
+<div id="fig:bond-req">
+![](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-bond-req.png){width=3.5in}
+![](images/SMIRNOFF99Frosst-vs-GAFF-v2.1-bond-req.png){width=3.5in}
+
+A comparison of bond equilibrium lengths for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Atom names refer to [@fig:atom-names]. 
 </div>
 
 |  System | Experimental |  | SMIRNOFF99Frosst |  | GAFF v1.7 |  | GAFF v2.1 |  |

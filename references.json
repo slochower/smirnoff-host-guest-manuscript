@@ -304,6 +304,46 @@
   },
   {
     "publisher": "American Chemical Society (ACS)",
+    "issue": "7",
+    "DOI": "10.1021/acs.jctc.7b00275",
+    "type": "article-journal",
+    "page": "3260-3275",
+    "source": "Crossref",
+    "title": "Attach-Pull-Release Calculations of Ligand Binding and Conformational Changes on the First BRD4 Bromodomain",
+    "volume": "13",
+    "author": [
+      {
+        "given": "Germano",
+        "family": "Heinzelmann"
+      },
+      {
+        "given": "Niel M.",
+        "family": "Henriksen"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          5,
+          31
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gbpj4m",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMCID": "PMC5541932",
+    "PMID": "28564537",
+    "id": "1CuDE1c2r"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
     "issue": "9",
     "DOI": "10.1021/acs.jctc.7b00359",
     "type": "article-journal",
@@ -337,6 +377,82 @@
     "PMCID": "PMC5606194",
     "PMID": "28696692",
     "id": "HVgz5rZq"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "11",
+    "DOI": "10.1021/acs.jctc.8b00640",
+    "type": "article-journal",
+    "page": "6076-6092",
+    "source": "Crossref",
+    "title": "Escaping Atom Types in Force Fields Using Direct Chemical Perception",
+    "volume": "14",
+    "author": [
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "Caitlin C.",
+        "family": "Bannan"
+      },
+      {
+        "given": "Andrea",
+        "family": "Rizzi"
+      },
+      {
+        "given": "Christopher I.",
+        "family": "Bayly"
+      },
+      {
+        "given": "John D.",
+        "family": "Chodera"
+      },
+      {
+        "given": "Victoria T.",
+        "family": "Lim"
+      },
+      {
+        "given": "Nathan M.",
+        "family": "Lim"
+      },
+      {
+        "given": "Kyle A.",
+        "family": "Beauchamp"
+      },
+      {
+        "given": "David R.",
+        "family": "Slochower"
+      },
+      {
+        "given": "Michael R.",
+        "family": "Shirts"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      },
+      {
+        "given": "Peter K.",
+        "family": "Eastman"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          11
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gffnf3",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMCID": "PMC6245550",
+    "PMID": "30351006",
+    "id": "1HYTTY1PU"
   },
   {
     "publisher": "American Chemical Society (ACS)",
@@ -589,6 +705,90 @@
     "id": "htck51Lp"
   },
   {
+    "publisher": "Informa UK Limited",
+    "issue": "4",
+    "DOI": "10.1080/07391102.1999.10508297",
+    "type": "article-journal",
+    "page": "845-862",
+    "source": "Crossref",
+    "title": "A Modified Version of the Cornellet al.Force Field with Improved Sugar Pucker Phases and Helical Repeat",
+    "volume": "16",
+    "author": [
+      {
+        "suffix": "III",
+        "given": "Thomas E.",
+        "family": "Cheatham"
+      },
+      {
+        "given": "Piotr",
+        "family": "Cieplak"
+      },
+      {
+        "given": "Peter A.",
+        "family": "Kollman"
+      }
+    ],
+    "container-title": "Journal of Biomolecular Structure and Dynamics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1999,
+          2
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfzp4j",
+    "container-title-short": "Journal of Biomolecular Structure and Dynamics",
+    "PMID": "10217454",
+    "id": "13wrQoS3l"
+  },
+  {
+    "type": "webpage",
+    "title": "Daylight>SMIRKS Tutorial",
+    "URL": "http://daylight.com/dayhtml_tutorials/languages/smirks/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          4,
+          20
+        ]
+      ]
+    },
+    "id": "pOsXFMux"
+  },
+  {
+    "type": "webpage",
+    "title": "An Informal AMBER Small Molecule Force Field: parm@Frosst",
+    "abstract": "Computational Chemistry List Archive,\nResource for Computational Chemists",
+    "URL": "http://www.ccl.net/cca/data/parm_at_Frosst/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          4,
+          20
+        ]
+      ]
+    },
+    "id": "168lWg0SB"
+  },
+  {
+    "type": "webpage",
+    "title": "Open Force Field Initiative",
+    "abstract": "An open source, open science, and open data approach to better force fields",
+    "URL": "https://openforcefield.org/",
+    "language": "en-us",
+    "author": [
+      {
+        "family": "The Open Force Field Initiative",
+        "given": ""
+      }
+    ],
+    "id": "OhpH7vfg"
+  },
+  {
     "type": "webpage",
     "title": "The Amber Molecular Dynamics Package",
     "abstract": "Amber is a package of programs for\n   molecular dynamics simulations of proteins and nucleic acids",
@@ -598,7 +798,7 @@
         [
           "2019",
           4,
-          18
+          20
         ]
       ]
     },
