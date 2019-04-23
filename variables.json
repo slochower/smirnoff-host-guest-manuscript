@@ -1,5 +1,5 @@
 {
-  "date": "April 20, 2019",
+  "date": "April 23, 2019",
   "authors": [
     {
       "github": "slochower",
@@ -74,7 +74,7 @@
     "repo_slug": "slochower/smirnoff-host-guest-manuscript",
     "repo_owner": "slochower",
     "repo_name": "smirnoff-host-guest-manuscript",
-    "commit": "9e7eb83a2840e78662be03f477a5451520d8befd"
+    "commit": "ab335ac281fb9359efe40781e6eb85d0a31920e0"
   },
   "manuscript_stats": {
     "reference_counts": {

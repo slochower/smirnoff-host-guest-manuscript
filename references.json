@@ -752,7 +752,7 @@
         [
           "2019",
           4,
-          20
+          23
         ]
       ]
     },
@@ -768,7 +768,7 @@
         [
           "2019",
           4,
-          20
+          23
         ]
       ]
     },
@@ -789,19 +789,8 @@
     "id": "OhpH7vfg"
   },
   {
+    "URL": "www.ambermd.org",
     "type": "webpage",
-    "title": "The Amber Molecular Dynamics Package",
-    "abstract": "Amber is a package of programs for\n   molecular dynamics simulations of proteins and nucleic acids",
-    "URL": "http://ambermd.org/",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          4,
-          20
-        ]
-      ]
-    },
     "id": "197xzzCJg"
   }
 ]
