@@ -77,11 +77,26 @@ if [ "$BUILD_PDF" != "false" ] && [ -z "$DOCKER_EXISTS" ]; then
   rm images
 fi
 
+if [ "$BUILD_LATEX" == "true" ]; then
+  echo "Export LaTeX manuscript"
+    pandoc \
+    --from=markdown \
+    --to=latex \
+    --filter=pandoc-eqnos \
+    --filter=pandoc-tablenos \
+    --filter=pandoc-crossref \
+    --bibliography=$BIBLIOGRAPHY_PATH \
+    --biblatex \
+    --csl=$CSL_PATH \
+    --output=output/manuscript.tex \
+    $INPUT_PATH
+fi
+
 # Create PDF output (unless BUILD_PDF environment variable equals "false")
 if [ "$BUILD_PDF" != "false" ] && [ -n "$DOCKER_EXISTS" ]; then
   echo "Exporting PDF manuscript using Docker + Athena"
   if [ -d output/images ]; then rm -rf output/images; fi  # if images is a directory, remove it
-  cp -r -L content/images output/
+  cp -R -L content/images output/
   docker run \
     --rm \
     --volume `pwd`/output:/converted/ \
@@ -99,7 +114,7 @@ if [ "$BUILD_DOCX" = "true" ]; then
   pandoc --verbose \
     --from=markdown \
     --to=docx \
-    --filter=pandoc-fignos \
+    --filter=pandoc-crossref \
     --filter=pandoc-eqnos \
     --filter=pandoc-tablenos \
     --bibliography=$BIBLIOGRAPHY_PATH \
