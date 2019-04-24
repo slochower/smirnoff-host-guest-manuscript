@@ -3,6 +3,7 @@ author-meta:
 - David R. Slochower
 - Niel M. Henriksen
 - John D. Chodera
+- David L. Mobley
 - Michael K. Gilson
 date-meta: '2019-04-24'
 keywords:
@@ -21,9 +22,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/8ad4eeb66f29b2811db809fbbc736d796d4ba6ec/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/ff89e7673fc8bab233594a294e51aad25d1c6839/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@8ad4eeb](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/8ad4eeb66f29b2811db809fbbc736d796d4ba6ec)
+from [slochower/smirnoff-host-guest-manuscript@ff89e76](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ff89e7673fc8bab233594a294e51aad25d1c6839)
 on April 24, 2019.
 </em></small>
 
@@ -60,6 +61,17 @@ on April 24, 2019.
     [jchodera](https://twitter.com/jchodera)<br>
   <small>
      Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065
+  </small>
+
++ **David L. Mobley**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-1083-5533](https://orcid.org/0000-0002-1083-5533)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [davidlmobley](https://github.com/davidlmobley)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [davidlmobley](https://twitter.com/davidlmobley)<br>
+  <small>
+     Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA
   </small>
 
 + **Michael K. Gilson**<br>
@@ -570,7 +582,7 @@ In contrast, simulations with both SMIRNOFF99Frosst and GAFF v1.7 report a multi
 At any given time point, SMIRNOFF99Frosst adopts a variety of individual pseudodihedral conformations, leading to many conformations with at least one glucose monomer inside the cyclodextrin cavity and distortion of the overall shape of the host binding pocket (@fig:pseudodihedral,b-c). 
 Each pseudodihedral in GAFF v2.1 has a tight distribution; neighboring pseudodihedrals are negatively correlated with each other and positively correlated with the dihedrals on the opposite side of the ring (@fig:pseudodihedral,d).
 
-![(a) Population histograms of the pseudodihedral in free βCD, averaged over 43 μs, for each force field; one curve is drawn for each pseudodihedral in βCD. (b) Renderings of βCD in GAFF v1.7 which have the similar mean psuedodihedral values but very different individual pseudodihedral values. (c) Left: The timeseries of psuedodihedral values in SMIRNOFF99Frost during the `b-chp-p` simulation. The average value is drawn in grey. Right: The correlation between pseudodihedrals in the βCD ring with SMIRNOFF99Frosst. (d) The same as panel (c) except using GAFF v2.1. v2.1.](images/cyclodextrin-pseudodihedral.png){#fig:pseudodihedral width=100%}
+![(a) Population histograms of the pseudodihedral in free βCD, averaged over 43 μs, for each force field; one curve is drawn for each pseudodihedral in βCD. (b) Renderings of βCD in GAFF v1.7 which have the similar mean psuedodihedral values but very different individual pseudodihedral values. (c) Left: The timeseries of psuedodihedral values in SMIRNOFF99Frost during the `b-chp-p` simulation. The average value is drawn in grey. Right: The correlation between pseudodihedrals in the βCD ring with SMIRNOFF99Frosst. (d) The same as panel (c) except using GAFF v2.1.](images/cyclodextrin-pseudodihedral.png){#fig:pseudodihedral width=100%}
 
 
 ## Discussion
@@ -578,7 +590,8 @@ Each pseudodihedral in GAFF v2.1 has a tight distribution; neighboring pseudodih
 The necessity of adding each "type" of parameter for each atom type means that many parameters in GAFF are duplicates.
 But it is not clear which parameters can be pruned.
 SMIRNOFF99Frosst is a terse repesentation of a GAFF-like force field that is a good starting point for future development and optimization.
-How are we going to take this work forward?]{.lightgrey}
+How are we going to take this work forward?]{.banner .lightgrey}
+
 
 ## Supporting Information {.page_break_before #SI}
 

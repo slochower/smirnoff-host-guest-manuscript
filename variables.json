@@ -43,6 +43,20 @@
       ]
     },
     {
+      "github": "davidlmobley",
+      "orcid": "0000-0002-1083-5533",
+      "twitter": "davidlmobley",
+      "name": "David L. Mobley",
+      "initials": "DLM",
+      "email": "dmobley@uci.edu",
+      "affiliations": [
+        "Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA"
+      ],
+      "affiliation_numbers": [
+        4
+      ]
+    },
+    {
       "twitter": "michaelkgilson",
       "name": "Michael K. Gilson",
       "orcid": "0000-0002-3375-1738",
@@ -68,13 +82,17 @@
     {
       "affiliation": "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065",
       "affiliation_number": 3
+    },
+    {
+      "affiliation": "Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA",
+      "affiliation_number": 4
     }
   ],
   "ci_source": {
     "repo_slug": "slochower/smirnoff-host-guest-manuscript",
     "repo_owner": "slochower",
     "repo_name": "smirnoff-host-guest-manuscript",
-    "commit": "8ad4eeb66f29b2811db809fbbc736d796d4ba6ec"
+    "commit": "ff89e7673fc8bab233594a294e51aad25d1c6839"
   },
   "manuscript_stats": {
     "reference_counts": {
