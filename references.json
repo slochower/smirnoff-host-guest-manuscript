@@ -542,6 +542,39 @@
   },
   {
     "publisher": "American Chemical Society (ACS)",
+    "issue": "18",
+    "DOI": "10.1021/ja9921118",
+    "type": "article-journal",
+    "page": "4418-4435",
+    "source": "Crossref",
+    "title": "Chiral Recognition Thermodynamics of β-Cyclodextrin:  The Thermodynamic Origin of Enantioselectivity and the Enthalpy−Entropy Compensation Effect",
+    "volume": "122",
+    "author": [
+      {
+        "given": "Mikhail",
+        "family": "Rekharsky"
+      },
+      {
+        "given": "Yoshihisa",
+        "family": "Inoue"
+      }
+    ],
+    "container-title": "Journal of the American Chemical Society",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2000,
+          5
+        ]
+      ]
+    },
+    "URL": "https://doi.org/c2tvdg",
+    "container-title-short": "J. Am. Chem. Soc.",
+    "id": "g7xxBB7m"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
     "issue": "30",
     "DOI": "10.1021/jp8001614",
     "type": "article-journal",
@@ -752,7 +785,7 @@
         [
           "2019",
           4,
-          23
+          24
         ]
       ]
     },
@@ -768,7 +801,7 @@
         [
           "2019",
           4,
-          23
+          24
         ]
       ]
     },
