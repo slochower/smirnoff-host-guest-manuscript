@@ -32,6 +32,17 @@ author_info:
     email: john.chodera@choderalab.org
     affiliations:
       - Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065
+
+  -
+    github: davidlmobley
+    orcid: 0000-0002-1083-5533
+    twitter: davidlmobley
+    name: David L. Mobley
+    initials: DLM
+    email: dmobley@uci.edu
+    affiliations: 
+      - Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA
+
   -
     twitter: michaelkgilson
     name: Michael K. Gilson
