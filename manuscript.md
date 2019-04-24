@@ -21,9 +21,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/68ba92c8869b3a6d382e007c95f037a4a6c7b2f0/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/8ad4eeb66f29b2811db809fbbc736d796d4ba6ec/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@68ba92c](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/68ba92c8869b3a6d382e007c95f037a4a6c7b2f0)
+from [slochower/smirnoff-host-guest-manuscript@8ad4eeb](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/8ad4eeb66f29b2811db809fbbc736d796d4ba6ec)
 on April 24, 2019.
 </em></small>
 
@@ -565,22 +565,20 @@ In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 an
 ![Top: Root mean square deviation (RMSD) of free βCD in the three force fields, all relative to the same initial structure. A 1000 frame moving average is plotted in red. Middle: to-view of the open cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the open cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity.](images/cyclodextrin-flexibility.png){#fig:flexibility width=100%}
 
 The "flip" pseudodihedral O2<sub>n</sub>--C1<sub>n</sub>--C4<sub>n+1</sub>--O3<sub>n+1</sub> characterizes the orientation of glucose monomers relative to their neighbors.
-This dihedral is tightly distributed in GAFF v2.1, with all seven dihedrals having a Gaussian-like distribution, centered around -10 degreees (@fig:psuedodihedral,a).
+This dihedral is tightly distributed in GAFF v2.1, with all seven dihedrals having a Gaussian-like distribution, centered around -10 degreees (@fig:pseudodihedral,a).
 In contrast, simulations with both SMIRNOFF99Frosst and GAFF v1.7 report a multipeaked distribution for the dihedral, with a small amount of spread among the individual angles. 
-At any given time point, SMIRNOFF99Frosst adopts a variety of individual pseudodihedral conformations, leading to many conformations with at least one glucose monomer inside the cyclodextrin cavity and distortion of the overall shape of the host binding pocket (@fig:psuedodihedral,b-c). 
-Each pseudodihedral in GAFF v2.1 has a tight distribution; neighboring pseudodihedrals are negatively correlated with each other and positively correlated with the dihedrals on the opposite side of the ring (@fig:psuedodihedral,d).
+At any given time point, SMIRNOFF99Frosst adopts a variety of individual pseudodihedral conformations, leading to many conformations with at least one glucose monomer inside the cyclodextrin cavity and distortion of the overall shape of the host binding pocket (@fig:pseudodihedral,b-c). 
+Each pseudodihedral in GAFF v2.1 has a tight distribution; neighboring pseudodihedrals are negatively correlated with each other and positively correlated with the dihedrals on the opposite side of the ring (@fig:pseudodihedral,d).
 
-![(a) Population histograms of the pseudodihedral in free βCD, averaged over 43 μs, for each force field; one curve is drawn for each pseudodihedral in βCD. (b) Renderings of βCD in GAFF v1.7 which have the similar mean psuedodihedral values but very different individual pseudodihedral values. (c) Left: The timeseries of psuedodihedral values in SMIRNOFF99Frost during the `b-chp-p` simulation. Right: The correlation between pseudodihedrals in the βCD ring with SMIRNOFF99Frosst. (d) The same as panel (c) except using GAFF v2.1. v2.1.](images/cyclodextrin-pseudodihedral.png){#fig:pseudodihedral width=100%}
+![(a) Population histograms of the pseudodihedral in free βCD, averaged over 43 μs, for each force field; one curve is drawn for each pseudodihedral in βCD. (b) Renderings of βCD in GAFF v1.7 which have the similar mean psuedodihedral values but very different individual pseudodihedral values. (c) Left: The timeseries of psuedodihedral values in SMIRNOFF99Frost during the `b-chp-p` simulation. The average value is drawn in grey. Right: The correlation between pseudodihedrals in the βCD ring with SMIRNOFF99Frosst. (d) The same as panel (c) except using GAFF v2.1. v2.1.](images/cyclodextrin-pseudodihedral.png){#fig:pseudodihedral width=100%}
 
 
 ## Discussion
-
-[- It is striking that SMIRNOFF99Frosst does similarly to both GAFF force fields, despite having fewer parameters.
+[It is striking that SMIRNOFF99Frosst does similarly to both GAFF force fields, despite having fewer parameters.
 The necessity of adding each "type" of parameter for each atom type means that many parameters in GAFF are duplicates.
-- But it is not clear which parameters can be pruned.
-- SMIRNOFF99Frosst is a terse repesentation of a GAFF-like force field that is a good starting point for future development and optimization.
-- How are we going to take this work forward?]{.lightgrey}
-
+But it is not clear which parameters can be pruned.
+SMIRNOFF99Frosst is a terse repesentation of a GAFF-like force field that is a good starting point for future development and optimization.
+How are we going to take this work forward?]{.lightgrey}
 
 ## Supporting Information {.page_break_before #SI}
 
