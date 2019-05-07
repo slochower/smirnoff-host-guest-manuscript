@@ -404,19 +404,15 @@
             if (!target)
                 return;
 
-            let newTarget = target;
             // if figure or table, modify target to get expected element
             if (hash.indexOf('#ref-') === 0)
-                newTarget = target.querySelector('p');
+                target = target.querySelector('p');
             else if (hash.indexOf('#fig:') === 0)
-                newTarget = target.parentNode;
+                target = target.parentNode;
             else if (hash.indexOf('#tbl:') === 0)
                 return;
 
-            if (!newTarget || newTarget === document.body)
-                newTarget = target;
-
-            return newTarget;
+            return target;
         }
 
         // when prev/next arrow button is clicked
