@@ -205,6 +205,158 @@
   {
     "publisher": "Springer Nature",
     "issue": "1",
+    "DOI": "10.1007/s10822-016-9948-6",
+    "type": "article-journal",
+    "page": "119-132",
+    "source": "Crossref",
+    "title": "Resolving the problem of trapped water in binding cavities: prediction of host–guest binding free energies in the SAMPL5 challenge by funnel metadynamics",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Soumendranath",
+        "family": "Bhakat"
+      },
+      {
+        "given": "Pär",
+        "family": "Söderhjelm"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          29
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9m894",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC5239820",
+    "PMID": "27573983",
+    "id": "kj7fJ3fg"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1007/s10822-016-9965-5",
+    "type": "article-journal",
+    "page": "107-118",
+    "source": "Crossref",
+    "title": "Absolute binding free energies for octa-acids and guests in SAMPL5",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Florentina",
+        "family": "Tofoleanu"
+      },
+      {
+        "given": "Juyong",
+        "family": "Lee"
+      },
+      {
+        "given": "Frank C.",
+        "family": "Pickard IV"
+      },
+      {
+        "given": "Gerhard",
+        "family": "König"
+      },
+      {
+        "given": "Jing",
+        "family": "Huang"
+      },
+      {
+        "given": "Minkyung",
+        "family": "Baek"
+      },
+      {
+        "given": "Chaok",
+        "family": "Seok"
+      },
+      {
+        "given": "Bernard R.",
+        "family": "Brooks"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          9,
+          30
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9m9c2",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC6472255",
+    "PMID": "27696242",
+    "id": "l8KUmyk3"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1007/s10822-016-9974-4",
+    "type": "article-journal",
+    "page": "1-19",
+    "source": "Crossref",
+    "title": "Overview of the SAMPL5 host–guest challenge: Are we doing better?",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Jian",
+        "family": "Yin"
+      },
+      {
+        "given": "Niel M.",
+        "family": "Henriksen"
+      },
+      {
+        "given": "David R.",
+        "family": "Slochower"
+      },
+      {
+        "given": "Michael R.",
+        "family": "Shirts"
+      },
+      {
+        "given": "Michael W.",
+        "family": "Chiu"
+      },
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          9,
+          22
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9m82x",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC5241188",
+    "PMID": "27658802",
+    "id": "BGsUYQln"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "1",
     "DOI": "10.1007/s10822-016-9977-1",
     "type": "article-journal",
     "page": "147-161",
@@ -261,6 +413,258 @@
     "PMCID": "PMC5581938",
     "PMID": "27787702",
     "id": "T7iFp9ei"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1007/s10822-018-0144-8",
+    "type": "article-journal",
+    "page": "1059-1073",
+    "source": "Crossref",
+    "title": "Prediction of CB[8] host–guest binding free energies in SAMPL6 using the double-decoupling method",
+    "volume": "32",
+    "author": [
+      {
+        "given": "Kyungreem",
+        "family": "Han"
+      },
+      {
+        "given": "Phillip S.",
+        "family": "Hudson"
+      },
+      {
+        "given": "Michael R.",
+        "family": "Jones"
+      },
+      {
+        "given": "Naohiro",
+        "family": "Nishikawa"
+      },
+      {
+        "given": "Florentina",
+        "family": "Tofoleanu"
+      },
+      {
+        "given": "Bernard R.",
+        "family": "Brooks"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          6
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfpzp2",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC6347468",
+    "PMID": "30084077",
+    "id": "ku7PPPs"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1007/s10822-018-0153-7",
+    "type": "article-journal",
+    "page": "1013-1026",
+    "source": "Crossref",
+    "title": "Detailed potential of mean force studies on host–guest systems from the SAMPL6 challenge",
+    "volume": "32",
+    "author": [
+      {
+        "given": "Lin Frank",
+        "family": "Song"
+      },
+      {
+        "given": "Nupur",
+        "family": "Bansal"
+      },
+      {
+        "given": "Zheng",
+        "family": "Zheng"
+      },
+      {
+        "given": "Kenneth M.",
+        "family": "Merz"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          24
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfpw5t",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMID": "30143917",
+    "id": "bKuLAjgi"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1007/s10822-018-0154-6",
+    "type": "article-journal",
+    "page": "1047-1058",
+    "source": "Crossref",
+    "title": "Blinded predictions of standard binding free energies: lessons learned from the SAMPL6 challenge",
+    "volume": "32",
+    "author": [
+      {
+        "given": "Michail",
+        "family": "Papadourakis"
+      },
+      {
+        "given": "Stefano",
+        "family": "Bosisio"
+      },
+      {
+        "given": "Julien",
+        "family": "Michel"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          29
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfpbrc",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMID": "30159717",
+    "id": "Dn1HX5lD"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1007/s10822-018-0166-2",
+    "type": "article-journal",
+    "page": "1075-1086",
+    "source": "Crossref",
+    "title": "Comparison of the umbrella sampling and the double decoupling method in binding free energy predictions for SAMPL6 octa-acid host–guest challenges",
+    "volume": "32",
+    "author": [
+      {
+        "given": "Naohiro",
+        "family": "Nishikawa"
+      },
+      {
+        "given": "Kyungreem",
+        "family": "Han"
+      },
+      {
+        "given": "Xiongwu",
+        "family": "Wu"
+      },
+      {
+        "given": "Florentina",
+        "family": "Tofoleanu"
+      },
+      {
+        "given": "Bernard R.",
+        "family": "Brooks"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfz352",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC6413509",
+    "PMID": "30324304",
+    "id": "ScmrI810"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1007/s10822-018-0170-6",
+    "type": "article-journal",
+    "page": "937-963",
+    "source": "Crossref",
+    "title": "Overview of the SAMPL6 host–guest binding affinity prediction challenge",
+    "volume": "32",
+    "author": [
+      {
+        "given": "Andrea",
+        "family": "Rizzi"
+      },
+      {
+        "given": "Steven",
+        "family": "Murkli"
+      },
+      {
+        "given": "John N.",
+        "family": "McNeill"
+      },
+      {
+        "given": "Wei",
+        "family": "Yao"
+      },
+      {
+        "given": "Matthew",
+        "family": "Sullivan"
+      },
+      {
+        "given": "Michael K.",
+        "family": "Gilson"
+      },
+      {
+        "given": "Michael W.",
+        "family": "Chiu"
+      },
+      {
+        "given": "Lyle",
+        "family": "Isaacs"
+      },
+      {
+        "given": "Bruce C.",
+        "family": "Gibb"
+      },
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "John D.",
+        "family": "Chodera"
+      }
+    ],
+    "container-title": "Journal of Computer-Aided Molecular Design",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfpzh5",
+    "container-title-short": "J Comput Aided Mol Des",
+    "PMCID": "PMC6301044",
+    "PMID": "30415285",
+    "id": "9MLPuYAQ"
   },
   {
     "publisher": "American Chemical Society (ACS)",
@@ -456,6 +860,125 @@
   },
   {
     "publisher": "American Chemical Society (ACS)",
+    "issue": "3",
+    "DOI": "10.1021/acs.jctc.8b01026",
+    "type": "article-journal",
+    "page": "1863-1874",
+    "source": "Crossref",
+    "title": "OPLS3e: Extending Force Field Coverage for Drug-Like Small Molecules",
+    "volume": "15",
+    "author": [
+      {
+        "given": "Katarina",
+        "family": "Roos"
+      },
+      {
+        "given": "Chuanjie",
+        "family": "Wu"
+      },
+      {
+        "given": "Wolfgang",
+        "family": "Damm"
+      },
+      {
+        "given": "Mark",
+        "family": "Reboul"
+      },
+      {
+        "given": "James M.",
+        "family": "Stevenson"
+      },
+      {
+        "given": "Chao",
+        "family": "Lu"
+      },
+      {
+        "given": "Markus K.",
+        "family": "Dahlgren"
+      },
+      {
+        "given": "Sayan",
+        "family": "Mondal"
+      },
+      {
+        "given": "Wei",
+        "family": "Chen"
+      },
+      {
+        "given": "Lingle",
+        "family": "Wang"
+      },
+      {
+        "given": "Robert",
+        "family": "Abel"
+      },
+      {
+        "given": "Richard A.",
+        "family": "Friesner"
+      },
+      {
+        "given": "Edward D.",
+        "family": "Harder"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          2,
+          15
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfvpnf",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMID": "30768902",
+    "id": "B182mNck"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "12",
+    "DOI": "10.1021/ct4005992",
+    "type": "article-journal",
+    "page": "5526-5538",
+    "source": "Crossref",
+    "title": "The Movable Type Method Applied to Protein–Ligand Binding",
+    "volume": "9",
+    "author": [
+      {
+        "given": "Zheng",
+        "family": "Zheng"
+      },
+      {
+        "given": "Melek N.",
+        "family": "Ucisik"
+      },
+      {
+        "given": "Kenneth M.",
+        "family": "Merz"
+      }
+    ],
+    "container-title": "Journal of Chemical Theory and Computation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          11,
+          26
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f5kjt2",
+    "container-title-short": "J. Chem. Theory Comput.",
+    "PMCID": "PMC3924725",
+    "PMID": "24535920",
+    "id": "rOVoXhRJ"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
     "issue": "9",
     "DOI": "10.1021/ct5004109",
     "type": "article-journal",
@@ -542,6 +1065,149 @@
   },
   {
     "publisher": "American Chemical Society (ACS)",
+    "issue": "7",
+    "DOI": "10.1021/ja512751q",
+    "type": "article-journal",
+    "page": "2695-2703",
+    "source": "Crossref",
+    "title": "Accurate and Reliable Prediction of Relative Ligand Binding Potency in Prospective Drug Discovery by Way of a Modern Free-Energy Calculation Protocol and Force Field",
+    "volume": "137",
+    "author": [
+      {
+        "given": "Lingle",
+        "family": "Wang"
+      },
+      {
+        "given": "Yujie",
+        "family": "Wu"
+      },
+      {
+        "given": "Yuqing",
+        "family": "Deng"
+      },
+      {
+        "given": "Byungchan",
+        "family": "Kim"
+      },
+      {
+        "given": "Levi",
+        "family": "Pierce"
+      },
+      {
+        "given": "Goran",
+        "family": "Krilov"
+      },
+      {
+        "given": "Dmitry",
+        "family": "Lupyan"
+      },
+      {
+        "given": "Shaughnessy",
+        "family": "Robinson"
+      },
+      {
+        "given": "Markus K.",
+        "family": "Dahlgren"
+      },
+      {
+        "given": "Jeremy",
+        "family": "Greenwood"
+      },
+      {
+        "given": "Donna L.",
+        "family": "Romero"
+      },
+      {
+        "given": "Craig",
+        "family": "Masse"
+      },
+      {
+        "given": "Jennifer L.",
+        "family": "Knight"
+      },
+      {
+        "given": "Thomas",
+        "family": "Steinbrecher"
+      },
+      {
+        "given": "Thijs",
+        "family": "Beuming"
+      },
+      {
+        "given": "Wolfgang",
+        "family": "Damm"
+      },
+      {
+        "given": "Ed",
+        "family": "Harder"
+      },
+      {
+        "given": "Woody",
+        "family": "Sherman"
+      },
+      {
+        "given": "Mark",
+        "family": "Brewer"
+      },
+      {
+        "given": "Ron",
+        "family": "Wester"
+      },
+      {
+        "given": "Mark",
+        "family": "Murcko"
+      },
+      {
+        "given": "Leah",
+        "family": "Frye"
+      },
+      {
+        "given": "Ramy",
+        "family": "Farid"
+      },
+      {
+        "given": "Teng",
+        "family": "Lin"
+      },
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "William L.",
+        "family": "Jorgensen"
+      },
+      {
+        "given": "Bruce J.",
+        "family": "Berne"
+      },
+      {
+        "given": "Richard A.",
+        "family": "Friesner"
+      },
+      {
+        "given": "Robert",
+        "family": "Abel"
+      }
+    ],
+    "container-title": "Journal of the American Chemical Society",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          2,
+          12
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f64pdz",
+    "container-title-short": "J. Am. Chem. Soc.",
+    "PMID": "25625324",
+    "id": "HQi6ihVB"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
     "issue": "18",
     "DOI": "10.1021/ja9921118",
     "type": "article-journal",
@@ -572,6 +1238,54 @@
     "URL": "https://doi.org/c2tvdg",
     "container-title-short": "J. Am. Chem. Soc.",
     "id": "g7xxBB7m"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "2",
+    "DOI": "10.1021/jacs.6b11467",
+    "type": "article-journal",
+    "page": "946-957",
+    "source": "Crossref",
+    "title": "Predictions of Ligand Selectivity from Absolute Binding Free Energy Calculations",
+    "volume": "139",
+    "author": [
+      {
+        "given": "Matteo",
+        "family": "Aldeghi"
+      },
+      {
+        "given": "Alexander",
+        "family": "Heifetz"
+      },
+      {
+        "given": "Michael J.",
+        "family": "Bodkin"
+      },
+      {
+        "given": "Stefan",
+        "family": "Knapp"
+      },
+      {
+        "given": "Philip C.",
+        "family": "Biggin"
+      }
+    ],
+    "container-title": "Journal of the American Chemical Society",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          1,
+          9
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9kr6h",
+    "container-title-short": "J. Am. Chem. Soc.",
+    "PMCID": "PMC5253712",
+    "PMID": "28009512",
+    "id": "15iR76Uc"
   },
   {
     "publisher": "American Chemical Society (ACS)",
@@ -657,6 +1371,79 @@
     "URL": "https://doi.org/cmwfwn",
     "container-title-short": "J. Phys. Chem. B",
     "id": "1236RpaUv"
+  },
+  {
+    "publisher": "Royal Society of Chemistry (RSC)",
+    "abstract": "<p>A quantum mechanical bespoke molecular mechanics force field is derived for the L99A mutant of T4 lysozyme and used to compute absolute binding free energies of six benzene analogs to the protein.</p>",
+    "DOI": "10.1039/c9md00017h",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Computation of protein–ligand binding free energies using quantum mechanical bespoke force fields",
+    "author": [
+      {
+        "given": "Daniel J.",
+        "family": "Cole"
+      },
+      {
+        "given": "Israel",
+        "family": "Cabeza de Vaca"
+      },
+      {
+        "given": "William L.",
+        "family": "Jorgensen"
+      }
+    ],
+    "container-title": "MedChemComm",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfz353",
+    "container-title-short": "Med. Chem. Commun.",
+    "id": "mdqdy96N"
+  },
+  {
+    "publisher": "AIP Publishing",
+    "issue": "21",
+    "DOI": "10.1063/1.2799191",
+    "type": "article-journal",
+    "page": "214108",
+    "source": "Crossref",
+    "title": "Nonlinear scaling schemes for Lennard-Jones interactions in free energy calculations",
+    "volume": "127",
+    "author": [
+      {
+        "given": "Thomas",
+        "family": "Steinbrecher"
+      },
+      {
+        "given": "David L.",
+        "family": "Mobley"
+      },
+      {
+        "given": "David A.",
+        "family": "Case"
+      }
+    ],
+    "container-title": "The Journal of Chemical Physics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2007,
+          12,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/fc7n55",
+    "container-title-short": "The Journal of Chemical Physics",
+    "PMID": "18067350",
+    "id": "sMVo0eOR"
   },
   {
     "publisher": "AIP Publishing",
@@ -777,6 +1564,7 @@
     "id": "13wrQoS3l"
   },
   {
+    "id": "pOsXFMux",
     "type": "webpage",
     "title": "Daylight>SMIRKS Tutorial",
     "URL": "http://daylight.com/dayhtml_tutorials/languages/smirks/",
@@ -784,14 +1572,14 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          8
         ]
       ]
-    },
-    "id": "pOsXFMux"
+    }
   },
   {
+    "id": "168lWg0SB",
     "type": "webpage",
     "title": "An Informal AMBER Small Molecule Force Field: parm@Frosst",
     "abstract": "Computational Chemistry List Archive,\nResource for Computational Chemists",
@@ -800,12 +1588,65 @@
       "date-parts": [
         [
           "2019",
-          4,
-          24
+          5,
+          8
         ]
       ]
-    },
-    "id": "168lWg0SB"
+    }
+  },
+  {
+    "id": "cT3I9uDT",
+    "type": "webpage",
+    "title": "Remove generics, add hydrogen radii, rename ffxml files by davidlmobley · Pull Request #101 · openforcefield/openforcefield",
+    "container-title": "GitHub",
+    "abstract": "This PR will:\n\n Remove generic atoms matching any element from smirnoff99Frosst so exceptions are raised if parameters are assigned to a molecule which contains an element we don&#39;t cover (osmiu...",
+    "URL": "https://github.com/openforcefield/openforcefield/pull/101",
+    "language": "en",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          5,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "10E0XdByV",
+    "type": "webpage",
+    "title": "Adjust hydroxyl hydrogen to have a small radius, requires more research · Issue #61 · openforcefield/smirnoff99Frosst",
+    "container-title": "GitHub",
+    "abstract": "@davidlmobley @cbayly13 and I have discussed this off line, but the parameters for HX in parm@frosst were never added to SMIRNOFF99Frosst. SMARTS patterns from Patty: HX: [$([#1]-O-[#6]-,:[#7])] AN...",
+    "URL": "https://github.com/openforcefield/smirnoff99Frosst/issues/61",
+    "language": "en",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          5,
+          8
+        ]
+      ]
+    }
+  },
+  {
+    "id": "Q2dwH7Dq",
+    "type": "webpage",
+    "title": "Add hydroxyl hydrogen radii, remove generics, update for 1.0.7 release by davidlmobley · Pull Request #74 · openforcefield/smirnoff99Frosst",
+    "container-title": "GitHub",
+    "abstract": "Updates as per openforcefield/openforcefield#101 ; most notably adding nonzero LJ parameters for hydroxyl hydrogens, as introduced in SMIRNOFF paper.\nAlso updates for 1.0.7 release, as we need a po...",
+    "URL": "https://github.com/openforcefield/smirnoff99Frosst/pull/74",
+    "language": "en",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          5,
+          8
+        ]
+      ]
+    }
   },
   {
     "type": "webpage",
@@ -822,18 +1663,8 @@
     "id": "OhpH7vfg"
   },
   {
+    "URL": "www.ambermd.org",
     "type": "webpage",
-    "title": "Institute for Quantitative Biomedicine (IQB) | iqb.rutgers.edu",
-    "URL": "https://iqb.rutgers.edu/",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          4,
-          24
-        ]
-      ]
-    },
     "id": "197xzzCJg"
   }
 ]
