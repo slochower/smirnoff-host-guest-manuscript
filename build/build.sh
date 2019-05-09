@@ -30,7 +30,6 @@ pandoc --verbose \
   --filter=pandoc-eqnos \
   --filter=pandoc-tablenos \
   --filter=pandoc-fignos \
-  --metadata-file=build/assets/pandoc-crossref.yaml \
   --bibliography=$BIBLIOGRAPHY_PATH \
   --csl=$CSL_PATH \
   --metadata link-citations=true \
@@ -52,7 +51,7 @@ pandoc --verbose \
   $INPUT_PATH
 
 # Return null if docker command is missing, otherwise return path to docker
-# DOCKER_EXISTS=`command -v docker`
+DOCKER_EXISTS=`command -v docker`
 
 # Create PDF output (unless BUILD_PDF environment variable equals "false")
 if [ "$BUILD_PDF" != "false" ] && [ -z "$DOCKER_EXISTS" ]; then
@@ -98,12 +97,14 @@ if [ "$BUILD_PDF" != "false" ] && [ -n "$DOCKER_EXISTS" ]; then
   if [ -d output/images ]; then rm -rf output/images; fi  # if images is a directory, remove it
   cp -R -L content/images output/
   docker run \
+    --shm-size="2g" \
     --rm \
     --volume `pwd`/output:/converted/ \
     --security-opt seccomp:unconfined \
     arachnysdocker/athenapdf:2.16.0 \
     athenapdf \
     --delay=20000 \
+    --timeout=20000 \
     manuscript.html manuscript.pdf
   rm -rf output/images
 fi
