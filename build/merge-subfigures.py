@@ -8,14 +8,16 @@ def int_to_letter(int):
     return alphabet[int]
 
 
-def label(input, output, annotation):
+def label(input, output, annotation, pointsize=18):
 
     command = f"""
     convert \
     -font arial \
     -stroke black \
-    -pointsize 18 \
+    -pointsize {pointsize} \
     -gravity northwest \
+    -undercolor 'rgba(100%, 100%, 100%, 0.8)' \
+    -strokewidth 2 \
     -draw "text 2,2 '{int_to_letter(annotation)}'" \
     -density 300 \
     {input} \
@@ -70,7 +72,7 @@ def resize(input, output, dim, width=True):
 
     subprocess.call(command, shell=True)
 
-def tile(output, geometry="2x2"):
+def tile(output, geometry="2x2", gravity="center"):
     # The `<` means don't make smaller, I think.
 
     command = f"""
@@ -78,8 +80,8 @@ def tile(output, geometry="2x2"):
     tmp/tmp-?.png \
     -tile {geometry} \
     -geometry '1x1+0+0<' \
-    -gravity center \
-    tmp/{output}
+    -gravity {gravity} \
+    {output}
     """
     subprocess.call(command, shell=True)
 
@@ -97,6 +99,10 @@ if __name__ == "__main__":
     ap.add_argument("-o", "--output", help="Merged file", required=True)
     ap.add_argument("-g", "--geometry", help="ImageMagick geometry of tiles", 
     required=False, default="2x2")
+    ap.add_argument("-y", "--gravity", help="ImageMagick gravity of tile alignment", 
+    required=False, default="center")
+    ap.add_argument("-f", "--fontsize", help="Font size of label", 
+    required=False, default="18")
     ap.add_argument("-r", "--resize", help="Whether to resize smallest", 
     required=False, default=False, action="store_true")
 
@@ -129,9 +135,11 @@ if __name__ == "__main__":
 
         label(input = figure, 
             output = f"tmp-{index}.png",
-            annotation = index)
+            annotation = index,
+            pointsize = args["fontsize"])
         
 
     tile(output = args["output"],
-         geometry = args["geometry"])
-    # clean(mask = "tmp")
+         geometry = args["geometry"],
+         gravity = args["gravity"])
+    clean(mask = "tmp")

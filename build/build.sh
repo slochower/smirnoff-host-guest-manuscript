@@ -29,7 +29,7 @@ pandoc --verbose \
   --to=html5 \
   --filter=pandoc-eqnos \
   --filter=pandoc-tablenos \
-  --filter=pandoc-crossref \
+  --filter=pandoc-fignos \
   --metadata-file=build/assets/pandoc-crossref.yaml \
   --bibliography=$BIBLIOGRAPHY_PATH \
   --csl=$CSL_PATH \
@@ -66,7 +66,7 @@ if [ "$BUILD_PDF" != "false" ] && [ -z "$DOCKER_EXISTS" ]; then
     --pdf-engine-opt=--presentational-hints \
     --filter=pandoc-eqnos \
     --filter=pandoc-tablenos \
-    --filter=pandoc-crossref \
+    --filter=pandoc-fignos \
     --bibliography=$BIBLIOGRAPHY_PATH \
     --csl=$CSL_PATH \
     --metadata link-citations=true \
@@ -84,7 +84,7 @@ if [ "$BUILD_LATEX" == "true" ]; then
     --to=latex \
     --filter=pandoc-eqnos \
     --filter=pandoc-tablenos \
-    --filter=pandoc-crossref \
+    --filter=pandoc-fignos \
     --bibliography=$BIBLIOGRAPHY_PATH \
     --biblatex \
     --csl=$CSL_PATH \
@@ -114,7 +114,7 @@ if [ "$BUILD_DOCX" = "true" ]; then
   pandoc --verbose \
     --from=markdown \
     --to=docx \
-    --filter=pandoc-crossref \
+    --filter=pandoc-fignos \
     --filter=pandoc-eqnos \
     --filter=pandoc-tablenos \
     --bibliography=$BIBLIOGRAPHY_PATH \
