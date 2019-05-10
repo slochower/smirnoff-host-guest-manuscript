@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/gh-pages) branch hosts the contents of this directory at https://slochower.github.io/smirnoff-host-guest-manuscript/.
-The permalink for this webpage version is https://slochower.github.io/smirnoff-host-guest-manuscript/v/13743754973d621a8d78d9ab22eaca929f78254f/.
+The permalink for this webpage version is https://slochower.github.io/smirnoff-host-guest-manuscript/v/c428ae8c794b6b5e9d9830b28c6542b9b891f517/.
 To redirect to the permalink for the latest manuscript version at anytime, use the link https://slochower.github.io/smirnoff-host-guest-manuscript/v/freeze/.
 
 ## Files
@@ -36,4 +36,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`13743754973d621a8d78d9ab22eaca929f78254f`](https://github.com/slochower/smirnoff-host-guest-manuscript/commit/13743754973d621a8d78d9ab22eaca929f78254f).
+[`c428ae8c794b6b5e9d9830b28c6542b9b891f517`](https://github.com/slochower/smirnoff-host-guest-manuscript/commit/c428ae8c794b6b5e9d9830b28c6542b9b891f517).
