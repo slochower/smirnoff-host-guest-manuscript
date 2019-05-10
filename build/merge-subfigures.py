@@ -90,6 +90,7 @@ def clean(mask):
     rm tmp/{mask}*.png
     """
     subprocess.call(command, shell=True)
+    subprocess.call("rmdir tmp", shell=True)
 
 
 if __name__ == "__main__":
