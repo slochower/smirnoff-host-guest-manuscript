@@ -159,6 +159,46 @@
     "id": "W9FLyOZr"
   },
   {
+    "publisher": "Wiley",
+    "issue": "4",
+    "DOI": "10.1002/wcms.89",
+    "type": "article-journal",
+    "page": "652-697",
+    "source": "Crossref",
+    "title": "Carbohydrate force fields",
+    "volume": "2",
+    "author": [
+      {
+        "given": "B. Lachele",
+        "family": "Foley"
+      },
+      {
+        "given": "Matthew B.",
+        "family": "Tessier"
+      },
+      {
+        "given": "Robert J.",
+        "family": "Woods"
+      }
+    ],
+    "container-title": "Wiley Interdisciplinary Reviews: Computational Molecular Science",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          10,
+          31
+        ]
+      ]
+    },
+    "URL": "https://doi.org/fcxc66",
+    "container-title-short": "WIREs Comput Mol Sci",
+    "PMCID": "PMC4270206",
+    "PMID": "25530813",
+    "id": "okbsmIQF"
+  },
+  {
     "publisher": "Springer Nature",
     "issue": "4",
     "DOI": "10.1007/s10822-014-9735-1",
@@ -939,6 +979,110 @@
   },
   {
     "publisher": "American Chemical Society (ACS)",
+    "issue": "5",
+    "DOI": "10.1021/acs.jpcb.7b11808",
+    "type": "article-journal",
+    "page": "1608-1626",
+    "source": "Crossref",
+    "title": "Validation and Comparison of Force Fields for Native Cyclodextrins in Aqueous Solution",
+    "volume": "122",
+    "author": [
+      {
+        "given": "Julia",
+        "family": "Gebhardt"
+      },
+      {
+        "given": "Catharina",
+        "family": "Kleist"
+      },
+      {
+        "given": "Sven",
+        "family": "Jakobtorweihen"
+      },
+      {
+        "given": "Niels",
+        "family": "Hansen"
+      }
+    ],
+    "container-title": "The Journal of Physical Chemistry B",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          1,
+          24
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gcv3xq",
+    "container-title-short": "J. Phys. Chem. B",
+    "PMID": "29287148",
+    "id": "jdi722iE"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "5",
+    "DOI": "10.1021/cr9700181",
+    "type": "article-journal",
+    "page": "1787-1802",
+    "source": "Crossref",
+    "title": "Structures of the Common Cyclodextrins and Their Larger AnaloguesBeyond the Doughnut",
+    "volume": "98",
+    "author": [
+      {
+        "given": "Wolfram",
+        "family": "Saenger"
+      },
+      {
+        "given": "Joël",
+        "family": "Jacob"
+      },
+      {
+        "given": "Katrin",
+        "family": "Gessler"
+      },
+      {
+        "given": "Thomas",
+        "family": "Steiner"
+      },
+      {
+        "given": "Daniel",
+        "family": "Hoffmann"
+      },
+      {
+        "given": "Haruyo",
+        "family": "Sanbe"
+      },
+      {
+        "given": "Kyoko",
+        "family": "Koizumi"
+      },
+      {
+        "given": "Steven M.",
+        "family": "Smith"
+      },
+      {
+        "given": "Takeshi",
+        "family": "Takaha"
+      }
+    ],
+    "container-title": "Chemical Reviews",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1998,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/dgz7hm",
+    "container-title-short": "Chem. Rev.",
+    "id": "l02WNlWU"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
     "issue": "12",
     "DOI": "10.1021/ct4005992",
     "type": "article-journal",
@@ -1062,6 +1206,39 @@
     "container-title-short": "J. Chem. Theory Comput.",
     "PMID": "26574392",
     "id": "IGZ99oJ8"
+  },
+  {
+    "publisher": "American Chemical Society (ACS)",
+    "issue": "11",
+    "DOI": "10.1021/ja00427a050",
+    "type": "article-journal",
+    "page": "3357-3365",
+    "source": "Crossref",
+    "title": "Topography of cyclodextrin inclusion complexes. 8. Crystal and molecular structure of the .alpha.-cyclodextrin-methanol-pentahydrate complex. Disorder in a hydrophobic cage",
+    "volume": "98",
+    "author": [
+      {
+        "given": "B.",
+        "family": "Hingerty"
+      },
+      {
+        "given": "W.",
+        "family": "Saenger"
+      }
+    ],
+    "container-title": "Journal of the American Chemical Society",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1976,
+          5
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cmfz5v",
+    "container-title-short": "J. Am. Chem. Soc.",
+    "id": "j3qbz56S"
   },
   {
     "publisher": "American Chemical Society (ACS)",
@@ -1374,6 +1551,51 @@
   },
   {
     "publisher": "Royal Society of Chemistry (RSC)",
+    "issue": "33",
+    "DOI": "10.1039/c1cp20854c",
+    "type": "article-journal",
+    "page": "15103",
+    "source": "Crossref",
+    "title": "Molecular dynamics studies of native and substituted cyclodextrins in different media: 1. Charge derivation and force field performances",
+    "volume": "13",
+    "author": [
+      {
+        "given": "Christine",
+        "family": "Cézard"
+      },
+      {
+        "given": "Xavier",
+        "family": "Trivelli"
+      },
+      {
+        "given": "Frédéric",
+        "family": "Aubry"
+      },
+      {
+        "given": "Florence",
+        "family": "Djedaïni-Pilard"
+      },
+      {
+        "given": "François-Yves",
+        "family": "Dupradeau"
+      }
+    ],
+    "container-title": "Physical Chemistry Chemical Physics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cv3hss",
+    "container-title-short": "Phys. Chem. Chem. Phys.",
+    "PMID": "21792425",
+    "id": "j7JJedX4"
+  },
+  {
+    "publisher": "Royal Society of Chemistry (RSC)",
     "abstract": "<p>A quantum mechanical bespoke molecular mechanics force field is derived for the L99A mutant of T4 lysozyme and used to compute absolute binding free energies of six benzene analogs to the protein.</p>",
     "DOI": "10.1039/c9md00017h",
     "type": "article-journal",
@@ -1663,18 +1885,8 @@
     "id": "OhpH7vfg"
   },
   {
-    "id": "197xzzCJg",
+    "URL": "www.ambermd.org",
     "type": "webpage",
-    "title": "Institute for Quantitative Biomedicine (IQB) | iqb.rutgers.edu",
-    "URL": "https://iqb.rutgers.edu/",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          5,
-          10
-        ]
-      ]
-    }
+    "id": "197xzzCJg"
   }
 ]

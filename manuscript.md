@@ -22,9 +22,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/c428ae8c794b6b5e9d9830b28c6542b9b891f517/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/cd4eaa43bb555250928c58099e7a96fd55ca3a93/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@c428ae8](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/c428ae8c794b6b5e9d9830b28c6542b9b891f517)
+from [slochower/smirnoff-host-guest-manuscript@cd4eaa4](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/cd4eaa43bb555250928c58099e7a96fd55ca3a93)
 on May 10, 2019.
 </em></small>
 
@@ -102,7 +102,7 @@ Relative free energy calculations on a series of congeneric ligands, using propr
 A variety of techniques for computing absolute binding free energies in host-guest systems have shown accuracy of ~1 kcal/mol, as highlighted in the recent SAMPL5 and SAMPL6 blind challenges [@BGsUYQln; @9MLPuYAQ].
 These techniques include both quantum and classical dynamics, employing a range of energy and solvation models, with some techniques having knowledge-based steps, docking, or clustering [@rOVoXhRJ; @Dn1HX5lD; @kj7fJ3fg; @l8KUmyk3; @1935a9V0d; @ku7PPPs; @ScmrI810; @bKuLAjgi].
 
-[Give the above paragraph another look.]{.banner .lightgrey}
+[The above paragraph is dry and not engaging. It also does not connect with the next paragraph.]{.banner .lightgrey}
 
 Here, we report the calculation of binding free energies, enthalpies, and entropies of drug-like guest molecules to α- and β-cyclodextrin host molecules, converged to within ~0.1 kcal/mol, using the attach-pull-release method.
 These calculations, which are easier to sample and have been experimentally characterized using a variety of methods, offer an opportunity to benchmark---and ultimately optimize---new and existing force fields.
@@ -538,12 +538,23 @@ Each pseudodihedral in GAFF v2.1 has a tight distribution; neighboring pseudodih
 
 
 ## Discussion
-[It is striking that SMIRNOFF99Frosst does similarly to both GAFF force fields, despite having fewer parameters.
-The necessity of adding each "type" of parameter for each atom type means that many parameters in GAFF are duplicates.
-But it is not clear which parameters can be pruned.
-SMIRNOFF99Frosst is a terse repesentation of a GAFF-like force field that is a good starting point for future development and optimization.
-How are we going to take this work forward?]{.banner .lightgrey}
 
+As a terse representation of a GAFF-like force field, SMIRNOFF99Frosst does remarkably well. 
+Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst performs as well as GAFF v1.7 and better than GAFF v2.1 predicting binding free energies of small molecules to αCD and βCD, based on the mean signed error relative to experiment.
+Moreover, SMIRNOFF99Frosst performs better than either GAFF v1.7 or GAFF v2.1 on predicted binding enthalpies, with a mean signed error less than 1 kcal/mol.
+GAFF v2.1 has excellent agreement with experiment on predicted binding entropy, followed by SMIRNOFF99Frosst and then GAFF v1.7.
+
+It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible cyclodextrin hosts.
+It has been shown that there are 2--7 H<sub>2</sub>O inside αCD and 8--11 H<sub>2</sub>O molecules inside βCD [@j3qbz56S; @l02WNlWU].
+It is likely that simulations with SMIRNOFF99Frosst and GAFF v1.7 result in fewer resident waters inside the cyclodextrin cavity due to intrusions from glucose units.
+Futhermore, it is known that sugars and conjugated carbohydrates are especially difficult for many "general" force fields, due to the highly polar bonds in sugars, the number of chiral centers, and the large structural differences between chiral isomers [@okbsmIQF].
+The specialized q4md-CD force field [@j7JJedX4], which used cyclodextrin X-ray crystal structures and NMR ^3^J couplings to tune force field parameters, produces a far more rigid cyclodextrin molecule, similar to GAFF v2.1 [@HVgz5rZq].
+The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those [@jdi722iE].
+The lack of rigidity is associated with an underestimation of the binding enthalpy and an overestimation of the binding entropy; SMRINOFF99Frossst has a ΔH MSE = 0.77 kcal/mol and −TΔS MSE = -0.78 kcal/mol whereas the more rigid GAFF v2.1 results in ΔH MSE = -1.64 kcal/mol and −TΔS MSE = 0.08 kcal/mol.
+It is especially notable that GAFF v2.1 has the best overall correlations `and probably the best Kendall τ?`.
+
+As a starting point for force field optimization, it therefore seems important to include sugars and carbohydrates in the development of future iterations of SMIRNOFF99Frosst.
+This will be especially useful for modeling more physiologically relevant protein structures, such as proteoglycans and glycopeptides.
 
 ## Supporting Information {.page_break_before #SI}
 
