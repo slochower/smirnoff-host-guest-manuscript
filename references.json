@@ -1789,7 +1789,7 @@
     "id": "pOsXFMux",
     "type": "webpage",
     "title": "Daylight>SMIRKS Tutorial",
-    "URL": "http://daylight.com/dayhtml_tutorials/languages/smirks/",
+    "URL": "https://daylight.com/dayhtml_tutorials/languages/smirks/",
     "accessed": {
       "date-parts": [
         [
@@ -1885,18 +1885,8 @@
     "id": "OhpH7vfg"
   },
   {
-    "id": "197xzzCJg",
+    "URL": "www.ambermd.org",
     "type": "webpage",
-    "title": "Institute for Quantitative Biomedicine (IQB) | iqb.rutgers.edu",
-    "URL": "https://iqb.rutgers.edu/",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          5,
-          15
-        ]
-      ]
-    }
+    "id": "197xzzCJg"
   }
 ]
