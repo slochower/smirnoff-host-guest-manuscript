@@ -5,14 +5,14 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-05-10'
+date-meta: '2019-05-15'
 keywords:
 - markdown
 - publishing
 - manubot
 lang: en-US
-title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the
-  Open Force Field Group
+title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from
+  the Open Force Field Initiative
 ...
 
 
@@ -22,10 +22,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from t
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/cd4eaa43bb555250928c58099e7a96fd55ca3a93/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/d917972589a184c2813862a1d0c2c72bf0f8077c/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@cd4eaa4](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/cd4eaa43bb555250928c58099e7a96fd55ca3a93)
-on May 10, 2019.
+from [slochower/smirnoff-host-guest-manuscript@d917972](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/d917972589a184c2813862a1d0c2c72bf0f8077c)
+on May 15, 2019.
 </em></small>
 
 ## Authors
@@ -131,51 +131,51 @@ As in Henriksen, *et al.* [@HVgz5rZq], only a single stereoisomer was considered
 
 ![Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs.](images/host-guest-pairs.png){#fig:host-guest-pairs}
 
-|  Host-guest ID | Host | Guest[charge] |
-| --- | --- | --- |
-|  a-bam | αCD | 1-butylamine[+1] |
-|  a-nmb | αCD | n-methylbutylamine[+1] |
-|  a-mba | αCD | 1-methylbutylamine[+1]^a^ |
-|  a-pam | αCD | 1-pentylamine[+1] |
-|  a-ham | αCD | 1-hexylamine[+1] |
-|  a-nmh | αCD | n-methylhexylamine[+1] |
-|  a-mha | αCD | 1-methylhexylamine[+1]^a^ |
-|  a-hpa | αCD | 1-heptylamine[+1] |
-|  a-mhp | αCD | 1-methylheptylamine[+1]^b^ |
-|  a-oam | αCD | 1-octylamine[+1] |
-|  b-ham | βCD | 1-hexylamine[+1] |
-|  b-mha | βCD | 1-methylhexylamine[+1]^a^ |
-|  b-oam | βCD | 1-octylamine[+1] |
-|  a-cbu | αCD | cyclobutanol[0] |
-|  a-cpe | αCD | cyclopentanol[0] |
-|  a-chp | αCD | cycloheptanol[0] |
-|  a-coc | αCD | cyclooctanol[0] |
-|  b-cbu | βCD | cyclobutanol[0] |
-|  b-cpe | βCD | cyclopentanol[0] |
-|  b-mch | βCD | 1-methylcyclohexanol[0] |
-|  b-m4c | βCD | cis-4-methylcyclohexanol[0] |
-|  b-m4t | βCD | trans-4-methylcyclohexanol[0] |
-|  b-chp | βCD | cycloheptanol[0] |
-|  b-coc | βCD | cyclooctanol[0] |
-|  a-but | αCD | butanoate[-1] |
-|  a-pnt | αCD | pentanoate[-1] |
-|  a-hex | αCD | hexanoate[-1] |
-|  a-hx2 | αCD | trans-2-hexenoate[-1] |
-|  a-hx3 | αCD | trans-3-hexenoate[-1] |
-|  a-hep | αCD | heptanoate[-1] |
-|  a-hp6 | αCD | 6-heptenoate[-1] |
-|  a-oct | αCD | octanoate[-1] |
-|  b-pnt | βCD | pentanoate[-1] |
-|  b-hex | βCD | hexanoate[-1] |
-|  b-hep | βCD | heptanoate[-1] |
-|  b-ben | βCD | benzoate[-1] |
-|  b-pha | βCD | phenylacetate[-1] |
-|  b-mp3 | βCD | 3-methylphenylacetate[-1] |
-|  b-mp4 | βCD | 4-methylphenylacetate[-1] |
-|  b-mo3 | βCD | 3-methoxyphenylacetate[-1] |
-|  b-mo4 | βCD | 4-methoxyphenylacetate[-1] |
-|  b-pb3 | βCD | 3-phenylbutanoate[-1] |
-|  b-pb4 | βCD | 4-phenylbutanoate[-1] |
+|  Host-guest ID | Host | Guest | Charge |
+| --- | --- | --- | --- |
+|  a-bam | αCD | 1-butylamine | +1 |
+|  a-nmb | αCD | n-methylbutylamine| +1 |
+|  a-mba | αCD | 1-methylbutylamine^a^ | +1 |
+|  a-pam | αCD | 1-pentylamine| +1 |
+|  a-ham | αCD | 1-hexylamine| +1 |
+|  a-nmh | αCD | n-methylhexylamine | +1 |
+|  a-mha | αCD | 1-methylhexylamine^a^ | +1 |
+|  a-hpa | αCD | 1-heptylamine | +1 |
+|  a-mhp | αCD | 1-methylheptylamine^b^ | +1 |
+|  a-oam | αCD | 1-octylamine | +1 |
+|  b-ham | βCD | 1-hexylamine | +1 |
+|  b-mha | βCD | 1-methylhexylamine^a^ | +1 |
+|  b-oam | βCD | 1-octylamine | +1 |
+|  a-cbu | αCD | cyclobutanol | 0 |
+|  a-cpe | αCD | cyclopentanol | 0 |
+|  a-chp | αCD | cycloheptanol | 0 |
+|  a-coc | αCD | cyclooctanol | 0 |
+|  b-cbu | βCD | cyclobutanol | 0 |
+|  b-cpe | βCD | cyclopentanol | 0 |
+|  b-mch | βCD | 1-methylcyclohexanol | 0 |
+|  b-m4c | βCD | cis-4-methylcyclohexanol | 0 |
+|  b-m4t | βCD | trans-4-methylcyclohexanol | 0 |
+|  b-chp | βCD | cycloheptanol | 0 |
+|  b-coc | βCD | cyclooctanol | 0 |
+|  a-but | αCD | butanoate | -1 |
+|  a-pnt | αCD | pentanoate | -1 |
+|  a-hex | αCD | hexanoate | -1 |
+|  a-hx2 | αCD | trans-2-hexenoate | -1 |
+|  a-hx3 | αCD | trans-3-hexenoate | -1 |
+|  a-hep | αCD | heptanoate | -1 |
+|  a-hp6 | αCD | 6-heptenoate | -1 |
+|  a-oct | αCD | octanoate | -1 |
+|  b-pnt | βCD | pentanoate | -1 |
+|  b-hex | βCD | hexanoate | -1 |
+|  b-hep | βCD | heptanoate | -1 |
+|  b-ben | βCD | benzoate | -1 |
+|  b-pha | βCD | phenylacetate | -1 |
+|  b-mp3 | βCD | 3-methylphenylacetate | -1 |
+|  b-mp4 | βCD | 4-methylphenylacetate | -1 |
+|  b-mo3 | βCD | 3-methoxyphenylacetate | -1 |
+|  b-mo4 | βCD | 4-methoxyphenylacetate | -1 |
+|  b-pb3 | βCD | 3-phenylbutanoate | -1 |
+|  b-pb4 | βCD | 4-phenylbutanoate | -1 |
 
 Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. {#tbl:host-guests}
 
