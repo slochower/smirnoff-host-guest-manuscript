@@ -9,9 +9,9 @@
   <meta name="author" content="John D. Chodera" />
   <meta name="author" content="David L. Mobley" />
   <meta name="author" content="Michael K. Gilson" />
-  <meta name="dcterms.date" content="2019-05-10" />
+  <meta name="dcterms.date" content="2019-05-15" />
   <meta name="keywords" content="markdown, publishing, manubot" />
-  <title>Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the Open Force Field Group</title>
+  <title>Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -24,9 +24,9 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the Open Force Field Group</h1>
+<h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/cd4eaa43bb555250928c58099e7a96fd55ca3a93/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/cd4eaa43bb555250928c58099e7a96fd55ca3a93">slochower/smirnoff-host-guest-manuscript@cd4eaa4</a> on May 10, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/d917972589a184c2813862a1d0c2c72bf0f8077c/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/d917972589a184c2813862a1d0c2c72bf0f8077c">slochower/smirnoff-host-guest-manuscript@d917972</a> on May 15, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -58,224 +58,268 @@
 <tr class="header">
 <th>Host-guest ID</th>
 <th>Host</th>
-<th>Guest[charge]</th>
+<th>Guest</th>
+<th>Charge</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>a-bam</td>
 <td>αCD</td>
-<td>1-butylamine[+1]</td>
+<td>1-butylamine</td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>a-nmb</td>
 <td>αCD</td>
-<td>n-methylbutylamine[+1]</td>
+<td>n-methylbutylamine</td>
+<td>+1</td>
 </tr>
 <tr class="odd">
 <td>a-mba</td>
 <td>αCD</td>
-<td>1-methylbutylamine[+1]<sup>a</sup></td>
+<td>1-methylbutylamine<sup>a</sup></td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>a-pam</td>
 <td>αCD</td>
-<td>1-pentylamine[+1]</td>
+<td>1-pentylamine</td>
+<td>+1</td>
 </tr>
 <tr class="odd">
 <td>a-ham</td>
 <td>αCD</td>
-<td>1-hexylamine[+1]</td>
+<td>1-hexylamine</td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>a-nmh</td>
 <td>αCD</td>
-<td>n-methylhexylamine[+1]</td>
+<td>n-methylhexylamine</td>
+<td>+1</td>
 </tr>
 <tr class="odd">
 <td>a-mha</td>
 <td>αCD</td>
-<td>1-methylhexylamine[+1]<sup>a</sup></td>
+<td>1-methylhexylamine<sup>a</sup></td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>a-hpa</td>
 <td>αCD</td>
-<td>1-heptylamine[+1]</td>
+<td>1-heptylamine</td>
+<td>+1</td>
 </tr>
 <tr class="odd">
 <td>a-mhp</td>
 <td>αCD</td>
-<td>1-methylheptylamine[+1]<sup>b</sup></td>
+<td>1-methylheptylamine<sup>b</sup></td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>a-oam</td>
 <td>αCD</td>
-<td>1-octylamine[+1]</td>
+<td>1-octylamine</td>
+<td>+1</td>
 </tr>
 <tr class="odd">
 <td>b-ham</td>
 <td>βCD</td>
-<td>1-hexylamine[+1]</td>
+<td>1-hexylamine</td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>b-mha</td>
 <td>βCD</td>
-<td>1-methylhexylamine[+1]<sup>a</sup></td>
+<td>1-methylhexylamine<sup>a</sup></td>
+<td>+1</td>
 </tr>
 <tr class="odd">
 <td>b-oam</td>
 <td>βCD</td>
-<td>1-octylamine[+1]</td>
+<td>1-octylamine</td>
+<td>+1</td>
 </tr>
 <tr class="even">
 <td>a-cbu</td>
 <td>αCD</td>
-<td>cyclobutanol[0]</td>
+<td>cyclobutanol</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>a-cpe</td>
 <td>αCD</td>
-<td>cyclopentanol[0]</td>
+<td>cyclopentanol</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>a-chp</td>
 <td>αCD</td>
-<td>cycloheptanol[0]</td>
+<td>cycloheptanol</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>a-coc</td>
 <td>αCD</td>
-<td>cyclooctanol[0]</td>
+<td>cyclooctanol</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>b-cbu</td>
 <td>βCD</td>
-<td>cyclobutanol[0]</td>
+<td>cyclobutanol</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>b-cpe</td>
 <td>βCD</td>
-<td>cyclopentanol[0]</td>
+<td>cyclopentanol</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>b-mch</td>
 <td>βCD</td>
-<td>1-methylcyclohexanol[0]</td>
+<td>1-methylcyclohexanol</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>b-m4c</td>
 <td>βCD</td>
-<td>cis-4-methylcyclohexanol[0]</td>
+<td>cis-4-methylcyclohexanol</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>b-m4t</td>
 <td>βCD</td>
-<td>trans-4-methylcyclohexanol[0]</td>
+<td>trans-4-methylcyclohexanol</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>b-chp</td>
 <td>βCD</td>
-<td>cycloheptanol[0]</td>
+<td>cycloheptanol</td>
+<td>0</td>
 </tr>
 <tr class="even">
 <td>b-coc</td>
 <td>βCD</td>
-<td>cyclooctanol[0]</td>
+<td>cyclooctanol</td>
+<td>0</td>
 </tr>
 <tr class="odd">
 <td>a-but</td>
 <td>αCD</td>
-<td>butanoate[-1]</td>
+<td>butanoate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>a-pnt</td>
 <td>αCD</td>
-<td>pentanoate[-1]</td>
+<td>pentanoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>a-hex</td>
 <td>αCD</td>
-<td>hexanoate[-1]</td>
+<td>hexanoate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>a-hx2</td>
 <td>αCD</td>
-<td>trans-2-hexenoate[-1]</td>
+<td>trans-2-hexenoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>a-hx3</td>
 <td>αCD</td>
-<td>trans-3-hexenoate[-1]</td>
+<td>trans-3-hexenoate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>a-hep</td>
 <td>αCD</td>
-<td>heptanoate[-1]</td>
+<td>heptanoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>a-hp6</td>
 <td>αCD</td>
-<td>6-heptenoate[-1]</td>
+<td>6-heptenoate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>a-oct</td>
 <td>αCD</td>
-<td>octanoate[-1]</td>
+<td>octanoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>b-pnt</td>
 <td>βCD</td>
-<td>pentanoate[-1]</td>
+<td>pentanoate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>b-hex</td>
 <td>βCD</td>
-<td>hexanoate[-1]</td>
+<td>hexanoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>b-hep</td>
 <td>βCD</td>
-<td>heptanoate[-1]</td>
+<td>heptanoate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>b-ben</td>
 <td>βCD</td>
-<td>benzoate[-1]</td>
+<td>benzoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>b-pha</td>
 <td>βCD</td>
-<td>phenylacetate[-1]</td>
+<td>phenylacetate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>b-mp3</td>
 <td>βCD</td>
-<td>3-methylphenylacetate[-1]</td>
+<td>3-methylphenylacetate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>b-mp4</td>
 <td>βCD</td>
-<td>4-methylphenylacetate[-1]</td>
+<td>4-methylphenylacetate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>b-mo3</td>
 <td>βCD</td>
-<td>3-methoxyphenylacetate[-1]</td>
+<td>3-methoxyphenylacetate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>b-mo4</td>
 <td>βCD</td>
-<td>4-methoxyphenylacetate[-1]</td>
+<td>4-methoxyphenylacetate</td>
+<td>-1</td>
 </tr>
 <tr class="even">
 <td>b-pb3</td>
 <td>βCD</td>
-<td>3-phenylbutanoate[-1]</td>
+<td>3-phenylbutanoate</td>
+<td>-1</td>
 </tr>
 <tr class="odd">
 <td>b-pb4</td>
 <td>βCD</td>
-<td>4-phenylbutanoate[-1]</td>
+<td>4-phenylbutanoate</td>
+<td>-1</td>
 </tr>
 </tbody>
 </table>
@@ -3276,7 +3320,7 @@ Andrew T. Fenley, Niel M. Henriksen, Hari S. Muddana, Michael K. Gilson<br />
 DOI: <a href="https://doi.org/10.1021/ct5004109">10.1021/ct5004109</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25221445">25221445</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4159218">PMC4159218</a></p>
 </div>
 <div id="ref-197xzzCJg">
-<p>33. <a href="www.ambermd.org">www.ambermd.org</a></p>
+<p>33. <strong>Institute for Quantitative Biomedicine (IQB) | iqb.rutgers.edu</strong><a href="https://iqb.rutgers.edu/">https://iqb.rutgers.edu/</a></p>
 </div>
 <div id="ref-IGZ99oJ8">
 <p>34. <strong>Long-Time-Step Molecular Dynamics through Hydrogen Mass Repartitioning</strong><br />
