@@ -2,10 +2,11 @@
 author-meta:
 - David R. Slochower
 - Niel M. Henriksen
+- Lee-Ping Wang
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-05-15'
+date-meta: '2019-05-16'
 keywords:
 - markdown
 - publishing
@@ -22,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/d62afc43fcc23000647bbd6aaa04250d361a01a6/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/7806e8e25bd23e664dc2086e67c271aa246dd900/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@d62afc4](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/d62afc43fcc23000647bbd6aaa04250d361a01a6)
-on May 15, 2019.
+from [slochower/smirnoff-host-guest-manuscript@7806e8e](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/7806e8e25bd23e664dc2086e67c271aa246dd900)
+on May 16, 2019.
 </em></small>
 
 ## Authors
@@ -50,6 +51,15 @@ on May 15, 2019.
     [nhenriksen](https://github.com/nhenriksen)<br>
   <small>
      Atomwise, Inc., San Francisco, CA 94105, USA
+  </small>
+
++ **Lee-Ping Wang**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0003-3072-9946](https://orcid.org/0000-0003-3072-9946)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [leeping](https://github.com/leeping)<br>
+  <small>
+     Department of Chemistry, University of California, Davis, CA 95616, USA
   </small>
 
 + **John D. Chodera**<br>
@@ -84,19 +94,25 @@ on May 15, 2019.
   </small>
 
 
-[Note, I only added authors who reviewed the outline on Google Docs. We can revisit this.]{.banner .lightgrey}
-
-
 ## Abstract {.page_break_before}
 
-Designing ligands that bind their target with high affinity and specificity is a key step in small-molecule drug discovery. Yet accurate predictions of protein-ligand binding free energies are difficult and errors in the calculations can be traced to challenges adequately sampling conformational space, ambiguous protonation states, and other causes. Noncovalent complexes between a cavity-containing host molecule and drug-like guest molecules have emerged as powerful tools for modeling protein-ligand binding. Due to their small size and extensive experimental characterization, calculations of host-guest binding free energies, enthalpies, and entropies offer an opportunity to directly probe, and ultimately optimize, force fields.
+Designing ligands that bind their target biomolecules with high affinity and specificity is a key step in small-molecule drug discovery.
+Yet accurate predictions of protein-ligand binding free energies are difficult and errors in the calculations can be traced to challenges in adequately sampling conformational space, ambiguous protonation states, errors in force fields, and other causes.
+Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates.
+Noncovalent complexes between a cavity-containing host molecule and drug-like guest molecules have emerged as powerful model systems for isolating the nature of errors in more complex protein-ligand binding systems.
+Due to their small size and ease of experimental characterization, calculations of host-guest binding free energies, enthalpies, and entropies offer an opportunity to directly probe, and ultimately optimize, force fields while minimizing the impact of other sources of error.
 
-The Open Force Field Initiative aims to create a modern, open software infrastructure for automatically generating and validating force fields using high-quality data sets. The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters of a typical general small molecule force field, such as GAFF, yet predicts binding thermodynamics that are on average, at least as accurate. Here, we report the results of free energy calculations on 43 α and β-cyclodextrin host-guest pairs for which experimental data are available. Our calculations were performed using the attach-pull-release method as implemented in the open source package, `pAPRika`. On binding free energies, the root mean square error of the predictions relative to experiment is 0.91 kcal/mol, 95% CI [0.71, 1.13] for SMIRNOFF99Frosst and 1.68 kcal/mol, 95% CI [1.51, 1.84] for GAFF version 2.1. These results suggest significant room for improvement in force fields, and will help create a transparent and robust method of evaluating future candidate parameter sets from the Open Force Field Initiative. Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates.
+The Open Force Field Initiative aims to create a modern, open software infrastructure for automatically generating and validating force fields using high-quality data sets.
+The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters of a typical general small molecule force field, such as GAFF, yet predicts binding thermodynamics that are on average, at least as accurate.
+Here, we evaluate the accuracy of such small molecule force fields using free energy calculations of 43 α and β-cyclodextrin host-guest pairs for which high-quality experimental thermodynamic data are available.
+Our calculations were performed using the attach-pull-release method as implemented in the open source package, `pAPRika`.
+On binding free energies, the root mean square error of the predictions relative to experiment is 0.91 kcal/mol, 95% CI [0.71, 1.13] for SMIRNOFF99Frosst and 1.68 kcal/mol, 95% CI [1.51, 1.84] for GAFF version 2.1, using TIP3P water and AM1-BCC charges in both force fields.
+These results suggest significant room for improvement in force fields, and will help create a transparent and robust method of evaluating future candidate parameter sets.
 
 ## Introduction
 
 Accurate predictions of protein-ligand binding free energies are a key goal of computational chemistry.
-Despite this, calculations of protein-ligand binding thermodynamics involve a number of challenging choices, including specifying the protonation state of ionizable residues, adding hydrogens or otherwise adjusting the initial protein structure, and placing the ligand in the binding pocket, for which there is no consensus in the computational chemistry community.
+Despite this, calculations of protein-ligand binding thermodynamics involve a number of challenging choices, including the choice of empirical force field, specifying the protonation state of ionizable residues, adding hydrogens or otherwise adjusting the initial protein structure, and placing the ligand in the binding pocket, for which there is no consensus in the computational chemistry community.
 Predictions of protein-ligand absolute binding free energies have achieved root mean square errors around 1-2 kcal/mol for "well-behaved" systems [@9MLPuYAQ; @1CuDE1c2r; @mdqdy96N], with deviations an order of magnitude larger for some protein families [@15iR76Uc].
 Relative free energy calculations on a series of congeneric ligands, using proprietary methods, have also achieved root mean square errors ~1 kcal/mol [@HQi6ihVB; @B182mNck].
 A variety of techniques for computing absolute binding free energies in host-guest systems have shown accuracy of ~1 kcal/mol, as highlighted in the recent SAMPL5 and SAMPL6 blind challenges [@BGsUYQln; @9MLPuYAQ].
@@ -737,7 +753,7 @@ Table: Experimental and predicted binding entropies (−TΔS). {#tbl:TdS-combine
 - [GitHub repository](https://github.com/openforcefield/openforcefield) for the Open Force Field group containing the toolkit and force field XML file.
 
 ## Author contributions
-Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC;  Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.
+Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC;  Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG, LPW; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.
 
 ## Acknowledgments 
 
