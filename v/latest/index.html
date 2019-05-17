@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/743b88b900c3f5b04b752e31dc8c0a19034a7f6d/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/743b88b900c3f5b04b752e31dc8c0a19034a7f6d">slochower/smirnoff-host-guest-manuscript@743b88b</a> on May 17, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/81ad7963d47a2458c8530878276d2fcbe58e7de9/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/81ad7963d47a2458c8530878276d2fcbe58e7de9">slochower/smirnoff-host-guest-manuscript@81ad796</a> on May 17, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -36,6 +36,10 @@
 <li><p><strong>John D. Chodera</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-0542-119X">0000-0003-0542-119X</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/jchodera">jchodera</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/jchodera">jchodera</a><br> <small> Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065 </small></p></li>
 <li><p><strong>David L. Mobley</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-1083-5533">0000-0002-1083-5533</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/davidlmobley">davidlmobley</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/davidlmobley">davidlmobley</a><br> <small> Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA </small></p></li>
 <li><p><strong>Michael K. Gilson</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-3375-1738">0000-0002-3375-1738</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/michaelkgilson">michaelkgilson</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
+</ul>
+<h2 id="relevant-issues">Relevant Issues</h2>
+<ul>
+<li><a href="https://github.com/slochower/smirnoff-host-guest-manuscript/issues/42">Update tables with CSV link and SMILES #42</a></li>
 </ul>
 <h2 id="abstract" class="page_break_before">Abstract</h2>
 <p>Designing ligands that bind their target biomolecules with high affinity and specificity is a key step in small-molecule drug discovery. Yet accurate predictions of protein-ligand binding free energies are difficult and errors in the calculations can be traced to challenges in adequately sampling conformational space, ambiguous protonation states, errors in force fields, and other causes. Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates. Noncovalent complexes between a cavity-containing host molecule and drug-like guest molecules have emerged as powerful model systems for isolating the nature of errors in more complex protein-ligand binding systems. Due to their small size and ease of experimental characterization, calculations of host-guest binding free energies, enthalpies, and entropies offer an opportunity to directly probe, and ultimately optimize, force fields while minimizing the impact of other sources of error.</p>
@@ -324,7 +328,6 @@
 </tr>
 </tbody>
 </table>
-<p><span class="banner lightgrey">Add CSV link for table. Add SMILES.</span></p>
 <h3 id="application-of-force-field-parameters">Application of force field parameters</h3>
 <p>We sought to compare force fields directly, and as such, attempted to minimize additional differences between the simulations with each force field. In all simulations, we applied AM1-BCC <span class="citation" data-cites="LxrgIkt0 BkLoOd0N">[<a href="#ref-LxrgIkt0" role="doc-biblioref">31</a>,<a href="#ref-BkLoOd0N" role="doc-biblioref">32</a>]</span> partial atomic charges to both the host and guest molecules using the <code>antechamber</code> program. The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure <a href="#fig:atom-names">2</a>); each glucose monomer in the cyclodextrin polymer has identical charges. Using the entire αCD molecule as an input to <code>antechamber</code> results in partial atomic charge differences of ±0.02 e, but requires reducing the maximum path length used to determine the equivalence of atomic charges (Figure <a href="#fig:charge-schemes">16</a>). We used TIP3P water <span class="citation" data-cites="chrX4HGh">[<a href="#ref-chrX4HGh" role="doc-biblioref">33</a>]</span> and Joung-Cheatham monovalent ion parameters <span class="citation" data-cites="uZnQBwCt">[<a href="#ref-uZnQBwCt" role="doc-biblioref">34</a>]</span> in each simulation set.</p>
 <figure>
@@ -3287,7 +3290,7 @@ DOI: <a href="https://doi.org/10.1002/jcc.20035">10.1002/jcc.20035</a> · PMID: 
 <div id="ref-4LS7HWPh">
 <p>26. <strong>A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst</strong><br />
 Open Force Field Initiative<br />
-(2019-04-26) <a href="https://github.com/openforcefield/smirnoff99Frosst">https://github.com/openforcefield/smirnoff99Frosst</a></p>
+(2019-05-17) <a href="https://github.com/openforcefield/smirnoff99Frosst">https://github.com/openforcefield/smirnoff99Frosst</a></p>
 </div>
 <div id="ref-XzEPM0UV">
 <p>27. <strong>Open Force Field Roadmap</strong><br />
