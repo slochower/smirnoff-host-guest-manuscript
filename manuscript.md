@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/db4e6ac3664185049e7c413b888008483808c4b2/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/6852d385dc8c6858db75a38966f792b6d1d2acd7/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@db4e6ac](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/db4e6ac3664185049e7c413b888008483808c4b2)
+from [slochower/smirnoff-host-guest-manuscript@6852d38](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/6852d385dc8c6858db75a38966f792b6d1d2acd7)
 on May 17, 2019.
 </em></small>
 
@@ -97,6 +97,8 @@ on May 17, 2019.
 ## Outstanding Issues
 
 - [Update tables with CSV link and SMILES #42](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/42)
+- [Update figure legends and labels with additional information #46](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/46)
+- [Update GAFF v2.1 statistics in the text #47](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/47)
 
 ## Abstract {.page_break_before}
 
@@ -221,7 +223,6 @@ We used TIP3P water [@chrX4HGh] and Joung-Cheatham monovalent ion parameters [@u
 ![Atom names (A) and GAFF atom types (B) for a glucose monomer in αCD shown with two flanking monomers. The remaining three glucose monomers are hidden for clarity.](images/atom-names.png){width="100%" #fig:atom-names}
 
 GAFF v1.7 bond, angle, torsion, and Lennard-Jones parameters were applied using the `tleap` program distributed with AmberTools16.
-
 GAFF v2.1 parameters were applied in an identical manner to the GAFF v1.7 parameters, using the `tleap` program distributed with AmberTools18 and substituting `leaprc.gaff` for `leaprc.gaff2` in the `tleap` input file.
 
 To apply SMIRNOFF99Frosst parameters, we followed a [multistep process](https://github.com/slochower/smirnoff-host-guest/blob/master/02-convert-APR-files.ipynb), beginning with the AMBER-format `.prmtop` and `.inpcrd` GAFF v1.7 files.
@@ -336,7 +337,7 @@ On binding entropies, GAFF v2.1 has the lowest RMSE compared to experiment (RMSE
 All force fields perform poorly predicting −TΔS for carboxylate guests. 
 It is worth noting that all force fields predict a much smaller entropic component of binding for `a-coc` by 3-5 kcal/mol, which does not easily fit inside the primary cavity of cyclodextrin (Figure @fig:by-orientation).
 
-![Comparison of calculated absolute binding free energies (ΔG) and binding enthalpies (ΔH) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/dG-dH.png){#fig:dG-dH}
+![Comparison of calculated absolute binding free energies (ΔG) and binding enthalpies (ΔH) with experiment with SMIRNOFF99Frosst parameters (A, B), GAFF v1.7 parameters (C, D), or GAFF v2.1 parameters (E, F) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/dG-dH.png){#fig:dG-dH}
 
 
 |      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | 
@@ -361,23 +362,23 @@ The difference in binding free energy between either orientation (ΔΔG<sub>orie
 SMIRNOFF99Frosst predicts the largest ΔΔG<sub>orientation</sub> for the ammonium-containing butylamine and pentylamine with αCD (@fig:by-orientation), with the primary orientation being more favorable.
 GAFF v1.7 predicts a large ΔΔG<sub>orientation</sub> for the cyclic alcohols cyclooctanol and  cycloheptanol, with the secondary orientation having a more favorable ΔG.
 This effect is even more apparent with GAFF v2.1 where the ΔΔG<sub>orientation</sub> for `a-chp` and `a-coc` is greater than 4 kcal/mol.
-This effect is due, at least in part, to sampling challenges in the bound state for very large guests (Figure @fig:by-orientation, bottom right), especially in the narrow primary cavity of the smaller α-cyclodextrin.
+This effect is due, at least in part, to sampling challenges in the bound state for very large guests (Figure @fig:by-orientation, D), especially in the narrow primary cavity of the smaller α-cyclodextrin.
 
-![The differences in binding free energy (ΔG) between guests in either the primary or secondary orientation of αCD or βCD. Arrows point from ΔG for the secondary to ΔG for the primary cavity. The systems are arranged in descending order by greatest difference in ΔG between orientations.
-Bottom right: An overlay of cyclooctanol bound state positions (400 snapshots over 1 μs) with αCD in GAFF v2.1.](images/by-orientation.png){#fig:by-orientation}
+![The differences in binding free energy (ΔG) between guests in either the primary or secondary orientation of αCD or βCD, for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). Arrows point from ΔG for the secondary to ΔG for the primary cavity. 
+(D) An overlay of cyclooctanol bound state positions (400 snapshots over 1 μs) with αCD in GAFF v2.1.](images/by-orientation.png){#fig:by-orientation}
 
 ### Guest preferences for αCD and βCD
 
 Ten guests in the data set bind both αCD and βCD.
 These ten guests show different patterns of binding between the two host molecules.
-For example, SMIRNOFF99Frosts underestimates the binding free energy of cyclooctanol both orientations by the same amount (Figure @fig:by-cyclodextrin).
+For example, SMIRNOFF99Frosst underestimates the binding free energy of cyclooctanol both orientations by the same amount (Figure @fig:by-cyclodextrin).
 However, despite underestimating the binding free energy of cyclobutanol for αCD by ~0.7 kcal/mol,  the binding affinity prediction for βCD is very slightly overestimated by ~0.3 kcal/mol (Table @tbl:dG-combined).
 Very similar patterns are observed for GAFF v1.7 and both force fields appear to perform better overall on binding affinities to αCD compared to βCD (Figure @fig:dG-dH-by-cyclodextrin).
 
 As is the case with the difference in binding free energy between guest orientations, the difference in binding free energy between host molecules using GAFF v2.1 is large.
 There does not appear to be a clear difference in the accuracy of the predictions for αCD versus βCD (Figure @fig:dG-dH-by-cyclodextrin).
 
-![Shown are the αCD and βCD binding free energies for each guest, highlighting the differences in binding to the two hosts. The binding affinity for αCD is circled in black. Thin colored lines connect data points for the same guest. Color is used purely to distinguish among the guests.](images/by-cyclodextrin.png){#fig:by-cyclodextrin}
+![Shown are the αCD and βCD binding free energies for each guest, highlighting the differences in binding to the two hosts for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). The binding affinity for αCD is circled in black. Thin colored lines connect data points for the same guest. Color is used purely to distinguish among the guests.](images/by-cyclodextrin.png){#fig:by-cyclodextrin}
 
 ### Trends by guest functional group
 
