@@ -1910,19 +1910,17 @@
     }
   },
   {
-    "id": "tKJug83o",
     "type": "webpage",
-    "title": "Institute for Quantitative Biomedicine (IQB) | iqb.rutgers.edu",
-    "URL": "https://iqb.rutgers.edu/",
-    "accessed": {
+    "URL": "http://www.ambermd.org",
+    "title": "The Amber Molecular Dynamics Package",
+    "issued": {
       "date-parts": [
         [
-          "2019",
-          5,
-          17
+          2019
         ]
       ]
-    }
+    },
+    "id": "tKJug83o"
   },
   {
     "id": "168lWg0SB",
