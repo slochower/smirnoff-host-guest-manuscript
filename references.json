@@ -1939,6 +1939,24 @@
     }
   },
   {
+    "id": "16UiKZ8o1",
+    "type": "webpage",
+    "title": "choderalab/ambermini",
+    "container-title": "GitHub",
+    "abstract": "A stripped-down set of just antechamber, sqm, and tleap. - choderalab/ambermini",
+    "URL": "https://github.com/choderalab/ambermini",
+    "language": "en",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          5,
+          17
+        ]
+      ]
+    }
+  },
+  {
     "id": "cT3I9uDT",
     "type": "webpage",
     "title": "Remove generics, add hydrogen radii, rename ffxml files by davidlmobley · Pull Request #101 · openforcefield/openforcefield",
@@ -1958,23 +1976,12 @@
   },
   {
     "id": "4LS7HWPh",
-    "type": "book",
-    "title": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst",
-    "publisher": "Open Force Field Initiative",
-    "genre": "Python",
-    "source": "GitHub",
+    "type": "webpage",
+    "title": "openforcefield/smirnoff99Frosst",
+    "container-title": "GitHub",
+    "abstract": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format - openforcefield/smirnoff99Frosst",
     "URL": "https://github.com/openforcefield/smirnoff99Frosst",
-    "note": "original-date: 2016-09-15T21:03:43Z",
-    "shortTitle": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format",
-    "issued": {
-      "date-parts": [
-        [
-          "2019",
-          5,
-          17
-        ]
-      ]
-    },
+    "language": "en",
     "accessed": {
       "date-parts": [
         [

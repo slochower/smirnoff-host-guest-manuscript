@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/8a8e27917ff4b3344914f192e2e40ae33f0dcd7f/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/db4e6ac3664185049e7c413b888008483808c4b2/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@8a8e279](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/8a8e27917ff4b3344914f192e2e40ae33f0dcd7f)
+from [slochower/smirnoff-host-guest-manuscript@db4e6ac](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/db4e6ac3664185049e7c413b888008483808c4b2)
 on May 17, 2019.
 </em></small>
 
@@ -574,13 +574,21 @@ Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Fros
 Moreover, SMIRNOFF99Frosst performs better than either GAFF v1.7 or GAFF v2.1 on predicted binding enthalpies, with a mean signed error less than 1 kcal/mol.
 GAFF v2.1 has excellent agreement with experiment on predicted binding entropy, followed by SMIRNOFF99Frosst and then GAFF v1.7.
 
+
+-----
+In GAFF v2.1, the bond and angle parameters have been updated to reproduce small molecule geometries obtained from high-level quantum mechanical calculations [@16UiKZ8o1].
+The force constants for the bond and angle parameters were tuned to reproduce the vibrational spectra of over 600 molecules.
+The torsion parameters were optimized to reproduce the rotational potential energy surface of 400 model compounds.
+Finally, the Lennard-Jones coefficients were redeveloped to reproduce interaction energies and pure liquid properties.
+-----
+
 It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible cyclodextrin hosts.
 It has been shown that there are 2--7 H<sub>2</sub>O inside αCD and 8--11 H<sub>2</sub>O molecules inside βCD [@j3qbz56S; @l02WNlWU].
 It is likely that simulations with SMIRNOFF99Frosst and GAFF v1.7 result in fewer resident waters inside the cyclodextrin cavity due to intrusions from glucose units.
 Futhermore, it is known that sugars and conjugated carbohydrates are especially difficult for many "general" force fields, due to the highly polar bonds in sugars, the number of chiral centers, and the large structural differences between chiral isomers [@okbsmIQF].
 
 The combination of X-ray and NMR data suggest that the specialized q4md-CD [@j7JJedX4] force field, and the rigid GAFF v2.1 [@HVgz5rZq] force field, better model the flexibility of the CD cavity.
-Cézard, *et al.* present strong NMR evidence that the vicinal ^3^J H5--H6′ and ^3^J H5-H6″ coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers [@j7JJedX4].
+Cézard, *et al.* present strong NMR evidence that the vicinal ^3^J H5--H6′ (atom names H5--H62 in Figure @fig:atom-anmes) and ^3^J H5-H6″(atom names H5--H61) coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers [@j7JJedX4].
 This is also evident in X-ray structures, where the rigidity of the cyclodextrin ring is retained as long as water is present in the cavity and the torsional angles between adjacent glycouril units show surprisingly small variance [@j3qbz56S].
 
 The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those [@jdi722iE].
@@ -590,9 +598,32 @@ It is especially notable that GAFF v2.1 has the best overall correlations `and p
 As a starting point for force field optimization, it therefore seems important to include sugars and carbohydrates in the development of future iterations of SMIRNOFF99Frosst.
 This will be especially useful for modeling more physiologically relevant protein structures, such as proteoglycans and glycopeptides.
 
+## Code and data availability
+- [GitHub repository](https://github.com/slochower/smirnoff-host-guest) used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.
+- [GitHub repository](https://github.com/slochower/smirnoff-host-guest-simulations-data) for setting up the attach-pull-release calculations using `paprika` version 0.0.3.
+- [GitHub repository](https://github.com/slochower/smirnoff-host-guest-simulations) for analyzing the simulations and generating the plots in this manuscript.
+- [GitHub repository](https://github.com/openforcefield/openforcefield) for the Open Force Field group containing the toolkit and force field XML file.
+
+## Author contributions
+Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC;  Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG, LPW; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.
+
+## Acknowledgments 
+
+## Disclosures
+The authors declare the following competing financial interest(s): MKG has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC.
+
+## List of abbreviations
+APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field
+
+## References {.page_break_before}
+
+<!-- Explicitly insert bibliography here -->
+<div id="refs"></div>
+
+
 ## Supporting Information {.page_break_before #SI}
 
-![Comparison of AM1-BCC partial atomic charges assigned by running `antechamber` on a single glucose monomer (A) or on an entire αCD molecule with the option `-pl 10` to specify the maximum path length to determin equivalence of atomic charges (B).](images/charge-schemes.png){width=100% #fig:charge-schemes}
+![Comparison of AM1-BCC partial atomic charges assigned by running `antechamber` on a single glucose monomer (A) or on an entire αCD molecule (B) with the option `-pl 10` to specify the maximum path length used to determine the equivalence of atomic charges.](images/charge-schemes.png){width=100% #fig:charge-schemes}
 
 ![Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/TdS.png){width="100%" #fig:TdS}
 
@@ -765,25 +796,3 @@ Table: Experimental and predicted binding enthalpies (ΔH). {#tbl:dH-combined}
 |  b-pnt | -3.16 | 0.62 | -1.43 | 1.04 | -1.22 | 0.89 | -2.40 | 0.35 |
 
 Table: Experimental and predicted binding entropies (−TΔS). {#tbl:TdS-combined}
-
-## Code and data availability
-- [GitHub repository](https://github.com/slochower/smirnoff-host-guest) used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.
-- [GitHub repository](https://github.com/slochower/smirnoff-host-guest-simulations-data) for setting up the attach-pull-release calculations using `paprika` version 0.0.3.
-- [GitHub repository](https://github.com/slochower/smirnoff-host-guest-simulations) for analyzing the simulations and generating the plots in this manuscript.
-- [GitHub repository](https://github.com/openforcefield/openforcefield) for the Open Force Field group containing the toolkit and force field XML file.
-
-## Author contributions
-Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC;  Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG, LPW; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.
-
-## Acknowledgments 
-
-## Disclosures
-The authors declare the following competing financial interest(s): MKG has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC.
-
-## List of abbreviations
-APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field
-
-## References {.page_break_before}
-
-<!-- Explicitly insert bibliography here -->
-<div id="refs"></div>
