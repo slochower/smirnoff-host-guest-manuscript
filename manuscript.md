@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/eb8090531bc9d7338996934ba0a6833778e42b6c/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/743b88b900c3f5b04b752e31dc8c0a19034a7f6d/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@eb80905](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/eb8090531bc9d7338996934ba0a6833778e42b6c)
+from [slochower/smirnoff-host-guest-manuscript@743b88b](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/743b88b900c3f5b04b752e31dc8c0a19034a7f6d)
 on May 17, 2019.
 </em></small>
 
@@ -212,6 +212,7 @@ Table: The 43 unique host-guest combinations used in this study. The formal char
 We sought to compare force fields directly, and as such, attempted to minimize additional differences between the simulations with each force field.
 In all simulations, we applied AM1-BCC [@LxrgIkt0; @BkLoOd0N] partial atomic charges to both the host and guest molecules using the `antechamber` program.
 The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure @fig:atom-names); each glucose monomer in the cyclodextrin polymer has identical charges.
+Using the entire αCD molecule as an input to `antechamber` results in partial atomic charge differences of ±0.02 e, but requires reducing the maximum path length used to determine the equivalence of atomic charges (Figure @fig:charge-schemes). 
 We used TIP3P water [@chrX4HGh] and Joung-Cheatham monovalent ion parameters [@uZnQBwCt] in each simulation set.
 
 ![Atom names (left) and GAFF atom types (right) for a glucose monomer in αCD shown with two flanking monomers. The remaining three glucose monomers are hidden for clarity.](images/atom-names.png){width="100%" #fig:atom-names}
@@ -589,6 +590,8 @@ As a starting point for force field optimization, it therefore seems important t
 This will be especially useful for modeling more physiologically relevant protein structures, such as proteoglycans and glycopeptides.
 
 ## Supporting Information {.page_break_before #SI}
+
+![Comparison of AM1-BCC partial atomic charges assigned by running `antechamber` on a single glucose monomer (A) or on an entire αCD molecule (B).](images/charge-schemes.png){width=100% #fig:charge-schemes}
 
 ![Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/TdS.png){width="100%" #fig:TdS}
 
