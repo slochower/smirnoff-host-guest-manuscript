@@ -707,6 +707,77 @@
     "id": "9MLPuYAQ"
   },
   {
+    "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1007/s10953-018-0769-1",
+    "type": "article-journal",
+    "page": "1597-1608",
+    "source": "Crossref",
+    "title": "Toward Expanded Diversity of Host–Guest Interactions via Synthesis and Characterization of Cyclodextrin Derivatives",
+    "volume": "47",
+    "author": [
+      {
+        "given": "K.",
+        "family": "Kellett"
+      },
+      {
+        "given": "S. A.",
+        "family": "Kantonen"
+      },
+      {
+        "given": "B. M.",
+        "family": "Duggan"
+      },
+      {
+        "given": "M. K.",
+        "family": "Gilson"
+      }
+    ],
+    "container-title": "Journal of Solution Chemistry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          6,
+          4
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfp949",
+    "container-title-short": "J Solution Chem",
+    "id": "q7znTABh"
+  },
+  {
+    "publisher": "Elsevier BV",
+    "issue": "9",
+    "DOI": "10.1016/s0032-9592(03)00258-9",
+    "type": "article-journal",
+    "page": "1033-1046",
+    "source": "Crossref",
+    "title": "Cyclodextrins and their uses: a review",
+    "volume": "39",
+    "author": [
+      {
+        "given": "E.M.Martin",
+        "family": "Del Valle"
+      }
+    ],
+    "container-title": "Process Biochemistry",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2004,
+          5
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bxthjg",
+    "container-title-short": "Process Biochemistry",
+    "id": "19cBeLx8d"
+  },
+  {
     "publisher": "American Chemical Society (ACS)",
     "issue": "9",
     "DOI": "10.1021/acs.jctc.5b00405",
@@ -1786,6 +1857,44 @@
     "id": "13wrQoS3l"
   },
   {
+    "type": "article-journal",
+    "id": "XzEPM0UV",
+    "language": "en",
+    "author": [
+      {
+        "family": "Shirts",
+        "given": "Michael R"
+      },
+      {
+        "family": "Chodera",
+        "given": "John Damon"
+      },
+      {
+        "family": "Mobley",
+        "given": "David L"
+      },
+      {
+        "family": "Gilson",
+        "given": "Michael K"
+      },
+      {
+        "literal": "Lee-Ping Wang"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "container-title": "Unpublished",
+    "DOI": "10.13140/rg.2.2.27587.86562",
+    "publisher": "Unpublished",
+    "title": "Open Force Field Roadmap",
+    "URL": "https://doi.org/gf2stw"
+  },
+  {
     "id": "pOsXFMux",
     "type": "webpage",
     "title": "Daylight>SMIRKS Tutorial",
@@ -1795,10 +1904,15 @@
         [
           "2019",
           5,
-          16
+          17
         ]
       ]
     }
+  },
+  {
+    "URL": "http://www.ambermd.org",
+    "type": "webpage",
+    "id": "tKJug83o"
   },
   {
     "id": "168lWg0SB",
@@ -1811,7 +1925,7 @@
         [
           "2019",
           5,
-          16
+          17
         ]
       ]
     }
@@ -1829,7 +1943,36 @@
         [
           "2019",
           5,
-          16
+          17
+        ]
+      ]
+    }
+  },
+  {
+    "id": "4LS7HWPh",
+    "type": "book",
+    "title": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst",
+    "publisher": "Open Force Field Initiative",
+    "genre": "Python",
+    "source": "GitHub",
+    "URL": "https://github.com/openforcefield/smirnoff99Frosst",
+    "note": "original-date: 2016-09-15T21:03:43Z",
+    "shortTitle": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format",
+    "issued": {
+      "date-parts": [
+        [
+          "2019",
+          4,
+          26
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          5,
+          17
         ]
       ]
     }
@@ -1847,7 +1990,7 @@
         [
           "2019",
           5,
-          16
+          17
         ]
       ]
     }
@@ -1865,7 +2008,7 @@
         [
           "2019",
           5,
-          16
+          17
         ]
       ]
     }
@@ -1883,10 +2026,5 @@
       }
     ],
     "id": "OhpH7vfg"
-  },
-  {
-    "URL": "www.ambermd.org",
-    "type": "webpage",
-    "id": "197xzzCJg"
   }
 ]

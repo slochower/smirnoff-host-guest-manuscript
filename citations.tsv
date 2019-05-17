@@ -14,6 +14,8 @@ string	citation	standard_citation	citation_id
 @doi:10.1007/s10822-018-0154-6	doi:10.1007/s10822-018-0154-6	doi:10.1007/s10822-018-0154-6	Dn1HX5lD
 @doi:10.1007/s10822-018-0166-2	doi:10.1007/s10822-018-0166-2	doi:10.1007/s10822-018-0166-2	ScmrI810
 @doi:10.1007/s10822-018-0170-6	doi:10.1007/s10822-018-0170-6	doi:10.1007/s10822-018-0170-6	9MLPuYAQ
+@doi:10.1007/s10953-018-0769-1	doi:10.1007/s10953-018-0769-1	doi:10.1007/s10953-018-0769-1	q7znTABh
+@doi:10/bxthjg	doi:10/bxthjg	doi:10.1016/s0032-9592(03)00258-9	19cBeLx8d
 @doi:10.1021/acs.jctc.5b00405	doi:10.1021/acs.jctc.5b00405	doi:10.1021/acs.jctc.5b00405	1935a9V0d
 @doi:10.1021/acs.jctc.7b00275	doi:10.1021/acs.jctc.7b00275	doi:10.1021/acs.jctc.7b00275	1CuDE1c2r
 @doi:10.1021/acs.jctc.7b00359	doi:10.1021/acs.jctc.7b00359	doi:10.1021/acs.jctc.7b00359	HVgz5rZq
@@ -36,10 +38,12 @@ string	citation	standard_citation	citation_id
 @doi:10.1063/1.445869	doi:10.1063/1.445869	doi:10.1063/1.445869	chrX4HGh
 @doi:10.1063/1.457480	doi:10.1063/1.457480	doi:10.1063/1.457480	htck51Lp
 @doi:10.1080/07391102.1999.10508297	doi:10.1080/07391102.1999.10508297	doi:10.1080/07391102.1999.10508297	13wrQoS3l
+@doi:10.13140/RG.2.2.27587.86562	doi:10.13140/RG.2.2.27587.86562	doi:10.13140/rg.2.2.27587.86562	XzEPM0UV
 @url:http://daylight.com/dayhtml_tutorials/languages/smirks/	url:http://daylight.com/dayhtml_tutorials/languages/smirks/	url:http://daylight.com/dayhtml_tutorials/languages/smirks/	pOsXFMux
+@url:http://www.ambermd.org	url:http://www.ambermd.org	url:http://www.ambermd.org	tKJug83o
 @url:http://www.ccl.net/cca/data/parm_at_Frosst/	url:http://www.ccl.net/cca/data/parm_at_Frosst/	url:http://www.ccl.net/cca/data/parm_at_Frosst/	168lWg0SB
 @url:https://github.com/openforcefield/openforcefield/pull/101	url:https://github.com/openforcefield/openforcefield/pull/101	url:https://github.com/openforcefield/openforcefield/pull/101	cT3I9uDT
+@url:https://github.com/openforcefield/smirnoff99Frosst/blob/13c6453a17b275f8dc421d7cc8b3ec12baf4a24f/smirnoff99Frosst/smirnoff99Frosst.ffxml	url:https://github.com/openforcefield/smirnoff99Frosst/blob/13c6453a17b275f8dc421d7cc8b3ec12baf4a24f/smirnoff99Frosst/smirnoff99Frosst.ffxml	url:https://github.com/openforcefield/smirnoff99Frosst/blob/13c6453a17b275f8dc421d7cc8b3ec12baf4a24f/smirnoff99Frosst/smirnoff99Frosst.ffxml	4LS7HWPh
 @url:https://github.com/openforcefield/smirnoff99Frosst/issues/61	url:https://github.com/openforcefield/smirnoff99Frosst/issues/61	url:https://github.com/openforcefield/smirnoff99Frosst/issues/61	10E0XdByV
 @url:https://github.com/openforcefield/smirnoff99Frosst/pull/74	url:https://github.com/openforcefield/smirnoff99Frosst/pull/74	url:https://github.com/openforcefield/smirnoff99Frosst/pull/74	Q2dwH7Dq
 @url:https://openforcefield.org	url:https://openforcefield.org	url:https://openforcefield.org	OhpH7vfg
-@url:www.ambermd.org	url:www.ambermd.org	url:www.ambermd.org	197xzzCJg

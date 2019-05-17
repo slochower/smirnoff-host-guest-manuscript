@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-05-16'
+date-meta: '2019-05-17'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/7806e8e25bd23e664dc2086e67c271aa246dd900/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/912a67c51109bf2044a1506c0edff1afe1926d71/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@7806e8e](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/7806e8e25bd23e664dc2086e67c271aa246dd900)
-on May 16, 2019.
+from [slochower/smirnoff-host-guest-manuscript@912a67c](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/912a67c51109bf2044a1506c0edff1afe1926d71)
+on May 17, 2019.
 </em></small>
 
 ## Authors
@@ -113,26 +113,36 @@ These results suggest significant room for improvement in force fields, and will
 
 Accurate predictions of protein-ligand binding free energies are a key goal of computational chemistry.
 Despite this, calculations of protein-ligand binding thermodynamics involve a number of challenging choices, including the choice of empirical force field, specifying the protonation state of ionizable residues, adding hydrogens or otherwise adjusting the initial protein structure, and placing the ligand in the binding pocket, for which there is no consensus in the computational chemistry community.
-Predictions of protein-ligand absolute binding free energies have achieved root mean square errors around 1-2 kcal/mol for "well-behaved" systems [@9MLPuYAQ; @1CuDE1c2r; @mdqdy96N], with deviations an order of magnitude larger for some protein families [@15iR76Uc].
-Relative free energy calculations on a series of congeneric ligands, using proprietary methods, have also achieved root mean square errors ~1 kcal/mol [@HQi6ihVB; @B182mNck].
+Predictions of protein-ligand absolute binding free energies have achieved root mean square errors around 1-2 kcal/mol for "well-behaved" systems [@9MLPuYAQ; @1CuDE1c2r; @mdqdy96N], with deviations an order of magnitude larger for some protein families with slow degrees of freedom [@15iR76Uc].
+Relative free energy calculations on a series of congeneric ligands, using proprietary methods, have also achieved root mean square errors compared to experiment of around 1 kcal/mol [@HQi6ihVB; @B182mNck].
+Yet, it is not possible to determine how much of the predicted error can be attributed to each of the decisions made by the modeler.
+
+By minimizing the ambiguities involved in modeling protein-ligand complexes, host-guest systems offer a way to isolate and directly probe force field error. 
 A variety of techniques for computing absolute binding free energies in host-guest systems have shown accuracy of ~1 kcal/mol, as highlighted in the recent SAMPL5 and SAMPL6 blind challenges [@BGsUYQln; @9MLPuYAQ].
 These techniques include both quantum and classical dynamics, employing a range of energy and solvation models, with some techniques having knowledge-based steps, docking, or clustering [@rOVoXhRJ; @Dn1HX5lD; @kj7fJ3fg; @l8KUmyk3; @1935a9V0d; @ku7PPPs; @ScmrI810; @bKuLAjgi].
+The attach-pull-release (APR) method has consistently been ranked among the most accurate techniques for predicting binding thermodynamics of host-guest complexes in blind challenges [@BGsUYQln; @GA1AFcUw]. 
+In APR, the reversible work of transferring the guest from the binding site to solution, via a physical pathway, is computed using a series of umbrella sampling windows.
+Simulating each window and integrating over the partial derivative of the restraint energy with respect to the restraint target is used to generate a potential of mean force along the pulling coordinate, yielding the binding free energy at standard state, ΔG.
+Subtracting the mean potential energies obtained from long simulations of the solvated bound complex and the solvated dissociated complex can be used to determine the binding enthalpy at standard state, ΔH.
+Together, ΔG and ΔH can be combined to determine the binding entropy, ΔS.
+Thus, APR provides a complete thermodynamic description of binding---ΔG, ΔH, and ΔS---that are all absolute quantities for any host and guest
 
-[The above paragraph is dry and not engaging. It also does not connect with the next paragraph.]{.banner .lightgrey}
-
+Cyclodextrins, in particular, are ideal host molecules.
+They are neutral across the pH range, with well-characterized structures [@l02WNlWU], and bind both small molecule fragments and drug-like guest molecules with reasonable affinity [@q7znTABh].
+Moreover, cyclodextrins are stable in numerous conditions and their aqueous solubitilty allows a range of different experimental techniques to be used to measure their binding to guests [@19cBeLx8d].
 Here, we report the calculation of binding free energies, enthalpies, and entropies of drug-like guest molecules to α- and β-cyclodextrin host molecules, converged to within ~0.1 kcal/mol, using the attach-pull-release method.
-These calculations, which are easier to sample and have been experimentally characterized using a variety of methods, offer an opportunity to benchmark---and ultimately optimize---new and existing force fields.
-We compare the predictions of three force fields: GAFF v1.7 [@YmRgHfeU], GAFF v2.1, and SMIRNOFF99Frosst [@1HYTTY1PU; @OhpH7vfg].
+These calculations offer an opportunity to benchmark---and ultimately optimize---new and existing force fields.
 
-SMIRNOFF99Frosst, released in late 2018, is the first force field produced by the Open Force Field Initiative.
+SMIRNOFF99Frosst, released in late 2018, is the first force field produced by the Open Force Field Initiative [@1HYTTY1PU; @OhpH7vfg].
 SMIRNOFF99Frosst is derived from AMBER parm99 [@13wrQoS3l] and Merck's parm@Frosst [@168lWg0SB].
 Instead of relying on atom types to assign force field parameters to compounds, which is the procedure followed by the `tleap` program that parameterizes molecules in AmberTools, SMIRNOFF99Frosst and the Open Force Field Toolkit use the local chemical environment of each atom to apply force field parameters using SMIRKS strings [@pOsXFMux].
 This process simplifies and effectively uncouples the parameters for each term in the force field.
 That is, the addition of a new Lennard-Jones parameter does not require the addition of new bonded, angle, and dihedral parameters involving the same atom. 
-These factors lead to a much more lean force field specification; there are over 3000 lines of parameters in GAFF v1.7, over 6000 lines of parameters in GAFF v2.1, and just 322 lines of parameters in SMIRNOFF99Frosst version 1.0.5.
+These factors lead to a much more lean force field specification; there are over 3000 lines of parameters in GAFF v1.7 [@YmRgHfeU], over 6000 lines of parameters in GAFF v2.1, and just 322 lines of parameters in SMIRNOFF99Frosst version 1.0.5 [@4LS7HWPh].
+It is important to note that SMIRNOFF99Frosst is not yet optimized---simply compressed--at this stage; subsequent work will focus on optimizing SMIRNOFF99Frosst and other SMIRNOFF-family force fields to fit experimental data [@XzEPM0UV].
 
 Thus far, SMIRNOFF99Frosst has been tested on hydration free energies of 642 small molecules, and the densities and dielectric constants of 45 pure organic liquids [@1HYTTY1PU].
-Here we benchmark SMIRNOFF99Frosst using noncovalent binding thermodynamics using two flexible host molecules and thirty three guests containing three different functional group moieties.
+Here, we benchmark SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1 using noncovalent binding thermodynamics using two flexible host molecules and thirty three guests containing three different functional group moieties.
 We first show that SMIRNOFF99Frosst does about as well as the conventional force fields, GAFF v1.7 (on both absolute errors and correlation) and GAFF v2.1 (on absolute errors), predicting experimental binding free energies, enthalpies, and entropies.
 We then characterize the differences in host conformations sampled by SMIRNOFF99Frosst compared to the other force fields.
 
@@ -141,9 +151,9 @@ We then characterize the differences in host conformations sampled by SMIRNOFF99
 ### Choice of host-guest systems
 In this study, we report the binding thermodynamics of 43 host-guest complexes (Figure @fig:host-guest-pairs and Table @tbl:host-guests) computed using three different force fields. 
 The complexes consist of either α- or β-cyclodextrin as host molecules and a series of small molecule guests containing ammonium, carboxylate, or cyclic alcohol functional groups.
-Cyclodextrins are cyclic polymers consisting of six (αCD) or seven (βCD) glucose monomers in the shape of a truncated cone.
-The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry (ITC) and nuclear magnetic resonance spectroscopy (NMR) [@1236RpaUv] and computationally in [@HVgz5rZq].
-As in Henriksen, *et al.* [@HVgz5rZq], only a single stereoisomer was considered for the 1-methylammonium guests because it was not clear whether a mixture or a pure solution was used in Rekharsky, et al. [@1236RpaUv], and the ΔG difference between each stereoisomer is expected to be < 0.1 kcal/mol [@g7xxBB7m].
+The cyclodextrins in the current study are cyclic polymers consisting of six (αCD) or seven (βCD) glucose monomers in the shape of a truncated cone.
+The equilibrium constants and standard molar enthalpies of binding for these 43 complexes have been measured using isothermal titration calorimetry (ITC) and nuclear magnetic resonance spectroscopy (NMR) [@1236RpaUv].
+Calculations on these host-guest systems have been performed previously [@HVgz5rZq], and like Henriksen, *et al*., only a single stereoisomer was considered for the 1-methylammonium guests because it was not clear whether a mixture or a pure solution was used in Rekharsky, et al. [@1236RpaUv], and the ΔG difference between each stereoisomer is expected to be < 0.1 kcal/mol [@g7xxBB7m].
 
 ![Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs.](images/host-guest-pairs.png){#fig:host-guest-pairs}
 
@@ -194,6 +204,8 @@ As in Henriksen, *et al.* [@HVgz5rZq], only a single stereoisomer was considered
 |  b-pb4 | βCD | 4-phenylbutanoate | -1 |
 
 Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. {#tbl:host-guests}
+
+[Add CSV link for table]{.banner .lightgrey}
 
 ### Application of force field parameters
 
@@ -250,7 +262,7 @@ The binding enthalpy (ΔH) was computed as the difference in mean potential ener
 The binding entropy (ΔS) was computed by subtraction using ΔG and ΔH.
 
 ### Simulations
-Simulations were performed with the `pmemd.cuda` module of AMBER 16 (calculations with the GAFF v1.7 force field) and AMBER 18 (calculations with the GAFF v2.1 and SMIRNOFF99Frosst force fields) molecular dynamics software [@197xzzCJg]. 
+Simulations were performed with the `pmemd.cuda` module of AMBER 16 (calculations with the GAFF v1.7 force field) and AMBER 18 (calculations with the GAFF v2.1 and SMIRNOFF99Frosst force fields) molecular dynamics software [@tKJug83o]. 
 Each window for each system was independently solvated and simulated.
 The host-guest simulations using GAFF v1.7 were previously published in Henriksen, *et al.*  [@HVgz5rZq] and are described in additional detail therein.
 Solvation consisted of 2000 TIP3P waters for the αCD systems and 2210 waters for the βCD systems in an orthorhombic box. 
