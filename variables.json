@@ -109,7 +109,7 @@
     "repo_slug": "slochower/smirnoff-host-guest-manuscript",
     "repo_owner": "slochower",
     "repo_name": "smirnoff-host-guest-manuscript",
-    "commit": "4783a889f8d340191351ab527b969736634703d6"
+    "commit": "fd553feb173a2f23c820de8b1a2b1281bcc5277d"
   },
   "manuscript_stats": {
     "reference_counts": {
@@ -117,6 +117,6 @@
       "url": 8,
       "total": 48
     },
-    "word_count": 11805
+    "word_count": 11849
   }
 }
