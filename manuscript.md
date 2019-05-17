@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/2fb53f0f65b2b8747482a8b0316701ee9d500136/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/f1da5fa27c129f327f8176f9aea76dfeb51df225/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@2fb53f0](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/2fb53f0f65b2b8747482a8b0316701ee9d500136)
+from [slochower/smirnoff-host-guest-manuscript@f1da5fa](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/f1da5fa27c129f327f8176f9aea76dfeb51df225)
 on May 17, 2019.
 </em></small>
 
@@ -99,6 +99,7 @@ on May 17, 2019.
 - [Update tables with CSV link and SMILES #42](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/42)
 - [Update figure legends and labels with additional information #46](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/46)
 - [Update GAFF v2.1 statistics in the text #47](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/47)
+- [Consider adding discussion of Kendall's tau #49](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/49)
 
 ## Abstract {.page_break_before}
 
@@ -146,6 +147,7 @@ This process simplifies and effectively uncouples the parameters for each term i
 That is, the addition of a new Lennard-Jones parameter does not require the addition of new bonded, angle, and dihedral parameters involving the same atom. 
 These factors lead to a much more lean force field specification; there are over 3000 lines of parameters in GAFF v1.7 [@YmRgHfeU], over 6000 lines of parameters in GAFF v2.1, and just 322 lines of parameters in SMIRNOFF99Frosst version 1.0.5 [@4LS7HWPh].
 It is important to note that SMIRNOFF99Frosst is not yet optimized---simply compressed--at this stage; subsequent work will focus on optimizing SMIRNOFF99Frosst and other SMIRNOFF-family force fields to fit experimental data [@XzEPM0UV].
+In the following text, SMRINOFF99Frosst refers to version 1.0.5 of the force field, unless otherwise noted.
 
 Thus far, SMIRNOFF99Frosst has been tested on hydration free energies of 642 small molecules, and the densities and dielectric constants of 45 pure organic liquids [@1HYTTY1PU].
 Here, we benchmark SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1 using noncovalent binding thermodynamics using two flexible host molecules and thirty three guests containing three different functional group moieties.
@@ -385,32 +387,36 @@ There does not appear to be a clear difference in the accuracy of the prediction
 SMIRNOFF99Frosst does a good job (MSE = -0.10 kcal/mol, 95% CI [-0.54, 0.30] and RMSE = 0.76 kcal/mol, 95% CI [0.43, 1.12]) estimating the binding free energy of ammonium-containing guests to both αCD and βCD (Figure @fig:ammonium and Table @tbl:overall-ammonium).
 Shorter chain molecules bind less strongly and the same guest binds more strongly to αCD than βCD.
 
-![Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. Darker colors indicate shorter chain molecules. Non-highlighted guests are shown as smaller gray circles.](images/ammonium.png){#fig:ammonium}
+![Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted, for αCD (A) and βCD (B). Darker colors indicate shorter chain molecules. Non-highlighted guests are shown as smaller gray circles.](images/ammonium.png){#fig:ammonium}
 
 SMIRNOFF99Frosst performs reasonably on cyclic alcohols (MSE = 0.70 kcal/mol, 95% CI [0.22, 1.21] and RMSE = 1.07 kcal/mol, 95% CI [0.66, 1.58]) (Figure @fig:alcohols and Table @tbl:overall-alcohols).
 The predictions for αCD are uniformly underestimated while those for βCD are mostly under-predicted.
 The predicted ΔG for cyclooctanol with αCD is particularly poor due to a poor fit in the bound state (Figure @fig:by-orientation).
+The experimental uncertainty assigned to cyclooctanol is also much higher than the uncertainty of other guest compounds, due to an uncertainty in its concentration that can likely trace to its poor solubility at the experimental conditions ([@1236RpaUv], tables 1 and 2).
 
-[Should say something here about cylooctanol predictions *and* experiment being poor because it does not fit well, especially in αCD]{.banner .lightgrey}
-
-![Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate smaller molecules. Non-highlighted guests are shown as smaller gray circles.](images/alcohols.png){#fig:alcohols}
+![Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted, for αCD (A) and βCD (B). Darker colors indicate smaller molecules. Non-highlighted guests are shown as smaller gray circles.](images/alcohols.png){#fig:alcohols}
 
 The binding affinity of carboxylate guests to both αCD and βCD is well characterized by SMIRNOFF99Frosst (MSE = -0.36 kcal/mol, 95% CI [-0.73, -0.01] and RMSE = 0.87 kcal/mol, 95% CI [0.58, 1.16]) (Figure @fig:carboxylates and Table @tbl:overall-carboxylates).
 
-![Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicates smaller molecules. Non-highlighted guests are shown as smaller gray circles.](images/carboxylates.png){#fig:carboxylates}
+![Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted, for αCD (A) and βCD (B). Darker colors indicates smaller molecules. Non-highlighted guests are shown as smaller gray circles.](images/carboxylates.png){#fig:carboxylates}
 
 In all cases, GAFF v1.7 tends to predict slightly weaker binding than SMIRNOFF99Frosst whereas GAFF v2.1 predicts much stronger binding for these compounds (Figures @fig:additional-highlights-ammonium, @fig:additional-highlights-alcohols, and @fig:additional-highlights-carboxylates).
 
 ### Differences in force field parameters between SMIRNOFF99Frosst and GAFF
 
-Next, we summarize the parameter differences among SMIRNOFF99Frosst, a descendant of parm99; GAFF v1.7 (released circa March 2015 according to `gaff.dat` distributed with AMBER16); and GAFF v2.1 (which is under active development) on the parameters applied to αCD.
+Next, we summarize the parameter differences among SMIRNOFF99Frosst, a descendant of parm99 and parm@Frosst; GAFF v1.7 (released circa March 2015 according to `gaff.dat` distributed with AMBER16); and GAFF v2.1 (which is under active development) on the parameters applied to αCD.
+In GAFF v2.1, the bond and angle parameters have been updated to reproduce small molecule geometries obtained from high-level quantum mechanical calculations [@16UiKZ8o1].
+The force constants for the bond and angle parameters were tuned to reproduce the vibrational spectra of over 600 molecules.
+The torsion parameters were optimized to reproduce the rotational potential energy surface of 400 model compounds.
+Finally, the Lennard-Jones coefficients were redeveloped to reproduce interaction energies and pure liquid properties.
+
+#### Lennard-Jones
 
 The σ and ε parameters are identical between SMIRNOFF99Frosst and GAFF v1.7.
 Note, that hydroxyl hydrogens are assigned σ = 0 Å and ε = 0 kcal/mol in both GAFF v1.7 and SMIRNOFF99Frosst v1.0.5, but later versions of SMIRNOFF99Frosst adopt [small σ and ε](https://github.com/openforcefield/smirnoff99Frosst/blob/4ca43af6241a97edb356586f3f83ac21afcdff65/smirnoff99Frosst/smirnoff99Frosst.offxml#L315) values based on a similiar atom type in parm@Frosst [@Q2dwH7Dq; @cT3I9uDT; @10E0XdByV].
 Compared to GAFF v2.1, SMIRNOFF99Frosst has deeper well depths for oxygens and decreased σ values for the hydroxyl hydrogens (Figure @fig:LJ).
 
-#### Lennard-Jones
-![A comparison of Lennard-Jones nonbonded parameters for SMIRNOFF99Frosst and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to Figure @fig:atom-names.](images/LJ.png){width="100%" #fig:LJ}
+![A comparison of Lennard-Jones nonbonded σ (A) and ε (B) parameters for SMIRNOFF99Frosst and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to Figure @fig:atom-names.](images/LJ.png){width="100%" #fig:LJ}
 
 #### Bonded parameters
 
@@ -418,7 +424,7 @@ Compared to GAFF v1.7, SMIRNOFF99Frosst tends to have slightly larger bond force
 In GAFF v2.1, the O--H hydroxyl bond force constant is consistent with SMIRNOFF99Frosst, but the carbon-oxygen bond constants are weaker.
 Equilibrium bond lengths are very similar (Figure @fig:bond-req).
 
-![A comparison of bond force constants for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Atom names refer to Figure @fig:atom-names.](images/bonds.png){width="100%" #fig:bonds}
+![A comparison of bond force constants between SMIRNOFF99Frosst and GAFF v1.7 (A), or SMIRNOFF99Frosst and GAFF v2.1 (B). Values that differ by more than 10% are labeled in red. Atom names refer to Figure @fig:atom-names.](images/bonds.png){width="100%" #fig:bonds}
 
 #### Angle parameters
 
@@ -428,69 +434,25 @@ The $\ce{C-C-C}$ angles are primarily around the ring of the glucose monomer.
 The $\ce{C-O-C}$ angles are both around the ring and between monomers (e.g., $\ce{C1-O1-C4}$ and $\ce{C1-O5-C5}$).
 Weaker force constants for these parameters may lead to increased flexibility.
 
-![A comparison of angle parameters for SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1. Values that differ by more than 10% are labeled in red. Precise atom names have been omitted to compress multiple angles with the same parameter values into a single label.](images/angles.png){width="100%" #fig:angles}
+![A comparison of angle force constants between SMIRNOFF99Frosst and GAFF v1.7 (A) or SMIRNOFF99Frosst and GAFF v2.1 (B). A comparison of equilibrium angle values SMIRNOFF99Frosst and GAFF v1.7 (C) or SMIRNOFF99Frosst and GAFF v2.1 (D). Values that differ by more than 10% are labeled in red. Precise atom names have been omitted to compress multiple angles with the same parameter values into a single label.](images/angles.png){width="100%" #fig:angles}
 
 #### Dihedral parameters
 
-The dihedral parameters between SMIRNOFF99Frosst and GAFF v1.7 are extremely similar (where differences occur, they are in the second or third decimal place), with the exception of the $\ce{H1-C1-C2-O2}$ parameter (Figure @fig:atom-names, GAFF atom types `h2-c3-c3-oh`, SMIRKS pattern `[#1:1]-[#6X4:2]-[#6X4:3]-[#8X2:4]`), for which SMIRNOFF99Frosst applies a dihedral with periodicity = 1 and GAFF v1.7 applies a dihedral with a periodicity of 3 (Table @tbl:S99-vs-GAFF-v1.7 and Figure @fig:dihedral).
-
-|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v1.7 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
-|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
-|  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
-
-Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. {#tbl:S99-vs-GAFF-v1.7}
+The dihedral parameters in SMIRNOFF99Frosst and GAFF v1.7 are extremely similar---where differences in barrier heights occur, they are in the hundreths or thousandths of 1 kcal/mol---with the exception of the $\ce{H1-C1-C2-O2}$ parameter (Figure @fig:atom-names).
+This dihedral corresponds to GAFF atom types `h2-c3-c3-oh` and SMIRKS pattern `[#1:1]-[#6X4:2]-[#6X4:3]-[#8X2:4]`).
+SMIRNOFF99Frosst applies a single term with periodicity = 1 and GAFF v1.7 applies a single term with periodicity = 3 (Table @tbl:S99-vs-GAFF-v1.7 and Figure @fig:dihedral).
 
 ![The dihedral energy term applied to H1-C1-C2-O2 in SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to Figure @fig:atom-names.](images/SMIRNOFF99Frosst-vs-GAFF-v1.7-H1-C2-C2-O2.png){#fig:dihedral width=3.5in}
 
-The dihedral parameters in GAFF v2.1 differ from those in SMIRNOFF99Frosst, in a number of ways.
+The dihedral parameters in GAFF v2.1 differ from those in SMIRNOFF99Frosst in a number of ways.
 There are several dihedrals that have a different number of terms in either force field (Table @tbl:S99-vs-GAFF-v2.1-missing).
-Partly this is due to the addition of dihedral terms with a barrier height of exactly 0.00 kcal/mol in GAFF, which are used to override wildcard parameters that might match the same atom types. 
-For example, GAFF v2.1 applies a three term energy function to the atom types `c3-os-c3-c3`, whereas SMIRNOFF99Frosst employs a two term energy function for the SMIRKS pattern (`[#6X4:1]-[#6X4:2]-[#8X2H0:3]-[#6X4:4]`), but only the terms with periodicity 2 and 3 have nonzero barrier heights in GAFF v2.1.
+This is partly due to the addition of dihedral terms with a barrier height of exactly 0.00 kcal/mol in GAFF, which are used to override wildcard parameters that might match the same atom types. 
+For example, GAFF v2.1 applies a three term energy function to the atom types `c3-os-c3-c3`, whereas SMIRNOFF99Frosst employs a two term energy function for the SMIRKS pattern `[#6X4:1]-[#6X4:2]-[#8X2H0:3]-[#6X4:4]`, but only the terms with periodicity 2 and 3 have nonzero barrier heights in GAFF v2.1.
 SMIRNOFF99Frosst uses two nonzero terms to model the potential barrier for the SMIRKS pattern `[#6X4:1]-[#6X4:2]-[#8X2H1:3]-[#1:4]` yet GAFF v2.1 applies a single term with a barrier height of exactly 0.00 kcal/mol for the atom types `c3-c3-oh-ho`.
 
-[I am considering removing this table. I think it is difficult to interpret: there are cases where things are missing, things are zero, and duplicate parameters applied to different sets of atoms and listed multiple times.]{.banner .lightgrey}
-
-|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
-|  C1 | C2 | O2 | HO2 | 1 | 0 | 0.25 | -- |
-|  C1 | C2 | O2 | HO2 | 3 | 0 | 0.16 | 0.00 |
-|  C1 | O5 | C5 | C4 | 1 | 0 | -- | 0.00 |
-|  C1 | O5 | C5 | C4 | 2 | 0 | 0.10 | 0.16 |
-|  C1 | O5 | C5 | C4 | 3 | 0 | 0.38 | 0.24 |
-|  C1 | O5 | C5 | C6 | 1 | 0 | -- | 0.00 |
-|  C1 | O5 | C5 | C6 | 2 | 0 | 0.10 | 0.16 |
-|  C1 | O5 | C5 | C6 | 3 | 0 | 0.38 | 0.24 |
-|  C2 | C1 | O5 | C5 | 1 | 0 | -- | 0.00 |
-|  C2 | C1 | O5 | C5 | 2 | 0 | 0.10 | 0.16 |
-|  C2 | C1 | O5 | C5 | 3 | 0 | 0.38 | 0.24 |
-|  C2 | C3 | O3 | HO3 | 1 | 0 | 0.25 | -- |
-|  C2 | C3 | O3 | HO3 | 3 | 0 | 0.16 | 0.00 |
-|  C5 | C6 | O6 | HO6 | 1 | 0 | 0.25 | -- |
-|  C5 | C6 | O6 | HO6 | 3 | 0 | 0.16 | 0.00 |
-|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
-|  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
-|  O1 | C1 | C2 | O2 | 1 | 0 | -- | 0.02 |
-|  O1 | C1 | C2 | O2 | 2 | 0 | 1.18 | 0.00 |
-|  O1 | C1 | C2 | O2 | 3 | 0 | 0.14 | 1.01 |
-|  O2 | C2 | C1 | O5 | 1 | 0 | -- | 0.02 |
-|  O2 | C2 | C1 | O5 | 2 | 0 | 1.18 | 0.00 |
-|  O2 | C2 | C1 | O5 | 3 | 0 | 0.14 | 1.01 |
-|  O5 | C5 | C6 | O6 | 1 | 0 | -- | 0.02 |
-|  O5 | C5 | C6 | O6 | 2 | 0 | 1.18 | 0.00 |
-|  O5 | C5 | C6 | O6 | 3 | 0 | 0.14 | 1.01 |
-|  HO2 | O2 | C2 | C3 | 1 | 0 | 0.25 | -- |
-|  HO2 | O2 | C2 | C3 | 3 | 0 | 0.16 | 0.00 |
-|  HO3 | O3 | C3 | C4 | 1 | 0 | 0.25 | -- |
-|  HO3 | O3 | C3 | C4 | 3 | 0 | 0.16 | 0.00 |
-
-Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the corresponding term in the other force field. Atom names refer to @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1-missing}
-
 In other cases, SMIRNOFF99Frosst and GAFF v2.1 have disagreements on the barrier height after matching the periodicity and phase for a given dihedrals.
-It is notable that GAFF v2.1 does not have drastically higher force constants for any of the dihedrals, yet GAFF v2.1 produces much more rigid structures (Table @tbl:S99-vs-GAFF-v2.1, Figure @fig:flexibility).
-The dihedral differences between neighboring glucose monomers demonstrate that SMIRNOFF99Frosst, not GAFF v2.1 has higher force constants (Table @tbl:S99-vs-GAFF-v2.1-inter).
+It is notable that the barrier heights in GAFF v2.1 are similiar in magnitude to those in SMIRNOFF99Frosst, yet GAFF v2.1 produces much more rigid structures (Table @tbl:S99-vs-GAFF-v2.1, Figure @fig:flexibility).
+Moreover, the dihedral differences between neighboring glucose monomers are larger in SMIRNOFF99Frosst compared to GAFF v2.1 (Table @tbl:S99-vs-GAFF-v2.1-inter).
 
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -525,7 +487,7 @@ The dihedral differences between neighboring glucose monomers demonstrate that S
 |  H61 | C6 | O6 | HO6 | 3 | 0 | 0.17 | 0.11 |
 |  H62 | C6 | O6 | HO6 | 3 | 0 | 0.17 | 0.11 |
 
-Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.1 for cases where the phase and periodicity of the energy term match but the barrier height does not. {#tbl:S99-vs-GAFF-v2.1}
+Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.1 for cases where the phase and periodicity of the energy term match but the barrier height does not. Atom names refer to Figure @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1}
 
 
 |   |  |  |  |  |  |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
@@ -547,13 +509,15 @@ Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.
 |   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 2 | 0 | 1.18 | 0.00 |
 |   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 3 | 0 | 0.14 | 0.00 |
 
-Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. {#tbl:S99-vs-GAFF-v2.1-inter}
+Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1-inter}
 
 ![The dihedral energy term applied to three inter-residue dihedrals in SMIRNOFF99Frosst and GAFF v2.1. The dihedral acting on atoms O1<sub>n</sub>--C4<sub>n+1</sub>--C5<sub>n+1</sub>--O5<sub>n+1</sub> is quite significantly different, with multiple minima and and barrier heights. This dihedral partially controls the rotation of glucose monomers towards or away from the interior of the cyclodextrin cavity. Surprisingly, glucose monomers in GAFF v2.1 penetrate the open cavity much less frequently than in SMIRNOFF99Frosst, despite the lower and broader dihedral energy in GAFF v2.1. Atom names refer to Figure @fig:atom-names.](images/interdihedrals.png){width="100%" #fig:interdihedrals}
 
 ### Structural consequences of the force field parameter differences
 
-In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 and 2.5 Å over 43 μs of simulation. GAFF v2.1 is significanly more rigid, with an average RMSD less than 1.0 Å from the initial structure (Figure @fig:flexibility).
+In both SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD is between 2 and 2.5 Å over 43 μs of unrestrained simulation, in the absence of guest molecules. 
+GAFF v2.1 is significanly more rigid, with an average RMSD less than 1.0 Å from the initial structure (Figure @fig:flexibility).
+RMSD is measured relative to a minimized structure of solvated  βCD, for each force field.
 
 ![Top: Root mean square deviation (RMSD) of free βCD in the three force fields, all relative to the same initial structure. A 1000 frame moving average is plotted in red. Middle: to-view of the open cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the open cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity.](images/cyclodextrin-flexibility.png){#fig:flexibility width=100%}
 
@@ -572,14 +536,6 @@ As a terse representation of a GAFF-like force field, SMIRNOFF99Frosst does rema
 Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst performs as well as GAFF v1.7 and better than GAFF v2.1 predicting binding free energies of small molecules to αCD and βCD, based on the mean signed error relative to experiment.
 Moreover, SMIRNOFF99Frosst performs better than either GAFF v1.7 or GAFF v2.1 on predicted binding enthalpies, with a mean signed error less than 1 kcal/mol.
 GAFF v2.1 has excellent agreement with experiment on predicted binding entropy, followed by SMIRNOFF99Frosst and then GAFF v1.7.
-
-
------
-In GAFF v2.1, the bond and angle parameters have been updated to reproduce small molecule geometries obtained from high-level quantum mechanical calculations [@16UiKZ8o1].
-The force constants for the bond and angle parameters were tuned to reproduce the vibrational spectra of over 600 molecules.
-The torsion parameters were optimized to reproduce the rotational potential energy surface of 400 model compounds.
-Finally, the Lennard-Jones coefficients were redeveloped to reproduce interaction energies and pure liquid properties.
------
 
 It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible cyclodextrin hosts.
 It has been shown that there are 2--7 H<sub>2</sub>O inside αCD and 8--11 H<sub>2</sub>O molecules inside βCD [@j3qbz56S; @l02WNlWU].
@@ -838,3 +794,48 @@ Table: Predicted thermodynamic properties for each force field relative to exper
 
 Table: Predicted thermodynamic properties for each force field relative to experiment on cyclic alcohol guests. {#tbl:overall-alcohols}
 
+
+|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v1.7 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
+|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
+|  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
+
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to Figure @fig:atom-names. {#tbl:S99-vs-GAFF-v1.7}
+
+
+|   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
+|  C1 | C2 | O2 | HO2 | 1 | 0 | 0.25 | -- |
+|  C1 | C2 | O2 | HO2 | 3 | 0 | 0.16 | 0.00 |
+|  C1 | O5 | C5 | C4 | 1 | 0 | -- | 0.00 |
+|  C1 | O5 | C5 | C4 | 2 | 0 | 0.10 | 0.16 |
+|  C1 | O5 | C5 | C4 | 3 | 0 | 0.38 | 0.24 |
+|  C1 | O5 | C5 | C6 | 1 | 0 | -- | 0.00 |
+|  C1 | O5 | C5 | C6 | 2 | 0 | 0.10 | 0.16 |
+|  C1 | O5 | C5 | C6 | 3 | 0 | 0.38 | 0.24 |
+|  C2 | C1 | O5 | C5 | 1 | 0 | -- | 0.00 |
+|  C2 | C1 | O5 | C5 | 2 | 0 | 0.10 | 0.16 |
+|  C2 | C1 | O5 | C5 | 3 | 0 | 0.38 | 0.24 |
+|  C2 | C3 | O3 | HO3 | 1 | 0 | 0.25 | -- |
+|  C2 | C3 | O3 | HO3 | 3 | 0 | 0.16 | 0.00 |
+|  C5 | C6 | O6 | HO6 | 1 | 0 | 0.25 | -- |
+|  C5 | C6 | O6 | HO6 | 3 | 0 | 0.16 | 0.00 |
+|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
+|  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
+|  O1 | C1 | C2 | O2 | 1 | 0 | -- | 0.02 |
+|  O1 | C1 | C2 | O2 | 2 | 0 | 1.18 | 0.00 |
+|  O1 | C1 | C2 | O2 | 3 | 0 | 0.14 | 1.01 |
+|  O2 | C2 | C1 | O5 | 1 | 0 | -- | 0.02 |
+|  O2 | C2 | C1 | O5 | 2 | 0 | 1.18 | 0.00 |
+|  O2 | C2 | C1 | O5 | 3 | 0 | 0.14 | 1.01 |
+|  O5 | C5 | C6 | O6 | 1 | 0 | -- | 0.02 |
+|  O5 | C5 | C6 | O6 | 2 | 0 | 1.18 | 0.00 |
+|  O5 | C5 | C6 | O6 | 3 | 0 | 0.14 | 1.01 |
+|  HO2 | O2 | C2 | C3 | 1 | 0 | 0.25 | -- |
+|  HO2 | O2 | C2 | C3 | 3 | 0 | 0.16 | 0.00 |
+|  HO3 | O3 | C3 | C4 | 1 | 0 | 0.25 | -- |
+|  HO3 | O3 | C3 | C4 | 3 | 0 | 0.16 | 0.00 |
+
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the corresponding term in the other force field. Atom names refer to @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1-missing}
