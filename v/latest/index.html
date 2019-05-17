@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/8a8e27917ff4b3344914f192e2e40ae33f0dcd7f/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/8a8e27917ff4b3344914f192e2e40ae33f0dcd7f">slochower/smirnoff-host-guest-manuscript@8a8e279</a> on May 17, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/db4e6ac3664185049e7c413b888008483808c4b2/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/db4e6ac3664185049e7c413b888008483808c4b2">slochower/smirnoff-host-guest-manuscript@db4e6ac</a> on May 17, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -1574,13 +1574,326 @@ All force fields perform poorly predicting −TΔS for carboxylate guests. It is
 </figure>
 <h2 id="discussion">Discussion</h2>
 <p>As a terse representation of a GAFF-like force field, SMIRNOFF99Frosst does remarkably well. Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst performs as well as GAFF v1.7 and better than GAFF v2.1 predicting binding free energies of small molecules to αCD and βCD, based on the mean signed error relative to experiment. Moreover, SMIRNOFF99Frosst performs better than either GAFF v1.7 or GAFF v2.1 on predicted binding enthalpies, with a mean signed error less than 1 kcal/mol. GAFF v2.1 has excellent agreement with experiment on predicted binding entropy, followed by SMIRNOFF99Frosst and then GAFF v1.7.</p>
-<p>It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible cyclodextrin hosts. It has been shown that there are 2–7 H<sub>2</sub>O inside αCD and 8–11 H<sub>2</sub>O molecules inside βCD <span class="citation" data-cites="j3qbz56S l02WNlWU">[<a href="#ref-l02WNlWU" role="doc-biblioref">17</a>,<a href="#ref-j3qbz56S" role="doc-biblioref">45</a>]</span>. It is likely that simulations with SMIRNOFF99Frosst and GAFF v1.7 result in fewer resident waters inside the cyclodextrin cavity due to intrusions from glucose units. Futhermore, it is known that sugars and conjugated carbohydrates are especially difficult for many “general” force fields, due to the highly polar bonds in sugars, the number of chiral centers, and the large structural differences between chiral isomers <span class="citation" data-cites="okbsmIQF">[<a href="#ref-okbsmIQF" role="doc-biblioref">46</a>]</span>.</p>
-<p>The combination of X-ray and NMR data suggest that the specialized q4md-CD <span class="citation" data-cites="j7JJedX4">[<a href="#ref-j7JJedX4" role="doc-biblioref">47</a>]</span> force field, and the rigid GAFF v2.1 <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">29</a>]</span> force field, better model the flexibility of the CD cavity. Cézard, <em>et al.</em> present strong NMR evidence that the vicinal <sup>3</sup>J H5–H6′ and <sup>3</sup>J H5-H6″ coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers <span class="citation" data-cites="j7JJedX4">[<a href="#ref-j7JJedX4" role="doc-biblioref">47</a>]</span>. This is also evident in X-ray structures, where the rigidity of the cyclodextrin ring is retained as long as water is present in the cavity and the torsional angles between adjacent glycouril units show surprisingly small variance <span class="citation" data-cites="j3qbz56S">[<a href="#ref-j3qbz56S" role="doc-biblioref">45</a>]</span>.</p>
-<p>The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those <span class="citation" data-cites="jdi722iE">[<a href="#ref-jdi722iE" role="doc-biblioref">48</a>]</span>. The lack of rigidity is associated with an underestimation of the binding enthalpy and an overestimation of the binding entropy; SMRINOFF99Frossst has a ΔH MSE = 0.77 kcal/mol and −TΔS MSE = -0.78 kcal/mol whereas the more rigid GAFF v2.1 results in ΔH MSE = -1.64 kcal/mol and −TΔS MSE = 0.08 kcal/mol. It is especially notable that GAFF v2.1 has the best overall correlations <code>and probably the best Kendall τ?</code>.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>In GAFF v2.1, the bond and angle parameters have been updated to reproduce small molecule geometries obtained from high-level quantum mechanical calculations <span class="citation" data-cites="16UiKZ8o1">[<a href="#ref-16UiKZ8o1" role="doc-biblioref">45</a>]</span>.</td>
+</tr>
+<tr class="even">
+<td>The force constants for the bond and angle parameters were tuned to reproduce the vibrational spectra of over 600 molecules.</td>
+</tr>
+<tr class="odd">
+<td>The torsion parameters were optimized to reproduce the rotational potential energy surface of 400 model compounds.</td>
+</tr>
+<tr class="even">
+<td>Finally, the Lennard-Jones coefficients were redeveloped to reproduce interaction energies and pure liquid properties.</td>
+</tr>
+</tbody>
+</table>
+<p>It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible cyclodextrin hosts. It has been shown that there are 2–7 H<sub>2</sub>O inside αCD and 8–11 H<sub>2</sub>O molecules inside βCD <span class="citation" data-cites="j3qbz56S l02WNlWU">[<a href="#ref-l02WNlWU" role="doc-biblioref">17</a>,<a href="#ref-j3qbz56S" role="doc-biblioref">46</a>]</span>. It is likely that simulations with SMIRNOFF99Frosst and GAFF v1.7 result in fewer resident waters inside the cyclodextrin cavity due to intrusions from glucose units. Futhermore, it is known that sugars and conjugated carbohydrates are especially difficult for many “general” force fields, due to the highly polar bonds in sugars, the number of chiral centers, and the large structural differences between chiral isomers <span class="citation" data-cites="okbsmIQF">[<a href="#ref-okbsmIQF" role="doc-biblioref">47</a>]</span>.</p>
+<p>The combination of X-ray and NMR data suggest that the specialized q4md-CD <span class="citation" data-cites="j7JJedX4">[<a href="#ref-j7JJedX4" role="doc-biblioref">48</a>]</span> force field, and the rigid GAFF v2.1 <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">29</a>]</span> force field, better model the flexibility of the CD cavity. Cézard, <em>et al.</em> present strong NMR evidence that the vicinal <sup>3</sup>J H5–H6′ (atom names H5–H62 in Figure <span class="citation" data-cites="fig:atom-anmes">[<span class="citeproc-not-found" data-reference-id="fig:atom-anmes"><strong>???</strong></span>]</span>) and <sup>3</sup>J H5-H6″(atom names H5–H61) coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers <span class="citation" data-cites="j7JJedX4">[<a href="#ref-j7JJedX4" role="doc-biblioref">48</a>]</span>. This is also evident in X-ray structures, where the rigidity of the cyclodextrin ring is retained as long as water is present in the cavity and the torsional angles between adjacent glycouril units show surprisingly small variance <span class="citation" data-cites="j3qbz56S">[<a href="#ref-j3qbz56S" role="doc-biblioref">46</a>]</span>.</p>
+<p>The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those <span class="citation" data-cites="jdi722iE">[<a href="#ref-jdi722iE" role="doc-biblioref">49</a>]</span>. The lack of rigidity is associated with an underestimation of the binding enthalpy and an overestimation of the binding entropy; SMRINOFF99Frossst has a ΔH MSE = 0.77 kcal/mol and −TΔS MSE = -0.78 kcal/mol whereas the more rigid GAFF v2.1 results in ΔH MSE = -1.64 kcal/mol and −TΔS MSE = 0.08 kcal/mol. It is especially notable that GAFF v2.1 has the best overall correlations <code>and probably the best Kendall τ?</code>.</p>
 <p>As a starting point for force field optimization, it therefore seems important to include sugars and carbohydrates in the development of future iterations of SMIRNOFF99Frosst. This will be especially useful for modeling more physiologically relevant protein structures, such as proteoglycans and glycopeptides.</p>
+<h2 id="code-and-data-availability">Code and data availability</h2>
+<ul>
+<li><a href="https://github.com/slochower/smirnoff-host-guest">GitHub repository</a> used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.</li>
+<li><a href="https://github.com/slochower/smirnoff-host-guest-simulations-data">GitHub repository</a> for setting up the attach-pull-release calculations using <code>paprika</code> version 0.0.3.</li>
+<li><a href="https://github.com/slochower/smirnoff-host-guest-simulations">GitHub repository</a> for analyzing the simulations and generating the plots in this manuscript.</li>
+<li><a href="https://github.com/openforcefield/openforcefield">GitHub repository</a> for the Open Force Field group containing the toolkit and force field XML file.</li>
+</ul>
+<h2 id="author-contributions">Author contributions</h2>
+<p>Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC; Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG, LPW; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<h2 id="disclosures">Disclosures</h2>
+<p>The authors declare the following competing financial interest(s): MKG has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC.</p>
+<h2 id="list-of-abbreviations">List of abbreviations</h2>
+<p>APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field</p>
+<h2 id="references" class="page_break_before">References</h2>
+<!-- Explicitly insert bibliography here -->
+<div id="refs" role="doc-bibliography">
+<div id="ref-9MLPuYAQ">
+<p>1. <strong>Overview of the SAMPL6 host–guest binding affinity prediction challenge</strong><br />
+Andrea Rizzi, Steven Murkli, John N. McNeill, Wei Yao, Matthew Sullivan, Michael K. Gilson, Michael W. Chiu, Lyle Isaacs, Bruce C. Gibb, David L. Mobley, John D. Chodera<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2018-10) <a href="https://doi.org/gfpzh5">https://doi.org/gfpzh5</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-018-0170-6">10.1007/s10822-018-0170-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30415285">30415285</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6301044">PMC6301044</a></p>
+</div>
+<div id="ref-1CuDE1c2r">
+<p>2. <strong>Attach-Pull-Release Calculations of Ligand Binding and Conformational Changes on the First BRD4 Bromodomain</strong><br />
+Germano Heinzelmann, Niel M. Henriksen, Michael K. Gilson<br />
+<em>Journal of Chemical Theory and Computation</em> (2017-05-31) <a href="https://doi.org/gbpj4m">https://doi.org/gbpj4m</a><br />
+DOI: <a href="https://doi.org/10.1021/acs.jctc.7b00275">10.1021/acs.jctc.7b00275</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28564537">28564537</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5541932">PMC5541932</a></p>
+</div>
+<div id="ref-mdqdy96N">
+<p>3. <strong>Computation of protein–ligand binding free energies using quantum mechanical bespoke force fields</strong><br />
+Daniel J. Cole, Israel Cabeza de Vaca, William L. Jorgensen<br />
+<em>MedChemComm</em> (2019) <a href="https://doi.org/gfz353">https://doi.org/gfz353</a><br />
+DOI: <a href="https://doi.org/10.1039/c9md00017h">10.1039/c9md00017h</a></p>
+</div>
+<div id="ref-15iR76Uc">
+<p>4. <strong>Predictions of Ligand Selectivity from Absolute Binding Free Energy Calculations</strong><br />
+Matteo Aldeghi, Alexander Heifetz, Michael J. Bodkin, Stefan Knapp, Philip C. Biggin<br />
+<em>Journal of the American Chemical Society</em> (2017-01-09) <a href="https://doi.org/f9kr6h">https://doi.org/f9kr6h</a><br />
+DOI: <a href="https://doi.org/10.1021/jacs.6b11467">10.1021/jacs.6b11467</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28009512">28009512</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5253712">PMC5253712</a></p>
+</div>
+<div id="ref-HQi6ihVB">
+<p>5. <strong>Accurate and Reliable Prediction of Relative Ligand Binding Potency in Prospective Drug Discovery by Way of a Modern Free-Energy Calculation Protocol and Force Field</strong><br />
+Lingle Wang, Yujie Wu, Yuqing Deng, Byungchan Kim, Levi Pierce, Goran Krilov, Dmitry Lupyan, Shaughnessy Robinson, Markus K. Dahlgren, Jeremy Greenwood, … Robert Abel<br />
+<em>Journal of the American Chemical Society</em> (2015-02-12) <a href="https://doi.org/f64pdz">https://doi.org/f64pdz</a><br />
+DOI: <a href="https://doi.org/10.1021/ja512751q">10.1021/ja512751q</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25625324">25625324</a></p>
+</div>
+<div id="ref-B182mNck">
+<p>6. <strong>OPLS3e: Extending Force Field Coverage for Drug-Like Small Molecules</strong><br />
+Katarina Roos, Chuanjie Wu, Wolfgang Damm, Mark Reboul, James M. Stevenson, Chao Lu, Markus K. Dahlgren, Sayan Mondal, Wei Chen, Lingle Wang, … Edward D. Harder<br />
+<em>Journal of Chemical Theory and Computation</em> (2019-02-15) <a href="https://doi.org/gfvpnf">https://doi.org/gfvpnf</a><br />
+DOI: <a href="https://doi.org/10.1021/acs.jctc.8b01026">10.1021/acs.jctc.8b01026</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30768902">30768902</a></p>
+</div>
+<div id="ref-BGsUYQln">
+<p>7. <strong>Overview of the SAMPL5 host–guest challenge: Are we doing better?</strong><br />
+Jian Yin, Niel M. Henriksen, David R. Slochower, Michael R. Shirts, Michael W. Chiu, David L. Mobley, Michael K. Gilson<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2016-09-22) <a href="https://doi.org/f9m82x">https://doi.org/f9m82x</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-016-9974-4">10.1007/s10822-016-9974-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27658802">27658802</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5241188">PMC5241188</a></p>
+</div>
+<div id="ref-rOVoXhRJ">
+<p>8. <strong>The Movable Type Method Applied to Protein–Ligand Binding</strong><br />
+Zheng Zheng, Melek N. Ucisik, Kenneth M. Merz<br />
+<em>Journal of Chemical Theory and Computation</em> (2013-11-26) <a href="https://doi.org/f5kjt2">https://doi.org/f5kjt2</a><br />
+DOI: <a href="https://doi.org/10.1021/ct4005992">10.1021/ct4005992</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24535920">24535920</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3924725">PMC3924725</a></p>
+</div>
+<div id="ref-Dn1HX5lD">
+<p>9. <strong>Blinded predictions of standard binding free energies: lessons learned from the SAMPL6 challenge</strong><br />
+Michail Papadourakis, Stefano Bosisio, Julien Michel<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2018-08-29) <a href="https://doi.org/gfpbrc">https://doi.org/gfpbrc</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-018-0154-6">10.1007/s10822-018-0154-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30159717">30159717</a></p>
+</div>
+<div id="ref-kj7fJ3fg">
+<p>10. <strong>Resolving the problem of trapped water in binding cavities: prediction of host–guest binding free energies in the SAMPL5 challenge by funnel metadynamics</strong><br />
+Soumendranath Bhakat, Pär Söderhjelm<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2016-08-29) <a href="https://doi.org/f9m894">https://doi.org/f9m894</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-016-9948-6">10.1007/s10822-016-9948-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27573983">27573983</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5239820">PMC5239820</a></p>
+</div>
+<div id="ref-l8KUmyk3">
+<p>11. <strong>Absolute binding free energies for octa-acids and guests in SAMPL5</strong><br />
+Florentina Tofoleanu, Juyong Lee, Frank C. Pickard IV, Gerhard König, Jing Huang, Minkyung Baek, Chaok Seok, Bernard R. Brooks<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2016-09-30) <a href="https://doi.org/f9m9c2">https://doi.org/f9m9c2</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-016-9965-5">10.1007/s10822-016-9965-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27696242">27696242</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6472255">PMC6472255</a></p>
+</div>
+<div id="ref-1935a9V0d">
+<p>12. <strong>Computational Calorimetry: High-Precision Calculation of Host–Guest Binding Thermodynamics</strong><br />
+Niel M. Henriksen, Andrew T. Fenley, Michael K. Gilson<br />
+<em>Journal of Chemical Theory and Computation</em> (2015-08-26) <a href="https://doi.org/f7q3mj">https://doi.org/f7q3mj</a><br />
+DOI: <a href="https://doi.org/10.1021/acs.jctc.5b00405">10.1021/acs.jctc.5b00405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26523125">26523125</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4614838">PMC4614838</a></p>
+</div>
+<div id="ref-ku7PPPs">
+<p>13. <strong>Prediction of CB[8] host–guest binding free energies in SAMPL6 using the double-decoupling method</strong><br />
+Kyungreem Han, Phillip S. Hudson, Michael R. Jones, Naohiro Nishikawa, Florentina Tofoleanu, Bernard R. Brooks<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2018-08-06) <a href="https://doi.org/gfpzp2">https://doi.org/gfpzp2</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-018-0144-8">10.1007/s10822-018-0144-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30084077">30084077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6347468">PMC6347468</a></p>
+</div>
+<div id="ref-ScmrI810">
+<p>14. <strong>Comparison of the umbrella sampling and the double decoupling method in binding free energy predictions for SAMPL6 octa-acid host–guest challenges</strong><br />
+Naohiro Nishikawa, Kyungreem Han, Xiongwu Wu, Florentina Tofoleanu, Bernard R. Brooks<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2018-10) <a href="https://doi.org/gfz352">https://doi.org/gfz352</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-018-0166-2">10.1007/s10822-018-0166-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30324304">30324304</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413509">PMC6413509</a></p>
+</div>
+<div id="ref-bKuLAjgi">
+<p>15. <strong>Detailed potential of mean force studies on host–guest systems from the SAMPL6 challenge</strong><br />
+Lin Frank Song, Nupur Bansal, Zheng Zheng, Kenneth M. Merz<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2018-08-24) <a href="https://doi.org/gfpw5t">https://doi.org/gfpw5t</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-018-0153-7">10.1007/s10822-018-0153-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30143917">30143917</a></p>
+</div>
+<div id="ref-GA1AFcUw">
+<p>16. <strong>The SAMPL4 host–guest blind prediction challenge: an overview</strong><br />
+Hari S. Muddana, Andrew T. Fenley, David L. Mobley, Michael K. Gilson<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2014-03-06) <a href="https://doi.org/f5585s">https://doi.org/f5585s</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-014-9735-1">10.1007/s10822-014-9735-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24599514">24599514</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4053502">PMC4053502</a></p>
+</div>
+<div id="ref-l02WNlWU">
+<p>17. <strong>Structures of the Common Cyclodextrins and Their Larger AnaloguesBeyond the Doughnut</strong><br />
+Wolfram Saenger, Joël Jacob, Katrin Gessler, Thomas Steiner, Daniel Hoffmann, Haruyo Sanbe, Kyoko Koizumi, Steven M. Smith, Takeshi Takaha<br />
+<em>Chemical Reviews</em> (1998-07) <a href="https://doi.org/dgz7hm">https://doi.org/dgz7hm</a><br />
+DOI: <a href="https://doi.org/10.1021/cr9700181">10.1021/cr9700181</a></p>
+</div>
+<div id="ref-q7znTABh">
+<p>18. <strong>Toward Expanded Diversity of Host–Guest Interactions via Synthesis and Characterization of Cyclodextrin Derivatives</strong><br />
+K. Kellett, S. A. Kantonen, B. M. Duggan, M. K. Gilson<br />
+<em>Journal of Solution Chemistry</em> (2018-06-04) <a href="https://doi.org/gfp949">https://doi.org/gfp949</a><br />
+DOI: <a href="https://doi.org/10.1007/s10953-018-0769-1">10.1007/s10953-018-0769-1</a></p>
+</div>
+<div id="ref-19cBeLx8d">
+<p>19. <strong>Cyclodextrins and their uses: a review</strong><br />
+E. M.Martin Del Valle<br />
+<em>Process Biochemistry</em> (2004-05) <a href="https://doi.org/bxthjg">https://doi.org/bxthjg</a><br />
+DOI: <a href="https://doi.org/10.1016/s0032-9592(03)00258-9">10.1016/s0032-9592(03)00258-9</a></p>
+</div>
+<div id="ref-1HYTTY1PU">
+<p>20. <strong>Escaping Atom Types in Force Fields Using Direct Chemical Perception</strong><br />
+David L. Mobley, Caitlin C. Bannan, Andrea Rizzi, Christopher I. Bayly, John D. Chodera, Victoria T. Lim, Nathan M. Lim, Kyle A. Beauchamp, David R. Slochower, Michael R. Shirts, … Peter K. Eastman<br />
+<em>Journal of Chemical Theory and Computation</em> (2018-10-11) <a href="https://doi.org/gffnf3">https://doi.org/gffnf3</a><br />
+DOI: <a href="https://doi.org/10.1021/acs.jctc.8b00640">10.1021/acs.jctc.8b00640</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30351006">30351006</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6245550">PMC6245550</a></p>
+</div>
+<div id="ref-OhpH7vfg">
+<p>21. <strong>Open Force Field Initiative</strong><br />
+The Open Force Field Initiative<br />
+<a href="https://openforcefield.org/">https://openforcefield.org/</a></p>
+</div>
+<div id="ref-13wrQoS3l">
+<p>22. <strong>A Modified Version of the Cornellet al.Force Field with Improved Sugar Pucker Phases and Helical Repeat</strong><br />
+Thomas E. Cheatham III, Piotr Cieplak, Peter A. Kollman<br />
+<em>Journal of Biomolecular Structure and Dynamics</em> (1999-02) <a href="https://doi.org/gfzp4j">https://doi.org/gfzp4j</a><br />
+DOI: <a href="https://doi.org/10.1080/07391102.1999.10508297">10.1080/07391102.1999.10508297</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/10217454">10217454</a></p>
+</div>
+<div id="ref-168lWg0SB">
+<p>23. <strong>An Informal AMBER Small Molecule Force Field: parm@Frosst</strong><a href="http://www.ccl.net/cca/data/parm_at_Frosst/">http://www.ccl.net/cca/data/parm_at_Frosst/</a></p>
+</div>
+<div id="ref-pOsXFMux">
+<p>24. <strong>Daylight&gt;SMIRKS Tutorial</strong><a href="https://daylight.com/dayhtml_tutorials/languages/smirks/">https://daylight.com/dayhtml_tutorials/languages/smirks/</a></p>
+</div>
+<div id="ref-YmRgHfeU">
+<p>25. <strong>Development and testing of a general amber force field</strong><br />
+Junmei Wang, Romain M. Wolf, James W. Caldwell, Peter A. Kollman, David A. Case<br />
+<em>Journal of Computational Chemistry</em> (2004) <a href="https://doi.org/cdmcnb">https://doi.org/cdmcnb</a><br />
+DOI: <a href="https://doi.org/10.1002/jcc.20035">10.1002/jcc.20035</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15116359">15116359</a></p>
+</div>
+<div id="ref-4LS7HWPh">
+<p>26. <strong>openforcefield/smirnoff99Frosst</strong><br />
+GitHub<br />
+<a href="https://github.com/openforcefield/smirnoff99Frosst">https://github.com/openforcefield/smirnoff99Frosst</a></p>
+</div>
+<div id="ref-XzEPM0UV">
+<p>27. <strong>Open Force Field Roadmap</strong><br />
+Michael R Shirts, John Damon Chodera, David L Mobley, Michael K Gilson, Lee-Ping Wang<br />
+<em>Unpublished</em> (2019) <a href="https://doi.org/gf2stw">https://doi.org/gf2stw</a><br />
+DOI: <a href="https://doi.org/10.13140/rg.2.2.27587.86562">10.13140/rg.2.2.27587.86562</a></p>
+</div>
+<div id="ref-1236RpaUv">
+<p>28. <strong>Thermodynamic and Nuclear Magnetic Resonance Study of the Reactions of α- and β-Cyclodextrin with Acids, Aliphatic Amines, and Cyclic Alcohols</strong><br />
+Mikhail V. Rekharsky, Martin P. Mayhew, Robert N. Goldberg, Philip D. Ross, Yuko Yamashoji, Yoshihisa Inoue<br />
+<em>The Journal of Physical Chemistry B</em> (1997-01) <a href="https://doi.org/cmwfwn">https://doi.org/cmwfwn</a><br />
+DOI: <a href="https://doi.org/10.1021/jp962715n">10.1021/jp962715n</a></p>
+</div>
+<div id="ref-HVgz5rZq">
+<p>29. <strong>Evaluating Force Field Performance in Thermodynamic Calculations of Cyclodextrin Host–Guest Binding: Water Models, Partial Charges, and Host Force Field Parameters</strong><br />
+Niel M. Henriksen, Michael K. Gilson<br />
+<em>Journal of Chemical Theory and Computation</em> (2017-07-11) <a href="https://doi.org/gd2z2t">https://doi.org/gd2z2t</a><br />
+DOI: <a href="https://doi.org/10.1021/acs.jctc.7b00359">10.1021/acs.jctc.7b00359</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28696692">28696692</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5606194">PMC5606194</a></p>
+</div>
+<div id="ref-g7xxBB7m">
+<p>30. <strong>Chiral Recognition Thermodynamics of β-Cyclodextrin:  The Thermodynamic Origin of Enantioselectivity and the Enthalpy−Entropy Compensation Effect</strong><br />
+Mikhail Rekharsky, Yoshihisa Inoue<br />
+<em>Journal of the American Chemical Society</em> (2000-05) <a href="https://doi.org/c2tvdg">https://doi.org/c2tvdg</a><br />
+DOI: <a href="https://doi.org/10.1021/ja9921118">10.1021/ja9921118</a></p>
+</div>
+<div id="ref-LxrgIkt0">
+<p>31. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation</strong><br />
+Araz Jakalian, David B. Jack, Christopher I. Bayly<br />
+<em>Journal of Computational Chemistry</em> (2002-10-18) <a href="https://doi.org/cktk6g">https://doi.org/cktk6g</a><br />
+DOI: <a href="https://doi.org/10.1002/jcc.10128">10.1002/jcc.10128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/12395429">12395429</a></p>
+</div>
+<div id="ref-BkLoOd0N">
+<p>32. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: I. Method</strong><br />
+Araz Jakalian, Bruce L. Bush, David B. Jack, Christopher I. Bayly<br />
+<em>Journal of Computational Chemistry</em> (2000-01-30) <a href="https://doi.org/cvvpkv">https://doi.org/cvvpkv</a><br />
+DOI: <a href="https://doi.org/10.1002/(sici)1096-987x(20000130)21:2%3C132::aid-jcc5%3E3.0.co;2-p">10.1002/(sici)1096-987x(20000130)21:2&lt;132::aid-jcc5&gt;3.0.co;2-p</a></p>
+</div>
+<div id="ref-chrX4HGh">
+<p>33. <strong>Comparison of simple potential functions for simulating liquid water</strong><br />
+William L. Jorgensen, Jayaraman Chandrasekhar, Jeffry D. Madura, Roger W. Impey, Michael L. Klein<br />
+<em>The Journal of Chemical Physics</em> (1983-07-15) <a href="https://doi.org/dg9sq8">https://doi.org/dg9sq8</a><br />
+DOI: <a href="https://doi.org/10.1063/1.445869">10.1063/1.445869</a></p>
+</div>
+<div id="ref-uZnQBwCt">
+<p>34. <strong>Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations</strong><br />
+In Suk Joung, Thomas E. Cheatham III<br />
+<em>The Journal of Physical Chemistry B</em> (2008-07) <a href="https://doi.org/cgwnj7">https://doi.org/cgwnj7</a><br />
+DOI: <a href="https://doi.org/10.1021/jp8001614">10.1021/jp8001614</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18593145">18593145</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2652252">PMC2652252</a></p>
+</div>
+<div id="ref-T7iFp9ei">
+<p>35. <strong>Lessons learned from comparing molecular dynamics engines on the SAMPL5 dataset</strong><br />
+Michael R. Shirts, Christoph Klein, Jason M. Swails, Jian Yin, Michael K. Gilson, David L. Mobley, David A. Case, Ellen D. Zhong<br />
+<em>Journal of Computer-Aided Molecular Design</em> (2016-10-27) <a href="https://doi.org/f9m3wn">https://doi.org/f9m3wn</a><br />
+DOI: <a href="https://doi.org/10.1007/s10822-016-9977-1">10.1007/s10822-016-9977-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27787702">27787702</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5581938">PMC5581938</a></p>
+</div>
+<div id="ref-W9FLyOZr">
+<p>36. <strong>Overcoming dissipation in the calculation of standard binding free energies by ligand extraction</strong><br />
+Camilo Velez-Vega, Michael K. Gilson<br />
+<em>Journal of Computational Chemistry</em> (2013-08) <a href="https://doi.org/gbdv9w">https://doi.org/gbdv9w</a><br />
+DOI: <a href="https://doi.org/10.1002/jcc.23398">10.1002/jcc.23398</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24038118">24038118</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3932244">PMC3932244</a></p>
+</div>
+<div id="ref-1HWPx2yMR">
+<p>37. <strong>Bridging Calorimetry and Simulation through Precise Calculations of Cucurbituril–Guest Binding Enthalpies</strong><br />
+Andrew T. Fenley, Niel M. Henriksen, Hari S. Muddana, Michael K. Gilson<br />
+<em>Journal of Chemical Theory and Computation</em> (2014-08) <a href="https://doi.org/f6hv4x">https://doi.org/f6hv4x</a><br />
+DOI: <a href="https://doi.org/10.1021/ct5004109">10.1021/ct5004109</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25221445">25221445</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4159218">PMC4159218</a></p>
+</div>
+<div id="ref-tKJug83o">
+<p>38. <strong>The Amber Molecular Dynamics Package</strong>(2019) <a href="http://www.ambermd.org">http://www.ambermd.org</a></p>
+</div>
+<div id="ref-IGZ99oJ8">
+<p>39. <strong>Long-Time-Step Molecular Dynamics through Hydrogen Mass Repartitioning</strong><br />
+Chad W. Hopkins, Scott Le Grand, Ross C. Walker, Adrian E. Roitberg<br />
+<em>Journal of Chemical Theory and Computation</em> (2015-03-30) <a href="https://doi.org/f697mk">https://doi.org/f697mk</a><br />
+DOI: <a href="https://doi.org/10.1021/ct5010406">10.1021/ct5010406</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26574392">26574392</a></p>
+</div>
+<div id="ref-sMVo0eOR">
+<p>40. <strong>Nonlinear scaling schemes for Lennard-Jones interactions in free energy calculations</strong><br />
+Thomas Steinbrecher, David L. Mobley, David A. Case<br />
+<em>The Journal of Chemical Physics</em> (2007-12-07) <a href="https://doi.org/fc7n55">https://doi.org/fc7n55</a><br />
+DOI: <a href="https://doi.org/10.1063/1.2799191">10.1063/1.2799191</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18067350">18067350</a></p>
+</div>
+<div id="ref-htck51Lp">
+<p>41. <strong>Error estimates on averages of correlated data</strong><br />
+H. Flyvbjerg, H. G. Petersen<br />
+<em>The Journal of Chemical Physics</em> (1989-07) <a href="https://doi.org/bjpm5j">https://doi.org/bjpm5j</a><br />
+DOI: <a href="https://doi.org/10.1063/1.457480">10.1063/1.457480</a></p>
+</div>
+<div id="ref-Q2dwH7Dq">
+<p>42. <strong>Add hydroxyl hydrogen radii, remove generics, update for 1.0.7 release by davidlmobley · Pull Request #74 · openforcefield/smirnoff99Frosst</strong><br />
+GitHub<br />
+<a href="https://github.com/openforcefield/smirnoff99Frosst/pull/74">https://github.com/openforcefield/smirnoff99Frosst/pull/74</a></p>
+</div>
+<div id="ref-cT3I9uDT">
+<p>43. <strong>Remove generics, add hydrogen radii, rename ffxml files by davidlmobley · Pull Request #101 · openforcefield/openforcefield</strong><br />
+GitHub<br />
+<a href="https://github.com/openforcefield/openforcefield/pull/101">https://github.com/openforcefield/openforcefield/pull/101</a></p>
+</div>
+<div id="ref-10E0XdByV">
+<p>44. <strong>Adjust hydroxyl hydrogen to have a small radius, requires more research · Issue #61 · openforcefield/smirnoff99Frosst</strong><br />
+GitHub<br />
+<a href="https://github.com/openforcefield/smirnoff99Frosst/issues/61">https://github.com/openforcefield/smirnoff99Frosst/issues/61</a></p>
+</div>
+<div id="ref-16UiKZ8o1">
+<p>45. <strong>choderalab/ambermini</strong><br />
+GitHub<br />
+<a href="https://github.com/choderalab/ambermini">https://github.com/choderalab/ambermini</a></p>
+</div>
+<div id="ref-j3qbz56S">
+<p>46. <strong>Topography of cyclodextrin inclusion complexes. 8. Crystal and molecular structure of the .alpha.-cyclodextrin-methanol-pentahydrate complex. Disorder in a hydrophobic cage</strong><br />
+B. Hingerty, W. Saenger<br />
+<em>Journal of the American Chemical Society</em> (1976-05) <a href="https://doi.org/cmfz5v">https://doi.org/cmfz5v</a><br />
+DOI: <a href="https://doi.org/10.1021/ja00427a050">10.1021/ja00427a050</a></p>
+</div>
+<div id="ref-okbsmIQF">
+<p>47. <strong>Carbohydrate force fields</strong><br />
+B. Lachele Foley, Matthew B. Tessier, Robert J. Woods<br />
+<em>Wiley Interdisciplinary Reviews: Computational Molecular Science</em> (2011-10-31) <a href="https://doi.org/fcxc66">https://doi.org/fcxc66</a><br />
+DOI: <a href="https://doi.org/10.1002/wcms.89">10.1002/wcms.89</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25530813">25530813</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4270206">PMC4270206</a></p>
+</div>
+<div id="ref-j7JJedX4">
+<p>48. <strong>Molecular dynamics studies of native and substituted cyclodextrins in different media: 1. Charge derivation and force field performances</strong><br />
+Christine Cézard, Xavier Trivelli, Frédéric Aubry, Florence Djedaïni-Pilard, François-Yves Dupradeau<br />
+<em>Physical Chemistry Chemical Physics</em> (2011) <a href="https://doi.org/cv3hss">https://doi.org/cv3hss</a><br />
+DOI: <a href="https://doi.org/10.1039/c1cp20854c">10.1039/c1cp20854c</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21792425">21792425</a></p>
+</div>
+<div id="ref-jdi722iE">
+<p>49. <strong>Validation and Comparison of Force Fields for Native Cyclodextrins in Aqueous Solution</strong><br />
+Julia Gebhardt, Catharina Kleist, Sven Jakobtorweihen, Niels Hansen<br />
+<em>The Journal of Physical Chemistry B</em> (2018-01-24) <a href="https://doi.org/gcv3xq">https://doi.org/gcv3xq</a><br />
+DOI: <a href="https://doi.org/10.1021/acs.jpcb.7b11808">10.1021/acs.jpcb.7b11808</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29287148">29287148</a></p>
+</div>
+</div>
 <h2 id="SI" class="page_break_before">Supporting Information</h2>
 <figure>
-<img src="images/charge-schemes.png" alt="Figure 16: Comparison of AM1-BCC partial atomic charges assigned by running antechamber on a single glucose monomer (A) or on an entire αCD molecule with the option -pl 10 to specify the maximum path length to determin equivalence of atomic charges (B)." id="fig:charge-schemes" style="width:100.0%" /><figcaption><span>Figure 16:</span> Comparison of AM1-BCC partial atomic charges assigned by running <code>antechamber</code> on a single glucose monomer (A) or on an entire αCD molecule with the option <code>-pl 10</code> to specify the maximum path length to determin equivalence of atomic charges (B).</figcaption>
+<img src="images/charge-schemes.png" alt="Figure 16: Comparison of AM1-BCC partial atomic charges assigned by running antechamber on a single glucose monomer (A) or on an entire αCD molecule (B) with the option -pl 10 to specify the maximum path length used to determine the equivalence of atomic charges." id="fig:charge-schemes" style="width:100.0%" /><figcaption><span>Figure 16:</span> Comparison of AM1-BCC partial atomic charges assigned by running <code>antechamber</code> on a single glucose monomer (A) or on an entire αCD molecule (B) with the option <code>-pl 10</code> to specify the maximum path length used to determine the equivalence of atomic charges.</figcaption>
 </figure>
 <figure>
 <img src="images/TdS.png" alt="Figure 17: Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively." id="fig:TdS" style="width:100.0%" /><figcaption><span>Figure 17:</span> Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.</figcaption>
@@ -3127,298 +3440,6 @@ All force fields perform poorly predicting −TΔS for carboxylate guests. It is
 </tr>
 </tbody>
 </table>
-<h2 id="code-and-data-availability">Code and data availability</h2>
-<ul>
-<li><a href="https://github.com/slochower/smirnoff-host-guest">GitHub repository</a> used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.</li>
-<li><a href="https://github.com/slochower/smirnoff-host-guest-simulations-data">GitHub repository</a> for setting up the attach-pull-release calculations using <code>paprika</code> version 0.0.3.</li>
-<li><a href="https://github.com/slochower/smirnoff-host-guest-simulations">GitHub repository</a> for analyzing the simulations and generating the plots in this manuscript.</li>
-<li><a href="https://github.com/openforcefield/openforcefield">GitHub repository</a> for the Open Force Field group containing the toolkit and force field XML file.</li>
-</ul>
-<h2 id="author-contributions">Author contributions</h2>
-<p>Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC; Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG, LPW; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.</p>
-<h2 id="acknowledgments">Acknowledgments</h2>
-<h2 id="disclosures">Disclosures</h2>
-<p>The authors declare the following competing financial interest(s): MKG has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC.</p>
-<h2 id="list-of-abbreviations">List of abbreviations</h2>
-<p>APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field</p>
-<h2 id="references" class="page_break_before">References</h2>
-<!-- Explicitly insert bibliography here -->
-<div id="refs" role="doc-bibliography">
-<div id="ref-9MLPuYAQ">
-<p>1. <strong>Overview of the SAMPL6 host–guest binding affinity prediction challenge</strong><br />
-Andrea Rizzi, Steven Murkli, John N. McNeill, Wei Yao, Matthew Sullivan, Michael K. Gilson, Michael W. Chiu, Lyle Isaacs, Bruce C. Gibb, David L. Mobley, John D. Chodera<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2018-10) <a href="https://doi.org/gfpzh5">https://doi.org/gfpzh5</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-018-0170-6">10.1007/s10822-018-0170-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30415285">30415285</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6301044">PMC6301044</a></p>
-</div>
-<div id="ref-1CuDE1c2r">
-<p>2. <strong>Attach-Pull-Release Calculations of Ligand Binding and Conformational Changes on the First BRD4 Bromodomain</strong><br />
-Germano Heinzelmann, Niel M. Henriksen, Michael K. Gilson<br />
-<em>Journal of Chemical Theory and Computation</em> (2017-05-31) <a href="https://doi.org/gbpj4m">https://doi.org/gbpj4m</a><br />
-DOI: <a href="https://doi.org/10.1021/acs.jctc.7b00275">10.1021/acs.jctc.7b00275</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28564537">28564537</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5541932">PMC5541932</a></p>
-</div>
-<div id="ref-mdqdy96N">
-<p>3. <strong>Computation of protein–ligand binding free energies using quantum mechanical bespoke force fields</strong><br />
-Daniel J. Cole, Israel Cabeza de Vaca, William L. Jorgensen<br />
-<em>MedChemComm</em> (2019) <a href="https://doi.org/gfz353">https://doi.org/gfz353</a><br />
-DOI: <a href="https://doi.org/10.1039/c9md00017h">10.1039/c9md00017h</a></p>
-</div>
-<div id="ref-15iR76Uc">
-<p>4. <strong>Predictions of Ligand Selectivity from Absolute Binding Free Energy Calculations</strong><br />
-Matteo Aldeghi, Alexander Heifetz, Michael J. Bodkin, Stefan Knapp, Philip C. Biggin<br />
-<em>Journal of the American Chemical Society</em> (2017-01-09) <a href="https://doi.org/f9kr6h">https://doi.org/f9kr6h</a><br />
-DOI: <a href="https://doi.org/10.1021/jacs.6b11467">10.1021/jacs.6b11467</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28009512">28009512</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5253712">PMC5253712</a></p>
-</div>
-<div id="ref-HQi6ihVB">
-<p>5. <strong>Accurate and Reliable Prediction of Relative Ligand Binding Potency in Prospective Drug Discovery by Way of a Modern Free-Energy Calculation Protocol and Force Field</strong><br />
-Lingle Wang, Yujie Wu, Yuqing Deng, Byungchan Kim, Levi Pierce, Goran Krilov, Dmitry Lupyan, Shaughnessy Robinson, Markus K. Dahlgren, Jeremy Greenwood, … Robert Abel<br />
-<em>Journal of the American Chemical Society</em> (2015-02-12) <a href="https://doi.org/f64pdz">https://doi.org/f64pdz</a><br />
-DOI: <a href="https://doi.org/10.1021/ja512751q">10.1021/ja512751q</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25625324">25625324</a></p>
-</div>
-<div id="ref-B182mNck">
-<p>6. <strong>OPLS3e: Extending Force Field Coverage for Drug-Like Small Molecules</strong><br />
-Katarina Roos, Chuanjie Wu, Wolfgang Damm, Mark Reboul, James M. Stevenson, Chao Lu, Markus K. Dahlgren, Sayan Mondal, Wei Chen, Lingle Wang, … Edward D. Harder<br />
-<em>Journal of Chemical Theory and Computation</em> (2019-02-15) <a href="https://doi.org/gfvpnf">https://doi.org/gfvpnf</a><br />
-DOI: <a href="https://doi.org/10.1021/acs.jctc.8b01026">10.1021/acs.jctc.8b01026</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30768902">30768902</a></p>
-</div>
-<div id="ref-BGsUYQln">
-<p>7. <strong>Overview of the SAMPL5 host–guest challenge: Are we doing better?</strong><br />
-Jian Yin, Niel M. Henriksen, David R. Slochower, Michael R. Shirts, Michael W. Chiu, David L. Mobley, Michael K. Gilson<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2016-09-22) <a href="https://doi.org/f9m82x">https://doi.org/f9m82x</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-016-9974-4">10.1007/s10822-016-9974-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27658802">27658802</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5241188">PMC5241188</a></p>
-</div>
-<div id="ref-rOVoXhRJ">
-<p>8. <strong>The Movable Type Method Applied to Protein–Ligand Binding</strong><br />
-Zheng Zheng, Melek N. Ucisik, Kenneth M. Merz<br />
-<em>Journal of Chemical Theory and Computation</em> (2013-11-26) <a href="https://doi.org/f5kjt2">https://doi.org/f5kjt2</a><br />
-DOI: <a href="https://doi.org/10.1021/ct4005992">10.1021/ct4005992</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24535920">24535920</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3924725">PMC3924725</a></p>
-</div>
-<div id="ref-Dn1HX5lD">
-<p>9. <strong>Blinded predictions of standard binding free energies: lessons learned from the SAMPL6 challenge</strong><br />
-Michail Papadourakis, Stefano Bosisio, Julien Michel<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2018-08-29) <a href="https://doi.org/gfpbrc">https://doi.org/gfpbrc</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-018-0154-6">10.1007/s10822-018-0154-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30159717">30159717</a></p>
-</div>
-<div id="ref-kj7fJ3fg">
-<p>10. <strong>Resolving the problem of trapped water in binding cavities: prediction of host–guest binding free energies in the SAMPL5 challenge by funnel metadynamics</strong><br />
-Soumendranath Bhakat, Pär Söderhjelm<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2016-08-29) <a href="https://doi.org/f9m894">https://doi.org/f9m894</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-016-9948-6">10.1007/s10822-016-9948-6</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27573983">27573983</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5239820">PMC5239820</a></p>
-</div>
-<div id="ref-l8KUmyk3">
-<p>11. <strong>Absolute binding free energies for octa-acids and guests in SAMPL5</strong><br />
-Florentina Tofoleanu, Juyong Lee, Frank C. Pickard IV, Gerhard König, Jing Huang, Minkyung Baek, Chaok Seok, Bernard R. Brooks<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2016-09-30) <a href="https://doi.org/f9m9c2">https://doi.org/f9m9c2</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-016-9965-5">10.1007/s10822-016-9965-5</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27696242">27696242</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6472255">PMC6472255</a></p>
-</div>
-<div id="ref-1935a9V0d">
-<p>12. <strong>Computational Calorimetry: High-Precision Calculation of Host–Guest Binding Thermodynamics</strong><br />
-Niel M. Henriksen, Andrew T. Fenley, Michael K. Gilson<br />
-<em>Journal of Chemical Theory and Computation</em> (2015-08-26) <a href="https://doi.org/f7q3mj">https://doi.org/f7q3mj</a><br />
-DOI: <a href="https://doi.org/10.1021/acs.jctc.5b00405">10.1021/acs.jctc.5b00405</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26523125">26523125</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4614838">PMC4614838</a></p>
-</div>
-<div id="ref-ku7PPPs">
-<p>13. <strong>Prediction of CB[8] host–guest binding free energies in SAMPL6 using the double-decoupling method</strong><br />
-Kyungreem Han, Phillip S. Hudson, Michael R. Jones, Naohiro Nishikawa, Florentina Tofoleanu, Bernard R. Brooks<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2018-08-06) <a href="https://doi.org/gfpzp2">https://doi.org/gfpzp2</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-018-0144-8">10.1007/s10822-018-0144-8</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30084077">30084077</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6347468">PMC6347468</a></p>
-</div>
-<div id="ref-ScmrI810">
-<p>14. <strong>Comparison of the umbrella sampling and the double decoupling method in binding free energy predictions for SAMPL6 octa-acid host–guest challenges</strong><br />
-Naohiro Nishikawa, Kyungreem Han, Xiongwu Wu, Florentina Tofoleanu, Bernard R. Brooks<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2018-10) <a href="https://doi.org/gfz352">https://doi.org/gfz352</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-018-0166-2">10.1007/s10822-018-0166-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30324304">30324304</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6413509">PMC6413509</a></p>
-</div>
-<div id="ref-bKuLAjgi">
-<p>15. <strong>Detailed potential of mean force studies on host–guest systems from the SAMPL6 challenge</strong><br />
-Lin Frank Song, Nupur Bansal, Zheng Zheng, Kenneth M. Merz<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2018-08-24) <a href="https://doi.org/gfpw5t">https://doi.org/gfpw5t</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-018-0153-7">10.1007/s10822-018-0153-7</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30143917">30143917</a></p>
-</div>
-<div id="ref-GA1AFcUw">
-<p>16. <strong>The SAMPL4 host–guest blind prediction challenge: an overview</strong><br />
-Hari S. Muddana, Andrew T. Fenley, David L. Mobley, Michael K. Gilson<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2014-03-06) <a href="https://doi.org/f5585s">https://doi.org/f5585s</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-014-9735-1">10.1007/s10822-014-9735-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24599514">24599514</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4053502">PMC4053502</a></p>
-</div>
-<div id="ref-l02WNlWU">
-<p>17. <strong>Structures of the Common Cyclodextrins and Their Larger AnaloguesBeyond the Doughnut</strong><br />
-Wolfram Saenger, Joël Jacob, Katrin Gessler, Thomas Steiner, Daniel Hoffmann, Haruyo Sanbe, Kyoko Koizumi, Steven M. Smith, Takeshi Takaha<br />
-<em>Chemical Reviews</em> (1998-07) <a href="https://doi.org/dgz7hm">https://doi.org/dgz7hm</a><br />
-DOI: <a href="https://doi.org/10.1021/cr9700181">10.1021/cr9700181</a></p>
-</div>
-<div id="ref-q7znTABh">
-<p>18. <strong>Toward Expanded Diversity of Host–Guest Interactions via Synthesis and Characterization of Cyclodextrin Derivatives</strong><br />
-K. Kellett, S. A. Kantonen, B. M. Duggan, M. K. Gilson<br />
-<em>Journal of Solution Chemistry</em> (2018-06-04) <a href="https://doi.org/gfp949">https://doi.org/gfp949</a><br />
-DOI: <a href="https://doi.org/10.1007/s10953-018-0769-1">10.1007/s10953-018-0769-1</a></p>
-</div>
-<div id="ref-19cBeLx8d">
-<p>19. <strong>Cyclodextrins and their uses: a review</strong><br />
-E. M.Martin Del Valle<br />
-<em>Process Biochemistry</em> (2004-05) <a href="https://doi.org/bxthjg">https://doi.org/bxthjg</a><br />
-DOI: <a href="https://doi.org/10.1016/s0032-9592(03)00258-9">10.1016/s0032-9592(03)00258-9</a></p>
-</div>
-<div id="ref-1HYTTY1PU">
-<p>20. <strong>Escaping Atom Types in Force Fields Using Direct Chemical Perception</strong><br />
-David L. Mobley, Caitlin C. Bannan, Andrea Rizzi, Christopher I. Bayly, John D. Chodera, Victoria T. Lim, Nathan M. Lim, Kyle A. Beauchamp, David R. Slochower, Michael R. Shirts, … Peter K. Eastman<br />
-<em>Journal of Chemical Theory and Computation</em> (2018-10-11) <a href="https://doi.org/gffnf3">https://doi.org/gffnf3</a><br />
-DOI: <a href="https://doi.org/10.1021/acs.jctc.8b00640">10.1021/acs.jctc.8b00640</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30351006">30351006</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6245550">PMC6245550</a></p>
-</div>
-<div id="ref-OhpH7vfg">
-<p>21. <strong>Open Force Field Initiative</strong><br />
-The Open Force Field Initiative<br />
-<a href="https://openforcefield.org/">https://openforcefield.org/</a></p>
-</div>
-<div id="ref-13wrQoS3l">
-<p>22. <strong>A Modified Version of the Cornellet al.Force Field with Improved Sugar Pucker Phases and Helical Repeat</strong><br />
-Thomas E. Cheatham III, Piotr Cieplak, Peter A. Kollman<br />
-<em>Journal of Biomolecular Structure and Dynamics</em> (1999-02) <a href="https://doi.org/gfzp4j">https://doi.org/gfzp4j</a><br />
-DOI: <a href="https://doi.org/10.1080/07391102.1999.10508297">10.1080/07391102.1999.10508297</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/10217454">10217454</a></p>
-</div>
-<div id="ref-168lWg0SB">
-<p>23. <strong>An Informal AMBER Small Molecule Force Field: parm@Frosst</strong><a href="http://www.ccl.net/cca/data/parm_at_Frosst/">http://www.ccl.net/cca/data/parm_at_Frosst/</a></p>
-</div>
-<div id="ref-pOsXFMux">
-<p>24. <strong>Daylight&gt;SMIRKS Tutorial</strong><a href="https://daylight.com/dayhtml_tutorials/languages/smirks/">https://daylight.com/dayhtml_tutorials/languages/smirks/</a></p>
-</div>
-<div id="ref-YmRgHfeU">
-<p>25. <strong>Development and testing of a general amber force field</strong><br />
-Junmei Wang, Romain M. Wolf, James W. Caldwell, Peter A. Kollman, David A. Case<br />
-<em>Journal of Computational Chemistry</em> (2004) <a href="https://doi.org/cdmcnb">https://doi.org/cdmcnb</a><br />
-DOI: <a href="https://doi.org/10.1002/jcc.20035">10.1002/jcc.20035</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15116359">15116359</a></p>
-</div>
-<div id="ref-4LS7HWPh">
-<p>26. <strong>A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst</strong><br />
-Open Force Field Initiative<br />
-(2019-05-17) <a href="https://github.com/openforcefield/smirnoff99Frosst">https://github.com/openforcefield/smirnoff99Frosst</a></p>
-</div>
-<div id="ref-XzEPM0UV">
-<p>27. <strong>Open Force Field Roadmap</strong><br />
-Michael R Shirts, John Damon Chodera, David L Mobley, Michael K Gilson, Lee-Ping Wang<br />
-<em>Unpublished</em> (2019) <a href="https://doi.org/gf2stw">https://doi.org/gf2stw</a><br />
-DOI: <a href="https://doi.org/10.13140/rg.2.2.27587.86562">10.13140/rg.2.2.27587.86562</a></p>
-</div>
-<div id="ref-1236RpaUv">
-<p>28. <strong>Thermodynamic and Nuclear Magnetic Resonance Study of the Reactions of α- and β-Cyclodextrin with Acids, Aliphatic Amines, and Cyclic Alcohols</strong><br />
-Mikhail V. Rekharsky, Martin P. Mayhew, Robert N. Goldberg, Philip D. Ross, Yuko Yamashoji, Yoshihisa Inoue<br />
-<em>The Journal of Physical Chemistry B</em> (1997-01) <a href="https://doi.org/cmwfwn">https://doi.org/cmwfwn</a><br />
-DOI: <a href="https://doi.org/10.1021/jp962715n">10.1021/jp962715n</a></p>
-</div>
-<div id="ref-HVgz5rZq">
-<p>29. <strong>Evaluating Force Field Performance in Thermodynamic Calculations of Cyclodextrin Host–Guest Binding: Water Models, Partial Charges, and Host Force Field Parameters</strong><br />
-Niel M. Henriksen, Michael K. Gilson<br />
-<em>Journal of Chemical Theory and Computation</em> (2017-07-11) <a href="https://doi.org/gd2z2t">https://doi.org/gd2z2t</a><br />
-DOI: <a href="https://doi.org/10.1021/acs.jctc.7b00359">10.1021/acs.jctc.7b00359</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28696692">28696692</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5606194">PMC5606194</a></p>
-</div>
-<div id="ref-g7xxBB7m">
-<p>30. <strong>Chiral Recognition Thermodynamics of β-Cyclodextrin:  The Thermodynamic Origin of Enantioselectivity and the Enthalpy−Entropy Compensation Effect</strong><br />
-Mikhail Rekharsky, Yoshihisa Inoue<br />
-<em>Journal of the American Chemical Society</em> (2000-05) <a href="https://doi.org/c2tvdg">https://doi.org/c2tvdg</a><br />
-DOI: <a href="https://doi.org/10.1021/ja9921118">10.1021/ja9921118</a></p>
-</div>
-<div id="ref-LxrgIkt0">
-<p>31. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation</strong><br />
-Araz Jakalian, David B. Jack, Christopher I. Bayly<br />
-<em>Journal of Computational Chemistry</em> (2002-10-18) <a href="https://doi.org/cktk6g">https://doi.org/cktk6g</a><br />
-DOI: <a href="https://doi.org/10.1002/jcc.10128">10.1002/jcc.10128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/12395429">12395429</a></p>
-</div>
-<div id="ref-BkLoOd0N">
-<p>32. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: I. Method</strong><br />
-Araz Jakalian, Bruce L. Bush, David B. Jack, Christopher I. Bayly<br />
-<em>Journal of Computational Chemistry</em> (2000-01-30) <a href="https://doi.org/cvvpkv">https://doi.org/cvvpkv</a><br />
-DOI: <a href="https://doi.org/10.1002/(sici)1096-987x(20000130)21:2%3C132::aid-jcc5%3E3.0.co;2-p">10.1002/(sici)1096-987x(20000130)21:2&lt;132::aid-jcc5&gt;3.0.co;2-p</a></p>
-</div>
-<div id="ref-chrX4HGh">
-<p>33. <strong>Comparison of simple potential functions for simulating liquid water</strong><br />
-William L. Jorgensen, Jayaraman Chandrasekhar, Jeffry D. Madura, Roger W. Impey, Michael L. Klein<br />
-<em>The Journal of Chemical Physics</em> (1983-07-15) <a href="https://doi.org/dg9sq8">https://doi.org/dg9sq8</a><br />
-DOI: <a href="https://doi.org/10.1063/1.445869">10.1063/1.445869</a></p>
-</div>
-<div id="ref-uZnQBwCt">
-<p>34. <strong>Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations</strong><br />
-In Suk Joung, Thomas E. Cheatham III<br />
-<em>The Journal of Physical Chemistry B</em> (2008-07) <a href="https://doi.org/cgwnj7">https://doi.org/cgwnj7</a><br />
-DOI: <a href="https://doi.org/10.1021/jp8001614">10.1021/jp8001614</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18593145">18593145</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2652252">PMC2652252</a></p>
-</div>
-<div id="ref-T7iFp9ei">
-<p>35. <strong>Lessons learned from comparing molecular dynamics engines on the SAMPL5 dataset</strong><br />
-Michael R. Shirts, Christoph Klein, Jason M. Swails, Jian Yin, Michael K. Gilson, David L. Mobley, David A. Case, Ellen D. Zhong<br />
-<em>Journal of Computer-Aided Molecular Design</em> (2016-10-27) <a href="https://doi.org/f9m3wn">https://doi.org/f9m3wn</a><br />
-DOI: <a href="https://doi.org/10.1007/s10822-016-9977-1">10.1007/s10822-016-9977-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27787702">27787702</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5581938">PMC5581938</a></p>
-</div>
-<div id="ref-W9FLyOZr">
-<p>36. <strong>Overcoming dissipation in the calculation of standard binding free energies by ligand extraction</strong><br />
-Camilo Velez-Vega, Michael K. Gilson<br />
-<em>Journal of Computational Chemistry</em> (2013-08) <a href="https://doi.org/gbdv9w">https://doi.org/gbdv9w</a><br />
-DOI: <a href="https://doi.org/10.1002/jcc.23398">10.1002/jcc.23398</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/24038118">24038118</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3932244">PMC3932244</a></p>
-</div>
-<div id="ref-1HWPx2yMR">
-<p>37. <strong>Bridging Calorimetry and Simulation through Precise Calculations of Cucurbituril–Guest Binding Enthalpies</strong><br />
-Andrew T. Fenley, Niel M. Henriksen, Hari S. Muddana, Michael K. Gilson<br />
-<em>Journal of Chemical Theory and Computation</em> (2014-08) <a href="https://doi.org/f6hv4x">https://doi.org/f6hv4x</a><br />
-DOI: <a href="https://doi.org/10.1021/ct5004109">10.1021/ct5004109</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25221445">25221445</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4159218">PMC4159218</a></p>
-</div>
-<div id="ref-tKJug83o">
-<p>38. <strong>The Amber Molecular Dynamics Package</strong>(2019) <a href="http://www.ambermd.org">http://www.ambermd.org</a></p>
-</div>
-<div id="ref-IGZ99oJ8">
-<p>39. <strong>Long-Time-Step Molecular Dynamics through Hydrogen Mass Repartitioning</strong><br />
-Chad W. Hopkins, Scott Le Grand, Ross C. Walker, Adrian E. Roitberg<br />
-<em>Journal of Chemical Theory and Computation</em> (2015-03-30) <a href="https://doi.org/f697mk">https://doi.org/f697mk</a><br />
-DOI: <a href="https://doi.org/10.1021/ct5010406">10.1021/ct5010406</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26574392">26574392</a></p>
-</div>
-<div id="ref-sMVo0eOR">
-<p>40. <strong>Nonlinear scaling schemes for Lennard-Jones interactions in free energy calculations</strong><br />
-Thomas Steinbrecher, David L. Mobley, David A. Case<br />
-<em>The Journal of Chemical Physics</em> (2007-12-07) <a href="https://doi.org/fc7n55">https://doi.org/fc7n55</a><br />
-DOI: <a href="https://doi.org/10.1063/1.2799191">10.1063/1.2799191</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18067350">18067350</a></p>
-</div>
-<div id="ref-htck51Lp">
-<p>41. <strong>Error estimates on averages of correlated data</strong><br />
-H. Flyvbjerg, H. G. Petersen<br />
-<em>The Journal of Chemical Physics</em> (1989-07) <a href="https://doi.org/bjpm5j">https://doi.org/bjpm5j</a><br />
-DOI: <a href="https://doi.org/10.1063/1.457480">10.1063/1.457480</a></p>
-</div>
-<div id="ref-Q2dwH7Dq">
-<p>42. <strong>Add hydroxyl hydrogen radii, remove generics, update for 1.0.7 release by davidlmobley · Pull Request #74 · openforcefield/smirnoff99Frosst</strong><br />
-GitHub<br />
-<a href="https://github.com/openforcefield/smirnoff99Frosst/pull/74">https://github.com/openforcefield/smirnoff99Frosst/pull/74</a></p>
-</div>
-<div id="ref-cT3I9uDT">
-<p>43. <strong>Remove generics, add hydrogen radii, rename ffxml files by davidlmobley · Pull Request #101 · openforcefield/openforcefield</strong><br />
-GitHub<br />
-<a href="https://github.com/openforcefield/openforcefield/pull/101">https://github.com/openforcefield/openforcefield/pull/101</a></p>
-</div>
-<div id="ref-10E0XdByV">
-<p>44. <strong>Adjust hydroxyl hydrogen to have a small radius, requires more research · Issue #61 · openforcefield/smirnoff99Frosst</strong><br />
-GitHub<br />
-<a href="https://github.com/openforcefield/smirnoff99Frosst/issues/61">https://github.com/openforcefield/smirnoff99Frosst/issues/61</a></p>
-</div>
-<div id="ref-j3qbz56S">
-<p>45. <strong>Topography of cyclodextrin inclusion complexes. 8. Crystal and molecular structure of the .alpha.-cyclodextrin-methanol-pentahydrate complex. Disorder in a hydrophobic cage</strong><br />
-B. Hingerty, W. Saenger<br />
-<em>Journal of the American Chemical Society</em> (1976-05) <a href="https://doi.org/cmfz5v">https://doi.org/cmfz5v</a><br />
-DOI: <a href="https://doi.org/10.1021/ja00427a050">10.1021/ja00427a050</a></p>
-</div>
-<div id="ref-okbsmIQF">
-<p>46. <strong>Carbohydrate force fields</strong><br />
-B. Lachele Foley, Matthew B. Tessier, Robert J. Woods<br />
-<em>Wiley Interdisciplinary Reviews: Computational Molecular Science</em> (2011-10-31) <a href="https://doi.org/fcxc66">https://doi.org/fcxc66</a><br />
-DOI: <a href="https://doi.org/10.1002/wcms.89">10.1002/wcms.89</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25530813">25530813</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4270206">PMC4270206</a></p>
-</div>
-<div id="ref-j7JJedX4">
-<p>47. <strong>Molecular dynamics studies of native and substituted cyclodextrins in different media: 1. Charge derivation and force field performances</strong><br />
-Christine Cézard, Xavier Trivelli, Frédéric Aubry, Florence Djedaïni-Pilard, François-Yves Dupradeau<br />
-<em>Physical Chemistry Chemical Physics</em> (2011) <a href="https://doi.org/cv3hss">https://doi.org/cv3hss</a><br />
-DOI: <a href="https://doi.org/10.1039/c1cp20854c">10.1039/c1cp20854c</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21792425">21792425</a></p>
-</div>
-<div id="ref-jdi722iE">
-<p>48. <strong>Validation and Comparison of Force Fields for Native Cyclodextrins in Aqueous Solution</strong><br />
-Julia Gebhardt, Catharina Kleist, Sven Jakobtorweihen, Niels Hansen<br />
-<em>The Journal of Physical Chemistry B</em> (2018-01-24) <a href="https://doi.org/gcv3xq">https://doi.org/gcv3xq</a><br />
-DOI: <a href="https://doi.org/10.1021/acs.jpcb.7b11808">10.1021/acs.jpcb.7b11808</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29287148">29287148</a></p>
-</div>
-</div>
 <!-- default theme -->
 
 <style>
