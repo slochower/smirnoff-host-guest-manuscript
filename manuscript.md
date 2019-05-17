@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/743b88b900c3f5b04b752e31dc8c0a19034a7f6d/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/81ad7963d47a2458c8530878276d2fcbe58e7de9/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@743b88b](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/743b88b900c3f5b04b752e31dc8c0a19034a7f6d)
+from [slochower/smirnoff-host-guest-manuscript@81ad796](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/81ad7963d47a2458c8530878276d2fcbe58e7de9)
 on May 17, 2019.
 </em></small>
 
@@ -93,6 +93,10 @@ on May 17, 2019.
      Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA
   </small>
 
+
+## Relevant Issues
+
+- [Update tables with CSV link and SMILES #42](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/42)
 
 ## Abstract {.page_break_before}
 
@@ -204,8 +208,6 @@ Calculations on these host-guest systems have been performed previously [@HVgz5r
 |  b-pb4 | βCD | 4-phenylbutanoate | -1 |
 
 Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. {#tbl:host-guests}
-
-[Add CSV link for table. Add SMILES.]{.banner .lightgrey}
 
 ### Application of force field parameters
 
