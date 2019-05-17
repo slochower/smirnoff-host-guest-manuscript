@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/912a67c51109bf2044a1506c0edff1afe1926d71/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/eb8090531bc9d7338996934ba0a6833778e42b6c/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@912a67c](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/912a67c51109bf2044a1506c0edff1afe1926d71)
+from [slochower/smirnoff-host-guest-manuscript@eb80905](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/eb8090531bc9d7338996934ba0a6833778e42b6c)
 on May 17, 2019.
 </em></small>
 
@@ -205,7 +205,7 @@ Calculations on these host-guest systems have been performed previously [@HVgz5r
 
 Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. {#tbl:host-guests}
 
-[Add CSV link for table]{.banner .lightgrey}
+[Add CSV link for table. Add SMILES.]{.banner .lightgrey}
 
 ### Application of force field parameters
 
@@ -576,7 +576,11 @@ It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively fle
 It has been shown that there are 2--7 H<sub>2</sub>O inside αCD and 8--11 H<sub>2</sub>O molecules inside βCD [@j3qbz56S; @l02WNlWU].
 It is likely that simulations with SMIRNOFF99Frosst and GAFF v1.7 result in fewer resident waters inside the cyclodextrin cavity due to intrusions from glucose units.
 Futhermore, it is known that sugars and conjugated carbohydrates are especially difficult for many "general" force fields, due to the highly polar bonds in sugars, the number of chiral centers, and the large structural differences between chiral isomers [@okbsmIQF].
-The specialized q4md-CD force field [@j7JJedX4], which used cyclodextrin X-ray crystal structures and NMR ^3^J couplings to tune force field parameters, produces a far more rigid cyclodextrin molecule, similar to GAFF v2.1 [@HVgz5rZq].
+
+The combination of X-ray and NMR data suggest that the specialized q4md-CD [@j7JJedX4] force field, and the rigid GAFF v2.1 [@HVgz5rZq] force field, better model the flexibility of the CD cavity.
+Cézard, *et al.* present strong NMR evidence that the vicinal ^3^J H5--H6′ and ^3^J H5-H6″ coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers [@j7JJedX4].
+This is also evident in X-ray structures, where the rigidity of the cyclodextrin ring is retained as long as water is present in the cavity and the torsional angles between adjacent glycouril units show surprisingly small variance [@j3qbz56S].
+
 The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those [@jdi722iE].
 The lack of rigidity is associated with an underestimation of the binding enthalpy and an overestimation of the binding entropy; SMRINOFF99Frossst has a ΔH MSE = 0.77 kcal/mol and −TΔS MSE = -0.78 kcal/mol whereas the more rigid GAFF v2.1 results in ΔH MSE = -1.64 kcal/mol and −TΔS MSE = 0.08 kcal/mol.
 It is especially notable that GAFF v2.1 has the best overall correlations `and probably the best Kendall τ?`.
