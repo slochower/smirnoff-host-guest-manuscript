@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/6852d385dc8c6858db75a38966f792b6d1d2acd7/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/2fb53f0f65b2b8747482a8b0316701ee9d500136/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@6852d38](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/6852d385dc8c6858db75a38966f792b6d1d2acd7)
+from [slochower/smirnoff-host-guest-manuscript@2fb53f0](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/2fb53f0f65b2b8747482a8b0316701ee9d500136)
 on May 17, 2019.
 </em></small>
 
@@ -382,14 +382,12 @@ There does not appear to be a clear difference in the accuracy of the prediction
 
 ### Trends by guest functional group
 
-SMIRNOFF99Frosst does a good job (MSE = -0.10 kcal/mol, 95% CI [-0.54, 0.30] and RMSE = 0.76 kcal/mol, 95% CI [0.43, 1.12]) estimating the binding free energy of ammonium-containing guests to both αCD and βCD (Figure @fig:ammonium).
+SMIRNOFF99Frosst does a good job (MSE = -0.10 kcal/mol, 95% CI [-0.54, 0.30] and RMSE = 0.76 kcal/mol, 95% CI [0.43, 1.12]) estimating the binding free energy of ammonium-containing guests to both αCD and βCD (Figure @fig:ammonium and Table @tbl:overall-ammonium).
 Shorter chain molecules bind less strongly and the same guest binds more strongly to αCD than βCD.
-
-[I need to include the functional group tables here. I will put the SMIRNOFF99Frosst vs. Experimental tables here and the others in the SI.]{.banner .lightgrey}
 
 ![Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. Darker colors indicate shorter chain molecules. Non-highlighted guests are shown as smaller gray circles.](images/ammonium.png){#fig:ammonium}
 
-SMIRNOFF99Frosst performs reasonably on cyclic alcohols (MSE = 0.70 kcal/mol, 95% CI [0.22, 1.21] and RMSE = 1.07 kcal/mol, 95% CI [0.66, 1.58]) (Figure @fig:alcohols).
+SMIRNOFF99Frosst performs reasonably on cyclic alcohols (MSE = 0.70 kcal/mol, 95% CI [0.22, 1.21] and RMSE = 1.07 kcal/mol, 95% CI [0.66, 1.58]) (Figure @fig:alcohols and Table @tbl:overall-alcohols).
 The predictions for αCD are uniformly underestimated while those for βCD are mostly under-predicted.
 The predicted ΔG for cyclooctanol with αCD is particularly poor due to a poor fit in the bound state (Figure @fig:by-orientation).
 
@@ -397,7 +395,7 @@ The predicted ΔG for cyclooctanol with αCD is particularly poor due to a poor 
 
 ![Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate smaller molecules. Non-highlighted guests are shown as smaller gray circles.](images/alcohols.png){#fig:alcohols}
 
-The binding affinity of carboxylate guests to both αCD and βCD is well characterized by SMIRNOFF99Frosst (MSE = -0.36 kcal/mol, 95% CI [-0.73, -0.01] and RMSE = 0.87 kcal/mol, 95% CI [0.58, 1.16]) (Figure @fig:carboxylates).
+The binding affinity of carboxylate guests to both αCD and βCD is well characterized by SMIRNOFF99Frosst (MSE = -0.36 kcal/mol, 95% CI [-0.73, -0.01] and RMSE = 0.87 kcal/mol, 95% CI [0.58, 1.16]) (Figure @fig:carboxylates and Table @tbl:overall-carboxylates).
 
 ![Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicates smaller molecules. Non-highlighted guests are shown as smaller gray circles.](images/carboxylates.png){#fig:carboxylates}
 
@@ -797,3 +795,46 @@ Table: Experimental and predicted binding enthalpies (ΔH). {#tbl:dH-combined}
 |  b-pnt | -3.16 | 0.62 | -1.43 | 1.04 | -1.22 | 0.89 | -2.40 | 0.35 |
 
 Table: Experimental and predicted binding entropies (−TΔS). {#tbl:TdS-combined}
+
+|      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | 
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | 
+| ΔG | SMIRNOFF99Frosst | 0.76 | [0.43, 1.11] | -0.10 | [-0.54, 0.31] | 0.48 | [0.07, 0.84] | 0.69 | [0.19, 1.16] | -1.06 | [0.54, -2.77] | 
+| ΔG | GAFF v1.7 | 0.77 | [0.59, 0.95] | 0.69 | [0.51, 0.88] | 0.90 | [0.76, 0.98] | 1.08 | [0.88, 1.26] | 0.95 | [1.56, 0.32] | 
+| ΔG | GAFF v2.1 | 1.85 | [1.59, 2.09] | -1.79 | [-2.04, -1.53] | 0.93 | [0.83, 0.98] | 1.32 | [1.13, 1.51] | -0.80 | [-0.20, -1.46] | 
+| ΔH | SMIRNOFF99Frosst | 1.15 | [0.77, 1.51] | 0.83 | [0.39, 1.27] | 0.89 | [0.76, 0.97] | 1.15 | [0.89, 1.53] | 1.31 | [2.81, 0.38] | 
+| ΔH | GAFF v1.7 | 2.12 | [1.77, 2.47] | 2.02 | [1.67, 2.37] | 0.92 | [0.80, 0.98] | 1.09 | [0.86, 1.35] | 2.29 | [3.34, 1.39] | 
+| ΔH | GAFF v2.1 | 1.90 | [1.31, 2.43] | -1.51 | [-2.15, -0.88] | 0.96 | [0.91, 0.99] | 1.54 | [1.38, 1.83] | 0.09 | [1.18, -0.44] | 
+| -TΔS | SMIRNOFF99Frosst | 1.47 | [0.90, 2.10] | -0.93 | [-1.59, -0.31] | 0.65 | [0.13, 0.91] | 0.99 | [0.58, 1.35] | -0.88 | [-0.09, -1.66] | 
+| -TΔS | GAFF v1.7 | 1.45 | [1.14, 1.79] | -1.33 | [-1.66, -1.00] | 0.88 | [0.18, 0.97] | 1.04 | [-0.02, 1.37] | -1.27 | [-0.55, -1.62] | 
+| -TΔS | GAFF v2.1 | 1.04 | [0.67, 1.40] | -0.27 | [-0.84, 0.26] | 0.89 | [0.29, 0.98] | 1.36 | [-0.53, 1.66] | -0.12 | [1.16, -0.59] | 
+
+Table: Predicted thermodynamic properties for each force field relative to experiment on ammonium guests. {#tbl:overall-ammonium}
+
+|      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | 
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | 
+| ΔG | SMIRNOFF99Frosst | 0.87 | [0.59, 1.16] | -0.36 | [-0.74, -0.01] | 0.34 | [0.02, 0.68] | 0.45 | [0.11, 0.75] | -1.85 | [-0.91, -2.83] | 
+| ΔG | GAFF v1.7 | 0.68 | [0.49, 0.88] | 0.03 | [-0.28, 0.34] | 0.52 | [0.16, 0.80] | 0.68 | [0.33, 0.97] | -0.84 | [0.08, -1.75] | 
+| ΔG | GAFF v2.1 | 1.46 | [1.21, 1.71] | -1.36 | [-1.61, -1.10] | 0.81 | [0.61, 0.93] | 1.18 | [0.85, 1.46] | -0.87 | [0.02, -1.74] | 
+| ΔH | SMIRNOFF99Frosst | 1.41 | [0.94, 1.93] | 0.20 | [-0.43, 0.84] | 0.53 | [0.20, 0.79] | 0.83 | [0.40, 1.53] | -0.14 | [2.12, -1.30] | 
+| ΔH | GAFF v1.7 | 1.95 | [1.34, 2.55] | 1.24 | [0.55, 1.93] | 0.47 | [0.13, 0.78] | 0.79 | [0.32, 1.49] | 0.82 | [3.10, -0.54] | 
+| ΔH | GAFF v2.1 | 2.43 | [1.75, 3.06] | -1.73 | [-2.51, -0.96] | 0.69 | [0.49, 0.85] | 1.40 | [0.99, 2.29] | -0.66 | [2.15, -1.61] | 
+| -TΔS | SMIRNOFF99Frosst | 1.73 | [1.17, 2.29] | -0.57 | [-1.32, 0.16] | 0.29 | [0.02, 0.61] | 0.62 | [0.16, 1.09] | -0.68 | [0.05, -1.43] | 
+| -TΔS | GAFF v1.7 | 2.07 | [1.35, 2.76] | -1.22 | [-2.00, -0.46] | 0.29 | [0.00, 0.67] | 0.63 | [-0.02, 1.18] | -1.31 | [-0.58, -2.09] | 
+| -TΔS | GAFF v2.1 | 1.46 | [1.12, 1.77] | 0.37 | [-0.27, 1.00] | 0.50 | [0.13, 0.76] | 0.93 | [0.58, 1.30] | 0.37 | [1.07, -0.34] | 
+
+Table: Predicted thermodynamic properties for each force field relative to experiment on carboxylate guests. {#tbl:overall-carboxylates}
+
+|      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | 
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | 
+| ΔG | SMIRNOFF99Frosst | 1.07 | [0.66, 1.58] | 0.71 | [0.22, 1.21] | 0.54 | [0.09, 0.86] | 0.55 | [0.20, 0.84] | -0.84 | [0.16, -2.09] | 
+| ΔG | GAFF v1.7 | 1.22 | [0.86, 1.67] | 0.93 | [0.45, 1.41] | 0.56 | [0.12, 0.89] | 0.59 | [0.25, 0.89] | -0.47 | [0.64, -1.77] | 
+| ΔG | GAFF v2.1 | 1.80 | [1.48, 2.15] | -1.64 | [-2.04, -1.14] | 0.73 | [0.19, 0.98] | 1.01 | [0.49, 1.27] | -1.63 | [-0.67, -3.19] | 
+| ΔH | SMIRNOFF99Frosst | 2.88 | [1.99, 3.68] | 1.66 | [0.21, 3.03] | 0.09 | [0.00, 0.44] | 0.07 | [-1.28, 1.67] | -0.29 | [3.93, -4.06] | 
+| ΔH | GAFF v1.7 | 3.63 | [2.67, 4.47] | 2.66 | [1.13, 4.07] | 0.10 | [0.00, 0.57] | 0.12 | [-1.09, 2.28] | 0.91 | [6.66, -2.47] | 
+| ΔH | GAFF v2.1 | 2.08 | [1.18, 3.16] | -1.64 | [-2.54, -0.91] | 0.54 | [0.00, 0.97] | 1.08 | [-0.37, 1.90] | -1.51 | [0.83, -5.50] | 
+| -TΔS | SMIRNOFF99Frosst | 2.47 | [1.62, 3.36] | -0.96 | [-2.22, 0.52] | 0.40 | [0.00, 0.93] | 1.18 | [-0.45, 2.26] | -0.88 | [0.36, -3.60] | 
+| -TΔS | GAFF v1.7 | 3.00 | [2.07, 3.88] | -1.73 | [-3.14, -0.18] | 0.37 | [0.00, 0.93] | 1.23 | [-0.38, 2.48] | -1.59 | [-0.31, -4.23] | 
+| -TΔS | GAFF v2.1 | 1.80 | [0.68, 3.19] | -0.00 | [-0.98, 1.27] | 0.48 | [0.00, 0.97] | 1.13 | [-0.22, 1.96] | 0.08 | [1.14, -1.79] | 
+
+Table: Predicted thermodynamic properties for each force field relative to experiment on cyclic alcohol guests. {#tbl:overall-alcohols}
+

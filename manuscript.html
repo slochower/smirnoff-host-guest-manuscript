@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/6852d385dc8c6858db75a38966f792b6d1d2acd7/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/6852d385dc8c6858db75a38966f792b6d1d2acd7">slochower/smirnoff-host-guest-manuscript@6852d38</a> on May 17, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/2fb53f0f65b2b8747482a8b0316701ee9d500136/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/2fb53f0f65b2b8747482a8b0316701ee9d500136">slochower/smirnoff-host-guest-manuscript@2fb53f0</a> on May 17, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -549,17 +549,16 @@ All force fields perform poorly predicting −TΔS for carboxylate guests. It is
 <img src="images/by-cyclodextrin.png" alt="Figure 5: Shown are the αCD and βCD binding free energies for each guest, highlighting the differences in binding to the two hosts for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). The binding affinity for αCD is circled in black. Thin colored lines connect data points for the same guest. Color is used purely to distinguish among the guests." id="fig:by-cyclodextrin" /><figcaption><span>Figure 5:</span> Shown are the αCD and βCD binding free energies for each guest, highlighting the differences in binding to the two hosts for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). The binding affinity for αCD is circled in black. Thin colored lines connect data points for the same guest. Color is used purely to distinguish among the guests.</figcaption>
 </figure>
 <h3 id="trends-by-guest-functional-group">Trends by guest functional group</h3>
-<p>SMIRNOFF99Frosst does a good job (MSE = -0.10 kcal/mol, 95% CI [-0.54, 0.30] and RMSE = 0.76 kcal/mol, 95% CI [0.43, 1.12]) estimating the binding free energy of ammonium-containing guests to both αCD and βCD (Figure <a href="#fig:ammonium">6</a>). Shorter chain molecules bind less strongly and the same guest binds more strongly to αCD than βCD.</p>
-<p><span class="banner lightgrey">I need to include the functional group tables here. I will put the SMIRNOFF99Frosst vs. Experimental tables here and the others in the SI.</span></p>
+<p>SMIRNOFF99Frosst does a good job (MSE = -0.10 kcal/mol, 95% CI [-0.54, 0.30] and RMSE = 0.76 kcal/mol, 95% CI [0.43, 1.12]) estimating the binding free energy of ammonium-containing guests to both αCD and βCD (Figure <a href="#fig:ammonium">6</a> and Table <a href="#tbl:overall-ammonium">10</a>). Shorter chain molecules bind less strongly and the same guest binds more strongly to αCD than βCD.</p>
 <figure>
 <img src="images/ammonium.png" alt="Figure 6: Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. Darker colors indicate shorter chain molecules. Non-highlighted guests are shown as smaller gray circles." id="fig:ammonium" /><figcaption><span>Figure 6:</span> Binding free energy (ΔG) comparisons showing ammonium guests in color and highlighted. Darker colors indicate shorter chain molecules. Non-highlighted guests are shown as smaller gray circles.</figcaption>
 </figure>
-<p>SMIRNOFF99Frosst performs reasonably on cyclic alcohols (MSE = 0.70 kcal/mol, 95% CI [0.22, 1.21] and RMSE = 1.07 kcal/mol, 95% CI [0.66, 1.58]) (Figure <a href="#fig:alcohols">7</a>). The predictions for αCD are uniformly underestimated while those for βCD are mostly under-predicted. The predicted ΔG for cyclooctanol with αCD is particularly poor due to a poor fit in the bound state (Figure <a href="#fig:by-orientation">4</a>).</p>
+<p>SMIRNOFF99Frosst performs reasonably on cyclic alcohols (MSE = 0.70 kcal/mol, 95% CI [0.22, 1.21] and RMSE = 1.07 kcal/mol, 95% CI [0.66, 1.58]) (Figure <a href="#fig:alcohols">7</a> and Table <a href="#tbl:overall-alcohols">12</a>). The predictions for αCD are uniformly underestimated while those for βCD are mostly under-predicted. The predicted ΔG for cyclooctanol with αCD is particularly poor due to a poor fit in the bound state (Figure <a href="#fig:by-orientation">4</a>).</p>
 <p><span class="banner lightgrey">Should say something here about cylooctanol predictions <em>and</em> experiment being poor because it does not fit well, especially in αCD</span></p>
 <figure>
 <img src="images/alcohols.png" alt="Figure 7: Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate smaller molecules. Non-highlighted guests are shown as smaller gray circles." id="fig:alcohols" /><figcaption><span>Figure 7:</span> Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicate smaller molecules. Non-highlighted guests are shown as smaller gray circles.</figcaption>
 </figure>
-<p>The binding affinity of carboxylate guests to both αCD and βCD is well characterized by SMIRNOFF99Frosst (MSE = -0.36 kcal/mol, 95% CI [-0.73, -0.01] and RMSE = 0.87 kcal/mol, 95% CI [0.58, 1.16]) (Figure <a href="#fig:carboxylates">8</a>).</p>
+<p>The binding affinity of carboxylate guests to both αCD and βCD is well characterized by SMIRNOFF99Frosst (MSE = -0.36 kcal/mol, 95% CI [-0.73, -0.01] and RMSE = 0.87 kcal/mol, 95% CI [0.58, 1.16]) (Figure <a href="#fig:carboxylates">8</a> and Table <a href="#tbl:overall-carboxylates">11</a>).</p>
 <figure>
 <img src="images/carboxylates.png" alt="Figure 8: Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicates smaller molecules. Non-highlighted guests are shown as smaller gray circles." id="fig:carboxylates" /><figcaption><span>Figure 8:</span> Binding free energy (ΔG) comparisons showing alcohols guests in color and highlighted. Darker colors indicates smaller molecules. Non-highlighted guests are shown as smaller gray circles.</figcaption>
 </figure>
@@ -1756,9 +1755,9 @@ Junmei Wang, Romain M. Wolf, James W. Caldwell, Peter A. Kollman, David A. Case<
 DOI: <a href="https://doi.org/10.1002/jcc.20035">10.1002/jcc.20035</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15116359">15116359</a></p>
 </div>
 <div id="ref-4LS7HWPh">
-<p>26. <strong>openforcefield/smirnoff99Frosst</strong><br />
-GitHub<br />
-<a href="https://github.com/openforcefield/smirnoff99Frosst">https://github.com/openforcefield/smirnoff99Frosst</a></p>
+<p>26. <strong>A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst</strong><br />
+Open Force Field Initiative<br />
+(2019-05-17) <a href="https://github.com/openforcefield/smirnoff99Frosst">https://github.com/openforcefield/smirnoff99Frosst</a></p>
 </div>
 <div id="ref-XzEPM0UV">
 <p>27. <strong>Open Force Field Roadmap</strong><br />
@@ -1863,9 +1862,9 @@ GitHub<br />
 <a href="https://github.com/openforcefield/smirnoff99Frosst/issues/61">https://github.com/openforcefield/smirnoff99Frosst/issues/61</a></p>
 </div>
 <div id="ref-16UiKZ8o1">
-<p>45. <strong>choderalab/ambermini</strong><br />
-GitHub<br />
-<a href="https://github.com/choderalab/ambermini">https://github.com/choderalab/ambermini</a></p>
+<p>45. <strong>A stripped-down set of just antechamber, sqm, and tleap.: choderalab/ambermini</strong><br />
+Chodera lab // Memorial Sloan Kettering Cancer Center<br />
+(2017-11-15) <a href="https://github.com/choderalab/ambermini">https://github.com/choderalab/ambermini</a></p>
 </div>
 <div id="ref-j3qbz56S">
 <p>46. <strong>Topography of cyclodextrin inclusion complexes. 8. Crystal and molecular structure of the .alpha.-cyclodextrin-methanol-pentahydrate complex. Disorder in a hydrophobic cage</strong><br />
@@ -3438,6 +3437,492 @@ DOI: <a href="https://doi.org/10.1021/acs.jpcb.7b11808">10.1021/acs.jpcb.7b11808
 <td>0.89</td>
 <td>-2.40</td>
 <td>0.35</td>
+</tr>
+</tbody>
+</table>
+<a name="tbl:overall-ammonium"></a>
+<table>
+<caption><span>Table 10:</span> Predicted thermodynamic properties for each force field relative to experiment on ammonium guests. </caption>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>RMSE</th>
+<th></th>
+<th>MSE</th>
+<th></th>
+<th>R²</th>
+<th></th>
+<th>Slope</th>
+<th></th>
+<th>Intercept</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ΔG</td>
+<td>SMIRNOFF99Frosst</td>
+<td>0.76</td>
+<td>[0.43, 1.11]</td>
+<td>-0.10</td>
+<td>[-0.54, 0.31]</td>
+<td>0.48</td>
+<td>[0.07, 0.84]</td>
+<td>0.69</td>
+<td>[0.19, 1.16]</td>
+<td>-1.06</td>
+<td>[0.54, -2.77]</td>
+</tr>
+<tr class="even">
+<td>ΔG</td>
+<td>GAFF v1.7</td>
+<td>0.77</td>
+<td>[0.59, 0.95]</td>
+<td>0.69</td>
+<td>[0.51, 0.88]</td>
+<td>0.90</td>
+<td>[0.76, 0.98]</td>
+<td>1.08</td>
+<td>[0.88, 1.26]</td>
+<td>0.95</td>
+<td>[1.56, 0.32]</td>
+</tr>
+<tr class="odd">
+<td>ΔG</td>
+<td>GAFF v2.1</td>
+<td>1.85</td>
+<td>[1.59, 2.09]</td>
+<td>-1.79</td>
+<td>[-2.04, -1.53]</td>
+<td>0.93</td>
+<td>[0.83, 0.98]</td>
+<td>1.32</td>
+<td>[1.13, 1.51]</td>
+<td>-0.80</td>
+<td>[-0.20, -1.46]</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>SMIRNOFF99Frosst</td>
+<td>1.15</td>
+<td>[0.77, 1.51]</td>
+<td>0.83</td>
+<td>[0.39, 1.27]</td>
+<td>0.89</td>
+<td>[0.76, 0.97]</td>
+<td>1.15</td>
+<td>[0.89, 1.53]</td>
+<td>1.31</td>
+<td>[2.81, 0.38]</td>
+</tr>
+<tr class="odd">
+<td>ΔH</td>
+<td>GAFF v1.7</td>
+<td>2.12</td>
+<td>[1.77, 2.47]</td>
+<td>2.02</td>
+<td>[1.67, 2.37]</td>
+<td>0.92</td>
+<td>[0.80, 0.98]</td>
+<td>1.09</td>
+<td>[0.86, 1.35]</td>
+<td>2.29</td>
+<td>[3.34, 1.39]</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>GAFF v2.1</td>
+<td>1.90</td>
+<td>[1.31, 2.43]</td>
+<td>-1.51</td>
+<td>[-2.15, -0.88]</td>
+<td>0.96</td>
+<td>[0.91, 0.99]</td>
+<td>1.54</td>
+<td>[1.38, 1.83]</td>
+<td>0.09</td>
+<td>[1.18, -0.44]</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>SMIRNOFF99Frosst</td>
+<td>1.47</td>
+<td>[0.90, 2.10]</td>
+<td>-0.93</td>
+<td>[-1.59, -0.31]</td>
+<td>0.65</td>
+<td>[0.13, 0.91]</td>
+<td>0.99</td>
+<td>[0.58, 1.35]</td>
+<td>-0.88</td>
+<td>[-0.09, -1.66]</td>
+</tr>
+<tr class="even">
+<td>-TΔS</td>
+<td>GAFF v1.7</td>
+<td>1.45</td>
+<td>[1.14, 1.79]</td>
+<td>-1.33</td>
+<td>[-1.66, -1.00]</td>
+<td>0.88</td>
+<td>[0.18, 0.97]</td>
+<td>1.04</td>
+<td>[-0.02, 1.37]</td>
+<td>-1.27</td>
+<td>[-0.55, -1.62]</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>GAFF v2.1</td>
+<td>1.04</td>
+<td>[0.67, 1.40]</td>
+<td>-0.27</td>
+<td>[-0.84, 0.26]</td>
+<td>0.89</td>
+<td>[0.29, 0.98]</td>
+<td>1.36</td>
+<td>[-0.53, 1.66]</td>
+<td>-0.12</td>
+<td>[1.16, -0.59]</td>
+</tr>
+</tbody>
+</table>
+<a name="tbl:overall-carboxylates"></a>
+<table>
+<caption><span>Table 11:</span> Predicted thermodynamic properties for each force field relative to experiment on carboxylate guests. </caption>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>RMSE</th>
+<th></th>
+<th>MSE</th>
+<th></th>
+<th>R²</th>
+<th></th>
+<th>Slope</th>
+<th></th>
+<th>Intercept</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ΔG</td>
+<td>SMIRNOFF99Frosst</td>
+<td>0.87</td>
+<td>[0.59, 1.16]</td>
+<td>-0.36</td>
+<td>[-0.74, -0.01]</td>
+<td>0.34</td>
+<td>[0.02, 0.68]</td>
+<td>0.45</td>
+<td>[0.11, 0.75]</td>
+<td>-1.85</td>
+<td>[-0.91, -2.83]</td>
+</tr>
+<tr class="even">
+<td>ΔG</td>
+<td>GAFF v1.7</td>
+<td>0.68</td>
+<td>[0.49, 0.88]</td>
+<td>0.03</td>
+<td>[-0.28, 0.34]</td>
+<td>0.52</td>
+<td>[0.16, 0.80]</td>
+<td>0.68</td>
+<td>[0.33, 0.97]</td>
+<td>-0.84</td>
+<td>[0.08, -1.75]</td>
+</tr>
+<tr class="odd">
+<td>ΔG</td>
+<td>GAFF v2.1</td>
+<td>1.46</td>
+<td>[1.21, 1.71]</td>
+<td>-1.36</td>
+<td>[-1.61, -1.10]</td>
+<td>0.81</td>
+<td>[0.61, 0.93]</td>
+<td>1.18</td>
+<td>[0.85, 1.46]</td>
+<td>-0.87</td>
+<td>[0.02, -1.74]</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>SMIRNOFF99Frosst</td>
+<td>1.41</td>
+<td>[0.94, 1.93]</td>
+<td>0.20</td>
+<td>[-0.43, 0.84]</td>
+<td>0.53</td>
+<td>[0.20, 0.79]</td>
+<td>0.83</td>
+<td>[0.40, 1.53]</td>
+<td>-0.14</td>
+<td>[2.12, -1.30]</td>
+</tr>
+<tr class="odd">
+<td>ΔH</td>
+<td>GAFF v1.7</td>
+<td>1.95</td>
+<td>[1.34, 2.55]</td>
+<td>1.24</td>
+<td>[0.55, 1.93]</td>
+<td>0.47</td>
+<td>[0.13, 0.78]</td>
+<td>0.79</td>
+<td>[0.32, 1.49]</td>
+<td>0.82</td>
+<td>[3.10, -0.54]</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>GAFF v2.1</td>
+<td>2.43</td>
+<td>[1.75, 3.06]</td>
+<td>-1.73</td>
+<td>[-2.51, -0.96]</td>
+<td>0.69</td>
+<td>[0.49, 0.85]</td>
+<td>1.40</td>
+<td>[0.99, 2.29]</td>
+<td>-0.66</td>
+<td>[2.15, -1.61]</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>SMIRNOFF99Frosst</td>
+<td>1.73</td>
+<td>[1.17, 2.29]</td>
+<td>-0.57</td>
+<td>[-1.32, 0.16]</td>
+<td>0.29</td>
+<td>[0.02, 0.61]</td>
+<td>0.62</td>
+<td>[0.16, 1.09]</td>
+<td>-0.68</td>
+<td>[0.05, -1.43]</td>
+</tr>
+<tr class="even">
+<td>-TΔS</td>
+<td>GAFF v1.7</td>
+<td>2.07</td>
+<td>[1.35, 2.76]</td>
+<td>-1.22</td>
+<td>[-2.00, -0.46]</td>
+<td>0.29</td>
+<td>[0.00, 0.67]</td>
+<td>0.63</td>
+<td>[-0.02, 1.18]</td>
+<td>-1.31</td>
+<td>[-0.58, -2.09]</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>GAFF v2.1</td>
+<td>1.46</td>
+<td>[1.12, 1.77]</td>
+<td>0.37</td>
+<td>[-0.27, 1.00]</td>
+<td>0.50</td>
+<td>[0.13, 0.76]</td>
+<td>0.93</td>
+<td>[0.58, 1.30]</td>
+<td>0.37</td>
+<td>[1.07, -0.34]</td>
+</tr>
+</tbody>
+</table>
+<a name="tbl:overall-alcohols"></a>
+<table>
+<caption><span>Table 12:</span> Predicted thermodynamic properties for each force field relative to experiment on cyclic alcohol guests. </caption>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th>RMSE</th>
+<th></th>
+<th>MSE</th>
+<th></th>
+<th>R²</th>
+<th></th>
+<th>Slope</th>
+<th></th>
+<th>Intercept</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ΔG</td>
+<td>SMIRNOFF99Frosst</td>
+<td>1.07</td>
+<td>[0.66, 1.58]</td>
+<td>0.71</td>
+<td>[0.22, 1.21]</td>
+<td>0.54</td>
+<td>[0.09, 0.86]</td>
+<td>0.55</td>
+<td>[0.20, 0.84]</td>
+<td>-0.84</td>
+<td>[0.16, -2.09]</td>
+</tr>
+<tr class="even">
+<td>ΔG</td>
+<td>GAFF v1.7</td>
+<td>1.22</td>
+<td>[0.86, 1.67]</td>
+<td>0.93</td>
+<td>[0.45, 1.41]</td>
+<td>0.56</td>
+<td>[0.12, 0.89]</td>
+<td>0.59</td>
+<td>[0.25, 0.89]</td>
+<td>-0.47</td>
+<td>[0.64, -1.77]</td>
+</tr>
+<tr class="odd">
+<td>ΔG</td>
+<td>GAFF v2.1</td>
+<td>1.80</td>
+<td>[1.48, 2.15]</td>
+<td>-1.64</td>
+<td>[-2.04, -1.14]</td>
+<td>0.73</td>
+<td>[0.19, 0.98]</td>
+<td>1.01</td>
+<td>[0.49, 1.27]</td>
+<td>-1.63</td>
+<td>[-0.67, -3.19]</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>SMIRNOFF99Frosst</td>
+<td>2.88</td>
+<td>[1.99, 3.68]</td>
+<td>1.66</td>
+<td>[0.21, 3.03]</td>
+<td>0.09</td>
+<td>[0.00, 0.44]</td>
+<td>0.07</td>
+<td>[-1.28, 1.67]</td>
+<td>-0.29</td>
+<td>[3.93, -4.06]</td>
+</tr>
+<tr class="odd">
+<td>ΔH</td>
+<td>GAFF v1.7</td>
+<td>3.63</td>
+<td>[2.67, 4.47]</td>
+<td>2.66</td>
+<td>[1.13, 4.07]</td>
+<td>0.10</td>
+<td>[0.00, 0.57]</td>
+<td>0.12</td>
+<td>[-1.09, 2.28]</td>
+<td>0.91</td>
+<td>[6.66, -2.47]</td>
+</tr>
+<tr class="even">
+<td>ΔH</td>
+<td>GAFF v2.1</td>
+<td>2.08</td>
+<td>[1.18, 3.16]</td>
+<td>-1.64</td>
+<td>[-2.54, -0.91]</td>
+<td>0.54</td>
+<td>[0.00, 0.97]</td>
+<td>1.08</td>
+<td>[-0.37, 1.90]</td>
+<td>-1.51</td>
+<td>[0.83, -5.50]</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>SMIRNOFF99Frosst</td>
+<td>2.47</td>
+<td>[1.62, 3.36]</td>
+<td>-0.96</td>
+<td>[-2.22, 0.52]</td>
+<td>0.40</td>
+<td>[0.00, 0.93]</td>
+<td>1.18</td>
+<td>[-0.45, 2.26]</td>
+<td>-0.88</td>
+<td>[0.36, -3.60]</td>
+</tr>
+<tr class="even">
+<td>-TΔS</td>
+<td>GAFF v1.7</td>
+<td>3.00</td>
+<td>[2.07, 3.88]</td>
+<td>-1.73</td>
+<td>[-3.14, -0.18]</td>
+<td>0.37</td>
+<td>[0.00, 0.93]</td>
+<td>1.23</td>
+<td>[-0.38, 2.48]</td>
+<td>-1.59</td>
+<td>[-0.31, -4.23]</td>
+</tr>
+<tr class="odd">
+<td>-TΔS</td>
+<td>GAFF v2.1</td>
+<td>1.80</td>
+<td>[0.68, 3.19]</td>
+<td>-0.00</td>
+<td>[-0.98, 1.27]</td>
+<td>0.48</td>
+<td>[0.00, 0.97]</td>
+<td>1.13</td>
+<td>[-0.22, 1.96]</td>
+<td>0.08</td>
+<td>[1.14, -1.79]</td>
 </tr>
 </tbody>
 </table>
