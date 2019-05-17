@@ -183,4 +183,4 @@ python ../../build/merge-subfigures.py --input \
 alpha_gaff_charged_by_monomer.png \
 alpha_gaff_charged_whole_molecule.png \
 --geometry 2x1 \
---resize --output charge-schemes.png
+--output charge-schemes.png
