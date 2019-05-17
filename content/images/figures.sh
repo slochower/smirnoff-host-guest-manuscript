@@ -176,3 +176,11 @@ python ../../build/merge-subfigures.py --input \
 SMIRNOFF99Frosst-vs-GAFF-v1.7-bond-req.png \
 SMIRNOFF99Frosst-vs-GAFF-v2.1-bond-req.png \
 --geometry 2x1 --output bond-req.png
+
+# Figure XX
+
+python ../../build/merge-subfigures.py --input \
+alpha_gaff_charged_by_monomer.png \
+alpha_gaff_charged_whole_molecule.png \
+--geometry 2x1 \
+--resize --output charge-schemes.png
