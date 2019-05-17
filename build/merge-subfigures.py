@@ -1,7 +1,7 @@
 import os
 import subprocess
 import argparse
-
+import logging
 
 def int_to_letter(int):
     alphabet = list('abcdefghijklmnopqrstuvwxyz'.upper())
@@ -23,6 +23,7 @@ def label(input, output, annotation, pointsize=18):
     {input} \
     "tmp/{output}"
     """
+    logging.debug(command)
     subprocess.call(command, shell=True)
 
 def get_sizes(input, width=True):
@@ -45,7 +46,7 @@ def get_sizes(input, width=True):
         '%h' \
         info:
         """
-
+    logging.debug(command)
     p = subprocess.check_output(command, shell=True)
     return int(p.decode("utf-8"))
 
@@ -69,7 +70,7 @@ def resize(input, output, dim, width=True):
         "tmp/{output}"
         """
 
-
+    logging.debug(command)
     subprocess.call(command, shell=True)
 
 def tile(output, geometry="2x2", gravity="center"):
@@ -83,17 +84,21 @@ def tile(output, geometry="2x2", gravity="center"):
     -gravity {gravity} \
     {output}
     """
+    logging.debug(command)
     subprocess.call(command, shell=True)
 
 def clean(mask):
     command = f"""
     rm tmp/{mask}*.png
     """
+    logging.debug(command)
     subprocess.call(command, shell=True)
     subprocess.call("rmdir tmp", shell=True)
 
 
 if __name__ == "__main__":
+    logger = logging.getLogger()
+
     ap = argparse.ArgumentParser()
     ap.add_argument("-i", "--input", help="Individual files", nargs="+",
     required=True)
@@ -106,8 +111,14 @@ if __name__ == "__main__":
     required=False, default="18")
     ap.add_argument("-r", "--resize", help="Whether to resize smallest", 
     required=False, default=False, action="store_true")
+    ap.add_argument("-d", "--debug", help="Whether to print debugging information", 
+    required=False, default=False, action="store_true")
+
 
     args = vars(ap.parse_args())
+
+    if args["debug"]:
+        logger.setLevel(logging.DEBUG)
 
     if args["resize"]:
         sizes = []
