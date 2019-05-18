@@ -29,8 +29,7 @@ pandoc --verbose \
   --to=html5 \
   --filter=pandoc-eqnos \
   --filter=pandoc-tablenos \
-  --filter=pandoc-crossref \
-  --metadata-file=build/assets/pandoc-crossref.yaml \
+  --filter=pandoc-fignos \
   --bibliography=$BIBLIOGRAPHY_PATH \
   --csl=$CSL_PATH \
   --metadata link-citations=true \
@@ -66,7 +65,7 @@ if [ "$BUILD_PDF" != "false" ] && [ -z "$DOCKER_EXISTS" ]; then
     --pdf-engine-opt=--presentational-hints \
     --filter=pandoc-eqnos \
     --filter=pandoc-tablenos \
-    --filter=pandoc-crossref \
+    --filter=pandoc-fignos \
     --bibliography=$BIBLIOGRAPHY_PATH \
     --csl=$CSL_PATH \
     --metadata link-citations=true \
@@ -77,18 +76,35 @@ if [ "$BUILD_PDF" != "false" ] && [ -z "$DOCKER_EXISTS" ]; then
   rm images
 fi
 
+if [ "$BUILD_LATEX" == "true" ]; then
+  echo "Export LaTeX manuscript"
+    pandoc \
+    --from=markdown \
+    --to=latex \
+    --filter=pandoc-eqnos \
+    --filter=pandoc-tablenos \
+    --filter=pandoc-fignos \
+    --bibliography=$BIBLIOGRAPHY_PATH \
+    --biblatex \
+    --csl=$CSL_PATH \
+    --output=output/manuscript.tex \
+    $INPUT_PATH
+fi
+
 # Create PDF output (unless BUILD_PDF environment variable equals "false")
 if [ "$BUILD_PDF" != "false" ] && [ -n "$DOCKER_EXISTS" ]; then
   echo "Exporting PDF manuscript using Docker + Athena"
   if [ -d output/images ]; then rm -rf output/images; fi  # if images is a directory, remove it
-  cp -r -L content/images output/
+  cp -R -L content/images output/
   docker run \
+    --shm-size="2g" \
     --rm \
     --volume `pwd`/output:/converted/ \
     --security-opt seccomp:unconfined \
     arachnysdocker/athenapdf:2.16.0 \
     athenapdf \
-    --delay=2000 \
+    --delay=20000 \
+    --timeout=20000 \
     manuscript.html manuscript.pdf
   rm -rf output/images
 fi

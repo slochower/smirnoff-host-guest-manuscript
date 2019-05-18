@@ -1,5 +1,5 @@
 ---
-title: "Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst from the Open Force Field Group"
+title: "Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative"
 keywords:
   - markdown
   - publishing
@@ -24,6 +24,15 @@ author_info:
     affiliations:
       - Atomwise, Inc., San Francisco, CA 94105, USA
   -
+    github: leeping 
+    orcid: 0000-0003-3072-9946
+    name: Lee-Ping Wang
+    initials: LPW
+    email: leeping@ucdavis.edu
+    affiliations:
+      - Department of Chemistry, University of California, Davis, CA 95616, USA
+
+  -
     github: jchodera
     orcid: 0000-0003-0542-119X
     twitter: jchodera
@@ -32,6 +41,17 @@ author_info:
     email: john.chodera@choderalab.org
     affiliations:
       - Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065
+
+  -
+    github: davidlmobley
+    orcid: 0000-0002-1083-5533
+    twitter: davidlmobley
+    name: David L. Mobley
+    initials: DLM
+    email: dmobley@uci.edu
+    affiliations: 
+      - Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA
+
   -
     twitter: michaelkgilson
     name: Michael K. Gilson
