@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-05-17'
+date-meta: '2019-05-18'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/f1da5fa27c129f327f8176f9aea76dfeb51df225/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/8f4ef5fde99dd2f1fd136d400b7a2db5d68c37ec/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@f1da5fa](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/f1da5fa27c129f327f8176f9aea76dfeb51df225)
-on May 17, 2019.
+from [slochower/smirnoff-host-guest-manuscript@8f4ef5f](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/8f4ef5fde99dd2f1fd136d400b7a2db5d68c37ec)
+on May 18, 2019.
 </em></small>
 
 ## Authors
@@ -100,6 +100,8 @@ on May 17, 2019.
 - [Update figure legends and labels with additional information #46](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/46)
 - [Update GAFF v2.1 statistics in the text #47](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/47)
 - [Consider adding discussion of Kendall's tau #49](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/49)
+- [Update SI figure captions with letter numbering #50](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/50)
+- [Refine language around "fewer parameters" claims #51](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/51)
 
 ## Abstract {.page_break_before}
 
@@ -532,10 +534,12 @@ Each pseudodihedral in GAFF v2.1 has a tight distribution; neighboring pseudodih
 
 ## Discussion
 
-As a terse representation of a GAFF-like force field, SMIRNOFF99Frosst does remarkably well. 
-Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst performs as well as GAFF v1.7 and better than GAFF v2.1 predicting binding free energies of small molecules to αCD and βCD, based on the mean signed error relative to experiment.
+As a terse representation of a GAFF-like force field, SMIRNOFF99Frosst performs remarkably well. 
+Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst performs as well as GAFF v1.7 and better than GAFF v2.1 on estimated binding free energies of small molecules to αCD and βCD, based on the mean signed error relative to experiment.
 Moreover, SMIRNOFF99Frosst performs better than either GAFF v1.7 or GAFF v2.1 on predicted binding enthalpies, with a mean signed error less than 1 kcal/mol.
 GAFF v2.1 has excellent agreement with experiment on predicted binding entropy, followed by SMIRNOFF99Frosst and then GAFF v1.7.
+Taken together, these results support the notion that a simpler force field, based on direct chemical perception and fewer "exceptions to the rules," are as accurate as force fields that have been hand-tuned over decades of use.
+The reduction in the number of parameters, and the simplification of the force field specification, will make it easier to iteratively refine and optimize SMIRNOFF99Frosst against experimental data and the results of quantum mechanical calculations.
 
 It is notable that both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible cyclodextrin hosts.
 It has been shown that there are 2--7 H<sub>2</sub>O inside αCD and 8--11 H<sub>2</sub>O molecules inside βCD [@j3qbz56S; @l02WNlWU].
@@ -543,15 +547,18 @@ It is likely that simulations with SMIRNOFF99Frosst and GAFF v1.7 result in fewe
 Futhermore, it is known that sugars and conjugated carbohydrates are especially difficult for many "general" force fields, due to the highly polar bonds in sugars, the number of chiral centers, and the large structural differences between chiral isomers [@okbsmIQF].
 
 The combination of X-ray and NMR data suggest that the specialized q4md-CD [@j7JJedX4] force field, and the rigid GAFF v2.1 [@HVgz5rZq] force field, better model the flexibility of the CD cavity.
-Cézard, *et al.* present strong NMR evidence that the vicinal ^3^J H5--H6′ (atom names H5--H62 in Figure @fig:atom-anmes) and ^3^J H5-H6″(atom names H5--H61) coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers [@j7JJedX4].
+Cézard, *et al.* present strong NMR evidence that the vicinal ^3^J H5--H6′ (atom names H5--H62 in Figure @fig:atom-names) and ^3^J H5-H6″(atom names H5--H61) coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers [@j7JJedX4].
 This is also evident in X-ray structures, where the rigidity of the cyclodextrin ring is retained as long as water is present in the cavity and the torsional angles between adjacent glycouril units show surprisingly small variance [@j3qbz56S].
-
 The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those [@jdi722iE].
 The lack of rigidity is associated with an underestimation of the binding enthalpy and an overestimation of the binding entropy; SMRINOFF99Frossst has a ΔH MSE = 0.77 kcal/mol and −TΔS MSE = -0.78 kcal/mol whereas the more rigid GAFF v2.1 results in ΔH MSE = -1.64 kcal/mol and −TΔS MSE = 0.08 kcal/mol.
-It is especially notable that GAFF v2.1 has the best overall correlations `and probably the best Kendall τ?`.
+It is especially notable that GAFF v2.1 has the best overall correlations.
 
-As a starting point for force field optimization, it therefore seems important to include sugars and carbohydrates in the development of future iterations of SMIRNOFF99Frosst.
-This will be especially useful for modeling more physiologically relevant protein structures, such as proteoglycans and glycopeptides.
+As SMIRNOFF99Frosst grows beyond a small molecule force field, it will be important to include sugars and other carbohydrates in the training sets used to develop parameters.
+This will be especially useful for modeling physiologically relevant protein structures, such as proteoglycans and glycopeptides.
+
+The results presented in this manuscript demonstrate that host-guest binding thermodynamics can be used to benchmark force fields, diagnose issues with parameters applied to specific functional groups, and suggest directions for improvements.
+
+[Discussion is still rough around the edges. Two immediate thoughts: I could focus more about how SMIRNOFF99Frosst does modeling cyclodextrins (currently the middle paragraph of this section). Or, I could be more circumspect, connecting with the Introduction, and mentioning that host-guest systems are good models and identify force field errors. This section would benefit from some concrete input.]{.banner .lightgrey}
 
 ## Code and data availability
 - [GitHub repository](https://github.com/slochower/smirnoff-host-guest) used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.
