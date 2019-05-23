@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/609a4db80dda67258957dd91b3cc02870ac916f9/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/10a4d31cdfa3aa05c93c7fb84fa0e4df7ed161a9/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@609a4db](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/609a4db80dda67258957dd91b3cc02870ac916f9)
+from [slochower/smirnoff-host-guest-manuscript@10a4d31](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/10a4d31cdfa3aa05c93c7fb84fa0e4df7ed161a9)
 on May 23, 2019.
 </em></small>
 
@@ -131,8 +131,8 @@ These techniques include both quantum and classical dynamics, employing a range 
 The attach-pull-release (APR) method has consistently been ranked among the most reliable techniques for predicting binding thermodynamics of host-guest complexes in blind challenges [@BGsUYQln; @GA1AFcUw].
 In APR, the reversible work of transferring the guest from the binding site to solution, via a physical pathway, is computed using a series of umbrella sampling windows.
 Simulating each window and integrating over the partial derivative of the restraint energy with respect to the restraint target is used to generate a potential of mean force along the pulling coordinate, yielding the binding free energy at standard state, ΔG°.
-Furthermore, subtracting the mean potential energies obtained from long simulations of the solvated bound complex and the solvated dissociated complex yields the binding enthalpy at standard state, ΔH°.
-Together, ΔG° and ΔH can be combined to determine the binding entropy, ΔS°.
+Furthermore, subtracting the mean potential energies obtained from long simulations of the solvated bound complex and the solvated dissociated complex yields the binding enthalpy, ΔH.
+Together, ΔG° and ΔH can be combined to determine the binding entropy at standard state, ΔS°.
 Thus, APR provides the complete thermodynamic signature of a host-guest binding reaction: ΔG°, ΔH, and −TΔS°.
 
 Cyclodextrins, in particular, are ideal host molecules.
