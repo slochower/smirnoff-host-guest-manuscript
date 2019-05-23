@@ -23,7 +23,7 @@ python ../../build/merge-subfigures.py --input \
     SMIRNOFF99Frosst-dG-by-orientation-all.png \
     GAFF-v1.7-dG-by-orientation-all.png \
     GAFF-v2.1-dG-by-orientation-all.png \
-    a-coc-bg2bg2-tip3p.png \
+    cyclooctanol.png \
     --geometry 2x2 --resize --output by-orientation.png
 
 # Figure 5
