@@ -45,5 +45,256 @@
         "given": ""
       }
     ]
+  },
+  {
+    "type": "book",
+    "standard_citation": "raw:amber2018",
+    "title": "AMBER 2018",
+    "author": [
+      {
+        "given": "D.A.",
+        "family": "Case"
+
+      },
+      {
+        "given": "D.S.",
+        "family": "Cerutti"
+
+      },
+      {
+        "given": "T.E. III",
+        "family": "Cheatham"
+
+      },
+      {
+        "given": "T.A.",
+        "family": "Darden"
+
+      },
+      {
+        "given": "R.E.",
+        "family": "Duke"
+
+      },
+      {
+        "given": "H.",
+        "family": "Gohlke"
+
+      },
+      {
+        "given": "A.W.",
+        "family": "Goetz"
+      },
+      {
+        "given": "D.",
+        "family": "Greene"
+
+      },
+      {
+        "given": "N.",
+        "family": "Homeyer"
+
+      },
+      {
+        "given": "S.",
+        "family": "Izadi"
+
+      },
+      {
+        "given": "A.",
+        "family": "Kovalenko"
+
+      },
+      {
+        "given": "T.S.",
+        "family": "Lee"
+
+      },
+      {
+        "given": "S.",
+        "family": "LeGrand"
+
+      },
+      {
+        "given": "P.",
+        "family": "Li"
+
+      },
+      {
+        "given": "C.",
+        "family": "Lin"
+
+      },
+      {
+        "given": "J.",
+        "family": "Liu"
+
+      },
+      {
+        "given": "T.",
+        "family": "Luchko"
+
+      },
+      {
+        "given": "R.",
+        "family": "Luo"
+
+      },
+      {
+        "given": "D.J.",
+        "family": "Mermelstein"
+
+      },
+      {
+        "given": "K.M.",
+        "family": "Merz"
+
+      },
+      {
+        "given": "G.",
+        "family": "Monard"
+
+      },
+      {
+        "given": "H.",
+        "family": "Nguyen"
+
+      },
+      {
+        "given": "I.",
+        "family": "Omelyan"
+
+      },
+      {
+        "given": "A.",
+        "family": "Onufriev"
+
+      },
+      {
+        "given": "F.",
+        "family": "Pan"
+
+      },
+      {
+        "given": "R.",
+        "family": "Qi"
+
+      },
+      {
+        "given": "D.R.",
+        "family": "Roe"
+
+      },
+      {
+        "given": "A.",
+        "family": "Roitberg"
+
+      },
+      {
+        "given": "C.",
+        "family": "Sagui"
+
+      },
+      {
+        "given": "C.L.",
+        "family": "Simmerling"
+
+      },
+      {
+        "given": "R.C.",
+        "family": "Walker"
+
+      },
+      {
+        "given": "J.",
+        "family": "Wang"
+
+      },
+      {
+        "given": "X.",
+        "family": "Wu"
+
+      },
+      {
+        "given": "L.",
+        "family": "Xiao"
+
+      },
+      {
+        "given": "D.M.",
+        "family": "York"
+
+      },
+      {
+        "given": "P.A.",
+        "family": "Kollman"
+
+      },
+      {
+        "given": "I.Y.",
+        "family": "Ben-Shalom"
+
+      },
+      {
+        "given": "M.K.",
+        "family": "Gilson"
+
+      },
+      {
+        "given": "S.R.",
+        "family": "Bronzell"
+
+      },
+      {
+        "given": "D.",
+        "family": "Ghoreishi"
+
+      },
+      {
+        "given": "T.",
+        "family": "Kurtzman"
+
+      },
+      {
+        "given": "Y.",
+        "family": "Miao"
+
+      },
+      {
+        "given": "C.",
+        "family": "Nguyen"
+
+      },
+      {
+        "given": "S.",
+        "family": "Schott-Verdugo"
+
+      },
+      {
+        "given": "J.",
+        "family": "Smith"
+
+      },
+      {
+        "given": "R.",
+        "family": "Salomon-Ferrer"
+
+      },
+      {
+        "given": "J",
+        "family": "Swails"
+
+      },
+      {
+        "given": "R.M.",
+        "family": "Wolf"
+
+      },
+      {
+        "given": "V.W.D.",
+        "family": "Cruzeiro"
+
+      }
+    ]
   }
 ]
