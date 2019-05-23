@@ -3,8 +3,9 @@ import subprocess
 import argparse
 import logging
 
+
 def int_to_letter(int):
-    alphabet = list('abcdefghijklmnopqrstuvwxyz'.upper())
+    alphabet = list("abcdefghijklmnopqrstuvwxyz".upper())
     return alphabet[int]
 
 
@@ -26,8 +27,9 @@ def label(input, output, annotation, pointsize=18):
     logging.debug(command)
     subprocess.call(command, shell=True)
 
+
 def get_sizes(input, width=True):
-    
+
     if width:
         command = f"""
         convert \
@@ -50,9 +52,13 @@ def get_sizes(input, width=True):
     p = subprocess.check_output(command, shell=True)
     return int(p.decode("utf-8"))
 
+
 def resize(input, output, dim, width=True):
-    
+
     print(f"Resizing {args['input'][index]} to tmp/{output}")
+    if not os.path.exists("tmp"):
+        os.makedirs("tmp")
+
     if width:
         command = f"""
         convert \
@@ -73,6 +79,7 @@ def resize(input, output, dim, width=True):
     logging.debug(command)
     subprocess.call(command, shell=True)
 
+
 def tile(output, geometry="2x2", gravity="center"):
     # The `<` means don't make smaller, I think.
 
@@ -87,6 +94,7 @@ def tile(output, geometry="2x2", gravity="center"):
     logging.debug(command)
     subprocess.call(command, shell=True)
 
+
 def clean(mask):
     command = f"""
     rm tmp/{mask}*.png
@@ -100,20 +108,41 @@ if __name__ == "__main__":
     logger = logging.getLogger()
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("-i", "--input", help="Individual files", nargs="+",
-    required=True)
+    ap.add_argument("-i", "--input", help="Individual files", nargs="+", required=True)
     ap.add_argument("-o", "--output", help="Merged file", required=True)
-    ap.add_argument("-g", "--geometry", help="ImageMagick geometry of tiles", 
-    required=False, default="2x2")
-    ap.add_argument("-y", "--gravity", help="ImageMagick gravity of tile alignment", 
-    required=False, default="center")
-    ap.add_argument("-f", "--fontsize", help="Font size of label", 
-    required=False, default="18")
-    ap.add_argument("-r", "--resize", help="Whether to resize smallest", 
-    required=False, default=False, action="store_true")
-    ap.add_argument("-d", "--debug", help="Whether to print debugging information", 
-    required=False, default=False, action="store_true")
-
+    ap.add_argument(
+        "-g",
+        "--geometry",
+        help="ImageMagick geometry of tiles",
+        required=False,
+        default="2x2",
+    )
+    ap.add_argument(
+        "-y",
+        "--gravity",
+        help="ImageMagick gravity of tile alignment",
+        required=False,
+        default="center",
+    )
+    ap.add_argument(
+        "-f", "--fontsize", help="Font size of label", required=False, default="18"
+    )
+    ap.add_argument(
+        "-r",
+        "--resize",
+        help="Whether to resize smallest",
+        required=False,
+        default=False,
+        action="store_true",
+    )
+    ap.add_argument(
+        "-d",
+        "--debug",
+        help="Whether to print debugging information",
+        required=False,
+        default=False,
+        action="store_true",
+    )
 
     args = vars(ap.parse_args())
 
@@ -125,33 +154,32 @@ if __name__ == "__main__":
         print("Determining sizes...")
 
         for figure in args["input"]:
-            sizes.append(get_sizes(input = figure,
-            width = False))            
+            sizes.append(get_sizes(input=figure, width=True))
             print(f"Found dimension {sizes[-1]}")
-        
+
         for index, size in enumerate(sizes):
             if size < max(sizes):
 
-                resize(input = args['input'][index],
-                       output = f"tmp-{index}.png",
-                       dim = max(sizes),
-                       width = False)
+                resize(
+                    input=args["input"][index],
+                    output=f"tmp-{index}.png",
+                    dim=max(sizes),
+                    width=True,
+                )
 
                 args["input"][index] = f"tmp/tmp-{index}.png"
-
 
     for index, figure in enumerate(args["input"]):
 
         if not os.path.exists("tmp"):
             os.makedirs("tmp")
 
-        label(input = figure, 
-            output = f"tmp-{index}.png",
-            annotation = index,
-            pointsize = args["fontsize"])
-        
+        label(
+            input=figure,
+            output=f"tmp-{index}.png",
+            annotation=index,
+            pointsize=args["fontsize"],
+        )
 
-    tile(output = args["output"],
-         geometry = args["geometry"],
-         gravity = args["gravity"])
-    clean(mask = "tmp")
+    tile(output=args["output"], geometry=args["geometry"], gravity=args["gravity"])
+    clean(mask="tmp")
