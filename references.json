@@ -1895,6 +1895,250 @@
     "URL": "https://doi.org/gf2stw"
   },
   {
+    "publisher": "American Chemical Society (ACS)",
+    "abstract": "<jats:p>We computed relative binding free energies\nusing GPU accelerated Thermodynamic Integration (GPU-TI) on\na dataset originally assembled by Schrödinger,\nInc.. Using their GPU enabled free energy code (FEP+) and\nthe OPLS2.1 force field combined with REST2 enhanced sampling approach,\nthese authors obtained an overall MUE of 0.9 kcal/mol and an overall RMSD of\n1.14 kcal/mol.&lt;b&gt; &lt;/b&gt;In our study using GPU-TI of AMBER with\nthe AMBER14SB/GAFF1.8 force field but without enhanced\nsampling, we obtained an overall MUE of 1.17 kcal/mol and an\noverall RMSD of 1.50 kcal/mol for the 330 mutations contained in this data set.</jats:p>",
+    "DOI": "10.26434/chemrxiv.7653434",
+    "type": "manuscript",
+    "source": "Crossref",
+    "title": "Validation of AMBER/GAFF for Relative Free Energy Calculations",
+    "author": [
+      {
+        "given": "Lin",
+        "family": "Song"
+      },
+      {
+        "given": "Tai-Sung",
+        "family": "Lee"
+      },
+      {
+        "given": "Chun",
+        "family": "Zhu"
+      },
+      {
+        "given": "Darrin M.",
+        "family": "York"
+      },
+      {
+        "given": "Kenneth M.",
+        "family": "Merz Jr."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          2,
+          4
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gf22kq",
+    "id": "166JLvkLU"
+  },
+  {
+    "type": "book",
+    "title": "AMBER 2018",
+    "author": [
+      {
+        "given": "D.A.",
+        "family": "Case"
+      },
+      {
+        "given": "D.S.",
+        "family": "Cerutti"
+      },
+      {
+        "given": "T.E. III",
+        "family": "Cheatham"
+      },
+      {
+        "given": "T.A.",
+        "family": "Darden"
+      },
+      {
+        "given": "R.E.",
+        "family": "Duke"
+      },
+      {
+        "given": "H.",
+        "family": "Gohlke"
+      },
+      {
+        "given": "A.W.",
+        "family": "Goetz"
+      },
+      {
+        "given": "D.",
+        "family": "Greene"
+      },
+      {
+        "given": "N.",
+        "family": "Homeyer"
+      },
+      {
+        "given": "S.",
+        "family": "Izadi"
+      },
+      {
+        "given": "A.",
+        "family": "Kovalenko"
+      },
+      {
+        "given": "T.S.",
+        "family": "Lee"
+      },
+      {
+        "given": "S.",
+        "family": "LeGrand"
+      },
+      {
+        "given": "P.",
+        "family": "Li"
+      },
+      {
+        "given": "C.",
+        "family": "Lin"
+      },
+      {
+        "given": "J.",
+        "family": "Liu"
+      },
+      {
+        "given": "T.",
+        "family": "Luchko"
+      },
+      {
+        "given": "R.",
+        "family": "Luo"
+      },
+      {
+        "given": "D.J.",
+        "family": "Mermelstein"
+      },
+      {
+        "given": "K.M.",
+        "family": "Merz"
+      },
+      {
+        "given": "G.",
+        "family": "Monard"
+      },
+      {
+        "given": "H.",
+        "family": "Nguyen"
+      },
+      {
+        "given": "I.",
+        "family": "Omelyan"
+      },
+      {
+        "given": "A.",
+        "family": "Onufriev"
+      },
+      {
+        "given": "F.",
+        "family": "Pan"
+      },
+      {
+        "given": "R.",
+        "family": "Qi"
+      },
+      {
+        "given": "D.R.",
+        "family": "Roe"
+      },
+      {
+        "given": "A.",
+        "family": "Roitberg"
+      },
+      {
+        "given": "C.",
+        "family": "Sagui"
+      },
+      {
+        "given": "C.L.",
+        "family": "Simmerling"
+      },
+      {
+        "given": "R.C.",
+        "family": "Walker"
+      },
+      {
+        "given": "J.",
+        "family": "Wang"
+      },
+      {
+        "given": "X.",
+        "family": "Wu"
+      },
+      {
+        "given": "L.",
+        "family": "Xiao"
+      },
+      {
+        "given": "D.M.",
+        "family": "York"
+      },
+      {
+        "given": "P.A.",
+        "family": "Kollman"
+      },
+      {
+        "given": "I.Y.",
+        "family": "Ben-Shalom"
+      },
+      {
+        "given": "M.K.",
+        "family": "Gilson"
+      },
+      {
+        "given": "S.R.",
+        "family": "Bronzell"
+      },
+      {
+        "given": "D.",
+        "family": "Ghoreishi"
+      },
+      {
+        "given": "T.",
+        "family": "Kurtzman"
+      },
+      {
+        "given": "Y.",
+        "family": "Miao"
+      },
+      {
+        "given": "C.",
+        "family": "Nguyen"
+      },
+      {
+        "given": "S.",
+        "family": "Schott-Verdugo"
+      },
+      {
+        "given": "J.",
+        "family": "Smith"
+      },
+      {
+        "given": "R.",
+        "family": "Salomon-Ferrer"
+      },
+      {
+        "given": "J",
+        "family": "Swails"
+      },
+      {
+        "given": "R.M.",
+        "family": "Wolf"
+      },
+      {
+        "given": "V.W.D.",
+        "family": "Cruzeiro"
+      }
+    ],
+    "id": "ltrN7ofw"
+  },
+  {
     "id": "pOsXFMux",
     "type": "webpage",
     "title": "Daylight>SMIRKS Tutorial",
@@ -1904,7 +2148,7 @@
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }
@@ -1933,25 +2177,36 @@
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }
   },
   {
     "id": "16UiKZ8o1",
-    "type": "webpage",
-    "title": "choderalab/ambermini",
-    "container-title": "GitHub",
-    "abstract": "A stripped-down set of just antechamber, sqm, and tleap. - choderalab/ambermini",
+    "type": "book",
+    "title": "A stripped-down set of just antechamber, sqm, and tleap.: choderalab/ambermini",
+    "publisher": "Chodera lab // Memorial Sloan Kettering Cancer Center",
+    "genre": "C",
+    "source": "GitHub",
     "URL": "https://github.com/choderalab/ambermini",
-    "language": "en",
+    "note": "original-date: 2014-04-14T19:38:19Z",
+    "shortTitle": "A stripped-down set of just antechamber, sqm, and tleap.",
+    "issued": {
+      "date-parts": [
+        [
+          "2017",
+          11,
+          15
+        ]
+      ]
+    },
     "accessed": {
       "date-parts": [
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }
@@ -1969,25 +2224,36 @@
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }
   },
   {
     "id": "4LS7HWPh",
-    "type": "webpage",
-    "title": "openforcefield/smirnoff99Frosst",
-    "container-title": "GitHub",
-    "abstract": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format - openforcefield/smirnoff99Frosst",
+    "type": "book",
+    "title": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst",
+    "publisher": "Open Force Field Initiative",
+    "genre": "Python",
+    "source": "GitHub",
     "URL": "https://github.com/openforcefield/smirnoff99Frosst",
-    "language": "en",
+    "note": "original-date: 2016-09-15T21:03:43Z",
+    "shortTitle": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format",
+    "issued": {
+      "date-parts": [
+        [
+          "2019",
+          5,
+          19
+        ]
+      ]
+    },
     "accessed": {
       "date-parts": [
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }
@@ -2005,7 +2271,7 @@
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }
@@ -2023,7 +2289,7 @@
         [
           "2019",
           5,
-          18
+          23
         ]
       ]
     }

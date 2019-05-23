@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-05-18'
+date-meta: '2019-05-23'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/8f4ef5fde99dd2f1fd136d400b7a2db5d68c37ec/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/609a4db80dda67258957dd91b3cc02870ac916f9/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@8f4ef5f](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/8f4ef5fde99dd2f1fd136d400b7a2db5d68c37ec)
-on May 18, 2019.
+from [slochower/smirnoff-host-guest-manuscript@609a4db](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/609a4db80dda67258957dd91b3cc02870ac916f9)
+on May 23, 2019.
 </em></small>
 
 ## Authors
@@ -105,56 +105,54 @@ on May 18, 2019.
 
 ## Abstract {.page_break_before}
 
-Designing ligands that bind their target biomolecules with high affinity and specificity is a key step in small-molecule drug discovery.
-Yet accurate predictions of protein-ligand binding free energies are difficult and errors in the calculations can be traced to challenges in adequately sampling conformational space, ambiguous protonation states, errors in force fields, and other causes.
-Improving the performance of force fields for predicting binding affinities will help reduce the timescale and cost required to generate drug candidates.
-Noncovalent complexes between a cavity-containing host molecule and drug-like guest molecules have emerged as powerful model systems for isolating the nature of errors in more complex protein-ligand binding systems.
-Due to their small size and ease of experimental characterization, calculations of host-guest binding free energies, enthalpies, and entropies offer an opportunity to directly probe, and ultimately optimize, force fields while minimizing the impact of other sources of error.
+Designing ligands that bind their target biomolecules with high affinity and specificity is a key step in small-molecule drug discovery, but accurately predicting protein-ligand binding free energies remains challenging.
+Key sources of errors in the calculations include inadequate sampling of conformational space, ambiguous protonation states, and errors in force fields.
+Noncovalent complexes between a host molecule with a binding cavity and a drug-like guest molecules have emerged as powerful model systems for isolating the nature of errors in more complex protein-ligand binding systems, as their small size greatly facilitates conformational sampling, and one can choose systems that avoid ambiguities in protonation states.
+These features, combined with their ease of experimental characterization, make host-guest systems ideal model systems to test and ultimately optimize force fields in the context of binding calculations.
 
 The Open Force Field Initiative aims to create a modern, open software infrastructure for automatically generating and validating force fields using high-quality data sets.
-The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters of a typical general small molecule force field, such as GAFF, yet predicts binding thermodynamics that are on average, at least as accurate.
-Here, we evaluate the accuracy of such small molecule force fields using free energy calculations of 43 α and β-cyclodextrin host-guest pairs for which high-quality experimental thermodynamic data are available.
-Our calculations were performed using the attach-pull-release method as implemented in the open source package, `pAPRika`.
-On binding free energies, the root mean square error of the predictions relative to experiment is 0.91 kcal/mol, 95% CI [0.71, 1.13] for SMIRNOFF99Frosst and 1.68 kcal/mol, 95% CI [1.51, 1.84] for GAFF version 2.1, using TIP3P water and AM1-BCC charges in both force fields.
-These results suggest significant room for improvement in force fields, and will help create a transparent and robust method of evaluating future candidate parameter sets.
+The first force field to arise out of this effort, named SMIRNOFF99Frosst, has one tenth the number of parameters, in version 1.0.5, compared to typical general small molecule force fields, such as GAFF.
+Here, we evaluate the accuracy of this initial force field, using free energy calculations of 43 α and β-cyclodextrin host-guest pairs for which high-quality experimental thermodynamic data are available, and compare with matched calculations using two versions of GAFF. For all three force fields, we used TIP3P water and AM1-BCC charges.
+The calculations are performed using the attach-pull-release (APR) method as implemented in the open source package, pAPRika. For binding free energies, the root mean square error of the SMIRNOFF99Frosst calculations relative to experiment is 0.9 kcal/mol, while the corresponding results for GAFF 1.7 and GAFF 2.1 are 0.9 kcal/mol and 1.7 kcal/mol, respectively, with 95% confidence ranges less than 0.4 kcal/mol for all three force fields.
+These results suggest that there is significant room for improvement in force fields and motivate further development of tools using host-guest binding data for the transparent and robust evaluation and optimization of future candidate parameter sets.
+
 
 ## Introduction
 
-Accurate predictions of protein-ligand binding free energies are a key goal of computational chemistry.
-Despite this, calculations of protein-ligand binding thermodynamics involve a number of challenging choices, including the choice of empirical force field, specifying the protonation state of ionizable residues, adding hydrogens or otherwise adjusting the initial protein structure, and placing the ligand in the binding pocket, for which there is no consensus in the computational chemistry community.
+The accurate prediction of protein-ligand binding free energies is a key goal of computational chemistry, with key applications in early stage drug discovery.
+However, calculations of protein-ligand binding thermodynamics still involve a number of challenging choices, including the choice of empirical force field, specifying the protonation states of ionizable residues, adding hydrogens and otherwise adjusting the initial protein structure, and positioning the candidate ligand in the binding pocket.
 Predictions of protein-ligand absolute binding free energies have achieved root mean square errors around 1-2 kcal/mol for "well-behaved" systems [@9MLPuYAQ; @1CuDE1c2r; @mdqdy96N], with deviations an order of magnitude larger for some protein families with slow degrees of freedom [@15iR76Uc].
-Relative free energy calculations on a series of congeneric ligands, using proprietary methods, have also achieved root mean square errors compared to experiment of around 1 kcal/mol [@HQi6ihVB; @B182mNck].
-Yet, it is not possible to determine how much of the predicted error can be attributed to each of the decisions made by the modeler.
+Retrospective relative free energy calculations on a series of congeneric ligands, using proprietary methods, have also achieved root mean square errors compared to experiment of around 1 kcal/mol [@HQi6ihVB; @B182mNck; @166JLvkLU].
+However, it is not possible to determine how much of the prediction error can be attributed to each of the decisions made by the modeler.
 
-By minimizing the ambiguities involved in modeling protein-ligand complexes, host-guest systems offer a way to isolate and directly probe force field error. 
+By minimizing the ambiguities involved in modeling protein-ligand complexes, host-guest systems offer a way to isolate and directly probe force field error.
 A variety of techniques for computing absolute binding free energies in host-guest systems have shown accuracy of ~1 kcal/mol, as highlighted in the recent SAMPL5 and SAMPL6 blind challenges [@BGsUYQln; @9MLPuYAQ].
 These techniques include both quantum and classical dynamics, employing a range of energy and solvation models, with some techniques having knowledge-based steps, docking, or clustering [@rOVoXhRJ; @Dn1HX5lD; @kj7fJ3fg; @l8KUmyk3; @1935a9V0d; @ku7PPPs; @ScmrI810; @bKuLAjgi].
-The attach-pull-release (APR) method has consistently been ranked among the most accurate techniques for predicting binding thermodynamics of host-guest complexes in blind challenges [@BGsUYQln; @GA1AFcUw]. 
+The attach-pull-release (APR) method has consistently been ranked among the most reliable techniques for predicting binding thermodynamics of host-guest complexes in blind challenges [@BGsUYQln; @GA1AFcUw].
 In APR, the reversible work of transferring the guest from the binding site to solution, via a physical pathway, is computed using a series of umbrella sampling windows.
-Simulating each window and integrating over the partial derivative of the restraint energy with respect to the restraint target is used to generate a potential of mean force along the pulling coordinate, yielding the binding free energy at standard state, ΔG.
-Subtracting the mean potential energies obtained from long simulations of the solvated bound complex and the solvated dissociated complex can be used to determine the binding enthalpy at standard state, ΔH.
-Together, ΔG and ΔH can be combined to determine the binding entropy, ΔS.
-Thus, APR provides a complete thermodynamic description of binding---ΔG, ΔH, and ΔS---that are all absolute quantities for any host and guest
+Simulating each window and integrating over the partial derivative of the restraint energy with respect to the restraint target is used to generate a potential of mean force along the pulling coordinate, yielding the binding free energy at standard state, ΔG°.
+Furthermore, subtracting the mean potential energies obtained from long simulations of the solvated bound complex and the solvated dissociated complex yields the binding enthalpy at standard state, ΔH°.
+Together, ΔG° and ΔH can be combined to determine the binding entropy, ΔS°.
+Thus, APR provides the complete thermodynamic signature of a host-guest binding reaction: ΔG°, ΔH, and −TΔS°.
 
 Cyclodextrins, in particular, are ideal host molecules.
 They are neutral across the pH range, with well-characterized structures [@l02WNlWU], and bind both small molecule fragments and drug-like guest molecules with reasonable affinity [@q7znTABh].
-Moreover, cyclodextrins are stable in numerous conditions and their aqueous solubitilty allows a range of different experimental techniques to be used to measure their binding to guests [@19cBeLx8d].
-Here, we report the calculation of binding free energies, enthalpies, and entropies of drug-like guest molecules to α- and β-cyclodextrin host molecules, converged to within ~0.1 kcal/mol, using the attach-pull-release method.
+Moreover, cyclodextrins are stable in numerous conditions and their aqueous solubility allows a range of different experimental techniques to be used to measure their binding to guests [@19cBeLx8d].
+Here, we report the calculation of binding free energies, enthalpies, and entropies of drug-like guest molecules to α- and β-cyclodextrin host molecules, converged to within ~0.1 kcal/mol, using the APR method.
 These calculations offer an opportunity to benchmark---and ultimately optimize---new and existing force fields.
+The first force field produced by the Open Force Field Initiative, SMIRNOFF99Frosst v1.0.5, was released in late 2018 [@1HYTTY1PU; @OhpH7vfg].
+It is derived from AMBER parm99 [@13wrQoS3l] and Merck's parm@Frosst [@168lWg0SB].
+Instead of relying on atom types to assign force field parameters to compounds, which is the procedure followed by the tleap program used to assign parameters to molecules in AmberTools [@ltrN7ofw], SMIRNOFF99Frosst and the Open Force Field Toolkit use separately defined local chemical environments for each atom, bond, angle, and dihedral, to apply force field parameters using SMIRKS strings [@pOsXFMux].
+This process simplifies and effectively uncouples the parameters for each term in the force field. For example, the addition of a new Lennard-Jones parameter does not require creating a new atom type that forces the addition of new bonded, angle, and dihedral parameters.
+This approach leads to a much leaner force field specification; there are over 3000 lines of parameters in GAFF v1.7 [@YmRgHfeU], over 6000 lines of parameters in GAFF v2.1, and just 322 lines of parameters in SMIRNOFF99Frosst version 1.0.5 [@4LS7HWPh].
+It is important to note that SMIRNOFF99Frosst is not yet optimized at this stage, only compressed; subsequent work will focus on optimizing SMIRNOFF99Frosst and other SMIRNOFF-family force fields to fit quantum and experimental data [@XzEPM0UV].
+In the following text, SMIRNOFF99Frosst refers to version 1.0.5 of the force field, unless otherwise noted.
 
-SMIRNOFF99Frosst, released in late 2018, is the first force field produced by the Open Force Field Initiative [@1HYTTY1PU; @OhpH7vfg].
-SMIRNOFF99Frosst is derived from AMBER parm99 [@13wrQoS3l] and Merck's parm@Frosst [@168lWg0SB].
-Instead of relying on atom types to assign force field parameters to compounds, which is the procedure followed by the `tleap` program that parameterizes molecules in AmberTools, SMIRNOFF99Frosst and the Open Force Field Toolkit use the local chemical environment of each atom to apply force field parameters using SMIRKS strings [@pOsXFMux].
-This process simplifies and effectively uncouples the parameters for each term in the force field.
-That is, the addition of a new Lennard-Jones parameter does not require the addition of new bonded, angle, and dihedral parameters involving the same atom. 
-These factors lead to a much more lean force field specification; there are over 3000 lines of parameters in GAFF v1.7 [@YmRgHfeU], over 6000 lines of parameters in GAFF v2.1, and just 322 lines of parameters in SMIRNOFF99Frosst version 1.0.5 [@4LS7HWPh].
-It is important to note that SMIRNOFF99Frosst is not yet optimized---simply compressed--at this stage; subsequent work will focus on optimizing SMIRNOFF99Frosst and other SMIRNOFF-family force fields to fit experimental data [@XzEPM0UV].
-In the following text, SMRINOFF99Frosst refers to version 1.0.5 of the force field, unless otherwise noted.
+Thus far, SMIRNOFF99Frosst has been tested on hydration free energies of 642 small molecules and the densities and dielectric constants of 45 pure organic liquids [@1HYTTY1PU].
+Here, we benchmark SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1 using noncovalent binding thermodynamics for two flexible host molecules and thirty three guests containing three different functional group moieties.
+We first compare the results of SMIRNOFF99Frosst with those of the conventional force fields GAFF v1.7 and GAFF v2.1, based on calculations of experimental binding free energies, enthalpies, and entropies.
+We then characterize the differences in host conformations sampled by SMIRNOFF99Frosst compared to the other two force fields.
 
-Thus far, SMIRNOFF99Frosst has been tested on hydration free energies of 642 small molecules, and the densities and dielectric constants of 45 pure organic liquids [@1HYTTY1PU].
-Here, we benchmark SMIRNOFF99Frosst, GAFF v1.7, and GAFF v2.1 using noncovalent binding thermodynamics using two flexible host molecules and thirty three guests containing three different functional group moieties.
-We first show that SMIRNOFF99Frosst does about as well as the conventional force fields, GAFF v1.7 (on both absolute errors and correlation) and GAFF v2.1 (on absolute errors), predicting experimental binding free energies, enthalpies, and entropies.
-We then characterize the differences in host conformations sampled by SMIRNOFF99Frosst compared to the other force fields.
 
 ## Methods
 
