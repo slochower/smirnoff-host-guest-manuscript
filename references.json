@@ -2099,19 +2099,9 @@
     "id": "ltrN7ofw"
   },
   {
-    "id": "pOsXFMux",
+    "URL": "http://daylight.com/dayhtml_tutorials/languages/smirks/",
     "type": "webpage",
-    "title": "Daylight>SMIRKS Tutorial",
-    "URL": "https://daylight.com/dayhtml_tutorials/languages/smirks/",
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          6,
-          26
-        ]
-      ]
-    }
+    "id": "pOsXFMux"
   },
   {
     "type": "webpage",
@@ -2191,12 +2181,23 @@
   },
   {
     "id": "4LS7HWPh",
-    "type": "webpage",
-    "title": "openforcefield/smirnoff99Frosst",
-    "container-title": "GitHub",
-    "abstract": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format - openforcefield/smirnoff99Frosst",
+    "type": "book",
+    "title": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format: openforcefield/smirnoff99Frosst",
+    "publisher": "Open Force Field Initiative",
+    "genre": "Python",
+    "source": "GitHub",
     "URL": "https://github.com/openforcefield/smirnoff99Frosst",
-    "language": "en",
+    "note": "original-date: 2016-09-15T21:03:43Z",
+    "shortTitle": "A general small molecule force field descended from AMBER99 and parm@Frosst, available in the SMIRNOFF format",
+    "issued": {
+      "date-parts": [
+        [
+          "2019",
+          6,
+          25
+        ]
+      ]
+    },
     "accessed": {
       "date-parts": [
         [
