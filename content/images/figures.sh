@@ -184,3 +184,19 @@ alpha_gaff_charged_by_monomer.png \
 alpha_gaff_charged_whole_molecule.png \
 --geometry 2x1 \
 --output charge-schemes.png
+
+# Figure XX
+
+python ../../build/merge-subfigures.py --input \
+H1-C2-C2-O2-structure.png \
+SMIRNOFF99Frosst-vs-GAFF-v1.7-H1-C2-C2-O2.png \
+--geometry 2x1 \
+--output H1-C2-C2-O2.png
+
+# Figure XX
+
+python ../../build/merge-subfigures.py --input \
+pseudodihedral-histogram.png \
+pseudodihedral-timeseries.png \
+--geometry 2x1 \
+--output cyclodextrin-flexibility.png
