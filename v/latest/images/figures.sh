@@ -199,4 +199,5 @@ python ../../build/merge-subfigures.py --input \
 pseudodihedral-histogram.png \
 pseudodihedral-timeseries.png \
 --geometry 2x1 \
---output cyclodextrin-flexibility.png
+--gravity north \
+--output cyclodextrin-pseudodihedral.png
