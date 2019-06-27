@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-06-26'
+date-meta: '2019-06-27'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/a71719c69e07060d5067f17ca22b651237d205b1/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/ad03222ab220fb81a5b3005cee885f4e2ec907c4/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@a71719c](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/a71719c69e07060d5067f17ca22b651237d205b1)
-on June 26, 2019.
+from [slochower/smirnoff-host-guest-manuscript@ad03222](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ad03222ab220fb81a5b3005cee885f4e2ec907c4)
+on June 27, 2019.
 </em></small>
 
 ## Authors
@@ -563,6 +563,8 @@ We are therefore continuing to build out experimental host-guest datasets tuned 
 Conceptualization, DRS, NMH, JDC, MKG; Methodology, DRS, NMH; Software, DRS, NMH; Formal Analysis, DRS, NMH, JDC, MKG; Investigation, DRS, NMH; Resources, MKG, JDC;  Data Curation, DRS, NMH; Writing-Original Draft, DRS, NMH; Writing - Review and Editing, DRS, NMH, JDC, MKG, LPW; Visualization, DRS; Supervision, JDC, MKG; Project Administration, MKG; Funding Acquisition, MKG.
 
 ## Acknowledgments 
+This work was funded in part by grant GM061300 to MKG from the National Institute of General Medical Sciences of the NIH.
+The contents of this publication are solely the responsibility of the authors and do not necessarily represent the oﬃcial views of the NIH.
 
 ## Disclosures
 The authors declare the following competing financial interest(s): MKG has an equity interest in and is a cofounder and scientific advisor of VeraChem LLC.

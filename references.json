@@ -2099,9 +2099,19 @@
     "id": "ltrN7ofw"
   },
   {
-    "URL": "http://daylight.com/dayhtml_tutorials/languages/smirks/",
+    "id": "pOsXFMux",
     "type": "webpage",
-    "id": "pOsXFMux"
+    "title": "Daylight>SMIRKS Tutorial",
+    "URL": "https://daylight.com/dayhtml_tutorials/languages/smirks/",
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          6,
+          27
+        ]
+      ]
+    }
   },
   {
     "type": "webpage",
@@ -2127,7 +2137,7 @@
         [
           "2019",
           6,
-          26
+          27
         ]
       ]
     }
@@ -2156,7 +2166,7 @@
         [
           "2019",
           6,
-          26
+          27
         ]
       ]
     }
@@ -2174,7 +2184,7 @@
         [
           "2019",
           6,
-          26
+          27
         ]
       ]
     }
@@ -2203,7 +2213,7 @@
         [
           "2019",
           6,
-          26
+          27
         ]
       ]
     }
@@ -2221,7 +2231,7 @@
         [
           "2019",
           6,
-          26
+          27
         ]
       ]
     }
@@ -2239,7 +2249,7 @@
         [
           "2019",
           6,
-          26
+          27
         ]
       ]
     }
