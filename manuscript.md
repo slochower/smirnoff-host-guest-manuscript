@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-06-27'
+date-meta: '2019-07-12'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/ad03222ab220fb81a5b3005cee885f4e2ec907c4/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/d4d14f145c627f1594069d5b8ba854c115ef2fb5/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@ad03222](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ad03222ab220fb81a5b3005cee885f4e2ec907c4)
-on June 27, 2019.
+from [slochower/smirnoff-host-guest-manuscript@d4d14f1](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/d4d14f145c627f1594069d5b8ba854c115ef2fb5)
+on July 12, 2019.
 </em></small>
 
 ## Authors
@@ -50,7 +50,7 @@ on June 27, 2019.
     · ![GitHub icon](images/github.svg){.inline_icon}
     [nhenriksen](https://github.com/nhenriksen)<br>
   <small>
-     Atomwise, Inc., San Francisco, CA 94105, USA
+     Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA
   </small>
 
 + **Lee-Ping Wang**<br>

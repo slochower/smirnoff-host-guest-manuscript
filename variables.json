@@ -1,5 +1,5 @@
 {
-  "date": "June 27, 2019",
+  "date": "July 12, 2019",
   "authors": [
     {
       "github": "slochower",
@@ -22,10 +22,10 @@
       "initials": "NMH",
       "email": "shireham@gmail.com",
       "affiliations": [
-        "Atomwise, Inc., San Francisco, CA 94105, USA"
+        "Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA"
       ],
       "affiliation_numbers": [
-        2
+        1
       ]
     },
     {
@@ -38,7 +38,7 @@
         "Department of Chemistry, University of California, Davis, CA 95616, USA"
       ],
       "affiliation_numbers": [
-        3
+        2
       ]
     },
     {
@@ -52,7 +52,7 @@
         "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065"
       ],
       "affiliation_numbers": [
-        4
+        3
       ]
     },
     {
@@ -66,7 +66,7 @@
         "Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA"
       ],
       "affiliation_numbers": [
-        5
+        4
       ]
     },
     {
@@ -89,27 +89,23 @@
       "affiliation_number": 1
     },
     {
-      "affiliation": "Atomwise, Inc., San Francisco, CA 94105, USA",
+      "affiliation": "Department of Chemistry, University of California, Davis, CA 95616, USA",
       "affiliation_number": 2
     },
     {
-      "affiliation": "Department of Chemistry, University of California, Davis, CA 95616, USA",
+      "affiliation": "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065",
       "affiliation_number": 3
     },
     {
-      "affiliation": "Computational and Systems Biology Program, Sloan Kettering Institute, Memorial Sloan Kettering Cancer Center, New York, NY 10065",
-      "affiliation_number": 4
-    },
-    {
       "affiliation": "Department of Pharmaceutical Sciences and Department of Chemistry, University of California, Irvine, CA 92697, USA",
-      "affiliation_number": 5
+      "affiliation_number": 4
     }
   ],
   "ci_source": {
     "repo_slug": "slochower/smirnoff-host-guest-manuscript",
     "repo_owner": "slochower",
     "repo_name": "smirnoff-host-guest-manuscript",
-    "commit": "ad03222ab220fb81a5b3005cee885f4e2ec907c4"
+    "commit": "d4d14f145c627f1594069d5b8ba854c115ef2fb5"
   },
   "manuscript_stats": {
     "reference_counts": {
