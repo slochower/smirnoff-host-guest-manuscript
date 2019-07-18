@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/9aadc8770f76e11884bcc0ff396771556af115e9/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/9aadc8770f76e11884bcc0ff396771556af115e9">slochower/smirnoff-host-guest-manuscript@9aadc87</a> on July 18, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/502e69d24fd5f9a1f025830dd1ad0b1d5f5a222a/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/502e69d24fd5f9a1f025830dd1ad0b1d5f5a222a">slochower/smirnoff-host-guest-manuscript@502e69d</a> on July 18, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -65,12 +65,20 @@
 <a name="tbl:host-guests"></a>
 <table>
 <caption><span>Table 1:</span> The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. <span class="citation" data-cites="1236RpaUv">[<a href="#ref-1236RpaUv" role="doc-biblioref">32</a>]</span>. <sup>a</sup> Only the <em>R</em> enantiomer was considered. <sup>b</sup> Only the <em>S</em> enantiomer was considered. </caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Host-guest ID</th>
 <th>Host</th>
 <th>Guest</th>
 <th>Charge</th>
+<th>SMILES</th>
 </tr>
 </thead>
 <tbody>
@@ -79,258 +87,301 @@
 <td>αCD</td>
 <td>1-butylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-nmb</td>
 <td>αCD</td>
 <td>n-methylbutylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])C([H])([H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-mba</td>
 <td>αCD</td>
 <td>1-methylbutylamine<sup>a</sup></td>
 <td>+1</td>
+<td>[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-pam</td>
 <td>αCD</td>
 <td>1-pentylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-ham</td>
 <td>αCD</td>
 <td>1-hexylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-nmh</td>
 <td>αCD</td>
 <td>n-methylhexylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])C([H])([H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-mha</td>
 <td>αCD</td>
 <td>1-methylhexylamine<sup>a</sup></td>
 <td>+1</td>
+<td>[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-hpa</td>
 <td>αCD</td>
 <td>1-heptylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-mhp</td>
 <td>αCD</td>
 <td>1-methylheptylamine<sup>b</sup></td>
 <td>+1</td>
+<td>[H][C@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-oam</td>
 <td>αCD</td>
 <td>1-octylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-ham</td>
 <td>βCD</td>
 <td>1-hexylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-mha</td>
 <td>βCD</td>
 <td>1-methylhexylamine<sup>a</sup></td>
 <td>+1</td>
+<td>[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-oam</td>
 <td>βCD</td>
 <td>1-octylamine</td>
 <td>+1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BH%5D">N+</a>([H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-cbu</td>
 <td>αCD</td>
 <td>cyclobutanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-cpe</td>
 <td>αCD</td>
 <td>cyclopentanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>a-chp</td>
 <td>αCD</td>
 <td>cycloheptanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-coc</td>
 <td>αCD</td>
 <td>cyclooctanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-cbu</td>
 <td>βCD</td>
 <td>cyclobutanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-cpe</td>
 <td>βCD</td>
 <td>cyclopentanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-mch</td>
 <td>βCD</td>
 <td>1-methylcyclohexanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C1([H])[H])([H])[H])(C([H])([H])[H])O[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-m4c</td>
 <td>βCD</td>
 <td>cis-4-methylcyclohexanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-m4t</td>
 <td>βCD</td>
 <td>trans-4-methylcyclohexanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-chp</td>
 <td>βCD</td>
 <td>cycloheptanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-coc</td>
 <td>βCD</td>
 <td>cyclooctanol</td>
 <td>0</td>
+<td>[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>a-but</td>
 <td>αCD</td>
 <td>butanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="even">
 <td>a-pnt</td>
 <td>αCD</td>
 <td>pentanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="odd">
 <td>a-hex</td>
 <td>αCD</td>
 <td>hexanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="even">
 <td>a-hx2</td>
 <td>αCD</td>
 <td>trans-2-hexenoate</td>
 <td>-1</td>
+<td>[H]/C(=C(/[H])\C([H])([H])C([H])([H])C([H])([H])[H])/<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="odd">
 <td>a-hx3</td>
 <td>αCD</td>
 <td>trans-3-hexenoate</td>
 <td>-1</td>
+<td>[H]/C(=C(/[H])\C([H])([H])C([H])([H])[H])/C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="even">
 <td>a-hep</td>
 <td>αCD</td>
 <td>heptanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="odd">
 <td>a-hp6</td>
 <td>αCD</td>
 <td>6-heptenoate</td>
 <td>-1</td>
+<td>[H]C(=C([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H]</td>
 </tr>
 <tr class="even">
 <td>a-oct</td>
 <td>αCD</td>
 <td>octanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="odd">
 <td>b-pnt</td>
 <td>βCD</td>
 <td>pentanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="even">
 <td>b-hex</td>
 <td>βCD</td>
 <td>hexanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="odd">
 <td>b-hep</td>
 <td>βCD</td>
 <td>heptanoate</td>
 <td>-1</td>
+<td>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-]</td>
 </tr>
 <tr class="even">
 <td>b-ben</td>
 <td>βCD</td>
 <td>benzoate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1[H])[H])<a href="%5BO-%5D">C-</a>[O-])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-pha</td>
 <td>βCD</td>
 <td>phenylacetate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1[H])[H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-mp3</td>
 <td>βCD</td>
 <td>3-methylphenylacetate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1[H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H])C([H])([H])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-mp4</td>
 <td>βCD</td>
 <td>4-methylphenylacetate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H]</td>
 </tr>
 <tr class="even">
 <td>b-mo3</td>
 <td>βCD</td>
 <td>3-methoxyphenylacetate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1[H])OC([H])([H])[H])[H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-mo4</td>
 <td>βCD</td>
 <td>4-methoxyphenylacetate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H])[H])OC([H])([H])[H])[H]</td>
 </tr>
 <tr class="even">
 <td>b-pb3</td>
 <td>βCD</td>
 <td>3-phenylbutanoate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1[H])[H])<a href="%5BH%5D">C@</a>(C([H])([H])[H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H])[H]</td>
 </tr>
 <tr class="odd">
 <td>b-pb4</td>
 <td>βCD</td>
 <td>4-phenylbutanoate</td>
 <td>-1</td>
+<td>[H]c1c(c(c(c(c1[H])[H])C([H])([H])C([H])([H])C([H])([H])<a href="%5BO-%5D">C-</a>[O-])[H])[H]</td>
 </tr>
 </tbody>
 </table>
