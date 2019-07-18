@@ -57,6 +57,17 @@
 
       },
       {
+        "given": "I.Y.",
+        "family": "Ben-Shalom"
+
+      },
+      {
+        "given": "S.R.",
+        "family": "Brozell"
+
+      },
+
+      {
         "given": "D.S.",
         "family": "Cerutti"
 
@@ -67,6 +78,11 @@
 
       },
       {
+        "given": "V.W.D.",
+        "family": "Cruzeiro"
+
+      },
+      {
         "given": "T.A.",
         "family": "Darden"
 
@@ -74,6 +90,16 @@
       {
         "given": "R.E.",
         "family": "Duke"
+
+      },
+      {
+        "given": "D.",
+        "family": "Ghoreishi"
+
+      },
+      {
+        "given": "M.K.",
+        "family": "Gilson"
 
       },
       {
@@ -91,6 +117,10 @@
 
       },
       {
+        "given": "R.",
+        "family": "Harris"
+      },
+      {
         "given": "N.",
         "family": "Homeyer"
 
@@ -103,6 +133,11 @@
       {
         "given": "A.",
         "family": "Kovalenko"
+
+      },
+      {
+        "given": "T.",
+        "family": "Kurtzman"
 
       },
       {
@@ -151,8 +186,18 @@
 
       },
       {
+        "given": "Y.",
+        "family": "Miao"
+
+      },
+      {
         "given": "G.",
         "family": "Monard"
+
+      },
+      {
+        "given": "C.",
+        "family": "Nguyen"
 
       },
       {
@@ -196,8 +241,32 @@
 
       },
       {
+        "given": "S.",
+        "family": "Schott-Verdugo"
+
+      },
+      {
+        "given": "J.",
+        "family": "Shen"
+      }
+      {
         "given": "C.L.",
         "family": "Simmerling"
+
+      },
+      {
+        "given": "J.",
+        "family": "Smith"
+
+      },
+      {
+        "given": "R.",
+        "family": "Salomon-Ferrer"
+
+      },
+      {
+        "given": "J",
+        "family": "Swails"
 
       },
       {
@@ -208,6 +277,15 @@
       {
         "given": "J.",
         "family": "Wang"
+
+      },
+      {
+        "given": "H.",
+        "family": "Wei"
+      }
+      {
+        "given": "R.M.",
+        "family": "Wolf"
 
       },
       {
@@ -228,71 +306,6 @@
       {
         "given": "P.A.",
         "family": "Kollman"
-
-      },
-      {
-        "given": "I.Y.",
-        "family": "Ben-Shalom"
-
-      },
-      {
-        "given": "M.K.",
-        "family": "Gilson"
-
-      },
-      {
-        "given": "S.R.",
-        "family": "Bronzell"
-
-      },
-      {
-        "given": "D.",
-        "family": "Ghoreishi"
-
-      },
-      {
-        "given": "T.",
-        "family": "Kurtzman"
-
-      },
-      {
-        "given": "Y.",
-        "family": "Miao"
-
-      },
-      {
-        "given": "C.",
-        "family": "Nguyen"
-
-      },
-      {
-        "given": "S.",
-        "family": "Schott-Verdugo"
-
-      },
-      {
-        "given": "J.",
-        "family": "Smith"
-
-      },
-      {
-        "given": "R.",
-        "family": "Salomon-Ferrer"
-
-      },
-      {
-        "given": "J",
-        "family": "Swails"
-
-      },
-      {
-        "given": "R.M.",
-        "family": "Wolf"
-
-      },
-      {
-        "given": "V.W.D.",
-        "family": "Cruzeiro"
 
       }
     ]
