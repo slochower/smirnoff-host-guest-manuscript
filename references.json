@@ -710,6 +710,49 @@
   },
   {
     "publisher": "Elsevier BV",
+    "issue": "3",
+    "DOI": "10.1016/s0006-3495(97)78756-3",
+    "type": "article-journal",
+    "page": "1047-1069",
+    "source": "Crossref",
+    "title": "The statistical-thermodynamic basis for computation of binding affinities: a critical review",
+    "volume": "72",
+    "author": [
+      {
+        "given": "M.K.",
+        "family": "Gilson"
+      },
+      {
+        "given": "J.A.",
+        "family": "Given"
+      },
+      {
+        "given": "B.L.",
+        "family": "Bush"
+      },
+      {
+        "given": "J.A.",
+        "family": "McCammon"
+      }
+    ],
+    "container-title": "Biophysical Journal",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1997,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/dkv3sk",
+    "container-title-short": "Biophysical Journal",
+    "PMCID": "PMC1184492",
+    "PMID": "9138555",
+    "id": "li8h8Q8W"
+  },
+  {
+    "publisher": "Elsevier BV",
     "issue": "9",
     "DOI": "10.1016/s0032-9592(03)00258-9",
     "type": "article-journal",
@@ -1661,6 +1704,35 @@
   },
   {
     "publisher": "AIP Publishing",
+    "issue": "5",
+    "DOI": "10.1063/1.1749657",
+    "type": "article-journal",
+    "page": "300-313",
+    "source": "Crossref",
+    "title": "Statistical Mechanics of Fluid Mixtures",
+    "volume": "3",
+    "author": [
+      {
+        "given": "John G.",
+        "family": "Kirkwood"
+      }
+    ],
+    "container-title": "The Journal of Chemical Physics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1935,
+          5
+        ]
+      ]
+    },
+    "URL": "https://doi.org/djkdtx",
+    "container-title-short": "The Journal of Chemical Physics",
+    "id": "79xe5F4u"
+  },
+  {
+    "publisher": "AIP Publishing",
     "issue": "21",
     "DOI": "10.1063/1.2799191",
     "type": "article-journal",
@@ -1904,6 +1976,14 @@
         "family": "Case"
       },
       {
+        "given": "I.Y.",
+        "family": "Ben-Shalom"
+      },
+      {
+        "given": "S.R.",
+        "family": "Brozell"
+      },
+      {
         "given": "D.S.",
         "family": "Cerutti"
       },
@@ -1912,12 +1992,24 @@
         "family": "Cheatham"
       },
       {
+        "given": "V.W.D.",
+        "family": "Cruzeiro"
+      },
+      {
         "given": "T.A.",
         "family": "Darden"
       },
       {
         "given": "R.E.",
         "family": "Duke"
+      },
+      {
+        "given": "D.",
+        "family": "Ghoreishi"
+      },
+      {
+        "given": "M.K.",
+        "family": "Gilson"
       },
       {
         "given": "H.",
@@ -1932,6 +2024,10 @@
         "family": "Greene"
       },
       {
+        "given": "R.",
+        "family": "Harris"
+      },
+      {
         "given": "N.",
         "family": "Homeyer"
       },
@@ -1942,6 +2038,10 @@
       {
         "given": "A.",
         "family": "Kovalenko"
+      },
+      {
+        "given": "T.",
+        "family": "Kurtzman"
       },
       {
         "given": "T.S.",
@@ -1980,8 +2080,16 @@
         "family": "Merz"
       },
       {
+        "given": "Y.",
+        "family": "Miao"
+      },
+      {
         "given": "G.",
         "family": "Monard"
+      },
+      {
+        "given": "C.",
+        "family": "Nguyen"
       },
       {
         "given": "H.",
@@ -2016,8 +2124,28 @@
         "family": "Sagui"
       },
       {
+        "given": "S.",
+        "family": "Schott-Verdugo"
+      },
+      {
+        "given": "J.",
+        "family": "Shen"
+      },
+      {
         "given": "C.L.",
         "family": "Simmerling"
+      },
+      {
+        "given": "J.",
+        "family": "Smith"
+      },
+      {
+        "given": "R.",
+        "family": "Salomon-Ferrer"
+      },
+      {
+        "given": "J",
+        "family": "Swails"
       },
       {
         "given": "R.C.",
@@ -2026,6 +2154,14 @@
       {
         "given": "J.",
         "family": "Wang"
+      },
+      {
+        "given": "H.",
+        "family": "Wei"
+      },
+      {
+        "given": "R.M.",
+        "family": "Wolf"
       },
       {
         "given": "X.",
@@ -2042,58 +2178,6 @@
       {
         "given": "P.A.",
         "family": "Kollman"
-      },
-      {
-        "given": "I.Y.",
-        "family": "Ben-Shalom"
-      },
-      {
-        "given": "M.K.",
-        "family": "Gilson"
-      },
-      {
-        "given": "S.R.",
-        "family": "Bronzell"
-      },
-      {
-        "given": "D.",
-        "family": "Ghoreishi"
-      },
-      {
-        "given": "T.",
-        "family": "Kurtzman"
-      },
-      {
-        "given": "Y.",
-        "family": "Miao"
-      },
-      {
-        "given": "C.",
-        "family": "Nguyen"
-      },
-      {
-        "given": "S.",
-        "family": "Schott-Verdugo"
-      },
-      {
-        "given": "J.",
-        "family": "Smith"
-      },
-      {
-        "given": "R.",
-        "family": "Salomon-Ferrer"
-      },
-      {
-        "given": "J",
-        "family": "Swails"
-      },
-      {
-        "given": "R.M.",
-        "family": "Wolf"
-      },
-      {
-        "given": "V.W.D.",
-        "family": "Cruzeiro"
       }
     ],
     "id": "ltrN7ofw"
@@ -2108,7 +2192,7 @@
         [
           "2019",
           7,
-          12
+          18
         ]
       ]
     }
@@ -2137,36 +2221,7 @@
         [
           "2019",
           7,
-          12
-        ]
-      ]
-    }
-  },
-  {
-    "id": "16UiKZ8o1",
-    "type": "book",
-    "title": "A stripped-down set of just antechamber, sqm, and tleap.: choderalab/ambermini",
-    "publisher": "Chodera lab // Memorial Sloan Kettering Cancer Center",
-    "genre": "C",
-    "source": "GitHub",
-    "URL": "https://github.com/choderalab/ambermini",
-    "note": "original-date: 2014-04-14T19:38:19Z",
-    "shortTitle": "A stripped-down set of just antechamber, sqm, and tleap.",
-    "issued": {
-      "date-parts": [
-        [
-          "2017",
-          11,
-          15
-        ]
-      ]
-    },
-    "accessed": {
-      "date-parts": [
-        [
-          "2019",
-          7,
-          12
+          18
         ]
       ]
     }
@@ -2184,7 +2239,7 @@
         [
           "2019",
           7,
-          12
+          18
         ]
       ]
     }
@@ -2213,7 +2268,7 @@
         [
           "2019",
           7,
-          12
+          18
         ]
       ]
     }
@@ -2231,7 +2286,7 @@
         [
           "2019",
           7,
-          12
+          18
         ]
       ]
     }
@@ -2249,7 +2304,7 @@
         [
           "2019",
           7,
-          12
+          18
         ]
       ]
     }
