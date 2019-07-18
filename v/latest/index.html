@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/502e69d24fd5f9a1f025830dd1ad0b1d5f5a222a/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/502e69d24fd5f9a1f025830dd1ad0b1d5f5a222a">slochower/smirnoff-host-guest-manuscript@502e69d</a> on July 18, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/ec58829548a2ca520307a92d1399685347d8a930/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ec58829548a2ca520307a92d1399685347d8a930">slochower/smirnoff-host-guest-manuscript@ec58829</a> on July 18, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -411,9 +411,9 @@
 <p><span id="eq:scale_w" style="display: inline-block; position: relative; width: 100%"><span class="math display">\[
     w(\lambda_i) = 
     \begin{cases}
-    \left( \sigma(λ_i) \, \frac{\lambda_{i+1}}{2} &amp; i = 0 \\
-    \left( \sigma(λ_i) \, \frac{\lambda_{i+1} - \lambda_{i-1}}{2} &amp; i \in [1, N-1] \\
-    \left( \sigma(λ_i) \, \frac{1 - \lambda_{i-1}}{2} &amp; i = N \\
+    \left( \sigma(\lambda_i) \, \frac{\lambda_{i+1}}{2} &amp; i = 0 \\
+    \left( \sigma(\lambda_i) \, \frac{\lambda_{i+1} - \lambda_{i-1}}{2} &amp; i \in [1, N-1] \\
+    \left( \sigma(\lambda_i) \, \frac{1 - \lambda_{i-1}}{2} &amp; i = N \\
     \end{cases}
 \]</span><span style="position: absolute; right: 0em; top: 50%; line-height:0; text-align: right">(1)</span></span> </p>
 <p>fell below a threshold of 0.02 kcal/mol during the attach phase and 0.1 kcal/mol during the pull phase.</p>
@@ -652,12 +652,15 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <th></th>
 <th></th>
 <th></th>
+<th></th>
 <th>SMIRNOFF99Frosst</th>
 <th>GAFF v2.1</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td>SMIRKS</td>
 <td>Atom 1</td>
 <td>Atom 2</td>
 <td>Atom 3</td>
@@ -666,8 +669,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>Phase</td>
 <td>Height (kcal/mol)</td>
 <td>Height (kcal/mol)</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C1</td>
 <td>C2</td>
 <td>C3</td>
@@ -676,8 +681,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.20</td>
 <td>0.11</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C1</td>
 <td>C2</td>
 <td>C3</td>
@@ -686,8 +693,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.25</td>
 <td>0.29</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C1</td>
 <td>C2</td>
 <td>C3</td>
@@ -696,8 +705,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.18</td>
 <td>0.13</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[*:1]-[#6X4:2]-[#6X4:3]-[*:4]</td>
 <td>C1</td>
 <td>C2</td>
 <td>C3</td>
@@ -706,8 +717,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.16</td>
 <td>0.21</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[*:1]-[#6X4:2]-[#8X2H0:3]-[*:4]</td>
 <td>C1</td>
 <td>O5</td>
 <td>C5</td>
@@ -716,8 +729,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.38</td>
 <td>0.34</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C2</td>
 <td>C3</td>
 <td>C4</td>
@@ -726,8 +741,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.20</td>
 <td>0.11</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C2</td>
 <td>C3</td>
 <td>C4</td>
@@ -736,8 +753,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.25</td>
 <td>0.29</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C2</td>
 <td>C3</td>
 <td>C4</td>
@@ -746,8 +765,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.18</td>
 <td>0.13</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C3</td>
 <td>C4</td>
 <td>C5</td>
@@ -756,8 +777,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.20</td>
 <td>0.11</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C3</td>
 <td>C4</td>
 <td>C5</td>
@@ -766,8 +789,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.25</td>
 <td>0.29</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#6X4:2]-[#6X4:3]-[#6X4:4]</td>
 <td>C3</td>
 <td>C4</td>
 <td>C5</td>
@@ -776,8 +801,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.18</td>
 <td>0.13</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[*:1]-[#6X4:2]-[#6X4:3]-[*:4]</td>
 <td>C4</td>
 <td>C5</td>
 <td>C6</td>
@@ -786,8 +813,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.16</td>
 <td>0.21</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#1:1]-[#6X4:2]-[#6X4:3]-[#1:4]</td>
 <td>H1</td>
 <td>C1</td>
 <td>C2</td>
@@ -796,8 +825,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.15</td>
 <td>0.16</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#1:1]-[#6X4:2]-[#6X4:3]-[#1:4]</td>
 <td>H2</td>
 <td>C2</td>
 <td>C3</td>
@@ -806,8 +837,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.15</td>
 <td>0.16</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[*:1]-[#6X4:2]-[#8X2:3]-[#1:4]</td>
 <td>H2</td>
 <td>C2</td>
 <td>O2</td>
@@ -816,8 +849,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.17</td>
 <td>0.11</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#1:1]-[#6X4:2]-[#6X4:3]-[#1:4]</td>
 <td>H3</td>
 <td>C3</td>
 <td>C4</td>
@@ -826,8 +861,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.15</td>
 <td>0.16</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[*:1]-[#6X4:2]-[#8X2:3]-[#1:4]</td>
 <td>H3</td>
 <td>C3</td>
 <td>O3</td>
@@ -836,8 +873,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.17</td>
 <td>0.11</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#1:1]-[#6X4:2]-[#6X4:3]-[#1:4]</td>
 <td>H4</td>
 <td>C4</td>
 <td>C5</td>
@@ -846,8 +885,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.15</td>
 <td>0.16</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#1:1]-[#6X4:2]-[#6X4:3]-[#1:4]</td>
 <td>H5</td>
 <td>C5</td>
 <td>C6</td>
@@ -856,8 +897,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.15</td>
 <td>0.16</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#1:1]-[#6X4:2]-[#6X4:3]-[#1:4]</td>
 <td>H5</td>
 <td>C5</td>
 <td>C6</td>
@@ -866,8 +909,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.15</td>
 <td>0.16</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#8X2:2]-[#6X4:3]-[#8X2:4]</td>
 <td>O1</td>
 <td>C1</td>
 <td>O5</td>
@@ -876,8 +921,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>1.35</td>
 <td>0.97</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#6X4:1]-[#8X2:2]-[#6X4:3]-[#8X2:4]</td>
 <td>O1</td>
 <td>C1</td>
 <td>O5</td>
@@ -886,8 +933,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.85</td>
 <td>1.24</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#6X4:1]-[#8X2:2]-[#6X4:3]-[#8X2:4]</td>
 <td>O1</td>
 <td>C1</td>
 <td>O5</td>
@@ -896,8 +945,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.10</td>
 <td>0.00</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[*:1]-[#6X4:2]-[#6X4:3]-[*:4]</td>
 <td>O2</td>
 <td>C2</td>
 <td>C3</td>
@@ -906,8 +957,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.16</td>
 <td>0.21</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[#8X2:1]-[#6X4:2]-[#6X4:3]-[#8X2:4]</td>
 <td>O2</td>
 <td>C2</td>
 <td>C3</td>
@@ -916,8 +969,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>1.18</td>
 <td>1.13</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[#8X2:1]-[#6X4:2]-[#6X4:3]-[#8X2:4]</td>
 <td>O2</td>
 <td>C2</td>
 <td>C3</td>
@@ -926,8 +981,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.14</td>
 <td>0.90</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[*:1]-[#6X4:2]-[#6X4:3]-[*:4]</td>
 <td>O3</td>
 <td>C3</td>
 <td>C4</td>
@@ -936,8 +993,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.16</td>
 <td>0.21</td>
+<td></td>
 </tr>
 <tr class="odd">
+<td>[*:1]-[#6X4:2]-[#8X2:3]-[#1:4]</td>
 <td>H61</td>
 <td>C6</td>
 <td>O6</td>
@@ -946,8 +1005,10 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.17</td>
 <td>0.11</td>
+<td></td>
 </tr>
 <tr class="even">
+<td>[*:1]-[#6X4:2]-[#8X2:3]-[#1:4]</td>
 <td>H62</td>
 <td>C6</td>
 <td>O6</td>
@@ -956,6 +1017,7 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <td>0</td>
 <td>0.17</td>
 <td>0.11</td>
+<td></td>
 </tr>
 </tbody>
 </table>
