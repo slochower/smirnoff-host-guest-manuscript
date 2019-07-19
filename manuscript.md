@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-07-18'
+date-meta: '2019-07-19'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/7bec8ca50a87d794c0f92793d3b239e9a2d1e6d2/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/da1cbf25159801ce9e82ddafb91ca4d700b958a6/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@7bec8ca](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/7bec8ca50a87d794c0f92793d3b239e9a2d1e6d2)
-on July 18, 2019.
+from [slochower/smirnoff-host-guest-manuscript@da1cbf2](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/da1cbf25159801ce9e82ddafb91ca4d700b958a6)
+on July 19, 2019.
 </em></small>
 
 ## Authors
@@ -295,9 +295,9 @@ In particular, for restraint energy $U$ in $\lambda$ window $i$, we define the i
 $$
     w(\lambda_i) = 
     \begin{cases}
-    \left( \sigma(\lambda_i) \, \frac{\lambda_{i+1}}{2} & i = 0 \\
-    \left( \sigma(\lambda_i) \, \frac{\lambda_{i+1} - \lambda_{i-1}}{2} & i \in [1, N-1] \\
-    \left( \sigma(\lambda_i) \, \frac{1 - \lambda_{i-1}}{2} & i = N \\
+    \sigma(\lambda_i) \, \frac{\lambda_{i+1}}{2} & i = 0 \\
+    \sigma(\lambda_i) \, \frac{\lambda_{i+1} - \lambda_{i-1}}{2} & i \in [1, N-1] \\
+    \sigma(\lambda_i) \, \frac{1 - \lambda_{i-1}}{2} & i = N \\
     \end{cases}
 $$ {#eq:scale_w}
 

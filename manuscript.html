@@ -10,7 +10,7 @@
   <meta name="author" content="John D. Chodera" />
   <meta name="author" content="David L. Mobley" />
   <meta name="author" content="Michael K. Gilson" />
-  <meta name="dcterms.date" content="2019-07-18" />
+  <meta name="dcterms.date" content="2019-07-19" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</title>
   <style>
@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/7bec8ca50a87d794c0f92793d3b239e9a2d1e6d2/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/7bec8ca50a87d794c0f92793d3b239e9a2d1e6d2">slochower/smirnoff-host-guest-manuscript@7bec8ca</a> on July 18, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/da1cbf25159801ce9e82ddafb91ca4d700b958a6/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/da1cbf25159801ce9e82ddafb91ca4d700b958a6">slochower/smirnoff-host-guest-manuscript@da1cbf2</a> on July 19, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -411,9 +411,9 @@
 <p><span id="eq:scale_w" style="display: inline-block; position: relative; width: 100%"><span class="math display">\[
     w(\lambda_i) = 
     \begin{cases}
-    \left( \sigma(\lambda_i) \, \frac{\lambda_{i+1}}{2} &amp; i = 0 \\
-    \left( \sigma(\lambda_i) \, \frac{\lambda_{i+1} - \lambda_{i-1}}{2} &amp; i \in [1, N-1] \\
-    \left( \sigma(\lambda_i) \, \frac{1 - \lambda_{i-1}}{2} &amp; i = N \\
+    \sigma(\lambda_i) \, \frac{\lambda_{i+1}}{2} &amp; i = 0 \\
+    \sigma(\lambda_i) \, \frac{\lambda_{i+1} - \lambda_{i-1}}{2} &amp; i \in [1, N-1] \\
+    \sigma(\lambda_i) \, \frac{1 - \lambda_{i-1}}{2} &amp; i = N \\
     \end{cases}
 \]</span><span style="position: absolute; right: 0em; top: 50%; line-height:0; text-align: right">(1)</span></span> </p>
 <p>fell below a threshold of 0.02 kcal/mol during the attach phase and 0.1 kcal/mol during the pull phase.</p>
