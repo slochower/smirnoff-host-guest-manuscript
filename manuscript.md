@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/da1cbf25159801ce9e82ddafb91ca4d700b958a6/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/b7ef869de8a5abd6ef22bb77ec7a59e626867d93/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@da1cbf2](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/da1cbf25159801ce9e82ddafb91ca4d700b958a6)
+from [slochower/smirnoff-host-guest-manuscript@b7ef869](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/b7ef869de8a5abd6ef22bb77ec7a59e626867d93)
 on July 19, 2019.
 </em></small>
 
@@ -368,7 +368,7 @@ The deviations between SMIRNOFF99Frosst and GAFF v2.1 are higher for ΔH (RMSE =
 | −TΔS° | GAFF v1.7 | 2.21 | [1.74, 2.68] | -1.38 | [-1.90, -0.86] | 0.43 | [0.16, 0.68] | 0.95 | [0.54, 1.38] | -1.41 | [-0.96, -1.89] | 0.32 | [0.50, 0.10] | 
 | −TΔS° | GAFF v1.7 | 2.21 | [1.74, 2.68] | -1.38 | [-1.90, -0.86] | 0.43 | [0.16, 0.68] | 0.95 | [0.54, 1.38] | -1.41 | [-0.96, -1.89] | 0.32 | [0.50, 0.10] | 
 
-Table: Predicted thermodynamic properties for each force field relative to experiment. {#tbl:statistics} 
+Table: Predicted thermodynamic properties for each force field relative to experiment in kcal/mol. {#tbl:statistics} 
 
 ### Guest preferences for binding in the primary or secondary orientation
 The asymmetry of the hosts and the guests leads to two distinct bound states for each host-guest pair: one where the functional group of the guest sits at the primary face of the host and another where the functional group of the guest sits at the secondary face (@fig:cavity).
@@ -449,7 +449,7 @@ The dihedral parameters in GAFF v2.1 differ from those in SMIRNOFF99Frosst in a 
 There are several dihedrals that have a different number of terms (Table @tbl:S99-vs-GAFF-v2.1-missing).
 This is partly due to the addition of dihedral terms with a barrier height of exactly 0.00 kcal/mol in GAFF, which are used to override wildcard parameters that might match the same atom types. 
 For example, GAFF v2.1 applies a three term energy function to the atom types `c3-os-c3-c3`, whereas SMIRNOFF99Frosst employs a two term energy function for the hydroxyl rotation SMIRKS pattern `[#6X4:1]-[#6X4:2]-[#8X2H0:3]-[#6X4:4]`, but only the terms with periodicity 2 and 3 have nonzero barrier heights in GAFF v2.1.
-Similarly, SMIRNOFF99Frosst uses two nonzero terms to model the potential barrier for the SMIRKS pattern `[#6X4:1]-[#6X4:2]-[#8X2H1:3]-[#1:4]` yet GAFF v2.1 applies a single term with a barrier height of exactly 0.00 kcal/mol for the corresponding atom types `c3-c3-oh-ho`.
+Similarly, SMIRNOFF99Frosst uses two nonzero terms to model the potential barrier for the SMIRKS pattern `[#6X4:1]-[#6X4:2]-[#8X2H1:3]-[#1:4]`, yet GAFF v2.1 applies a single term with a barrier height of exactly 0.00 kcal/mol for this rotation (atom types `c3-c3-oh-ho`).
 The fact that GAFF employs dihedral terms with zero amplitude terms highlights the complexity that would be required to optimize existing force fields that have accumulated legacy parameters needed to maintain backwards compatibility with older force fields and simulation codes.
 
 In other cases, SMIRNOFF99Frosst and GAFF v2.1 have disagreements on the barrier height after matching the periodicity and phase for a given dihedral.
@@ -565,7 +565,7 @@ On the other hand, it is perhaps unexpected that this force field which best rep
 It is worth noting the magnitude of these effects will depend on the guest parameters, as well as water model and ion parameters as well.
 
 More broadly, the results presented in this manuscript further demonstrate that host-guest binding thermodynamics can be used to benchmark force fields, to help diagnose issues with parameters applied to specific functional groups, and to suggest directions for improvements. 
-We are therefore continuing to build out experimental host-guest datasets tuned for this purpose, and to further streamline host-guest binding calculations so that they may be incorporated into automated tools to optimize force field parameters.
+We are therefore continuing to build out experimental host-guest datasets tuned for this purpose, and to further streamline host-guest binding thermodynamics calculations so that they may be incorporated into automated tools to optimize force field parameters.
 
 ## Code and data availability
 - [GitHub repository](https://github.com/slochower/smirnoff-host-guest) used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.
