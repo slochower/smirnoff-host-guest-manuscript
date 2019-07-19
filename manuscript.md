@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/f4eaddb7605083827081399b9754131fdfd0c3d9/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/7b0866f83d634c99aae9b0fbcbc27fe5042d94e0/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@f4eaddb](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/f4eaddb7605083827081399b9754131fdfd0c3d9)
+from [slochower/smirnoff-host-guest-manuscript@7b0866f](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/7b0866f83d634c99aae9b0fbcbc27fe5042d94e0)
 on July 19, 2019.
 </em></small>
 
@@ -168,9 +168,9 @@ Calculations on these host-guest systems have been performed previously [@HVgz5r
 
 ![Structures of the two cyclodextrin hosts and 33 guest molecules in this study which together comprise 43 unique host-guest pairs. The simulation "residue name" is written beneath each guest.](images/host-guest-pairs.png){#fig:host-guest-pairs}
 
-|  Host-guest ID | Host | Guest | Charge | SMILES |
+|  Host-guest ID | Host | Guest | Charge | SMILES <!-- style="min-width: 500px" --> |
 | --- | --- | --- | --- | --- | 
-|  a-bam | αCD | 1-butylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-bam | αCD | 1-butylamine | +1 |  `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
 |  a-nmb | αCD | n-methylbutylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]` |
 |  a-mba | αCD | 1-methylbutylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
 |  a-pam | αCD | 1-pentylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
