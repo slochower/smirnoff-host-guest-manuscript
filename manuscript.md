@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/f314cc1c164d8de762996f0e414929cbc493975f/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/ca0366c6b139191521507cacb6f343d0929f7bdf/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@f314cc1](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/f314cc1c164d8de762996f0e414929cbc493975f)
+from [slochower/smirnoff-host-guest-manuscript@ca0366c](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ca0366c6b139191521507cacb6f343d0929f7bdf)
 on July 19, 2019.
 </em></small>
 
