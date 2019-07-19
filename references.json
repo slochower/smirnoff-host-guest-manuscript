@@ -1772,6 +1772,42 @@
   },
   {
     "publisher": "AIP Publishing",
+    "issue": "12",
+    "DOI": "10.1063/1.2978177",
+    "type": "article-journal",
+    "page": "124105",
+    "source": "Crossref",
+    "title": "Statistically optimal analysis of samples from multiple equilibrium states",
+    "volume": "129",
+    "author": [
+      {
+        "given": "Michael R.",
+        "family": "Shirts"
+      },
+      {
+        "given": "John D.",
+        "family": "Chodera"
+      }
+    ],
+    "container-title": "The Journal of Chemical Physics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2008,
+          9,
+          28
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cvzgk7",
+    "container-title-short": "The Journal of Chemical Physics",
+    "PMCID": "PMC2671659",
+    "PMID": "19045004",
+    "id": "x2mTWVO"
+  },
+  {
+    "publisher": "AIP Publishing",
     "issue": "2",
     "DOI": "10.1063/1.445869",
     "type": "article-journal",

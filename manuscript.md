@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/b7ef869de8a5abd6ef22bb77ec7a59e626867d93/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/84f6f2f1d2b4468ad94da189cdf36dd77621b7d3/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@b7ef869](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/b7ef869de8a5abd6ef22bb77ec7a59e626867d93)
+from [slochower/smirnoff-host-guest-manuscript@84f6f2f](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/84f6f2f1d2b4468ad94da189cdf36dd77621b7d3)
 on July 19, 2019.
 </em></small>
 
@@ -170,49 +170,49 @@ Calculations on these host-guest systems have been performed previously [@HVgz5r
 
 |  Host-guest ID | Host | Guest | Charge | SMILES |
 | --- | --- | --- | --- | --- | 
-|  a-bam | αCD | 1-butylamine | +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  a-nmb | αCD | n-methylbutylamine| +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H] |
-|  a-mba | αCD | 1-methylbutylamine^a^ | +1 | [H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H] |
-|  a-pam | αCD | 1-pentylamine| +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  a-ham | αCD | 1-hexylamine| +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  a-nmh | αCD | n-methylhexylamine | +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H] |
-|  a-mha | αCD | 1-methylhexylamine^a^ | +1 | [H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H] |
-|  a-hpa | αCD | 1-heptylamine | +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  a-mhp | αCD | 1-methylheptylamine^b^ | +1 | [H][C@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H] |
-|  a-oam | αCD | 1-octylamine | +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  b-ham | βCD | 1-hexylamine | +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  b-mha | βCD | 1-methylhexylamine^a^ | +1 | [H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H] |
-|  b-oam | βCD | 1-octylamine | +1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H] |
-|  a-cbu | αCD | cyclobutanol | 0 | [H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H] |
-|  a-cpe | αCD | cyclopentanol | 0 | [H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H] |
-|  a-chp | αCD | cycloheptanol | 0 | [H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H] |
-|  a-coc | αCD | cyclooctanol | 0 | [H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H] |
-|  b-cbu | βCD | cyclobutanol | 0 | [H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H] |
-|  b-cpe | βCD | cyclopentanol | 0 | [H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H] |
-|  b-mch | βCD | 1-methylcyclohexanol | 0 | [H]C1(C(C(C(C(C1([H])[H])([H])[H])(C([H])([H])[H])O[H])([H])[H])([H])[H])[H] |
-|  b-m4c | βCD | cis-4-methylcyclohexanol | 0 | [H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H] |
-|  b-m4t | βCD | trans-4-methylcyclohexanol | 0 | [H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H] |
-|  b-chp | βCD | cycloheptanol | 0 | [H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H] |
-|  b-coc | βCD | cyclooctanol | 0 | [H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H] |
-|  a-but | αCD | butanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  a-pnt | αCD | pentanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  a-hex | αCD | hexanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  a-hx2 | αCD | trans-2-hexenoate | -1 | [H]/C(=C(/[H])\\C([H])([H])C([H])([H])C([H])([H])[H])/[C-]([O-])[O-] |
-|  a-hx3 | αCD | trans-3-hexenoate | -1 | [H]/C(=C(/[H])\\C([H])([H])C([H])([H])[H])/C([H])([H])[C-]([O-])[O-] |
-|  a-hep | αCD | heptanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  a-hp6 | αCD | 6-heptenoate | -1 | [H]C(=C([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H] |
-|  a-oct | αCD | octanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  b-pnt | βCD | pentanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  b-hex | βCD | hexanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  b-hep | βCD | heptanoate | -1 | [H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-] |
-|  b-ben | βCD | benzoate | -1 | [H]c1c(c(c(c(c1[H])[H])[C-]([O-])[O-])[H])[H] |
-|  b-pha | βCD | phenylacetate | -1 | [H]c1c(c(c(c(c1[H])[H])C([H])([H])[C-]([O-])[O-])[H])[H] |
-|  b-mp3 | βCD | 3-methylphenylacetate | -1 | [H]c1c(c(c(c(c1[H])C([H])([H])[C-]([O-])[O-])[H])C([H])([H])[H])[H] |
-|  b-mp4 | βCD | 4-methylphenylacetate | -1 | [H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])C([H])([H])[C-]([O-])[O-])[H] |
-|  b-mo3 | βCD | 3-methoxyphenylacetate | -1 | [H]c1c(c(c(c(c1[H])OC([H])([H])[H])[H])C([H])([H])[C-]([O-])[O-])[H] |
-|  b-mo4 | βCD | 4-methoxyphenylacetate | -1 | [H]c1c(c(c(c(c1C([H])([H])[C-]([O-])[O-])[H])[H])OC([H])([H])[H])[H] |
-|  b-pb3 | βCD | 3-phenylbutanoate | -1 | [H]c1c(c(c(c(c1[H])[H])[C@]([H])(C([H])([H])[H])C([H])([H])[C-]([O-])[O-])[H])[H] |
-|  b-pb4 | βCD | 4-phenylbutanoate | -1 | [H]c1c(c(c(c(c1[H])[H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H])[H] |
+|  a-bam | αCD | 1-butylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-nmb | αCD | n-methylbutylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]` |
+|  a-mba | αCD | 1-methylbutylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
+|  a-pam | αCD | 1-pentylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-ham | αCD | 1-hexylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-nmh | αCD | n-methylhexylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]` |
+|  a-mha | αCD | 1-methylhexylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
+|  a-hpa | αCD | 1-heptylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-mhp | αCD | 1-methylheptylamine^b^ | +1 | `[H][C@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
+|  a-oam | αCD | 1-octylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  b-ham | βCD | 1-hexylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  b-mha | βCD | 1-methylhexylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
+|  b-oam | βCD | 1-octylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-cbu | αCD | cyclobutanol | 0 | `[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]` |
+|  a-cpe | αCD | cyclopentanol | 0 | `[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]` |
+|  a-chp | αCD | cycloheptanol | 0 | `[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
+|  a-coc | αCD | cyclooctanol | 0 | `[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
+|  b-cbu | βCD | cyclobutanol | 0 | `[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]` |
+|  b-cpe | βCD | cyclopentanol | 0 | `[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]` |
+|  b-mch | βCD | 1-methylcyclohexanol | 0 | `[H]C1(C(C(C(C(C1([H])[H])([H])[H])(C([H])([H])[H])O[H])([H])[H])([H])[H])[H]` |
+|  b-m4c | βCD | cis-4-methylcyclohexanol | 0 | `[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]` |
+|  b-m4t | βCD | trans-4-methylcyclohexanol | 0 | `[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]` |
+|  b-chp | βCD | cycloheptanol | 0 | `[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
+|  b-coc | βCD | cyclooctanol | 0 | `[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
+|  a-but | αCD | butanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  a-pnt | αCD | pentanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  a-hex | αCD | hexanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  a-hx2 | αCD | trans-2-hexenoate | -1 | `[H]/C(=C(/[H])\\C([H])([H])C([H])([H])C([H])([H])[H])/[C-]([O-])[O-]` |
+|  a-hx3 | αCD | trans-3-hexenoate | -1 | `[H]/C(=C(/[H])\\C([H])([H])C([H])([H])[H])/C([H])([H])[C-]([O-])[O-]` |
+|  a-hep | αCD | heptanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  a-hp6 | αCD | 6-heptenoate | -1 | `[H]C(=C([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H]` |
+|  a-oct | αCD | octanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  b-pnt | βCD | pentanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  b-hex | βCD | hexanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  b-hep | βCD | heptanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
+|  b-ben | βCD | benzoate | -1 | `[H]c1c(c(c(c(c1[H])[H])[C-]([O-])[O-])[H])[H]` |
+|  b-pha | βCD | phenylacetate | -1 | `[H]c1c(c(c(c(c1[H])[H])C([H])([H])[C-]([O-])[O-])[H])[H]` |
+|  b-mp3 | βCD | 3-methylphenylacetate | -1 | `[H]c1c(c(c(c(c1[H])C([H])([H])[C-]([O-])[O-])[H])C([H])([H])[H])[H]` |
+|  b-mp4 | βCD | 4-methylphenylacetate | -1 | `[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])C([H])([H])[C-]([O-])[O-])[H]` |
+|  b-mo3 | βCD | 3-methoxyphenylacetate | -1 | `[H]c1c(c(c(c(c1[H])OC([H])([H])[H])[H])C([H])([H])[C-]([O-])[O-])[H]` |
+|  b-mo4 | βCD | 4-methoxyphenylacetate | -1 | `[H]c1c(c(c(c(c1C([H])([H])[C-]([O-])[O-])[H])[H])OC([H])([H])[H])[H]` |
+|  b-pb3 | βCD | 3-phenylbutanoate | -1 | `[H]c1c(c(c(c(c1[H])[H])[C@]([H])(C([H])([H])[H])C([H])([H])[C-]([O-])[O-])[H])[H]` |
+|  b-pb4 | βCD | 4-phenylbutanoate | -1 | `[H]c1c(c(c(c(c1[H])[H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H])[H]` |
 
 Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. {#tbl:host-guests}
 
@@ -272,7 +272,8 @@ The total binding enthalpy is weighted by both the binding enthalpy and binding 
 
 In this manuscript, we refer to calculations where the guest functional group in the bound state is at the primary face of cyclodextrin with a `-p` suffix, and calculations where it is at the secondary face of cyclodextrin with a `-s` suffix..
 
-Thermodynamic integration was used to compute the binding free energy (ΔG°) [@79xe5F4u]. 
+Thermodynamic integration [@79xe5F4u] and the multistate Bennett acceptance ratio estimator (MBAR) [@x2mTWVO] were used to compute the binding free energy (ΔG°).
+The results presented in the main text were analyzed using thermodynamic integration.
 The binding enthalpy (ΔH) was computed as the difference in mean potential energy of the bound state (in the absence of any restraints) and the unbound state (where the guest is held far away from the host, but the conformational restraints on the host are disabled).
 The binding entropy (ΔS°) was computed by subtraction using ΔG° and ΔH.
 
@@ -366,9 +367,12 @@ The deviations between SMIRNOFF99Frosst and GAFF v2.1 are higher for ΔH (RMSE =
 | ΔH | GAFF v2.1 | 2.21 | [1.77, 2.65] | -1.64 | [-2.10, -1.20] | 0.75 | [0.58, 0.87] | 1.38 | [1.15, 1.63] | -0.69 | [0.16, -1.43] | 0.67 | [0.79, 0.52] | 
 | −TΔS° | SMIRNOFF99Frosst | 1.90 | [1.49, 2.32] | -0.78 | [-1.29, -0.24] | 0.40 | [0.14, 0.63] | 0.90 | [0.51, 1.29] | -0.83 | [-0.34, -1.34] | 0.33 | [0.50, 0.13] | 
 | −TΔS° | GAFF v1.7 | 2.21 | [1.74, 2.68] | -1.38 | [-1.90, -0.86] | 0.43 | [0.16, 0.68] | 0.95 | [0.54, 1.38] | -1.41 | [-0.96, -1.89] | 0.32 | [0.50, 0.10] | 
-| −TΔS° | GAFF v1.7 | 2.21 | [1.74, 2.68] | -1.38 | [-1.90, -0.86] | 0.43 | [0.16, 0.68] | 0.95 | [0.54, 1.38] | -1.41 | [-0.96, -1.89] | 0.32 | [0.50, 0.10] | 
+| −TΔS° | GAFF v2.1 | 1.80 | [0.68, 3.19] | -0.00 | [-0.98, 1.27] | 0.48 | [0.00, 0.97] | 1.13 | [-0.22, 1.96] | 0.08 | [1.14, -1.79] | 0.46 | [0.82, -0.02] | 
 
 Table: Predicted thermodynamic properties for each force field relative to experiment in kcal/mol. {#tbl:statistics} 
+
+Analysis of the simulations with MBAR produces very slightly improved results for SMIRNOFF99Frosst ΔG°, ΔH, and −TΔS° compared to experiment (@tbl:mbar-statistics), but they do not appear to be statistically significant.
+In particular, 
 
 ### Guest preferences for binding in the primary or secondary orientation
 The asymmetry of the hosts and the guests leads to two distinct bound states for each host-guest pair: one where the functional group of the guest sits at the primary face of the host and another where the functional group of the guest sits at the secondary face (@fig:cavity).
@@ -379,7 +383,6 @@ GAFF v1.7 predicts a large ΔΔG<sub>orientation</sub> for the cyclic alcohols c
 When GAFF v2.1 is used, the differences between primary and secondary binding range even higher, greater than 4 kcal/mol, for αCD with these two guests.
 This effect is due, at least in part, to steric clashes in the bound state for very large guests (Figure @fig:by-orientation, D), especially in the narrow primary cavity of the smaller αCD.
 It is worth noting that the experimental measurement for the the `a-coc` (αCD:cyclooctanol) complex has very large uncertainties associated with both ΔG° and ΔH.
-
 
 ![Comparisons of binding free energy (ΔG) between guests in either the primary or secondary orientation of αCD or βCD, for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). Arrows point from ΔG for the secondary to ΔG for the primary cavity. 
 (D) An overlay of cyclooctanol bound state positions (400 snapshots over 1 μs) with αCD (left) or βCD (right) in GAFF v2.1.](images/by-orientation.png){#fig:by-orientation}
@@ -498,23 +501,23 @@ Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.
 |   |  |  |  |  |  |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  ID | Atom 1 | Res 1 | Atom 2 | Res 2 | Atom 3 | Res 3 | Atom 4 | Res 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
-|  1 | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 1 | 0 | -- | 0.00 |
+|  1 | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 1 | 0 | NP | 0.00 |
 |   | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 2 | 0 | 0.10 | 0.16 |
 |   | C1 | *n* | O1 | *n* | C4 | *n+1* | C3 | *n+1* | 3 | 0 | 0.38 | 0.24 |
-|  2 | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 1 | 0 | -- | 0.00 |
+|  2 | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 1 | 0 | NP | 0.00 |
 |   | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 2 | 0 | 0.10 | 0.16 |
 |   | C1 | *n* | O1 | *n* | C4 | *n+1* | C5 | *n+1* | 3 | 0 | 0.38 | 0.24 |
-|  3 | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 1 | 0 | -- | 0.00 |
+|  3 | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 1 | 0 | NP | 0.00 |
 |   | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 2 | 0 | 0.10 | 0.16 |
 |   | C2 | *n* | C1 | *n+1* | O1 | *n+1* | C4 | *n+1* | 3 | 0 | 0.38 | 0.24 |
-|  4 | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 1 | 0 | -- | 0.02 |
+|  4 | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 1 | 0 | NP | 0.02 |
 |   | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 2 | 0 | 1.18 | 0.00 |
 |   | O1 | *n* | C4 | *n+1* | C3 | *n+1* | O3 | *n+1* | 3 | 0 | 0.14 | 1.01 |
-|  5 | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 1 | 0 | -- | 0.17 |
+|  5 | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 1 | 0 | NP | 0.17 |
 |   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 2 | 0 | 1.18 | 0.00 |
 |   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 3 | 0 | 0.14 | 0.00 |
 
-Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1-inter}
+Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names. NP: not present. {#tbl:S99-vs-GAFF-v2.1-inter}
 
 ![The dihedral energy term applied to three inter-residue dihedrals in SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names.](images/interdihedrals.png){width="100%" #fig:interdihedrals}
 
@@ -673,7 +676,7 @@ APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field
 |  b-pha | -1.70 | 0.05 | -3.24 | 0.31 | -2.55 | 0.29 | -3.98 | 0.19 |
 |  b-pnt | -1.27 | 0.32 | -2.22 | 0.25 | -1.73 | 0.29 | -2.00 | 0.16 |
 
-Table: Experimental and predicted binding free energies (ΔG). {#tbl:dG-combined}
+Table: Experimental and predicted binding free energies (ΔG°). {#tbl:dG-combined}
 
 |  System | Experimental |  | SMIRNOFF99Frosst |  | GAFF v1.7 |  | GAFF v2.1 |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -771,7 +774,17 @@ Table: Experimental and predicted binding enthalpies (ΔH). {#tbl:dH-combined}
 |  b-pha | 0.09 | 0.12 | -2.14 | 0.76 | -1.21 | 1.01 | -0.52 | 0.41 |
 |  b-pnt | -3.16 | 0.62 | -1.43 | 1.04 | -1.22 | 0.89 | -2.40 | 0.35 |
 
-Table: Experimental and predicted binding entropies (−TΔS). {#tbl:TdS-combined}
+Table: Experimental and predicted binding entropies (−TΔS°). {#tbl:TdS-combined}
+
+
+
+|      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | Tau |    |
+|  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | --- | --- |
+| ΔG° | SMIRNOFF99Frosst | 0.80 | [0.62, 1.00] | -0.04 | [-0.28, 0.20] | 0.67 | [0.22, 0.65] | 0.53 | [0.33, 0.73] | -1.45 | [-0.80, -2.07] | 0.48 | [0.32, 0.62] | 
+| ΔH | SMIRNOFF99Frosst | 1.83 | [1.37, 2.28] | 0.73 | [0.26, 1.24] | 0.44 | [0.21, 0.66] | 0.84 | [0.54, 1.18] | 0.36 | [-0.53, 1.47] | 0.52 | [0.34, 0.68] | 
+| −TΔS° | SMIRNOFF99Frosst | 1.84 | [1.44, 2.25] | -0.76 | [-1.26, -0.26] | 0.40 | [0.15, 0.63] | 0.87 | [0.50, 1.24] | -0.84 | [-1.33, -0.36] | 0.32 | [0.11, -0.50] | 
+
+Table: Predicted thermodynamic properties for SMIRNOFF99Frosst relative to experiment in kcal/mol, analyzed using MBAR. {#tbl:mbar-statistics} 
 
 |      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | Tau |    |
 |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | --- | --- |
@@ -819,10 +832,10 @@ Table: Predicted thermodynamic properties for each force field relative to exper
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v1.7 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
-|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
+|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | NP |
 |  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
 
-Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to Figure @fig:atom-names. {#tbl:S99-vs-GAFF-v1.7}
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. Atom names refer to Figure @fig:atom-names. NP: not present. {#tbl:S99-vs-GAFF-v1.7}
 
 
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
@@ -830,33 +843,33 @@ Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. At
 |  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
 |  C1 | C2 | O2 | HO2 | 1 | 0 | 0.25 | -- |
 |  C1 | C2 | O2 | HO2 | 3 | 0 | 0.16 | 0.00 |
-|  C1 | O5 | C5 | C4 | 1 | 0 | -- | 0.00 |
+|  C1 | O5 | C5 | C4 | 1 | 0 | NP | 0.00 |
 |  C1 | O5 | C5 | C4 | 2 | 0 | 0.10 | 0.16 |
 |  C1 | O5 | C5 | C4 | 3 | 0 | 0.38 | 0.24 |
-|  C1 | O5 | C5 | C6 | 1 | 0 | -- | 0.00 |
+|  C1 | O5 | C5 | C6 | 1 | 0 | NP | 0.00 |
 |  C1 | O5 | C5 | C6 | 2 | 0 | 0.10 | 0.16 |
 |  C1 | O5 | C5 | C6 | 3 | 0 | 0.38 | 0.24 |
-|  C2 | C1 | O5 | C5 | 1 | 0 | -- | 0.00 |
+|  C2 | C1 | O5 | C5 | 1 | 0 | NP | 0.00 |
 |  C2 | C1 | O5 | C5 | 2 | 0 | 0.10 | 0.16 |
 |  C2 | C1 | O5 | C5 | 3 | 0 | 0.38 | 0.24 |
-|  C2 | C3 | O3 | HO3 | 1 | 0 | 0.25 | -- |
+|  C2 | C3 | O3 | HO3 | 1 | 0 | 0.25 | NP |
 |  C2 | C3 | O3 | HO3 | 3 | 0 | 0.16 | 0.00 |
-|  C5 | C6 | O6 | HO6 | 1 | 0 | 0.25 | -- |
+|  C5 | C6 | O6 | HO6 | 1 | 0 | 0.25 | NP |
 |  C5 | C6 | O6 | HO6 | 3 | 0 | 0.16 | 0.00 |
-|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | -- |
+|  H1 | C1 | C2 | O2 | 1 | 0 | 0.25 | NP |
 |  H1 | C1 | C2 | O2 | 3 | 0 | 0.00 | 0.16 |
-|  O1 | C1 | C2 | O2 | 1 | 0 | -- | 0.02 |
+|  O1 | C1 | C2 | O2 | 1 | 0 | NP | 0.02 |
 |  O1 | C1 | C2 | O2 | 2 | 0 | 1.18 | 0.00 |
 |  O1 | C1 | C2 | O2 | 3 | 0 | 0.14 | 1.01 |
-|  O2 | C2 | C1 | O5 | 1 | 0 | -- | 0.02 |
+|  O2 | C2 | C1 | O5 | 1 | 0 | NP | 0.02 |
 |  O2 | C2 | C1 | O5 | 2 | 0 | 1.18 | 0.00 |
 |  O2 | C2 | C1 | O5 | 3 | 0 | 0.14 | 1.01 |
-|  O5 | C5 | C6 | O6 | 1 | 0 | -- | 0.02 |
+|  O5 | C5 | C6 | O6 | 1 | 0 | NP | 0.02 |
 |  O5 | C5 | C6 | O6 | 2 | 0 | 1.18 | 0.00 |
 |  O5 | C5 | C6 | O6 | 3 | 0 | 0.14 | 1.01 |
-|  HO2 | O2 | C2 | C3 | 1 | 0 | 0.25 | -- |
+|  HO2 | O2 | C2 | C3 | 1 | 0 | 0.25 | NP |
 |  HO2 | O2 | C2 | C3 | 3 | 0 | 0.16 | 0.00 |
-|  HO3 | O3 | C3 | C4 | 1 | 0 | 0.25 | -- |
+|  HO3 | O3 | C3 | C4 | 1 | 0 | 0.25 | NP |
 |  HO3 | O3 | C3 | C4 | 3 | 0 | 0.16 | 0.00 |
 
-Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the corresponding term in the other force field. Atom names refer to @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1-missing}
+Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1, where one dihedral has fewer or more periodicity terms than the corresponding term in the other force field. Atom names refer to @fig:atom-names. NP: not present. {#tbl:S99-vs-GAFF-v2.1-missing}
