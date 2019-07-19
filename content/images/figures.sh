@@ -17,6 +17,14 @@ python ../../build/merge-subfigures.py --input \
     GAFF-v2.1-vs-Experiment-dH.png \
     --geometry 2x3 --output dG-dH.png
 
+convert \( dG-dH.png +append \) \
+ \( functional-group-legend.png +append \) \
+ -gravity center \
+ -append tmp.png
+
+mv tmp.png dG-dH.png
+
+
 # Figure 4
 
 python ../../build/merge-subfigures.py --input \

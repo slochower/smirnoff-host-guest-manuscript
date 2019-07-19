@@ -12,6 +12,9 @@ def int_to_letter(int):
 def label(input, output, annotation, pointsize=18):
 
     command = f"""
+    export MAGICK_HOME="$HOME/Documents/ImageMagick-7.0.8"; \
+    export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"; 
+    export PATH="$HOME/bin:$MAGICK_HOME/bin:$PATH"; \
     convert \
     -font arial \
     -stroke black \
@@ -32,6 +35,9 @@ def get_sizes(input, width=True):
 
     if width:
         command = f"""
+        export MAGICK_HOME="$HOME/Documents/ImageMagick-7.0.8"; \
+        export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"; 
+        export PATH="$HOME/bin:$MAGICK_HOME/bin:$PATH"; \
         convert \
         {input} \
         -ping \
@@ -41,6 +47,9 @@ def get_sizes(input, width=True):
         """
     else:
         command = f"""
+        export MAGICK_HOME="$HOME/Documents/ImageMagick-7.0.8"; \
+        export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"; 
+        export PATH="$HOME/bin:$MAGICK_HOME/bin:$PATH"; \
         convert \
         {input} \
         -ping \
@@ -61,6 +70,9 @@ def resize(input, output, dim, width=True):
 
     if width:
         command = f"""
+        export MAGICK_HOME="$HOME/Documents/ImageMagick-7.0.8"; \
+        export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"; 
+        export PATH="$HOME/bin:$MAGICK_HOME/bin:$PATH"; \
         convert \
         -density 300 \
         -resize {dim}x \
@@ -69,6 +81,9 @@ def resize(input, output, dim, width=True):
         """
     else:
         command = f"""
+        export MAGICK_HOME="$HOME/Documents/ImageMagick-7.0.8"; \
+        export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"; 
+        export PATH="$HOME/bin:$MAGICK_HOME/bin:$PATH"; \
         convert \
         -density 300 \
         -resize x{dim} \
@@ -84,6 +99,9 @@ def tile(output, geometry="2x2", gravity="center"):
     # The `<` means don't make smaller, I think.
 
     command = f"""
+    export MAGICK_HOME="$HOME/Documents/ImageMagick-7.0.8"; \
+    export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"; 
+    export PATH="$HOME/bin:$MAGICK_HOME/bin:$PATH"; \
     montage \
     tmp/tmp-?.png \
     -tile {geometry} \
