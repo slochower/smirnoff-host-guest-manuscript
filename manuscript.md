@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/84f6f2f1d2b4468ad94da189cdf36dd77621b7d3/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/f4eaddb7605083827081399b9754131fdfd0c3d9/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@84f6f2f](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/84f6f2f1d2b4468ad94da189cdf36dd77621b7d3)
+from [slochower/smirnoff-host-guest-manuscript@f4eaddb](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/f4eaddb7605083827081399b9754131fdfd0c3d9)
 on July 19, 2019.
 </em></small>
 
@@ -273,7 +273,7 @@ The total binding enthalpy is weighted by both the binding enthalpy and binding 
 In this manuscript, we refer to calculations where the guest functional group in the bound state is at the primary face of cyclodextrin with a `-p` suffix, and calculations where it is at the secondary face of cyclodextrin with a `-s` suffix..
 
 Thermodynamic integration [@79xe5F4u] and the multistate Bennett acceptance ratio estimator (MBAR) [@x2mTWVO] were used to compute the binding free energy (ΔG°).
-The results presented in the main text were analyzed using thermodynamic integration.
+The results presented in the main text were analyzed using thermodynamic integration to be consistent with prior analysis presented in Henriksen, *et al.* [@HVgz5rZq].
 The binding enthalpy (ΔH) was computed as the difference in mean potential energy of the bound state (in the absence of any restraints) and the unbound state (where the guest is held far away from the host, but the conformational restraints on the host are disabled).
 The binding entropy (ΔS°) was computed by subtraction using ΔG° and ΔH.
 
@@ -371,8 +371,7 @@ The deviations between SMIRNOFF99Frosst and GAFF v2.1 are higher for ΔH (RMSE =
 
 Table: Predicted thermodynamic properties for each force field relative to experiment in kcal/mol. {#tbl:statistics} 
 
-Analysis of the simulations with MBAR produces very slightly improved results for SMIRNOFF99Frosst ΔG°, ΔH, and −TΔS° compared to experiment (@tbl:mbar-statistics), but they do not appear to be statistically significant.
-In particular, 
+Analysis of the simulations with MBAR produces very slightly improved results for SMIRNOFF99Frosst ΔG°, ΔH, and −TΔS° compared to experiment (Table @tbl:mbar-statistics), but they do not appear to be statistically significant.
 
 ### Guest preferences for binding in the primary or secondary orientation
 The asymmetry of the hosts and the guests leads to two distinct bound states for each host-guest pair: one where the functional group of the guest sits at the primary face of the host and another where the functional group of the guest sits at the secondary face (@fig:cavity).
@@ -841,7 +840,7 @@ Table: Dihedral parameter differences between SMIRNOFF99Frosst and GAFF v1.7. At
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 |  Atom 1 | Atom 2 | Atom 3 | Atom 4 | Per | Phase | Height (kcal/mol) | Height (kcal/mol) |
-|  C1 | C2 | O2 | HO2 | 1 | 0 | 0.25 | -- |
+|  C1 | C2 | O2 | HO2 | 1 | 0 | 0.25 | NP |
 |  C1 | C2 | O2 | HO2 | 3 | 0 | 0.16 | 0.00 |
 |  C1 | O5 | C5 | C4 | 1 | 0 | NP | 0.00 |
 |  C1 | O5 | C5 | C4 | 2 | 0 | 0.10 | 0.16 |
