@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/5b970975602f7318858f17217343aa7ebd262bfd/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/9ce4e01bc7299cb54702f3a6351cb6a1161daabe/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@5b97097](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/5b970975602f7318858f17217343aa7ebd262bfd)
+from [slochower/smirnoff-host-guest-manuscript@9ce4e01](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/9ce4e01bc7299cb54702f3a6351cb6a1161daabe)
 on July 20, 2019.
 </em></small>
 
@@ -111,15 +111,15 @@ These results suggest that SMIRNOFF99Frosst performs competitively with existing
 
 ## Introduction
 
-The accurate prediction of protein-ligand binding free energies is a key goal of computational chemistry, with key applications in early stage drug discovery.
+The accurate prediction of protein-ligand binding free energies is a central goal of computational chemistry, with key applications in early stage drug discovery.
 However, calculations of protein-ligand binding thermodynamics still involve a number of challenging choices, including the choice of empirical force field, specifying the protonation states of ionizable residues, adding hydrogens and otherwise adjusting the initial protein structure, and positioning the candidate ligand in the binding pocket.
 Predictions of protein-ligand absolute binding free energies have achieved root mean square errors around 1-2 kcal/mol for "well-behaved" systems [@9MLPuYAQ; @1CuDE1c2r; @mdqdy96N], with deviations an order of magnitude larger for some protein families with slow degrees of freedom [@15iR76Uc].
 Retrospective relative free energy calculations on a series of congeneric ligands, using proprietary methods, have also achieved root mean square errors compared to experiment of around 1 kcal/mol [@HQi6ihVB; @B182mNck; @166JLvkLU].
 However, it is not possible to determine how much of the prediction error can be attributed to each of the decisions made by the modeler, as opposed to accuracy limitations of the force field.
 
 By minimizing the ambiguities involved in modeling protein-ligand complexes, host-guest systems offer a way to isolate and directly probe force field error.
-A variety of techniques for computing absolute binding free energies in host-guest systems have shown accuracy of ~1 kcal/mol, as highlighted in the recent SAMPL5 and SAMPL6 blind challenges [@BGsUYQln; @9MLPuYAQ].
-These techniques include both quantum and classical dynamics, employing a range of energy and solvation models, with some techniques having knowledge-based steps, docking, or clustering [@rOVoXhRJ; @Dn1HX5lD; @kj7fJ3fg; @l8KUmyk3; @1935a9V0d; @ku7PPPs; @ScmrI810; @bKuLAjgi].
+A variety of techniques for computing absolute binding free energies have been applied to host-guest systems, and some have shown accuracy as good as ~1 kcal/mol, as highlighted in the recent SAMPL5 and SAMPL6 blind challenges [@BGsUYQln; @9MLPuYAQ].
+The techniques applied to this problem have included both quantum and classical dynamics, employing a range of energy and solvation models, with some techniques having knowledge-based steps, docking, or clustering [@rOVoXhRJ; @Dn1HX5lD; @kj7fJ3fg; @l8KUmyk3; @1935a9V0d; @ku7PPPs; @ScmrI810; @bKuLAjgi].
 The attach-pull-release (APR) method has consistently been ranked among the most reliable techniques for predicting binding thermodynamics of host-guest complexes in blind challenges [@BGsUYQln; @GA1AFcUw].
 In APR, the reversible work of transferring the guest from the binding site to solution, via a physical pathway, is computed using a series of umbrella sampling windows.
 Simulating each window and integrating over the partial derivative of the restraint energy with respect to the restraint target, in each window, is used to generate a potential of mean force along the pulling coordinate, yielding the binding free energy at standard state, ΔG° after applying an analytic correction to account for the effective concentration of the guest during the simulation [@li8h8Q8W].
@@ -208,7 +208,7 @@ Table: The 43 unique host-guest combinations used in this study. The formal char
 
 ### Application of force field parameters
 
-We sought to compare force fields directly and therefore attempted to minimize additional differences between the simulations with each force field.
+We sought to compare force fields directly and therefore attempted to minimize additional differences among the simulations with each force field.
 In all simulations, we applied AM1-BCC [@LxrgIkt0; @BkLoOd0N] partial atomic charges to both the host and guest molecules using the `antechamber` program in AmberTools16 [@ltrN7ofw].
 The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure @fig:atom-names); each glucose monomer in the cyclodextrin polymer has identical charges.
 After removing the capping atoms, the net charge of the glucose monomer was -0.064 e.
@@ -231,7 +231,7 @@ Ongoing updates to the Open Force Field Toolkit may result in changes to how thi
 ### Thermodynamic calculation
 We used the attach-pull-release (APR) method, as implemented in the open source package pAPRika version 0.0.3, to calculate absolute binding free energies.
 A complete description of the APR method has been provided in the literature [@1935a9V0d; @W9FLyOZr; @GA1AFcUw; @1HWPx2yMR].
-The attachment and release phases consisted of 15 independent windows.
+The attachment and release phases each consisted of 15 independent windows.
 During the attachment phase, the force constants on the host and guest are scaled by a $\lambda$ parameter that goes from $\lambda = 0$, at which point all restraints are turned off, to $\lambda = 1$, at which point all restraints are at their maximum force constant. 
 The $\lambda$ windows are more densely spaced where the force constant is smaller to improve sampling along highly curved regions of the potential of mean force.
 These restraints include a set of distance, angle, and torsion restraints that orient the host and guest along the long axis of the simulation box.
@@ -247,7 +247,7 @@ The pulling phase consisted of 45 independent, equally spaced windows.
 During the pulling phase, the $\lambda$ parameter represents the target value of a distance restraint with constant force constant.
 This target distance is increased uniformly in 44 increments of 0.4 Å, yielding windows that separate the host and guest by 18 Å over the course of the calculation.
 
-Due to the asymmetry of the primary and secondary alcohols of cyclodextrin (Figure @fig:cavity), and the lack of symmetry of the small molecule guests, there are generally two distinct binding poses that do not interconvert during the simulation timescale.
+Due to the asymmetry of the primary and secondary alcohols of cyclodextrin (Figure @fig:cavity), as well as of the small molecule guests, there are generally two distinct binding poses that do not interconvert during the simulation timescale.
 To account for this effect, we separately compute the binding free energy and enthalpy for each orientation [@1935a9V0d] and combine the results to produce a single value for each host-guest combination using the following equation:
 
 \begin{equation}
@@ -263,7 +263,7 @@ The total binding enthalpy is weighted by both the binding enthalpy and binding 
 In this manuscript, we refer to calculations where the guest functional group in the bound state is at the primary face of cyclodextrin with a `-p` suffix, and calculations where it is at the secondary face of cyclodextrin with a `-s` suffix..
 
 Thermodynamic integration [@79xe5F4u] and the multistate Bennett acceptance ratio estimator (MBAR) [@x2mTWVO] were used to compute the binding free energy (ΔG°).
-The results presented in the main text were analyzed using thermodynamic integration to be consistent with prior analysis presented in Henriksen, *et al.* [@HVgz5rZq].
+The results presented in the main text are those analyzed using thermodynamic integration to be consistent with prior analysis presented in Henriksen, *et al.* [@HVgz5rZq].
 The binding enthalpy (ΔH) was computed as the difference in mean potential energy of the bound state (in the absence of any restraints) and the unbound state (where the guest is held far away from the host, but the conformational restraints on the host are disabled).
 The binding entropy (ΔS°) was computed by subtraction using ΔG° and ΔH.
 
@@ -275,7 +275,7 @@ Solvation consisted of 2000 TIP3P waters for the αCD systems and 2210 waters fo
 The host and guest were oriented via non-interacting dummy atoms along the simulation box's long $z$ axis, to allow use of an elongated periodic box that reduces the amount of solvent required for the calculation.
 Each simulation contained enough Na^+^ or Cl^-^ ions to neutralize the host-guest complex and an additional 50 mM NaCl to match the experimental conditions in [@1236RpaUv]. 
 In the GAFF simulations, hydrogen mass repartitioning [@IGZ99oJ8] was used to adjust the mass of hydrogen atoms by a factor of 3 and decreasing the mass of the bound heavy atoms proportionally, keeping the total molecular weight of each molecule constant and enabling a simulation timestep of 4 fs. 
-Hydrogen mass repartitioning produces excellent agreement on thermodynamic observables for other cyclodextrin-guest calculations, with deviations within statistical uncertainty [@1935a9V0d].
+Hydrogen mass repartitioning produces negligible changes in computed thermodynamic observables for other cyclodextrin-guest calculations, with deviations within statistical uncertainty [@1935a9V0d].
 Equilibration consisted of 50,000 steps of energy minimization, 100 ps of heating from 0 to 300 K, and then 2000 ps of additional NPT simulation. 
 AMBER's Langevin thermostat with a collision rate of 1 ps^-1^, the Monte Carlo barostat, a nonbonded cutoff of 9 Å and default PME parameters, were used for the NPT simulations.
 An isotropic analytic correction to the Lennard-Jones interactions is applied beyond the cutoff distance [@sMVo0eOR].
@@ -327,7 +327,7 @@ Despite having far fewer numerical parameters, SMIRNOFF99Frosst does about as we
 Thus, SMIRNOFF99Frosst yields an overall ΔG° RMSE from experiment of 0.9 [0.7, 1.1] kcal/mol across the 43 host-guest systems, compared to the statistically indistinguishable 0.9 [0.7, 1.1] kcal/mol for GAFF v1.7, and distinct from 1.7 [1.5, 1.9] kcal/mol for GAFF v2.1 (where the 95% confidence interval is written in brackets) as detailed in Figure @fig:dG-dH; Tables @tbl:statistics, @tbl:dG-combined. 
 
 On the whole, GAFF v1.7 agrees well with SMIRNOFF99Frosst (Figure @fig:dG-by-orientation), as the RMSE and MSE between their results are 0.8 [0.6, 1.0] kcal/mol and -0.5 [-0.3, -0.7] kcal/mol.
-This result is not surprising as GAFF v1.7 and SMIRNOFF99Frosst may be considered sibling force fields with a common ancestor in AMBER's parm99.
+This result is not surprising as GAFF v1.7 and SMIRNOFF99Frosst may be considered cousin force fields with a common ancestor in AMBER's parm99.
 Both SMIRNOFF99Frosst and GAFF v1.7 systematically underestimate the binding affinity for cyclic alcohols, with MSEs of 0.7 [0.2, 1.2] kcal/mol and 0.9 [0.4, 1.4] kcal/mol, respectively. 
 In contrast, GAFF v2.1 significantly overestimates the binding of all compounds, leading to MSE and RMSE values of -1.6 [-1.7, -1.4] kcal/mol and 1.6 [1.4, 1.8] kcal/mol, respectively.
 However, GAFF v2.1 has a particularly good correlation with experiment across all functional group classes, with R² of 0.8 [0.6, 0.9], compared with 0.3 [0.1, 0.6] and 0.5 [0.3, 0.7] for SMIRNOFF99Frosst and GAFF 1.7, respectively.
@@ -514,13 +514,13 @@ There are no improper dihedrals in αCD or βCD, nor any of the guests.
 
 ### Structural consequences of the force field parameter differences
 
-We observed a substantial difference between the conformational flexibility of the uncomplexed cyclodextrins in solution when simulated with GAFF v2.1 versus SMIRNOFF99Frosst. 
+We observed a substantial difference between the conformational flexibility of the uncomplexed cyclodextrins in solution when simulated with GAFF v2.1 versus SMIRNOFF99Frosst and GAFF v1.7. 
 With SMIRNOFF99Frosst and GAFF v1.7, the average RMSD of βCD, relative to the initial structure, is between 2.0--2.5 Å over 43 μs of unrestrained simulation, while with GAFF v2.1, the average RMSD is <1.0 Å (Figure @fig:flexibility).
 Not only are the RMSDs greater for SMIRNOFF99Frosst and GAFF v1.7, but there is greater variance in their RMSDs compared to GAFF v2.1, indicating greater flexibility.
 This large difference in structural fluctuations is clearly visible in the structure overlays also shown in the figure, which shows that GAFF v2.1 is the only one of the three force fields that leads to maintainance of a clearly defined binding cavity.
 In this respect, it is similar to the q4md-CD force field [@j7JJedX4], which was designed specifically for cyclodextrins and which also maintains a relatively well-defined cavity [@HVgz5rZq].
 
-![Top: Root mean square deviation (RMSD in Å) of free βCD in the three force fields. Each RMSD is calculated relative to a gas-phase minimization of βCD with GAFF v1.7. A 1000 frame moving average is plotted in red. Middle: top-view of the open cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the open cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity.](images/cyclodextrin-flexibility.png){#fig:flexibility width=100%}
+![Top: Root mean square deviation (RMSD in Å) of free βCD in the three force fields. Each RMSD is calculated relative to the initial structure, a gas-phase minimization of βCD with GAFF v1.7. A 1000 frame moving average is plotted in red. Middle: top-view of the unoccupied cavity of βCD with no guest (200 snapshots over 1 μs). Bottom: side-view of the unoccupied cavity. The carbons are colored blue in SMIRNOFF99Frosst, green in GAFF v1.7, and purple in GAFF v2.1. Hydrogen atoms have been hidden for clarity.](images/cyclodextrin-flexibility.png){#fig:flexibility width=100%}
 
 This difference may be further analyzed by considering the "flip" pseudodihedral O2<sub>n</sub>--C1<sub>n</sub>--C4<sub>n+1</sub>--O3<sub>n+1</sub>, which characterizes the orientation of glucose monomers relative to their neighbors.
 An angle of 0° corresponds approximately to a glucose that forms part of a cylindrical wall of the binding cavity, while an angle of ± 90° indicates a glucose that has flipped to put its plane parallel to the top and bottom of the cylinder, partly filling the cavity.
