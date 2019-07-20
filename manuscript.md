@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-07-19'
+date-meta: '2019-07-20'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/fbd19ff34930efed0625af0d9cf9eb84dca5d7d8/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/1265ae137f436309ec76b1b3ed93d6ebccf3aa4d/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@fbd19ff](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/fbd19ff34930efed0625af0d9cf9eb84dca5d7d8)
-on July 19, 2019.
+from [slochower/smirnoff-host-guest-manuscript@1265ae1](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/1265ae137f436309ec76b1b3ed93d6ebccf3aa4d)
+on July 20, 2019.
 </em></small>
 
 ## Authors
@@ -610,7 +610,7 @@ APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field
 
 ![Binding free energies (ΔG) with the primary orientation results colored in blue and secondary orientation results colored in green.](images/by-orientation-comparison.png){width="100%" #fig:by-orientation-comparison}
 
-![Binding free energies (ΔG) replotted from Figure @fig:by-orientation-comparison with points whose difference in binding free energy along either axis is greater than 2 kcal/mol shown in color. Arrows point from primary to secondary. **The arrow direction should match Figure @fig:by-orientation, but it doesn't.**](images/by-orientation-highlight.png){width="100%" #fig:by-orientation-highlight}
+![Binding free energies (ΔG) replotted from Figure @fig:by-orientation-comparison with points whose difference in binding free energy along either axis is greater than 2 kcal/mol shown in color. Arrows point from ΔG° for the secondary to ΔG° for the primary cavity (images/by-orientation-highlight.png){width="100%" #fig:by-orientation-highlight}
 
 ![Comparison of calculated absolute binding free energies (ΔG°) between force field combinations. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/dG-by-orientation.png){width="100%" #fig:dG-by-orientation}
 
