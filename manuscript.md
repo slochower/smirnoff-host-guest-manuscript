@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/94c61155e817d77a7193ad49918fb68d55a209ed/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/5b970975602f7318858f17217343aa7ebd262bfd/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@94c6115](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/94c61155e817d77a7193ad49918fb68d55a209ed)
+from [slochower/smirnoff-host-guest-manuscript@5b97097](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/5b970975602f7318858f17217343aa7ebd262bfd)
 on July 20, 2019.
 </em></small>
 
@@ -160,7 +160,7 @@ Calculations on these host-guest systems have been performed previously [@HVgz5r
 
 |  Host-guest ID | Host | Guest | Charge | SMILES |
 | --- | --- | --- | --- | --- | 
-|  a-bam | αCD | 1-butylamine | +1 |  <!-- style="min-width: 500px" --> `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
+|  a-bam | αCD | 1-butylamine | +1 |  <!-- style="min-width: 400px" --> `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
 |  a-nmb | αCD | n-methylbutylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]` |
 |  a-mba | αCD | 1-methylbutylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
 |  a-pam | αCD | 1-pentylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
