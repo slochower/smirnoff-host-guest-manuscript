@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/af3ed39c3966bbfb5ed16762e4c1190085c2aefe/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/94c61155e817d77a7193ad49918fb68d55a209ed/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@af3ed39](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/af3ed39c3966bbfb5ed16762e4c1190085c2aefe)
+from [slochower/smirnoff-host-guest-manuscript@94c6115](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/94c61155e817d77a7193ad49918fb68d55a209ed)
 on July 20, 2019.
 </em></small>
 
@@ -93,16 +93,6 @@ on July 20, 2019.
      Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA
   </small>
 
-
-## Outstanding Issues
-
-- [Update tables with CSV link and SMILES #42](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/42)
-- [Update figure legends and labels with additional information #46](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/46)
-- [Update GAFF v2.1 statistics in the text #47](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/47)
-- [Consider adding discussion of Kendall's tau #49](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/49)
-- [Update SI figure captions with letter numbering #50](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/50)
-- [Refine language around "fewer parameters" claims #51](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/51)
-- [Cleanup table headers #56](https://github.com/slochower/smirnoff-host-guest-manuscript/issues/56)
 
 ## Abstract {.page_break_before}
 
