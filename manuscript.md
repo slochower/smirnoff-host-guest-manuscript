@@ -23,9 +23,9 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/1265ae137f436309ec76b1b3ed93d6ebccf3aa4d/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/af3ed39c3966bbfb5ed16762e4c1190085c2aefe/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@1265ae1](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/1265ae137f436309ec76b1b3ed93d6ebccf3aa4d)
+from [slochower/smirnoff-host-guest-manuscript@af3ed39](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/af3ed39c3966bbfb5ed16762e4c1190085c2aefe)
 on July 20, 2019.
 </em></small>
 
@@ -383,7 +383,7 @@ When GAFF v2.1 is used, the differences between primary and secondary binding ra
 This effect is due, at least in part, to steric clashes in the bound state for very large guests (Figure @fig:by-orientation, D), especially in the narrow primary cavity of the smaller αCD.
 It is worth noting that the experimental measurement for the the `a-coc` (αCD:cyclooctanol) complex has very large uncertainties associated with both ΔG° and ΔH.
 
-![Comparisons of binding free energy (ΔG) between guests in either the primary or secondary orientation of αCD or βCD, for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). Arrows point from ΔG for the secondary to ΔG for the primary cavity. 
+![Comparisons of binding free energy (ΔG) between guests in either the primary or secondary orientation of αCD or βCD, for SMIRNOFF99Frosst (A), GAFF v1.7 (B), or GAFF v2.1 (C). Arrows point from ΔG° for the secondary to ΔG° for the primary cavity. 
 (D) An overlay of cyclooctanol bound state positions (400 snapshots over 1 μs) with αCD (left) or βCD (right) in GAFF v2.1.](images/by-orientation.png){#fig:by-orientation}
 
 ### Comparison of results for αCD versus βCD
@@ -495,7 +495,7 @@ Surprisingly, glucose monomers in GAFF v2.1 penetrate the open cavity much less 
 | [*:1]-[#6X4:2]-[#8X2:3]-[#1:4] |  H61 | C6 | O6 | HO6 | 3 | 0 | 0.17 | 0.11 |
 | [*:1]-[#6X4:2]-[#8X2:3]-[#1:4] |  H62 | C6 | O6 | HO6 | 3 | 0 | 0.17 | 0.11 |
 
-Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.1 for cases where the phase and periodicity of the energy term match but the barrier height does not. Atom names refer to Figure @fig:atom-names. {#tbl:S99-vs-GAFF-v2.1}
+Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.1 for cases where the phase and periodicity of the energy term match but the barrier height does not. Atom names refer to Figure @fig:atom-names. Barrier height in kcal/mol. {#tbl:S99-vs-GAFF-v2.1}
 
 |   |  |  |  |  |  |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v2.1 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -516,7 +516,7 @@ Table: Dihedral barrier height differences between SMIRNOFF99Frosst and GAFF v2.
 |   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 2 | 0 | 1.18 | 0.00 |
 |   | O1 | *n* | C4 | *n+1* | C5 | *n+1* | O5 | *n+1* | 3 | 0 | 0.14 | 0.00 |
 
-Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names. NP: not present. {#tbl:S99-vs-GAFF-v2.1-inter}
+Table: Inter-residue dihedral parameter differences between SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names. NP: not present. Barrier height in kcal/mol. {#tbl:S99-vs-GAFF-v2.1-inter}
 
 ![The dihedral energy term applied to three inter-residue dihedrals in SMIRNOFF99Frosst and GAFF v2.1. Atom names refer to Figure @fig:atom-names.](images/interdihedrals.png){width="100%" #fig:interdihedrals}
 
@@ -603,14 +603,13 @@ APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field
 
 ![Comparison of AM1-BCC partial atomic charges assigned by running `antechamber` on a single glucose monomer (A) or on an entire αCD molecule (B) with the option `-pl 10` to specify the maximum path length used to determine the equivalence of atomic charges.](images/charge-schemes.png){width=100% #fig:charge-schemes}
 
-![Comparison of calculated absolute binding entropies (−TΔS) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/TdS.png){width="100%" #fig:TdS}
+![Comparison of calculated absolute binding entropies (−TΔS°) with experiment with SMIRNOFF99Frosst parameters (top), GAFF v1.7 parameters (middle), or GAFF v2.1 parameters (bottom) applied to both host and guest. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/TdS.png){width="100%" #fig:TdS}
 
 ![The primary (left) and secondary (right) face of αCD.](images/alphaCD-structure.png){#fig:cavity width=3.5in}
 
+![Binding free energies (ΔG°) with the primary orientation results colored in blue and secondary orientation results colored in green.](images/by-orientation-comparison.png){width="100%" #fig:by-orientation-comparison}
 
-![Binding free energies (ΔG) with the primary orientation results colored in blue and secondary orientation results colored in green.](images/by-orientation-comparison.png){width="100%" #fig:by-orientation-comparison}
-
-![Binding free energies (ΔG) replotted from Figure @fig:by-orientation-comparison with points whose difference in binding free energy along either axis is greater than 2 kcal/mol shown in color. Arrows point from ΔG° for the secondary to ΔG° for the primary cavity (images/by-orientation-highlight.png){width="100%" #fig:by-orientation-highlight}
+![Binding free energies (ΔG°) replotted from Figure @fig:by-orientation-comparison with points whose difference in binding free energy along either axis is greater than 2 kcal/mol shown in color. Arrows point from ΔG° for the secondary to ΔG° for the primary cavity.](images/by-orientation-highlight.png){width="100%" #fig:by-orientation-highlight}
 
 ![Comparison of calculated absolute binding free energies (ΔG°) between force field combinations. The orange, blue, and purple coloring distinguish the functional group of the guest as an ammonium, alcohol, or carboxylate, respectively.](images/dG-by-orientation.png){width="100%" #fig:dG-by-orientation}
 
@@ -675,7 +674,7 @@ APR, attach-pull-release; CD, cyclodextrin; GAFF, Generalized AMBER Force Field
 |  b-pha | -1.70 | 0.05 | -3.24 | 0.31 | -2.55 | 0.29 | -3.98 | 0.19 |
 |  b-pnt | -1.27 | 0.32 | -2.22 | 0.25 | -1.73 | 0.29 | -2.00 | 0.16 |
 
-Table: Experimental and predicted binding free energies (ΔG°). {#tbl:dG-combined}
+Table: Experimental and predicted binding free energies (ΔG°). Values in kcal/mol. {#tbl:dG-combined}
 
 |  System | Experimental |  | SMIRNOFF99Frosst |  | GAFF v1.7 |  | GAFF v2.1 |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -724,7 +723,7 @@ Table: Experimental and predicted binding free energies (ΔG°). {#tbl:dG-combin
 |  b-pha | -1.79 | 0.11 | -1.10 | 0.69 | -1.34 | 0.97 | -3.45 | 0.36 |
 |  b-pnt | 1.89 | 0.53 | -0.79 | 1.01 | -0.51 | 0.84 | 0.40 | 0.31 |
 
-Table: Experimental and predicted binding enthalpies (ΔH). {#tbl:dH-combined}
+Table: Experimental and predicted binding enthalpies (ΔH). Values in kcal/mol. {#tbl:dH-combined}
 
 |  System | Experimental |  | SMIRNOFF99Frosst |  | GAFF v1.7 |  | GAFF v2.1 |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -773,9 +772,7 @@ Table: Experimental and predicted binding enthalpies (ΔH). {#tbl:dH-combined}
 |  b-pha | 0.09 | 0.12 | -2.14 | 0.76 | -1.21 | 1.01 | -0.52 | 0.41 |
 |  b-pnt | -3.16 | 0.62 | -1.43 | 1.04 | -1.22 | 0.89 | -2.40 | 0.35 |
 
-Table: Experimental and predicted binding entropies (−TΔS°). {#tbl:TdS-combined}
-
-
+Table: Experimental and predicted binding entropies (−TΔS°). Values in kcal/mol. {#tbl:TdS-combined}
 
 |      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | Tau |    |
 |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | --- | --- |
@@ -797,7 +794,7 @@ Table: Predicted thermodynamic properties for SMIRNOFF99Frosst relative to exper
 | −TΔS° | GAFF v1.7 | 1.45 | [1.14, 1.79] | -1.33 | [-1.66, -1.00] | 0.88 | [0.18, 0.97] | 1.04 | [-0.02, 1.37] | -1.27 | [-0.55, -1.62] | 0.28 | [0.64, -0.21] | 
 | −TΔS° | GAFF v2.1 | 1.04 | [0.67, 1.40] | -0.27 | [-0.84, 0.26] | 0.89 | [0.29, 0.98] | 1.36 | [-0.53, 1.66] | -0.12 | [1.16, -0.59] | 0.23 | [0.62, -0.26] | 
 
-Table: Predicted thermodynamic properties for each force field relative to experiment on ammonium guests. {#tbl:overall-ammonium}
+Table: Predicted thermodynamic properties for each force field relative to experiment on ammonium guests. Values in kcal/mol. {#tbl:overall-ammonium}
 
 |      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | Tau |    |
 |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | --- | --- |
@@ -811,7 +808,7 @@ Table: Predicted thermodynamic properties for each force field relative to exper
 | −TΔS° | GAFF v1.7 | 2.07 | [1.35, 2.76] | -1.22 | [-2.00, -0.46] | 0.29 | [0.00, 0.67] | 0.63 | [-0.02, 1.18] | -1.31 | [-0.58, -2.09] | 0.27 | [0.58, -0.09] | 
 | −TΔS° | GAFF v2.1 | 1.46 | [1.12, 1.77] | 0.37 | [-0.27, 1.00] | 0.50 | [0.13, 0.76] | 0.93 | [0.58, 1.30] | 0.37 | [1.07, -0.34] | 0.37 | [0.67, -0.01] | 
 
-Table: Predicted thermodynamic properties for each force field relative to experiment on carboxylate guests. {#tbl:overall-carboxylates}
+Table: Predicted thermodynamic properties for each force field relative to experiment on carboxylate guests. Values in kcal/mol. {#tbl:overall-carboxylates}
 
 |      |      | RMSE |      |  MSE |      |   R² |      | Slope |      | Intercept |      | Tau |    |
 |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  | --- | --- |
@@ -825,7 +822,7 @@ Table: Predicted thermodynamic properties for each force field relative to exper
 | −TΔS° | GAFF v1.7 | 3.00 | [2.07, 3.88] | -1.73 | [-3.14, -0.18] | 0.37 | [0.00, 0.93] | 1.23 | [-0.38, 2.48] | -1.59 | [-0.31, -4.23] | 0.29 | [0.71, -0.20] | 
 | −TΔS° | GAFF v2.1 | 1.80 | [0.68, 3.19] | -0.00 | [-0.98, 1.27] | 0.48 | [0.00, 0.97] | 1.13 | [-0.22, 1.96] | 0.08 | [1.14, -1.79] | 0.46 | [0.82, -0.02] | 
 
-Table: Predicted thermodynamic properties for each force field relative to experiment on cyclic alcohol guests. {#tbl:overall-alcohols}
+Table: Predicted thermodynamic properties for each force field relative to experiment on cyclic alcohol guests. Values in kcal/mol. {#tbl:overall-alcohols}
 
 
 |   |  |  |  |  |  | SMIRNOFF99Frosst | GAFF v1.7 |
