@@ -48,6 +48,17 @@
   },
   {
     "type": "book",
+    "standard_citation": "raw:openeye",
+    "title": "OEChem Toolkit 2019.Apr.2",
+    "publisher-place": "Santa Fe, NM. http://www.eyesopen.com",
+    "author": [
+      {
+        "given": "OpenEye Scientific Software"
+      }
+    ]
+  },
+  {
+    "type": "book",
     "standard_citation": "raw:amber2018",
     "title": "AMBER 2018",
     "author": [

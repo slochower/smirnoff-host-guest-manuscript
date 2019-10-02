@@ -15,6 +15,7 @@ manubot process \
 
 # pandoc settings
 CSL_PATH=build/assets/style.csl
+# CSL_PATH=build/assets/journal-of-chemical-theory-and-computation.csl
 BIBLIOGRAPHY_PATH=output/references.json
 INPUT_PATH=output/manuscript.md
 
