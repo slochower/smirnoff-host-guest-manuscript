@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-07-20'
+date-meta: '2019-10-02'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/9ce4e01bc7299cb54702f3a6351cb6a1161daabe/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/edaf7af4cf74857a4dc94ebe2db6bcadc72102b7/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@9ce4e01](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/9ce4e01bc7299cb54702f3a6351cb6a1161daabe)
-on July 20, 2019.
+from [slochower/smirnoff-host-guest-manuscript@edaf7af](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/edaf7af4cf74857a4dc94ebe2db6bcadc72102b7)
+on October 2, 2019.
 </em></small>
 
 ## Authors
@@ -223,7 +223,7 @@ GAFF v1.7 bond, angle, torsion, and Lennard-Jones parameters were applied using 
 GAFF v2.1 parameters were applied in an identical manner to the GAFF v1.7 parameters, using the `tleap` program distributed with AmberTools18 and substituting `leaprc.gaff` for `leaprc.gaff2` in the `tleap` input file.
 
 To apply SMIRNOFF99Frosst parameters, we followed a [multistep process](https://github.com/slochower/smirnoff-host-guest/blob/master/02-convert-APR-files.ipynb), beginning with the AMBER-format `.prmtop` and `.inpcrd` GAFF v1.7 files.
-The host and guest molecules were parameterized with version 0.0.3 of the Open Force Field Toolkit, which reads molecular coordinates and topologies and creates a serialized representation of the molecular system; version 1.0.5 of the SMIRNOFF99Frosst force field; specified in version 1.0 of the SMIRNOFF format.
+The host and guest molecules were parameterized with version 0.0.3 of the Open Force Field Toolkit which uses the OpenEye `OEChem` Toolkit version 2.0.2 [@15paDcyqf], which reads molecular coordinates and topologies and creates a serialized representation of the molecular system; version 1.0.5 of the SMIRNOFF99Frosst force field; specified in version 1.0 of the SMIRNOFF format.
 Once parameterized with SMIRNOFF99Frosst, the topology and coordinates for the host-guest complex were combined with the solvent and ions, which retained their TIP3P water parameters and Joung-Cheatham ion parameters, respectively.
 This was accomplished by the `ParmEd` program [@T7iFp9ei], which enables saving the OpenMM system created by the Open Force Field Toolkit in AMBER-format `.prmtop` and `.inpcrd` files.
 Ongoing updates to the Open Force Field Toolkit may result in changes to how this procedure is carried out in the future.
@@ -236,7 +236,7 @@ During the attachment phase, the force constants on the host and guest are scale
 The $\lambda$ windows are more densely spaced where the force constant is smaller to improve sampling along highly curved regions of the potential of mean force.
 These restraints include a set of distance, angle, and torsion restraints that orient the host and guest along the long axis of the simulation box.
 A separate set of conformational restraints were applied between neighboring glucose units of the cyclodextrin to minimize deformations of the host molecule as the guest molecule is pulled out. 
-The conformational restraints were applied along the pseudodihedrals O5<sub>n</sub>--C1<sub>n</sub>--C1<sub>n</sub>--C4<sub>n+1</sub> and C1<sub>n</sub>--O1<sub>n</sub>--C4<sub>n+1</sub>--C5<sub>n+1</sub> to improve convergence and sampling of the bound state (Figure @fig:atom-names for atom names). 
+The conformational restraints were applied along the pseudodihedrals O5<sub>n</sub>--C1<sub>n</sub>--O1<sub>n</sub>--C4<sub>n+1</sub> and C1<sub>n</sub>--O1<sub>n</sub>--C4<sub>n+1</sub>--C5<sub>n+1</sub> to improve convergence and sampling of the bound state (Figure @fig:atom-names for atom names). 
 To further improve sampling of weak-binding guests, we applied a hard wall restraint that confined the guest molecule to within a sphere of 12.3 and 13.5 Å of αCD and βCD, respectively, during the bound state.
 
 The release phase is the conceptual reverse of the attach phase, in which the conformational restraints on the host are gradually turned off ($\lambda =1 \rightarrow 0$) in the absence of the guest.
@@ -295,7 +295,7 @@ $$ {#eq:scale_w}
 fell below a threshold of 0.02 kcal/mol during the attach phase and 0.1 kcal/mol during the pull phase.
 
 The second term in Equation @eq:scale_w scales the uncertainty in the work in each λ window by the nonuniform spacing of the λ windows.
-$w(\lambda_i)$ the approximate contribution of window λ<sub>i</sub> to the overall PMF uncertainty.
+$w(\lambda_i)$ is the approximate contribution of window λ<sub>i</sub> to the overall PMF uncertainty.
 Excluding the first and last window, the average window length was 11.8 ns and 5.39 ns for GAFF v1.7 and GAFF v2.1 simulations, respectively.
 We took a more direct approach with the SMIRNOFF99Frosst simulations, due to changes in pAPRika that allowed us to target uncertainties of the same magnitude as in the GAFF simulations, by running each window for a constant length of 10 ns, except for the first and last window which ran for 1 μs to converge ΔH for all three force fields.
 
@@ -313,6 +313,7 @@ For each force field, we computed the root mean squared error (RMSE), mean signe
 The R^2^ values for the subsets of ligand with each are also reported in the bottom right corner in each graph.
 Comparisons with experiment have 43 measurements, for the 43 unique host-guest complexes listed in Table @tbl:host-guests; comparisons between force fields have 86 data points, representing the calculations for the two orientations of the guest, "p" and "s", in the binding site (see above).
 The overall RMSE and R^2^ statistics for each comparison are reported as the sample mean estimated from using all the data, with the 95% confidence interval, from bootstrapping over the set of complexes, in brackets.
+
 
 ## Results
 

@@ -203,7 +203,7 @@
     "id": "GA1AFcUw"
   },
   {
-    "publisher": "Springer Nature",
+    "publisher": "Springer Science and Business Media LLC",
     "issue": "1",
     "DOI": "10.1007/s10822-016-9948-6",
     "type": "article-journal",
@@ -415,7 +415,7 @@
     "id": "T7iFp9ei"
   },
   {
-    "publisher": "Springer Nature",
+    "publisher": "Springer Science and Business Media LLC",
     "issue": "10",
     "DOI": "10.1007/s10822-018-0144-8",
     "type": "article-journal",
@@ -467,7 +467,7 @@
     "id": "ku7PPPs"
   },
   {
-    "publisher": "Springer Nature",
+    "publisher": "Springer Science and Business Media LLC",
     "issue": "10",
     "DOI": "10.1007/s10822-018-0153-7",
     "type": "article-journal",
@@ -510,7 +510,7 @@
     "id": "bKuLAjgi"
   },
   {
-    "publisher": "Springer Nature",
+    "publisher": "Springer Science and Business Media LLC",
     "issue": "10",
     "DOI": "10.1007/s10822-018-0154-6",
     "type": "article-journal",
@@ -1670,11 +1670,14 @@
   },
   {
     "publisher": "Royal Society of Chemistry (RSC)",
+    "issue": "7",
     "abstract": "<p>A quantum mechanical bespoke molecular mechanics force field is derived for the L99A mutant of T4 lysozyme and used to compute absolute binding free energies of six benzene analogs to the protein.</p>",
     "DOI": "10.1039/c9md00017h",
     "type": "article-journal",
+    "page": "1116-1120",
     "source": "Crossref",
     "title": "Computation of protein–ligand binding free energies using quantum mechanical bespoke force fields",
+    "volume": "10",
     "author": [
       {
         "given": "Daniel J.",
@@ -1700,6 +1703,8 @@
     },
     "URL": "https://doi.org/gfz353",
     "container-title-short": "Med. Chem. Commun.",
+    "PMCID": "PMC6644397",
+    "PMID": "31391883",
     "id": "mdqdy96N"
   },
   {
@@ -2219,6 +2224,17 @@
     "id": "ltrN7ofw"
   },
   {
+    "type": "book",
+    "title": "OEChem Toolkit 2019.Apr.2",
+    "publisher-place": "Santa Fe, NM. http://www.eyesopen.com",
+    "author": [
+      {
+        "given": "OpenEye Scientific Software"
+      }
+    ],
+    "id": "15paDcyqf"
+  },
+  {
     "id": "pOsXFMux",
     "type": "webpage",
     "title": "Daylight>SMIRKS Tutorial",
@@ -2227,8 +2243,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          20
+          10,
+          2
         ]
       ]
     }
@@ -2256,8 +2272,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          20
+          10,
+          2
         ]
       ]
     }
@@ -2274,8 +2290,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          20
+          10,
+          2
         ]
       ]
     }
@@ -2294,8 +2310,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          9
+          9,
+          27
         ]
       ]
     },
@@ -2303,8 +2319,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          20
+          10,
+          2
         ]
       ]
     }
@@ -2321,8 +2337,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          20
+          10,
+          2
         ]
       ]
     }
@@ -2339,8 +2355,8 @@
       "date-parts": [
         [
           "2019",
-          7,
-          20
+          10,
+          2
         ]
       ]
     }
