@@ -10,7 +10,7 @@
   <meta name="author" content="John D. Chodera" />
   <meta name="author" content="David L. Mobley" />
   <meta name="author" content="Michael K. Gilson" />
-  <meta name="dcterms.date" content="2019-10-02" />
+  <meta name="dcterms.date" content="2019-10-04" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</title>
   <style>
@@ -27,7 +27,7 @@
 <header id="title-block-header">
 <h1 class="title">Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 from the Open Force Field Initiative</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/edaf7af4cf74857a4dc94ebe2db6bcadc72102b7/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/edaf7af4cf74857a4dc94ebe2db6bcadc72102b7">slochower/smirnoff-host-guest-manuscript@edaf7af</a> on October 2, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://slochower.github.io/smirnoff-host-guest-manuscript/v/ad64b44a90b64bfa0fc81b4b385c91d341608fee/">permalink</a>) was automatically generated from <a href="https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ad64b44a90b64bfa0fc81b4b385c91d341608fee">slochower/smirnoff-host-guest-manuscript@ad64b44</a> on October 4, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>David R. Slochower</strong><br> <img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" /> <a href="https://orcid.org/0000-0003-3928-5050">0000-0003-3928-5050</a> · <img src="images/github.svg" class="inline_icon" alt="GitHub icon" /> <a href="https://github.com/slochower">slochower</a> · <img src="images/twitter.svg" class="inline_icon" alt="Twitter icon" /> <a href="https://twitter.com/drslochower">drslochower</a><br> <small> Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California, San Diego, La Jolla, CA 92093, USA </small></p></li>
@@ -54,14 +54,7 @@
 </figure>
 <a name="tbl:host-guests"></a>
 <table>
-<caption><span>Table 1:</span> The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. <span class="citation" data-cites="1236RpaUv">[<a href="#ref-1236RpaUv" role="doc-biblioref">32</a>]</span>. <sup>a</sup> Only the <em>R</em> enantiomer was considered. <sup>b</sup> Only the <em>S</em> enantiomer was considered. </caption>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
+<caption><span>Table 1:</span> The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. <span class="citation" data-cites="1236RpaUv">[<a href="#ref-1236RpaUv" role="doc-biblioref">32</a>]</span>. <sup>a</sup> Only the <em>R</em> enantiomer was considered. <sup>b</sup> Only the <em>S</em> enantiomer was considered. SMILES strings are written as canonical isomeric SMILES as implemented in the OpenEye <code>OEChem</code> Toolkit version 2.0.2 <span class="citation" data-cites="15paDcyqf">[<a href="#ref-15paDcyqf" role="doc-biblioref">35</a>]</span>. </caption>
 <thead>
 <tr class="header">
 <th>Host-guest ID</th>
@@ -77,311 +70,313 @@
 <td>αCD</td>
 <td>1-butylamine</td>
 <td>+1</td>
-<td><!-- style="min-width: 400px" --> <code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><!-- style="min-width: 400px" --> <code>CCCC[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>a-nmb</td>
 <td>αCD</td>
 <td>n-methylbutylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]</code></td>
+<td><code>CCCC[NH2+]C</code></td>
 </tr>
 <tr class="odd">
 <td>a-mba</td>
 <td>αCD</td>
 <td>1-methylbutylamine<sup>a</sup></td>
 <td>+1</td>
-<td><code>[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]</code></td>
+<td><code>CCC[C@@H](C)[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>a-pam</td>
 <td>αCD</td>
 <td>1-pentylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCC[NH3+]</code></td>
 </tr>
 <tr class="odd">
 <td>a-ham</td>
 <td>αCD</td>
 <td>1-hexylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCCC[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>a-nmh</td>
 <td>αCD</td>
 <td>n-methylhexylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]</code></td>
+<td><code>CCCCCC[NH2+]C</code></td>
 </tr>
 <tr class="odd">
 <td>a-mha</td>
 <td>αCD</td>
 <td>1-methylhexylamine<sup>a</sup></td>
 <td>+1</td>
-<td><code>[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCC[C@@H](C)[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>a-hpa</td>
 <td>αCD</td>
 <td>1-heptylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCCCC[NH3+]</code></td>
 </tr>
 <tr class="odd">
 <td>a-mhp</td>
 <td>αCD</td>
 <td>1-methylheptylamine<sup>b</sup></td>
 <td>+1</td>
-<td><code>[H][C@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCCC[C@H](C)[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>a-oam</td>
 <td>αCD</td>
 <td>1-octylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCCCCC[NH3+]</code></td>
 </tr>
 <tr class="odd">
 <td>b-ham</td>
 <td>βCD</td>
 <td>1-hexylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCCC[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>b-mha</td>
 <td>βCD</td>
 <td>1-methylhexylamine<sup>a</sup></td>
 <td>+1</td>
-<td><code>[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCC[C@@H](C)[NH3+]</code></td>
 </tr>
 <tr class="odd">
 <td>b-oam</td>
 <td>βCD</td>
 <td>1-octylamine</td>
 <td>+1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]</code></td>
+<td><code>CCCCCCCC[NH3+]</code></td>
 </tr>
 <tr class="even">
 <td>a-cbu</td>
 <td>αCD</td>
 <td>cyclobutanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]</code></td>
+<td><code>C1CC(C1)O</code></td>
 </tr>
 <tr class="odd">
 <td>a-cpe</td>
 <td>αCD</td>
 <td>cyclopentanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>C1CCC(C1)O</code></td>
 </tr>
 <tr class="even">
 <td>a-chp</td>
 <td>αCD</td>
 <td>cycloheptanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>C1CCCC(CC1)O</code></td>
 </tr>
 <tr class="odd">
 <td>a-coc</td>
 <td>αCD</td>
 <td>cyclooctanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>C1CCCC(CCC1)O</code></td>
 </tr>
 <tr class="even">
 <td>b-cbu</td>
 <td>βCD</td>
 <td>cyclobutanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]</code></td>
+<td><code>C1CC(C1)O</code></td>
 </tr>
 <tr class="odd">
 <td>b-cpe</td>
 <td>βCD</td>
 <td>cyclopentanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>C1CCC(C1)O</code></td>
 </tr>
 <tr class="even">
 <td>b-mch</td>
 <td>βCD</td>
 <td>1-methylcyclohexanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C1([H])[H])([H])[H])(C([H])([H])[H])O[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>CC1(CCCCC1)O</code></td>
 </tr>
 <tr class="odd">
 <td>b-m4c</td>
 <td>βCD</td>
 <td>cis-4-methylcyclohexanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]</code></td>
+<td><code>CC1CCC(CC1)O</code></td>
 </tr>
 <tr class="even">
 <td>b-m4t</td>
 <td>βCD</td>
 <td>trans-4-methylcyclohexanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]</code></td>
+<td><code>CC1CCC(CC1)O</code></td>
 </tr>
 <tr class="odd">
 <td>b-chp</td>
 <td>βCD</td>
 <td>cycloheptanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>C1CCCC(CC1)O</code></td>
 </tr>
 <tr class="even">
 <td>b-coc</td>
 <td>βCD</td>
 <td>cyclooctanol</td>
 <td>0</td>
-<td><code>[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]</code></td>
+<td><code>C1CCCC(CCC1)O</code></td>
 </tr>
 <tr class="odd">
 <td>a-but</td>
 <td>αCD</td>
 <td>butanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>a-pnt</td>
 <td>αCD</td>
 <td>pentanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>a-hex</td>
 <td>αCD</td>
 <td>hexanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>a-hx2</td>
 <td>αCD</td>
 <td>trans-2-hexenoate</td>
 <td>-1</td>
-<td><code>[H]/C(=C(/[H])\\C([H])([H])C([H])([H])C([H])([H])[H])/[C-]([O-])[O-]</code></td>
+<td><code>CCC/C=C/C(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>a-hx3</td>
 <td>αCD</td>
 <td>trans-3-hexenoate</td>
 <td>-1</td>
-<td><code>[H]/C(=C(/[H])\\C([H])([H])C([H])([H])[H])/C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CC/C=C/CC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>a-hep</td>
 <td>αCD</td>
 <td>heptanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>a-hp6</td>
 <td>αCD</td>
 <td>6-heptenoate</td>
 <td>-1</td>
-<td><code>[H]C(=C([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H]</code></td>
+<td><code>C=CCCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>a-oct</td>
 <td>αCD</td>
 <td>octanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>b-pnt</td>
 <td>βCD</td>
 <td>pentanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>b-hex</td>
 <td>βCD</td>
 <td>hexanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>b-hep</td>
 <td>βCD</td>
 <td>heptanoate</td>
 <td>-1</td>
-<td><code>[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]</code></td>
+<td><code>CCCCCCC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>b-ben</td>
 <td>βCD</td>
 <td>benzoate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1[H])[H])[C-]([O-])[O-])[H])[H]</code></td>
+<td><code>c1ccc(cc1)C(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>b-pha</td>
 <td>βCD</td>
 <td>phenylacetate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1[H])[H])C([H])([H])[C-]([O-])[O-])[H])[H]</code></td>
+<td><code>c1ccc(cc1)CC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>b-mp3</td>
 <td>βCD</td>
 <td>3-methylphenylacetate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1[H])C([H])([H])[C-]([O-])[O-])[H])C([H])([H])[H])[H]</code></td>
+<td><code>Cc1cccc(c1)CC(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>b-mp4</td>
 <td>βCD</td>
 <td>4-methylphenylacetate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])C([H])([H])[C-]([O-])[O-])[H]</code></td>
+<td><code>Cc1ccc(cc1)CC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>b-mo3</td>
 <td>βCD</td>
 <td>3-methoxyphenylacetate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1[H])OC([H])([H])[H])[H])C([H])([H])[C-]([O-])[O-])[H]</code></td>
+<td><code>COc1cccc(c1)CC(=O)[O-]</code></td>
 </tr>
 <tr class="odd">
 <td>b-mo4</td>
 <td>βCD</td>
 <td>4-methoxyphenylacetate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1C([H])([H])[C-]([O-])[O-])[H])[H])OC([H])([H])[H])[H]</code></td>
+<td><code>COc1ccc(cc1)CC(=O)[O-]</code></td>
 </tr>
 <tr class="even">
 <td>b-pb3</td>
 <td>βCD</td>
 <td>3-phenylbutanoate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1[H])[H])[C@]([H])(C([H])([H])[H])C([H])([H])[C-]([O-])[O-])[H])[H]</code></td>
+<td><code>C[C@H](CC(=O)[O-])c1ccccc1</code></td>
 </tr>
 <tr class="odd">
 <td>b-pb4</td>
 <td>βCD</td>
 <td>4-phenylbutanoate</td>
 <td>-1</td>
-<td><code>[H]c1c(c(c(c(c1[H])[H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H])[H]</code></td>
+<td><code>c1ccc(cc1)CCCC(=O)[O-]</code></td>
 </tr>
 </tbody>
 </table>
 <h3 id="application-of-force-field-parameters">Application of force field parameters</h3>
-<p>We sought to compare force fields directly and therefore attempted to minimize additional differences among the simulations with each force field. In all simulations, we applied AM1-BCC <span class="citation" data-cites="LxrgIkt0 BkLoOd0N">[<a href="#ref-LxrgIkt0" role="doc-biblioref">35</a>,<a href="#ref-BkLoOd0N" role="doc-biblioref">36</a>]</span> partial atomic charges to both the host and guest molecules using the <code>antechamber</code> program in AmberTools16 <span class="citation" data-cites="ltrN7ofw">[<a href="#ref-ltrN7ofw" role="doc-biblioref">27</a>]</span>. The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure <a href="#fig:atom-names">2</a>); each glucose monomer in the cyclodextrin polymer has identical charges. After removing the capping atoms, the net charge of the glucose monomer was -0.064 e. To ensure a neutrality of the glucose monomer, the charge remainder was proportionally distributed across all atoms according to the magnitude of the partial charge for each atom. The minimum and maximum charge adjustments were 0.000684 and 0.007245 e, respectively. Using the entire αCD molecule as an input to <code>antechamber</code> results in partial atomic charges that differ by at most 0.02 e, compared to using a single monomer, and requires reducing the maximum path length used to determine the equivalence of atomic charges (Figure <a href="#fig:charge-schemes">16</a>). We used TIP3P water <span class="citation" data-cites="chrX4HGh">[<a href="#ref-chrX4HGh" role="doc-biblioref">37</a>]</span> and Joung-Cheatham monovalent ion parameters <span class="citation" data-cites="uZnQBwCt">[<a href="#ref-uZnQBwCt" role="doc-biblioref">38</a>]</span> in each simulation set.</p>
+<p>We sought to compare force fields directly and therefore attempted to minimize additional differences among the simulations with each force field. In all simulations, we applied AM1-BCC <span class="citation" data-cites="LxrgIkt0 BkLoOd0N">[<a href="#ref-LxrgIkt0" role="doc-biblioref">36</a>,<a href="#ref-BkLoOd0N" role="doc-biblioref">37</a>]</span> partial atomic charges to both the host and guest molecules using the <code>antechamber</code> program in AmberTools16 <span class="citation" data-cites="ltrN7ofw">[<a href="#ref-ltrN7ofw" role="doc-biblioref">27</a>]</span>.</p>
+<p>The Open Force Field Toolkit provides a mechanism for user-specified charges. If no charges are supplied, the toolkit will generate AM1-BCC charges. AM1-BCC is the recommended charge scehme, and the</p>
+<p>The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure <a href="#fig:atom-names">2</a>); each glucose monomer in the cyclodextrin polymer has identical charges. After removing the capping atoms, the net charge of the glucose monomer was -0.064 e. To ensure a neutrality of the glucose monomer, the charge remainder was proportionally distributed across all atoms according to the magnitude of the partial charge for each atom. The minimum and maximum charge adjustments were 0.000684 and 0.007245 e, respectively. Using the entire αCD molecule as an input to <code>antechamber</code> results in partial atomic charges that differ by at most 0.02 e, compared to using a single monomer, and requires reducing the maximum path length used to determine the equivalence of atomic charges (Figure <a href="#fig:charge-schemes">16</a>). We used TIP3P water <span class="citation" data-cites="chrX4HGh">[<a href="#ref-chrX4HGh" role="doc-biblioref">38</a>]</span> and Joung-Cheatham monovalent ion parameters <span class="citation" data-cites="uZnQBwCt">[<a href="#ref-uZnQBwCt" role="doc-biblioref">39</a>]</span> in each simulation set.</p>
 <figure>
 <img src="images/atom-names.png" id="fig:atom-names" style="width:100.0%" alt="" /><figcaption><span>Figure 2:</span> Atom names (A) and GAFF atom types (B) for a glucose monomer in αCD shown with two flanking monomers. The remaining three glucose monomers are hidden for clarity.</figcaption>
 </figure>
 <p>GAFF v1.7 bond, angle, torsion, and Lennard-Jones parameters were applied using the <code>tleap</code> program distributed with AmberTools16. GAFF v2.1 parameters were applied in an identical manner to the GAFF v1.7 parameters, using the <code>tleap</code> program distributed with AmberTools18 and substituting <code>leaprc.gaff</code> for <code>leaprc.gaff2</code> in the <code>tleap</code> input file.</p>
-<p>To apply SMIRNOFF99Frosst parameters, we followed a <a href="https://github.com/slochower/smirnoff-host-guest/blob/master/02-convert-APR-files.ipynb">multistep process</a>, beginning with the AMBER-format <code>.prmtop</code> and <code>.inpcrd</code> GAFF v1.7 files. The host and guest molecules were parameterized with version 0.0.3 of the Open Force Field Toolkit which uses the OpenEye <code>OEChem</code> Toolkit version 2.0.2 <span class="citation" data-cites="15paDcyqf">[<a href="#ref-15paDcyqf" role="doc-biblioref">39</a>]</span>, which reads molecular coordinates and topologies and creates a serialized representation of the molecular system; version 1.0.5 of the SMIRNOFF99Frosst force field; specified in version 1.0 of the SMIRNOFF format. Once parameterized with SMIRNOFF99Frosst, the topology and coordinates for the host-guest complex were combined with the solvent and ions, which retained their TIP3P water parameters and Joung-Cheatham ion parameters, respectively. This was accomplished by the <code>ParmEd</code> program <span class="citation" data-cites="T7iFp9ei">[<a href="#ref-T7iFp9ei" role="doc-biblioref">40</a>]</span>, which enables saving the OpenMM system created by the Open Force Field Toolkit in AMBER-format <code>.prmtop</code> and <code>.inpcrd</code> files. Ongoing updates to the Open Force Field Toolkit may result in changes to how this procedure is carried out in the future.</p>
+<p>To apply SMIRNOFF99Frosst parameters, we followed a <a href="https://github.com/slochower/smirnoff-host-guest/blob/master/02-convert-APR-files.ipynb">multistep process</a>, beginning with the AMBER-format <code>.prmtop</code> and <code>.inpcrd</code> GAFF v1.7 files. The host and guest molecules were parameterized with version 0.0.3 of the Open Force Field Toolkit which uses the OpenEye <code>OEChem</code> Toolkit version 2.0.2 <span class="citation" data-cites="15paDcyqf">[<a href="#ref-15paDcyqf" role="doc-biblioref">35</a>]</span>, which reads molecular coordinates and topologies and creates a serialized representation of the molecular system; version 1.0.5 of the SMIRNOFF99Frosst force field; specified in version 1.0 of the SMIRNOFF format. Once parameterized with SMIRNOFF99Frosst, the topology and coordinates for the host-guest complex were combined with the solvent and ions, which retained their TIP3P water parameters and Joung-Cheatham ion parameters, respectively. This was accomplished by the <code>ParmEd</code> program <span class="citation" data-cites="T7iFp9ei">[<a href="#ref-T7iFp9ei" role="doc-biblioref">40</a>]</span>, which enables saving the OpenMM system created by the Open Force Field Toolkit in AMBER-format <code>.prmtop</code> and <code>.inpcrd</code> files. Ongoing updates to the Open Force Field Toolkit may result in changes to how this procedure is carried out in the future.</p>
 <h3 id="thermodynamic-calculation">Thermodynamic calculation</h3>
 <p>We used the attach-pull-release (APR) method, as implemented in the open source package pAPRika version 0.0.3, to calculate absolute binding free energies. A complete description of the APR method has been provided in the literature <span class="citation" data-cites="1935a9V0d W9FLyOZr GA1AFcUw 1HWPx2yMR">[<a href="#ref-1935a9V0d" role="doc-biblioref">13</a>,<a href="#ref-GA1AFcUw" role="doc-biblioref">17</a>,<a href="#ref-1HWPx2yMR" role="doc-biblioref">19</a>,<a href="#ref-W9FLyOZr" role="doc-biblioref">41</a>]</span>. The attachment and release phases each consisted of 15 independent windows. During the attachment phase, the force constants on the host and guest are scaled by a <span class="math inline">\(\lambda\)</span> parameter that goes from <span class="math inline">\(\lambda = 0\)</span>, at which point all restraints are turned off, to <span class="math inline">\(\lambda = 1\)</span>, at which point all restraints are at their maximum force constant. The <span class="math inline">\(\lambda\)</span> windows are more densely spaced where the force constant is smaller to improve sampling along highly curved regions of the potential of mean force. These restraints include a set of distance, angle, and torsion restraints that orient the host and guest along the long axis of the simulation box. A separate set of conformational restraints were applied between neighboring glucose units of the cyclodextrin to minimize deformations of the host molecule as the guest molecule is pulled out. The conformational restraints were applied along the pseudodihedrals O5<sub>n</sub>–C1<sub>n</sub>–O1<sub>n</sub>–C4<sub>n+1</sub> and C1<sub>n</sub>–O1<sub>n</sub>–C4<sub>n+1</sub>–C5<sub>n+1</sub> to improve convergence and sampling of the bound state (Figure <a href="#fig:atom-names">2</a> for atom names). To further improve sampling of weak-binding guests, we applied a hard wall restraint that confined the guest molecule to within a sphere of 12.3 and 13.5 Å of αCD and βCD, respectively, during the bound state.</p>
 <p>The release phase is the conceptual reverse of the attach phase, in which the conformational restraints on the host are gradually turned off (<span class="math inline">\(\lambda =1 \rightarrow 0\)</span>) in the absence of the guest. This explicit release phase is performed once for αCD and once for βCD, as it is independent of guest molecule. Finally, an analytic correction is performed to compute the work of moving the guest from the restricted volume enforced by the APR restraints to standard state at 1 M concentration.</p>
@@ -1329,7 +1324,7 @@ All force fields perform poorly at replicating −TΔS° for carboxylate guests,
 <p>As a terse representation of a GAFF-like force field, SMIRNOFF99Frosst performs remarkably well. Despite having far fewer parameters than GAFF v1.7 and GAFF v2.1, SMIRNOFF99Frosst performs as well as GAFF v1.7 and arguably better than GAFF v2.1 on estimated binding free energies of small molecules to αCD and βCD, based on the mean signed error relative to experiment. Moreover, SMIRNOFF99Frosst performs better than either GAFF v1.7 or GAFF v2.1 on predicted binding enthalpies, with a mean signed error less than 1 kcal/mol. It should be noted that the binding free energy and enthalpy root mean squared errors (RMSE) and mean signed errors (MSE) for GAFF v2.1 are not substantially worse than those of SMIRNOFF99Frosst, and GAFF v2.1 has statistically significant better correlations with the the experimental data. GAFF v2.1 has excellent agreement with experiment on predicted binding entropy, followed by SMIRNOFF99Frosst and then GAFF v1.7. Taken together, these results support the notion that a force field with many fewer parameters can provide competitive performance. The reduction in the number of parameters, and the simplification of the force field specification, will make it easier to iteratively refine and optimize SMIRNOFF99Frosst against experimental data and the results of quantum mechanical calculations.</p>
 <p>However, both SMIRNOFF99Frosst and GAFF v1.7 result in excessively flexible representations of the cyclodextrin hosts, as detailed below. Cézard, <em>et al.</em> present strong NMR evidence that the vicinal <sup>3</sup>J H5–H6′ (atom names H5–H62 in Figure <a href="#fig:atom-names">2</a>) and <sup>3</sup>J H5-H6″(atom names H5–H61) coupling show minimal fluctuation in distance over a number of timescales, suggesting little change in the population of rotamers <span class="citation" data-cites="j7JJedX4">[<a href="#ref-j7JJedX4" role="doc-biblioref">51</a>]</span>. This is also evident in X-ray structures, where the rigidity of the cyclodextrin ring is retained as long as water is present in the cavity and the torsional angles between adjacent glucose units show little variance (0.3–0.6°) across different crystal structures <span class="citation" data-cites="j3qbz56S">[<a href="#ref-j3qbz56S" role="doc-biblioref">52</a>]</span>. The combination of X-ray and NMR data suggest that the specialized q4md-CD <span class="citation" data-cites="j7JJedX4">[<a href="#ref-j7JJedX4" role="doc-biblioref">51</a>]</span> force field, and the rigid GAFF v2.1 <span class="citation" data-cites="HVgz5rZq">[<a href="#ref-HVgz5rZq" role="doc-biblioref">33</a>]</span> force field, better model the flexibility of the CD cavity. The CHARMM36 force field displays similar structural dynamics to q4md-CD, with certain GROMOS force fields even more rigid than those <span class="citation" data-cites="jdi722iE">[<a href="#ref-jdi722iE" role="doc-biblioref">53</a>]</span>. The present results suggest that, as SMIRNOFF99Frosst is further developed, it will be important to include sugars and other carbohydrates in the training sets used to develop parameters. Unfortunately, it may be challenging to find the types of high quality experimental data typically used to train force fields—heats of vaporization, heats of mixing, hydration free energies, and partition coefficients, among others—for biologically relevant sugars. Proper accounting of sugars, and protein-sugar interactions, will be especially useful for modeling physiologically relevant protein structures, such as proteoglycans and glycopeptides.</p>
 <p>The greater rigidity of the cyclodextrins when simulated with GAFF v2.1 may contribute to its tendency to generate greater binding affinities and more negative enthalpies than the other two force fields, as a more rigid host may avoid an energy penalty associated with flipping the glucose residues out of the binding cavity to accommodate a guest molecule. The better preorganized cavity might also relate to the uniformly higher correlations between calculation and experiment for GAFF v2.1. On the other hand, it is perhaps unexpected that this force field which best represents the conformational preferences of the cyclodextrin yields consistently too negative binding free energies and enthalpies. It is worth noting the magnitude of these effects will depend on the guest parameters, as well as water model and ion parameters as well.</p>
-<p>More broadly, the results presented in this manuscript further demonstrate that host-guest binding thermodynamics can be used to benchmark force fields, to help diagnose issues with parameters applied to specific functional groups, and to suggest directions for improvements. We are therefore continuing to build out experimental host-guest datasets tuned for this purpose, and to further streamline host-guest binding thermodynamics calculations so that they may be incorporated into automated tools to optimize force field parameters.</p>
+<p>More broadly, the results presented in this manuscript further demonstrate that host-guest binding thermodynamics can be used to benchmark force fields, to help diagnose issues with parameters applied to specific functional groups, and to suggest directions for improvements. We are therefore continuing to build out experimental host-guest datasets tuned for this purpose, and to further streamline host-guest binding thermodynamics calculations so that binding data can be used alongside other data types, such as liquid properties, by automated tools for optimizing force field parameters.</p>
 <h2 id="code-and-data-availability">Code and data availability</h2>
 <ul>
 <li><a href="https://github.com/slochower/smirnoff-host-guest">GitHub repository</a> used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.</li>
@@ -1542,33 +1537,33 @@ Mikhail Rekharsky, Yoshihisa Inoue<br />
 <em>Journal of the American Chemical Society</em> (2000-05) <a href="https://doi.org/c2tvdg">https://doi.org/c2tvdg</a><br />
 DOI: <a href="https://doi.org/10.1021/ja9921118">10.1021/ja9921118</a></p>
 </div>
+<div id="ref-15paDcyqf">
+<p>35. <strong>OEChem Toolkit 2019.Apr.2</strong><br />
+OpenEye Scientific Software</p>
+</div>
 <div id="ref-LxrgIkt0">
-<p>35. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation</strong><br />
+<p>36. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: II. Parameterization and validation</strong><br />
 Araz Jakalian, David B. Jack, Christopher I. Bayly<br />
 <em>Journal of Computational Chemistry</em> (2002-10-18) <a href="https://doi.org/cktk6g">https://doi.org/cktk6g</a><br />
 DOI: <a href="https://doi.org/10.1002/jcc.10128">10.1002/jcc.10128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/12395429">12395429</a></p>
 </div>
 <div id="ref-BkLoOd0N">
-<p>36. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: I. Method</strong><br />
+<p>37. <strong>Fast, efficient generation of high-quality atomic charges. AM1-BCC model: I. Method</strong><br />
 Araz Jakalian, Bruce L. Bush, David B. Jack, Christopher I. Bayly<br />
 <em>Journal of Computational Chemistry</em> (2000-01-30) <a href="https://doi.org/cvvpkv">https://doi.org/cvvpkv</a><br />
 DOI: <a href="https://doi.org/10.1002/(sici)1096-987x(20000130)21:2%3C132::aid-jcc5%3E3.0.co;2-p">10.1002/(sici)1096-987x(20000130)21:2&lt;132::aid-jcc5&gt;3.0.co;2-p</a></p>
 </div>
 <div id="ref-chrX4HGh">
-<p>37. <strong>Comparison of simple potential functions for simulating liquid water</strong><br />
+<p>38. <strong>Comparison of simple potential functions for simulating liquid water</strong><br />
 William L. Jorgensen, Jayaraman Chandrasekhar, Jeffry D. Madura, Roger W. Impey, Michael L. Klein<br />
 <em>The Journal of Chemical Physics</em> (1983-07-15) <a href="https://doi.org/dg9sq8">https://doi.org/dg9sq8</a><br />
 DOI: <a href="https://doi.org/10.1063/1.445869">10.1063/1.445869</a></p>
 </div>
 <div id="ref-uZnQBwCt">
-<p>38. <strong>Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations</strong><br />
+<p>39. <strong>Determination of Alkali and Halide Monovalent Ion Parameters for Use in Explicitly Solvated Biomolecular Simulations</strong><br />
 In Suk Joung, Thomas E. Cheatham III<br />
 <em>The Journal of Physical Chemistry B</em> (2008-07) <a href="https://doi.org/cgwnj7">https://doi.org/cgwnj7</a><br />
 DOI: <a href="https://doi.org/10.1021/jp8001614">10.1021/jp8001614</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/18593145">18593145</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2652252">PMC2652252</a></p>
-</div>
-<div id="ref-15paDcyqf">
-<p>39. <strong>OEChem Toolkit 2019.Apr.2</strong><br />
-OpenEye Scientific Software</p>
 </div>
 <div id="ref-T7iFp9ei">
 <p>40. <strong>Lessons learned from comparing molecular dynamics engines on the SAMPL5 dataset</strong><br />

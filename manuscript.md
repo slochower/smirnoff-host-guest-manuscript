@@ -6,7 +6,7 @@ author-meta:
 - John D. Chodera
 - David L. Mobley
 - Michael K. Gilson
-date-meta: '2019-10-02'
+date-meta: '2019-10-04'
 keywords:
 - markdown
 - publishing
@@ -23,10 +23,10 @@ title: Binding thermodynamics of host-guest systems with SMIRNOFF99Frosst 1.0.5 
 
 <small><em>
 This manuscript
-([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/edaf7af4cf74857a4dc94ebe2db6bcadc72102b7/))
+([permalink](https://slochower.github.io/smirnoff-host-guest-manuscript/v/ad64b44a90b64bfa0fc81b4b385c91d341608fee/))
 was automatically generated
-from [slochower/smirnoff-host-guest-manuscript@edaf7af](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/edaf7af4cf74857a4dc94ebe2db6bcadc72102b7)
-on October 2, 2019.
+from [slochower/smirnoff-host-guest-manuscript@ad64b44](https://github.com/slochower/smirnoff-host-guest-manuscript/tree/ad64b44a90b64bfa0fc81b4b385c91d341608fee)
+on October 4, 2019.
 </em></small>
 
 ## Authors
@@ -160,56 +160,61 @@ Calculations on these host-guest systems have been performed previously [@HVgz5r
 
 |  Host-guest ID | Host | Guest | Charge | SMILES |
 | --- | --- | --- | --- | --- | 
-|  a-bam | αCD | 1-butylamine | +1 |  <!-- style="min-width: 400px" --> `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  a-nmb | αCD | n-methylbutylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]` |
-|  a-mba | αCD | 1-methylbutylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
-|  a-pam | αCD | 1-pentylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  a-ham | αCD | 1-hexylamine| +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  a-nmh | αCD | n-methylhexylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])C([H])([H])[H]` |
-|  a-mha | αCD | 1-methylhexylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
-|  a-hpa | αCD | 1-heptylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  a-mhp | αCD | 1-methylheptylamine^b^ | +1 | `[H][C@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
-|  a-oam | αCD | 1-octylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  b-ham | βCD | 1-hexylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  b-mha | βCD | 1-methylhexylamine^a^ | +1 | `[H][C@@](C([H])([H])[H])(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])[N+]([H])([H])[H]` |
-|  b-oam | βCD | 1-octylamine | +1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[N+]([H])([H])[H]` |
-|  a-cbu | αCD | cyclobutanol | 0 | `[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]` |
-|  a-cpe | αCD | cyclopentanol | 0 | `[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]` |
-|  a-chp | αCD | cycloheptanol | 0 | `[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
-|  a-coc | αCD | cyclooctanol | 0 | `[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
-|  b-cbu | βCD | cyclobutanol | 0 | `[H]C1(C(C(C1([H])[H])([H])O[H])([H])[H])[H]` |
-|  b-cpe | βCD | cyclopentanol | 0 | `[H]C1(C(C(C(C1([H])[H])([H])O[H])([H])[H])([H])[H])[H]` |
-|  b-mch | βCD | 1-methylcyclohexanol | 0 | `[H]C1(C(C(C(C(C1([H])[H])([H])[H])(C([H])([H])[H])O[H])([H])[H])([H])[H])[H]` |
-|  b-m4c | βCD | cis-4-methylcyclohexanol | 0 | `[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]` |
-|  b-m4t | βCD | trans-4-methylcyclohexanol | 0 | `[H]C1(C(C(C(C(C1([H])C([H])([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])[H]` |
-|  b-chp | βCD | cycloheptanol | 0 | `[H]C1(C(C(C(C(C(C1([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
-|  b-coc | βCD | cyclooctanol | 0 | `[H]C1(C(C(C(C(C(C(C1([H])[H])([H])[H])([H])[H])([H])O[H])([H])[H])([H])[H])([H])[H])[H]` |
-|  a-but | αCD | butanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  a-pnt | αCD | pentanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  a-hex | αCD | hexanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  a-hx2 | αCD | trans-2-hexenoate | -1 | `[H]/C(=C(/[H])\\C([H])([H])C([H])([H])C([H])([H])[H])/[C-]([O-])[O-]` |
-|  a-hx3 | αCD | trans-3-hexenoate | -1 | `[H]/C(=C(/[H])\\C([H])([H])C([H])([H])[H])/C([H])([H])[C-]([O-])[O-]` |
-|  a-hep | αCD | heptanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  a-hp6 | αCD | 6-heptenoate | -1 | `[H]C(=C([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H]` |
-|  a-oct | αCD | octanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  b-pnt | βCD | pentanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  b-hex | βCD | hexanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  b-hep | βCD | heptanoate | -1 | `[H]C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-]` |
-|  b-ben | βCD | benzoate | -1 | `[H]c1c(c(c(c(c1[H])[H])[C-]([O-])[O-])[H])[H]` |
-|  b-pha | βCD | phenylacetate | -1 | `[H]c1c(c(c(c(c1[H])[H])C([H])([H])[C-]([O-])[O-])[H])[H]` |
-|  b-mp3 | βCD | 3-methylphenylacetate | -1 | `[H]c1c(c(c(c(c1[H])C([H])([H])[C-]([O-])[O-])[H])C([H])([H])[H])[H]` |
-|  b-mp4 | βCD | 4-methylphenylacetate | -1 | `[H]c1c(c(c(c(c1C([H])([H])[H])[H])[H])C([H])([H])[C-]([O-])[O-])[H]` |
-|  b-mo3 | βCD | 3-methoxyphenylacetate | -1 | `[H]c1c(c(c(c(c1[H])OC([H])([H])[H])[H])C([H])([H])[C-]([O-])[O-])[H]` |
-|  b-mo4 | βCD | 4-methoxyphenylacetate | -1 | `[H]c1c(c(c(c(c1C([H])([H])[C-]([O-])[O-])[H])[H])OC([H])([H])[H])[H]` |
-|  b-pb3 | βCD | 3-phenylbutanoate | -1 | `[H]c1c(c(c(c(c1[H])[H])[C@]([H])(C([H])([H])[H])C([H])([H])[C-]([O-])[O-])[H])[H]` |
-|  b-pb4 | βCD | 4-phenylbutanoate | -1 | `[H]c1c(c(c(c(c1[H])[H])C([H])([H])C([H])([H])C([H])([H])[C-]([O-])[O-])[H])[H]` |
+|  a-bam | αCD | 1-butylamine | +1 |  <!-- style="min-width: 400px" --> `CCCC[NH3+]` |
+|  a-nmb | αCD | n-methylbutylamine| +1 | `CCCC[NH2+]C` |
+|  a-mba | αCD | 1-methylbutylamine^a^ | +1 | `CCC[C@@H](C)[NH3+]` |
+|  a-pam | αCD | 1-pentylamine| +1 | `CCCCC[NH3+]` |
+|  a-ham | αCD | 1-hexylamine| +1 | `CCCCCC[NH3+]` |
+|  a-nmh | αCD | n-methylhexylamine | +1 | `CCCCCC[NH2+]C` |
+|  a-mha | αCD | 1-methylhexylamine^a^ | +1 | `CCCCC[C@@H](C)[NH3+]` |
+|  a-hpa | αCD | 1-heptylamine | +1 | `CCCCCCC[NH3+]` |
+|  a-mhp | αCD | 1-methylheptylamine^b^ | +1 | `CCCCCC[C@H](C)[NH3+]` |
+|  a-oam | αCD | 1-octylamine | +1 | `CCCCCCCC[NH3+]` |
+|  b-ham | βCD | 1-hexylamine | +1 | `CCCCCC[NH3+]` |
+|  b-mha | βCD | 1-methylhexylamine^a^ | +1 | `CCCCC[C@@H](C)[NH3+]` |
+|  b-oam | βCD | 1-octylamine | +1 | `CCCCCCCC[NH3+]` |
+|  a-cbu | αCD | cyclobutanol | 0 | `C1CC(C1)O` |
+|  a-cpe | αCD | cyclopentanol | 0 | `C1CCC(C1)O` |
+|  a-chp | αCD | cycloheptanol | 0 | `C1CCCC(CC1)O` |
+|  a-coc | αCD | cyclooctanol | 0 | `C1CCCC(CCC1)O` |
+|  b-cbu | βCD | cyclobutanol | 0 | `C1CC(C1)O` |
+|  b-cpe | βCD | cyclopentanol | 0 | `C1CCC(C1)O` |
+|  b-mch | βCD | 1-methylcyclohexanol | 0 | `CC1(CCCCC1)O` |
+|  b-m4c | βCD | cis-4-methylcyclohexanol | 0 | `CC1CCC(CC1)O` |
+|  b-m4t | βCD | trans-4-methylcyclohexanol | 0 | `CC1CCC(CC1)O` |
+|  b-chp | βCD | cycloheptanol | 0 | `C1CCCC(CC1)O` |
+|  b-coc | βCD | cyclooctanol | 0 | `C1CCCC(CCC1)O` |
+|  a-but | αCD | butanoate | -1 | `CCCC(=O)[O-]` |
+|  a-pnt | αCD | pentanoate | -1 | `CCCCC(=O)[O-]` |
+|  a-hex | αCD | hexanoate | -1 | `CCCCCC(=O)[O-]` |
+|  a-hx2 | αCD | trans-2-hexenoate | -1 | `CCC/C=C/C(=O)[O-]` |
+|  a-hx3 | αCD | trans-3-hexenoate | -1 | `CC/C=C/CC(=O)[O-]` |
+|  a-hep | αCD | heptanoate | -1 | `CCCCCCC(=O)[O-]` |
+|  a-hp6 | αCD | 6-heptenoate | -1 | `C=CCCCCC(=O)[O-]` |
+|  a-oct | αCD | octanoate | -1 | `CCCCCCCC(=O)[O-]` |
+|  b-pnt | βCD | pentanoate | -1 | `CCCCC(=O)[O-]` |
+|  b-hex | βCD | hexanoate | -1 | `CCCCCC(=O)[O-]` |
+|  b-hep | βCD | heptanoate | -1 | `CCCCCCC(=O)[O-]` |
+|  b-ben | βCD | benzoate | -1 | `c1ccc(cc1)C(=O)[O-]` |
+|  b-pha | βCD | phenylacetate | -1 | `c1ccc(cc1)CC(=O)[O-]` |
+|  b-mp3 | βCD | 3-methylphenylacetate | -1 | `Cc1cccc(c1)CC(=O)[O-]` |
+|  b-mp4 | βCD | 4-methylphenylacetate | -1 | `Cc1ccc(cc1)CC(=O)[O-]` |
+|  b-mo3 | βCD | 3-methoxyphenylacetate | -1 | `COc1cccc(c1)CC(=O)[O-]` |
+|  b-mo4 | βCD | 4-methoxyphenylacetate | -1 | `COc1ccc(cc1)CC(=O)[O-]` |
+|  b-pb3 | βCD | 3-phenylbutanoate | -1 | `C[C@H](CC(=O)[O-])c1ccccc1` |
+|  b-pb4 | βCD | 4-phenylbutanoate | -1 | `c1ccc(cc1)CCCC(=O)[O-]` |
 
-Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. {#tbl:host-guests}
+Table: The 43 unique host-guest combinations used in this study. The formal charge of each guest is listed in brackets. The guest names correspond to Tables 1 and 2 in Rekharsky et al. [@1236RpaUv]. ^a^ Only the *R* enantiomer was considered. ^b^ Only the *S* enantiomer was considered. SMILES strings are written as canonical isomeric SMILES as implemented in the OpenEye `OEChem` Toolkit version 2.0.2 [@15paDcyqf]. {#tbl:host-guests}
 
 ### Application of force field parameters
 
 We sought to compare force fields directly and therefore attempted to minimize additional differences among the simulations with each force field.
 In all simulations, we applied AM1-BCC [@LxrgIkt0; @BkLoOd0N] partial atomic charges to both the host and guest molecules using the `antechamber` program in AmberTools16 [@ltrN7ofw].
+
+
+The Open Force Field Toolkit provides a mechanism for user-specified charges. If no charges are supplied, the toolkit will generate AM1-BCC charges.
+AM1-BCC is the recommended charge scehme, and the 
+
 The host charges were calculated using a single glucose molecule with methoxy caps on the O1 and O4 alcohols (Figure @fig:atom-names); each glucose monomer in the cyclodextrin polymer has identical charges.
 After removing the capping atoms, the net charge of the glucose monomer was -0.064 e.
 To ensure a neutrality of the glucose monomer, the charge remainder was proportionally distributed across all atoms according to the magnitude of the partial charge for each atom.
@@ -558,7 +563,7 @@ On the other hand, it is perhaps unexpected that this force field which best rep
 It is worth noting the magnitude of these effects will depend on the guest parameters, as well as water model and ion parameters as well.
 
 More broadly, the results presented in this manuscript further demonstrate that host-guest binding thermodynamics can be used to benchmark force fields, to help diagnose issues with parameters applied to specific functional groups, and to suggest directions for improvements. 
-We are therefore continuing to build out experimental host-guest datasets tuned for this purpose, and to further streamline host-guest binding thermodynamics calculations so that they may be incorporated into automated tools to optimize force field parameters.
+We are therefore continuing to build out experimental host-guest datasets tuned for this purpose, and to further streamline host-guest binding thermodynamics calculations so that binding data can be used alongside other data types, such as liquid properties, by automated tools for optimizing force field parameters.
 
 ## Code and data availability
 - [GitHub repository](https://github.com/slochower/smirnoff-host-guest) used to convert AMBER input files from GAFF force field to SMIRNOFF99Frosst.
